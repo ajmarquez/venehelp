@@ -184,5 +184,36 @@
     "requires_login_label": "No",
     "owner_label": "Respondedores comunitarios",
     "last_checked_label": "2026-06-26"
+  },
+  {
+    "slug": "yummy-sos",
+    "name": "Yummy - SOS",
+    "url": "https://sos.yummyrides.com",
+    "category": "website",
+    "purpose": "reporting",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "last_checked_at": "2026-06-26",
+    "owner": "Company platform",
+    "crawler_priority": 2,
+    "summary": "Sitio de emergencia operado por Yummy para reportar daños estructurales, ver reportes públicos y encontrar refugios tras el terremoto.",
+    "notes": [
+      "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026.",
+      "Los metadatos de la página y la navegación visible muestran flujos públicos para reportar daños, ver reportes, refugios y recursos."
+    ],
+    "tags": [
+      "terremoto",
+      "danos",
+      "reporte",
+      "emergencia"
+    ],
+    "category_label": "Sitio web",
+    "purpose_label": "Reporte",
+    "coverage_label": "Nacional",
+    "language_label": "Español",
+    "requires_login_label": "No",
+    "owner_label": "Plataforma empresarial",
+    "last_checked_label": "2026-06-26"
   }
 ]

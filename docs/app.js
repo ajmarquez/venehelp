@@ -4,6 +4,8 @@ const basePath = config.basePath || "";
 
 const state = {
   registry: null,
+  registryQuery: "",
+  registryStatus: "all",
   sources: [],
   query: "",
   category: "all",
@@ -13,6 +15,9 @@ const state = {
 const registryStatsEl = document.querySelector("[data-registry-stats]");
 const registryMetaEl = document.querySelector("[data-registry-meta]");
 const registryBodyEl = document.querySelector("[data-registry-body]");
+const registryResultsEl = document.querySelector("[data-registry-results]");
+const registrySearchEl = document.querySelector("[data-registry-search]");
+const registryStatusEl = document.querySelector("[data-registry-status]");
 const listEl = document.querySelector("[data-source-list]");
 const countEl = document.querySelector("[data-results-count]");
 const searchEl = document.querySelector("[data-search]");
@@ -47,34 +52,68 @@ const matchesQuery = (source, query) => {
 const renderBadge = (label, className = "pill") =>
   '<span class="' + className + '">' + label + "</span>";
 
+const matchesRegistryQuery = (record, query) => {
+  if (!query) return true;
+  const haystack = [
+    record.name,
+    record.location,
+    record.source_name,
+    record.status_label,
+    ...(record.reported_on || [])
+  ].join(" ").toLowerCase();
+  return haystack.includes(query);
+};
+
+const getFilteredRegistryRecords = () =>
+  (state.registry?.records || []).filter((record) => {
+    const matchesStatus = state.registryStatus === "all" || record.status === state.registryStatus;
+    return matchesStatus && matchesRegistryQuery(record, state.registryQuery);
+  });
+
 const renderRegistry = () => {
-  if (!registryStatsEl || !registryMetaEl || !registryBodyEl) {
+  if (!registryStatsEl && !registryMetaEl && !registryBodyEl && !registryResultsEl) {
     return;
   }
 
   if (!state.registry) {
-    registryMetaEl.textContent = messages.registryLoading;
+    if (registryMetaEl) {
+      registryMetaEl.textContent = messages.registryLoading;
+    }
     return;
   }
 
   const summary = state.registry.summary || {};
-  registryMetaEl.textContent = summary.is_partial
-    ? interpolate(messages.registryPartialNote, {
-        sampledPages: summary.sampled_pages ?? 0,
-        totalPages: summary.total_pages ?? 0,
-        sourceName: summary.source_name || ""
-      })
-    : interpolate(messages.registryFullNote, {
-        sourceName: summary.source_name || ""
-      });
+  if (registryMetaEl) {
+    registryMetaEl.textContent = summary.is_partial
+      ? interpolate(messages.registryPartialNote, {
+          sampledPages: summary.sampled_pages ?? 0,
+          totalPages: summary.total_pages ?? 0,
+          sourceName: summary.source_name || ""
+        })
+      : interpolate(messages.registryFullNote, {
+          sourceName: summary.source_name || ""
+        });
+  }
 
-  registryStatsEl.innerHTML = [
-    '<article class="registry-stat registry-stat--missing"><strong>' + (summary.missing_count_display || "-") + '</strong><span>' + messages.registryMissingLabel + '</span></article>',
-    '<article class="registry-stat registry-stat--found"><strong>' + (summary.found_count_display || "-") + '</strong><span>' + messages.registryFoundLabel + '</span></article>',
-    '<article class="registry-stat registry-stat--preview"><strong>' + (summary.preview_records || 0) + '</strong><span>' + messages.registryPreviewLabel + '</span></article>'
-  ].join("");
+  if (registryStatsEl) {
+    registryStatsEl.innerHTML = [
+      '<article class="registry-stat registry-stat--missing"><strong>' + (summary.missing_count_display || "-") + '</strong><span>' + messages.registryMissingLabel + '</span></article>',
+      '<article class="registry-stat registry-stat--found"><strong>' + (summary.found_count_display || "-") + '</strong><span>' + messages.registryFoundLabel + '</span></article>',
+      '<article class="registry-stat registry-stat--preview"><strong>' + (summary.preview_records || 0) + '</strong><span>' + messages.registryPreviewLabel + '</span></article>'
+    ].join("");
+  }
 
-  const rows = (state.registry.records || []).map((record) => {
+  const records = getFilteredRegistryRecords();
+
+  if (registryResultsEl) {
+    registryResultsEl.textContent = interpolate(messages.registryResultsShown, { count: records.length });
+  }
+
+  if (!registryBodyEl) {
+    return;
+  }
+
+  const rows = records.map((record) => {
     const nameHtml = record.detail_url
       ? '<a href="' + escapeHtml(record.detail_url) + '" target="_blank" rel="noreferrer">' + escapeHtml(record.name) + '</a>'
       : escapeHtml(record.name);
@@ -115,6 +154,10 @@ const renderCard = (source) => {
 };
 
 const render = () => {
+  if (!countEl || !listEl) {
+    return;
+  }
+
   const filtered = state.sources.filter((source) => {
     const matchesCategory = state.category === "all" || source.category === state.category;
     const matchesPurposeFilter = state.purpose === "all" || source.purpose === state.purpose;
@@ -126,15 +169,44 @@ const render = () => {
 };
 
 const load = async () => {
-  const [registryResponse, sourcesResponse] = await Promise.all([
-    fetch(basePath + "/data/registry.json"),
-    fetch(basePath + "/data/sources.json")
-  ]);
-  state.registry = await registryResponse.json();
-  state.sources = await sourcesResponse.json();
+  const tasks = [];
 
-  renderRegistry();
-  render();
+  if (registryStatsEl || registryMetaEl || registryBodyEl || registryResultsEl) {
+    tasks.push(
+      fetch(basePath + "/data/registry.json")
+        .then((response) => response.json())
+        .then((data) => {
+          state.registry = data;
+          renderRegistry();
+        })
+        .catch(() => {
+          if (registryMetaEl) {
+            registryMetaEl.textContent = messages.registryLoadFailed;
+          }
+        })
+    );
+  }
+
+  if (listEl || countEl) {
+    tasks.push(
+      fetch(basePath + "/data/sources.json")
+        .then((response) => response.json())
+        .then((data) => {
+          state.sources = data;
+          render();
+        })
+        .catch(() => {
+          if (countEl) {
+            countEl.textContent = messages.loadFailed;
+          }
+          if (listEl) {
+            listEl.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
+          }
+        })
+    );
+  }
+
+  await Promise.all(tasks);
 };
 
 if (searchEl) {
@@ -158,10 +230,18 @@ if (purposeEl) {
   });
 }
 
-load().catch(() => {
-  if (registryMetaEl) {
-    registryMetaEl.textContent = messages.registryLoadFailed;
-  }
-  countEl.textContent = messages.loadFailed;
-  listEl.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
-});
+if (registrySearchEl) {
+  registrySearchEl.addEventListener("input", (event) => {
+    state.registryQuery = normalize(event.target.value.trim());
+    renderRegistry();
+  });
+}
+
+if (registryStatusEl) {
+  registryStatusEl.addEventListener("change", (event) => {
+    state.registryStatus = event.target.value;
+    renderRegistry();
+  });
+}
+
+load();

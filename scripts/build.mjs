@@ -48,6 +48,8 @@ const localeBasePath = (locale) => withSitePath(`/${locale}`);
 const localePath = (locale, pathname = "/") =>
   withSitePath(`/${locale}${pathname === "/" ? "/" : pathname.startsWith("/") ? pathname : `/${pathname}`}`);
 const absoluteLocaleUrl = (locale, pathname = "/") => `${siteUrl}${localePath(locale, pathname)}`;
+const registryPath = (locale) => localePath(locale, "/registro/");
+const absoluteRegistryUrl = (locale) => `${siteUrl}${registryPath(locale)}`;
 
 const styles = `
 :root {
@@ -187,6 +189,11 @@ h2 {
   font-size: 0.86rem;
   font-weight: 700;
   color: var(--muted);
+}
+
+.field .small {
+  margin: 0;
+  padding: 0.75rem 0 0;
 }
 
 input,
@@ -507,6 +514,7 @@ const coverageLabels = {
 const ownerLabels = {
   "Volunteer initiative": { es: "Iniciativa voluntaria", en: "Volunteer initiative" },
   "Citizen platform": { es: "Plataforma ciudadana", en: "Citizen platform" },
+  "Company platform": { es: "Plataforma empresarial", en: "Company platform" },
   "Community responders": { es: "Respondedores comunitarios", en: "Community responders" },
   "Media outlet": { es: "Medio de comunicación", en: "Media outlet" },
   "Campaign network": { es: "Red de campaña", en: "Campaign network" },
@@ -583,6 +591,14 @@ const spanishSourceCopy = {
       "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026.",
       "Podría conectarse con mapas o paneles públicos de Kobo."
     ]
+  },
+  "yummy-sos": {
+    summary:
+      "Sitio de emergencia operado por Yummy para reportar daños estructurales, ver reportes públicos y encontrar refugios tras el terremoto.",
+    notes: [
+      "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026.",
+      "Los metadatos de la página y la navegación visible muestran flujos públicos para reportar daños, ver reportes, refugios y recursos."
+    ]
   }
 };
 
@@ -617,9 +633,20 @@ const localeCopy = {
     registryStatusColumn: "Estado",
     registryLocationColumn: "Ubicación",
     registryReportedOnColumn: "Reportado en",
+    registryResultsLabel: "Filas visibles",
+    registryResultsShown: "{count} filas visibles",
+    registrySearchLabel: "Buscar en el registro",
+    registrySearchPlaceholder: "Nombre, ubicación o fuente",
+    registryFilterLabel: "Estado",
+    registryAllStatuses: "Todos los estados",
     registryStatusMissing: "Se busca",
     registryStatusSafe: "A salvo",
     registryStatusFound: "Encontrado",
+    registryLinkLabel: "Abrir registro beta",
+    registryPageTitle: "Registro beta | VeneHelp",
+    registryPageEyebrow: "Registro beta",
+    registryPageIntro:
+      "Tabla beta de trazabilidad con búsqueda y filtros por estado. Los datos siguen siendo parciales y dependen de adaptadores públicos por sitio.",
     findSourceTitle: "Recursos disponibles",
     findSourceIntro:
       "Busca por nombre o filtra por tipo de recurso. El dataset para agentes y buscadores está disponible en <a href=\"{dataUrl}\"><code>{dataPath}</code></a>.",
@@ -687,9 +714,20 @@ const localeCopy = {
     registryStatusColumn: "Status",
     registryLocationColumn: "Location",
     registryReportedOnColumn: "Reported on",
+    registryResultsLabel: "Visible rows",
+    registryResultsShown: "{count} visible rows",
+    registrySearchLabel: "Search the registry",
+    registrySearchPlaceholder: "Name, location, or source",
+    registryFilterLabel: "Status",
+    registryAllStatuses: "All statuses",
     registryStatusMissing: "Missing",
     registryStatusSafe: "Safe",
     registryStatusFound: "Found",
+    registryLinkLabel: "Open beta registry",
+    registryPageTitle: "Beta registry | VeneHelp",
+    registryPageEyebrow: "Beta registry",
+    registryPageIntro:
+      "Beta provenance table with search and status filters. The data is still partial and depends on public per-site adapters.",
     findSourceTitle: "Available resources",
     findSourceIntro:
       "Search by name or filter by resource type. The dataset for agents and search systems is available at <a href=\"{dataUrl}\"><code>{dataPath}</code></a>.",
@@ -736,6 +774,8 @@ const basePath = config.basePath || "";
 
 const state = {
   registry: null,
+  registryQuery: "",
+  registryStatus: "all",
   sources: [],
   query: "",
   category: "all",
@@ -745,6 +785,9 @@ const state = {
 const registryStatsEl = document.querySelector("[data-registry-stats]");
 const registryMetaEl = document.querySelector("[data-registry-meta]");
 const registryBodyEl = document.querySelector("[data-registry-body]");
+const registryResultsEl = document.querySelector("[data-registry-results]");
+const registrySearchEl = document.querySelector("[data-registry-search]");
+const registryStatusEl = document.querySelector("[data-registry-status]");
 const listEl = document.querySelector("[data-source-list]");
 const countEl = document.querySelector("[data-results-count]");
 const searchEl = document.querySelector("[data-search]");
@@ -779,34 +822,68 @@ const matchesQuery = (source, query) => {
 const renderBadge = (label, className = "pill") =>
   '<span class="' + className + '">' + label + "</span>";
 
+const matchesRegistryQuery = (record, query) => {
+  if (!query) return true;
+  const haystack = [
+    record.name,
+    record.location,
+    record.source_name,
+    record.status_label,
+    ...(record.reported_on || [])
+  ].join(" ").toLowerCase();
+  return haystack.includes(query);
+};
+
+const getFilteredRegistryRecords = () =>
+  (state.registry?.records || []).filter((record) => {
+    const matchesStatus = state.registryStatus === "all" || record.status === state.registryStatus;
+    return matchesStatus && matchesRegistryQuery(record, state.registryQuery);
+  });
+
 const renderRegistry = () => {
-  if (!registryStatsEl || !registryMetaEl || !registryBodyEl) {
+  if (!registryStatsEl && !registryMetaEl && !registryBodyEl && !registryResultsEl) {
     return;
   }
 
   if (!state.registry) {
-    registryMetaEl.textContent = messages.registryLoading;
+    if (registryMetaEl) {
+      registryMetaEl.textContent = messages.registryLoading;
+    }
     return;
   }
 
   const summary = state.registry.summary || {};
-  registryMetaEl.textContent = summary.is_partial
-    ? interpolate(messages.registryPartialNote, {
-        sampledPages: summary.sampled_pages ?? 0,
-        totalPages: summary.total_pages ?? 0,
-        sourceName: summary.source_name || ""
-      })
-    : interpolate(messages.registryFullNote, {
-        sourceName: summary.source_name || ""
-      });
+  if (registryMetaEl) {
+    registryMetaEl.textContent = summary.is_partial
+      ? interpolate(messages.registryPartialNote, {
+          sampledPages: summary.sampled_pages ?? 0,
+          totalPages: summary.total_pages ?? 0,
+          sourceName: summary.source_name || ""
+        })
+      : interpolate(messages.registryFullNote, {
+          sourceName: summary.source_name || ""
+        });
+  }
 
-  registryStatsEl.innerHTML = [
-    '<article class="registry-stat registry-stat--missing"><strong>' + (summary.missing_count_display || "-") + '</strong><span>' + messages.registryMissingLabel + '</span></article>',
-    '<article class="registry-stat registry-stat--found"><strong>' + (summary.found_count_display || "-") + '</strong><span>' + messages.registryFoundLabel + '</span></article>',
-    '<article class="registry-stat registry-stat--preview"><strong>' + (summary.preview_records || 0) + '</strong><span>' + messages.registryPreviewLabel + '</span></article>'
-  ].join("");
+  if (registryStatsEl) {
+    registryStatsEl.innerHTML = [
+      '<article class="registry-stat registry-stat--missing"><strong>' + (summary.missing_count_display || "-") + '</strong><span>' + messages.registryMissingLabel + '</span></article>',
+      '<article class="registry-stat registry-stat--found"><strong>' + (summary.found_count_display || "-") + '</strong><span>' + messages.registryFoundLabel + '</span></article>',
+      '<article class="registry-stat registry-stat--preview"><strong>' + (summary.preview_records || 0) + '</strong><span>' + messages.registryPreviewLabel + '</span></article>'
+    ].join("");
+  }
 
-  const rows = (state.registry.records || []).map((record) => {
+  const records = getFilteredRegistryRecords();
+
+  if (registryResultsEl) {
+    registryResultsEl.textContent = interpolate(messages.registryResultsShown, { count: records.length });
+  }
+
+  if (!registryBodyEl) {
+    return;
+  }
+
+  const rows = records.map((record) => {
     const nameHtml = record.detail_url
       ? '<a href="' + escapeHtml(record.detail_url) + '" target="_blank" rel="noreferrer">' + escapeHtml(record.name) + '</a>'
       : escapeHtml(record.name);
@@ -847,6 +924,10 @@ const renderCard = (source) => {
 };
 
 const render = () => {
+  if (!countEl || !listEl) {
+    return;
+  }
+
   const filtered = state.sources.filter((source) => {
     const matchesCategory = state.category === "all" || source.category === state.category;
     const matchesPurposeFilter = state.purpose === "all" || source.purpose === state.purpose;
@@ -858,15 +939,44 @@ const render = () => {
 };
 
 const load = async () => {
-  const [registryResponse, sourcesResponse] = await Promise.all([
-    fetch(basePath + "/data/registry.json"),
-    fetch(basePath + "/data/sources.json")
-  ]);
-  state.registry = await registryResponse.json();
-  state.sources = await sourcesResponse.json();
+  const tasks = [];
 
-  renderRegistry();
-  render();
+  if (registryStatsEl || registryMetaEl || registryBodyEl || registryResultsEl) {
+    tasks.push(
+      fetch(basePath + "/data/registry.json")
+        .then((response) => response.json())
+        .then((data) => {
+          state.registry = data;
+          renderRegistry();
+        })
+        .catch(() => {
+          if (registryMetaEl) {
+            registryMetaEl.textContent = messages.registryLoadFailed;
+          }
+        })
+    );
+  }
+
+  if (listEl || countEl) {
+    tasks.push(
+      fetch(basePath + "/data/sources.json")
+        .then((response) => response.json())
+        .then((data) => {
+          state.sources = data;
+          render();
+        })
+        .catch(() => {
+          if (countEl) {
+            countEl.textContent = messages.loadFailed;
+          }
+          if (listEl) {
+            listEl.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
+          }
+        })
+    );
+  }
+
+  await Promise.all(tasks);
 };
 
 if (searchEl) {
@@ -890,13 +1000,21 @@ if (purposeEl) {
   });
 }
 
-load().catch(() => {
-  if (registryMetaEl) {
-    registryMetaEl.textContent = messages.registryLoadFailed;
-  }
-  countEl.textContent = messages.loadFailed;
-  listEl.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
-});
+if (registrySearchEl) {
+  registrySearchEl.addEventListener("input", (event) => {
+    state.registryQuery = normalize(event.target.value.trim());
+    renderRegistry();
+  });
+}
+
+if (registryStatusEl) {
+  registryStatusEl.addEventListener("change", (event) => {
+    state.registryStatus = event.target.value;
+    renderRegistry();
+  });
+}
+
+load();
 `.trimStart();
 
 const ensureDir = async (target) => {
@@ -1039,6 +1157,7 @@ const renderFilterOptions = (locale, field, labels) => {
 const renderLocaleIndexHtml = (locale, options = {}) => {
   const copy = localeCopy[locale];
   const dataPath = localePath(locale, "/data/sources.json");
+  const registryUrl = registryPath(locale);
   const introHtml = interpolate(copy.findSourceIntro, {
     dataUrl: dataPath,
     dataPath
@@ -1077,20 +1196,8 @@ ${renderHead({
           <p class="page-intro">${escapeHtml(copy.registryIntro)}</p>
           <p class="small" data-registry-meta>${escapeHtml(copy.registryLoading)}</p>
           <div class="registry-stats" data-registry-stats></div>
-          <div class="table-scroll">
-            <table class="registry-table">
-              <thead>
-                <tr>
-                  <th>${escapeHtml(copy.registryNameColumn)}</th>
-                  <th>${escapeHtml(copy.registryStatusColumn)}</th>
-                  <th>${escapeHtml(copy.registryLocationColumn)}</th>
-                  <th>${escapeHtml(copy.registryReportedOnColumn)}</th>
-                </tr>
-              </thead>
-              <tbody data-registry-body>
-                <tr><td colspan="4" class="small">${escapeHtml(copy.registryLoading)}</td></tr>
-              </tbody>
-            </table>
+          <div class="page-links" style="margin-top:1rem">
+            <a class="button" href="${registryUrl}">${escapeHtml(copy.registryLinkLabel)}</a>
           </div>
         </div>
       </section>
@@ -1143,6 +1250,78 @@ const renderRootIndexHtml = () =>
     appBasePath: localeBasePath("es"),
     rootDefault: true
   });
+
+const renderRegistryPageHtml = (locale) => {
+  const copy = localeCopy[locale];
+
+  return `<!doctype html>
+<html lang="${escapeHtml(copy.lang)}">
+${renderHead({
+  lang: copy.lang,
+  title: copy.registryPageTitle,
+  description: copy.registryPageIntro,
+  canonical: absoluteRegistryUrl(locale),
+  alternates: renderAlternateLinks("/registro/")
+})}
+  <body>
+    <div class="flag-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+    <main class="page">
+      <div class="shell">
+        ${renderPageTopbar(locale, "/registro/")}
+        <p class="eyebrow">${escapeHtml(copy.registryPageEyebrow)}</p>
+        <h1>${escapeHtml(copy.registryTitle)}</h1>
+        <p class="page-intro">${escapeHtml(copy.registryPageIntro)}</p>
+
+        <section class="page-card">
+          <p class="small" data-registry-meta>${escapeHtml(copy.registryLoading)}</p>
+          <div class="registry-stats" data-registry-stats></div>
+          <div class="controls">
+            <div class="field">
+              <label for="registry-search">${escapeHtml(copy.registrySearchLabel)}</label>
+              <input
+                id="registry-search"
+                type="search"
+                placeholder="${escapeHtml(copy.registrySearchPlaceholder)}"
+                data-registry-search
+              >
+            </div>
+            <div class="field">
+              <label for="registry-status">${escapeHtml(copy.registryFilterLabel)}</label>
+              <select id="registry-status" data-registry-status>
+                <option value="all">${escapeHtml(copy.registryAllStatuses)}</option>
+                <option value="missing">${escapeHtml(copy.registryStatusMissing)}</option>
+                <option value="safe">${escapeHtml(copy.registryStatusSafe)}</option>
+                <option value="found">${escapeHtml(copy.registryStatusFound)}</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>${escapeHtml(copy.registryResultsLabel)}</label>
+              <p class="small" data-registry-results>${escapeHtml(copy.registryLoading)}</p>
+            </div>
+          </div>
+          <div class="table-scroll">
+            <table class="registry-table">
+              <thead>
+                <tr>
+                  <th>${escapeHtml(copy.registryNameColumn)}</th>
+                  <th>${escapeHtml(copy.registryStatusColumn)}</th>
+                  <th>${escapeHtml(copy.registryLocationColumn)}</th>
+                  <th>${escapeHtml(copy.registryReportedOnColumn)}</th>
+                </tr>
+              </thead>
+              <tbody data-registry-body>
+                <tr><td colspan="4" class="small">${escapeHtml(copy.registryLoading)}</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+${renderCloudflareAnalyticsSnippet()}    <script>window.VENEHELP_CONFIG = ${JSON.stringify({ basePath: localeBasePath(locale), messages: copy })};</script>
+    <script src="${withSitePath("/app.js")}" defer></script>
+  </body>
+</html>`;
+};
 
 const renderLocalizedSourcesIndexHtml = (locale) => {
   const copy = localeCopy[locale];
@@ -1304,6 +1483,8 @@ VeneHelp is a public directory of missing-person reporting sources related to th
 - Spanish default homepage: ${absoluteUrl("/")}
 - Spanish homepage: ${absoluteLocaleUrl("es", "/")}
 - English homepage: ${absoluteLocaleUrl("en", "/")}
+- Spanish beta registry page: ${absoluteRegistryUrl("es")}
+- English beta registry page: ${absoluteRegistryUrl("en")}
 - Canonical raw dataset: ${absoluteUrl("/data/sources.json")}
 - Beta registry dataset: ${absoluteUrl("/data/registry.json")}
 
@@ -1321,6 +1502,7 @@ const renderSitemap = () => {
     absoluteUrl("/data/registry.json"),
     ...supportedLocales.flatMap((locale) => [
       absoluteLocaleUrl(locale, "/"),
+      absoluteRegistryUrl(locale),
       absoluteLocaleUrl(locale, "/sources/"),
       absoluteLocaleUrl(locale, "/data/sources.json"),
       absoluteLocaleUrl(locale, "/data/registry.json"),
@@ -1365,8 +1547,10 @@ for (const locale of supportedLocales) {
   await ensureDir(localeDir);
   await ensureDir(localeDataDir);
   await ensureDir(localeSourcesDir);
+  await ensureDir(path.join(localeDir, "registro"));
 
   await fs.writeFile(path.join(localeDir, "index.html"), renderLocaleIndexHtml(locale));
+  await fs.writeFile(path.join(localeDir, "registro", "index.html"), renderRegistryPageHtml(locale));
   await fs.writeFile(path.join(localeDataDir, "sources.json"), JSON.stringify(localizedSources[locale], null, 2) + "\n");
   await fs.writeFile(path.join(localeDataDir, "registry.json"), JSON.stringify(localizedRegistry[locale], null, 2) + "\n");
   await fs.writeFile(path.join(localeSourcesDir, "index.html"), renderLocalizedSourcesIndexHtml(locale));

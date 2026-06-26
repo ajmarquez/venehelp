@@ -7,6 +7,8 @@ VeneHelp is a public directory of missing-person reporting sources related to th
 - Spanish default homepage: https://directorioterremotovenezuela.org/
 - Spanish homepage: https://directorioterremotovenezuela.org/es/
 - English homepage: https://directorioterremotovenezuela.org/en/
+- Spanish beta registry page: https://directorioterremotovenezuela.org/es/registro/
+- English beta registry page: https://directorioterremotovenezuela.org/en/registro/
 - Canonical raw dataset: https://directorioterremotovenezuela.org/data/sources.json
 - Beta registry dataset: https://directorioterremotovenezuela.org/data/registry.json
 

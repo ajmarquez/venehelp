@@ -184,5 +184,36 @@
     "requires_login_label": "No",
     "owner_label": "Community responders",
     "last_checked_label": "2026-06-26"
+  },
+  {
+    "slug": "yummy-sos",
+    "name": "Yummy - SOS",
+    "url": "https://sos.yummyrides.com",
+    "category": "website",
+    "purpose": "reporting",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "last_checked_at": "2026-06-26",
+    "owner": "Company platform",
+    "crawler_priority": 2,
+    "summary": "Yummy-operated emergency website for reporting structural damage, viewing public incident reports, and finding shelters after the earthquake.",
+    "notes": [
+      "URL loaded successfully during the June 26, 2026 link check.",
+      "Page metadata and visible navigation show public flows for reporting damage, browsing reports, shelters, and resources."
+    ],
+    "tags": [
+      "earthquake",
+      "damage",
+      "reporting",
+      "emergency"
+    ],
+    "category_label": "Website",
+    "purpose_label": "Reporting",
+    "coverage_label": "National",
+    "language_label": "Spanish",
+    "requires_login_label": "No",
+    "owner_label": "Company platform",
+    "last_checked_label": "2026-06-26"
   }
 ]

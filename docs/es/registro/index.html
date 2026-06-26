@@ -3,81 +3,73 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>VeneHelp</title>
-    <meta name="description" content="Directorio de recursos de ayuda a afectados por el Terremoto en Venezuela.">
-    <link rel="canonical" href="https://directorioterremotovenezuela.org/">
-    <link rel="alternate" hreflang="es" href="https://directorioterremotovenezuela.org/">
-    <link rel="alternate" hreflang="en" href="https://directorioterremotovenezuela.org/en/">
+    <title>Registro beta | VeneHelp</title>
+    <meta name="description" content="Tabla beta de trazabilidad con búsqueda y filtros por estado. Los datos siguen siendo parciales y dependen de adaptadores públicos por sitio.">
+    <link rel="canonical" href="https://directorioterremotovenezuela.org/es/registro/">
+    <link rel="alternate" hreflang="es" href="https://directorioterremotovenezuela.org/es/registro/">
+    <link rel="alternate" hreflang="en" href="https://directorioterremotovenezuela.org/en/registro/">
     <link rel="alternate" hreflang="x-default" href="https://directorioterremotovenezuela.org/">
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
     <div class="flag-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-    <main>
-      <section class="hero">
-        <div class="shell">
-          <div class="topbar">
-  <a class="brand-link" href="/">VeneHelp</a>
+    <main class="page">
+      <div class="shell">
+        <div class="topbar">
+  <a class="brand-link" href="/es/">VeneHelp</a>
   <nav class="language-switcher" aria-label="Idioma">
-    <a href="/" aria-current="page">Español</a><a href="/en/">English</a>
+    <a href="/es/registro/" aria-current="page">Español</a><a href="/en/registro/">English</a>
   </nav>
 </div>
-          <div class="hero-grid">
-            <p class="eyebrow">Directorio de ayuda</p>
-            <h1>VeneHelp</h1>
-            <p class="lede">Directorio de recursos de ayuda a afectados por el Terremoto en Venezuela.</p>
-            <p class="directory-note">Agrupamos sitios, formularios, mapas y registros que han aparecido de forma fragmentada o redundante. La meta es que personas afectadas, voluntarios, periodistas y LLMs encuentren recursos confiables desde un solo lugar.</p>
-          </div>
-        </div>
-      </section>
+        <p class="eyebrow">Registro beta</p>
+        <h1>Registro consolidado (beta)</h1>
+        <p class="page-intro">Tabla beta de trazabilidad con búsqueda y filtros por estado. Los datos siguen siendo parciales y dependen de adaptadores públicos por sitio.</p>
 
-      <section class="section">
-        <div class="shell panel">
-          <h2>Registro consolidado (beta)</h2>
-          <p class="page-intro">Mostramos un contador principal y una tabla de trazabilidad a partir de un registro público consolidado. Esta vista es beta y hoy usa una recolección parcial de páginas públicas mientras se agregan más adaptadores.</p>
+        <section class="page-card">
           <p class="small" data-registry-meta>Cargando registro beta</p>
           <div class="registry-stats" data-registry-stats></div>
-          <div class="page-links" style="margin-top:1rem">
-            <a class="button" href="/es/registro/">Abrir registro beta</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="shell panel">
-          <h2>Recursos disponibles</h2>
-          <p class="page-intro">Busca por nombre o filtra por tipo de recurso. El dataset para agentes y buscadores está disponible en <a href="/es/data/sources.json"><code>/es/data/sources.json</code></a>.</p>
           <div class="controls">
             <div class="field">
-              <label for="search">Buscar</label>
-              <input id="search" type="search" placeholder="Busca por nombre, categoría o etiqueta" data-search>
+              <label for="registry-search">Buscar en el registro</label>
+              <input
+                id="registry-search"
+                type="search"
+                placeholder="Nombre, ubicación o fuente"
+                data-registry-search
+              >
             </div>
             <div class="field">
-              <label for="category">Categoría</label>
-              <select id="category" data-category>
-                <option value="all">Todas las categorías</option>
-                <option value="website">Sitio web</option><option value="map">Mapa</option><option value="form">Formulario</option>
+              <label for="registry-status">Estado</label>
+              <select id="registry-status" data-registry-status>
+                <option value="all">Todos los estados</option>
+                <option value="missing">Se busca</option>
+                <option value="safe">A salvo</option>
+                <option value="found">Encontrado</option>
               </select>
             </div>
             <div class="field">
-              <label for="purpose">Propósito</label>
-              <select id="purpose" data-purpose>
-                <option value="all">Todos los propósitos</option>
-                <option value="report-and-search">Reportar y buscar</option><option value="context-and-location">Contexto y ubicación</option><option value="reporting">Reporte</option>
-              </select>
+              <label>Filas visibles</label>
+              <p class="small" data-registry-results>Cargando registro beta</p>
             </div>
           </div>
-          <p class="small" data-results-count>Cargando recursos</p>
-          <div class="source-list" data-source-list></div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="shell">
-        <p>VeneHelp agrupa enlaces públicos y datos estructurados para facilitar el acceso humano y la búsqueda por LLMs. Última generación: 2026-06-26T11:47:14.902Z.</p>
+          <div class="table-scroll">
+            <table class="registry-table">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Estado</th>
+                  <th>Ubicación</th>
+                  <th>Reportado en</th>
+                </tr>
+              </thead>
+              <tbody data-registry-body>
+                <tr><td colspan="4" class="small">Cargando registro beta</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
       </div>
-    </footer>
+    </main>
     <script>window.VENEHELP_CONFIG = {"basePath":"/es","messages":{"lang":"es","localeLabel":"Español","alternateLocaleLabel":"English","htmlTitle":"VeneHelp","siteDescription":"Directorio de recursos de ayuda a afectados por el Terremoto en Venezuela.","eyebrow":"Directorio de ayuda","heroTitle":"VeneHelp","heroLede":"Directorio de recursos de ayuda a afectados por el Terremoto en Venezuela.","directoryNote":"Agrupamos sitios, formularios, mapas y registros que han aparecido de forma fragmentada o redundante. La meta es que personas afectadas, voluntarios, periodistas y LLMs encuentren recursos confiables desde un solo lugar.","registryTitle":"Registro consolidado (beta)","registryIntro":"Mostramos un contador principal y una tabla de trazabilidad a partir de un registro público consolidado. Esta vista es beta y hoy usa una recolección parcial de páginas públicas mientras se agregan más adaptadores.","registryLoading":"Cargando registro beta","registryLoadFailed":"No se pudo cargar el registro beta.","registryEmpty":"Todavía no hay filas en el registro beta.","registryMissingLabel":"Se busca","registryFoundLabel":"Encontradas / a salvo","registryPreviewLabel":"Filas en vista previa","registryPartialNote":"Vista previa tomada de {sampledPages} de {totalPages} páginas públicas de {sourceName}.","registryFullNote":"Vista completa tomada de {sourceName}.","registryNameColumn":"Nombre","registryStatusColumn":"Estado","registryLocationColumn":"Ubicación","registryReportedOnColumn":"Reportado en","registryResultsLabel":"Filas visibles","registryResultsShown":"{count} filas visibles","registrySearchLabel":"Buscar en el registro","registrySearchPlaceholder":"Nombre, ubicación o fuente","registryFilterLabel":"Estado","registryAllStatuses":"Todos los estados","registryStatusMissing":"Se busca","registryStatusSafe":"A salvo","registryStatusFound":"Encontrado","registryLinkLabel":"Abrir registro beta","registryPageTitle":"Registro beta | VeneHelp","registryPageEyebrow":"Registro beta","registryPageIntro":"Tabla beta de trazabilidad con búsqueda y filtros por estado. Los datos siguen siendo parciales y dependen de adaptadores públicos por sitio.","findSourceTitle":"Recursos disponibles","findSourceIntro":"Busca por nombre o filtra por tipo de recurso. El dataset para agentes y buscadores está disponible en <a href=\"{dataUrl}\"><code>{dataPath}</code></a>.","searchLabel":"Buscar","searchPlaceholder":"Busca por nombre, categoría o etiqueta","categoryLabel":"Categoría","purposeLabel":"Propósito","allCategories":"Todas las categorías","allPurposes":"Todos los propósitos","loadingSources":"Cargando recursos","resultsShown":"{count} recursos visibles","noResults":"Ningún recurso coincide con los filtros actuales.","loadFailed":"No se pudieron cargar las fuentes","loadFailedHelp":"Verifica que exista el archivo JSON generado y que el sitio se esté sirviendo desde la carpeta docs.","openSource":"Abrir recurso","details":"Detalles","directLinkPending":"Enlace directo pendiente","footer":"VeneHelp agrupa enlaces públicos y datos estructurados para facilitar el acceso humano y la búsqueda por LLMs. Última generación: {generatedAt}.","allSourcesEyebrow":"Todos los recursos","allSourcesTitle":"Directorio de recursos","allSourcesIntro":"Cada recurso tiene una página estable de detalle y una exportación JSON canónica por idioma.","breadcrumbsSources":"Recursos","metadataTitle":"Metadatos","coverageLabelDetail":"Cobertura","languageLabelDetail":"Idioma","requiresLoginLabel":"Requiere inicio de sesión","ownerLabelDetail":"Responsable","crawlerPriorityLabel":"Prioridad para rastreo","lastCheckedLabel":"Última revisión de enlace","notYetChecked":"No revisado","notesTitle":"Notas","tagsTitle":"Etiquetas","viewJson":"Ver JSON","languageNavLabel":"Idioma","sourceListTitle":"Todos los recursos | VeneHelp"}};</script>
     <script src="/app.js" defer></script>
   </body>
