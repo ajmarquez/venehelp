@@ -655,6 +655,19 @@ summary:focus-visible,
   font-size: 0.94rem;
 }
 
+.detail-link {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.detail-link:hover,
+.detail-link:focus-visible {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
 .language-switcher {
   display: inline-flex;
   flex-wrap: wrap;
@@ -1255,6 +1268,23 @@ const formatNumber = (value) => {
   }
 };
 
+const formatAsOf = (value) => {
+  if (!value) return '';
+  // Date-only stamps (YYYY-MM-DD) have no time component to localize.
+  if (value.length <= 10) return value;
+  const d = new Date(value);
+  if (isNaN(d.getTime())) return value;
+  try {
+    // No timeZone option -> the browser renders it in the viewer's local time.
+    return d.toLocaleString(messages.lang === 'es' ? 'es-VE' : 'en-US', {
+      day: '2-digit', month: 'short', year: 'numeric',
+      hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
+    });
+  } catch (error) {
+    return value;
+  }
+};
+
 const renderStats = (stats) => {
   if (!stats) return '';
   const parts = [];
@@ -1262,15 +1292,15 @@ const renderStats = (stats) => {
   if (stats.found != null) parts.push('<strong>' + formatNumber(stats.found) + '</strong> ' + escapeHtml(messages.statFound));
   if (stats.located != null) parts.push('<strong>' + formatNumber(stats.located) + '</strong> ' + escapeHtml(messages.statLocated));
   if (!parts.length) return '';
-  const attribution = escapeHtml(messages.statBySite) + (stats.as_of ? ' · ' + escapeHtml(stats.as_of) : '');
+  const attribution = escapeHtml(messages.statBySite) + (stats.as_of ? ' · ' + escapeHtml(formatAsOf(stats.as_of)) : '');
   return '<p class="source-stats">' + parts.join(' · ') + ' <span class="source-stats-note">— ' + attribution + '</span></p>';
 };
 
 const renderRegistryCard = (source) => {
   const detailsPath = basePath + '/sources/' + source.slug + '/';
-  const linkHtml = source.url
-    ? '<a class="button" href="' + source.url + '" target="_blank" rel="noreferrer">' + messages.openSource + '</a>'
-    : '<span class="small">' + messages.directLinkPending + '</span>';
+  const titleHtml = source.url
+    ? '<h3><a href="' + source.url + '" target="_blank" rel="noreferrer">' + escapeHtml(source.name) + '</a></h3>'
+    : '<h3><a href="' + detailsPath + '">' + escapeHtml(source.name) + '</a></h3>';
   const useWhenHtml = source.use_when_label
     ? '<p class="source-usewhen">' + escapeHtml(source.use_when_label) + '</p>'
     : '';
@@ -1288,7 +1318,7 @@ const renderRegistryCard = (source) => {
 
   return [
     '<article class="source-card">',
-    '<h3><a href="' + detailsPath + '">' + escapeHtml(source.name) + '</a></h3>',
+    titleHtml,
     useWhenHtml,
     warningHtml,
     '<p>' + escapeHtml(source.summary) + '</p>',
@@ -1296,8 +1326,7 @@ const renderRegistryCard = (source) => {
     '<div class="cap-row">' + capHtml + '</div>',
     trustHtml,
     '<footer>',
-    linkHtml,
-    '<a class="button secondary" href="' + detailsPath + '">' + messages.details + '</a>',
+    '<a class="detail-link" href="' + detailsPath + '">' + messages.details + ' →</a>',
     '</footer>',
     '</article>'
   ].join("");
@@ -1468,6 +1497,24 @@ const formatNumberStatic = (value, locale) => {
   return n.toLocaleString(locale === "es" ? "es-VE" : "en-US");
 };
 
+const formatAsOfStatic = (value, locale) => {
+  if (!value) return "";
+  // Date-only stamps (YYYY-MM-DD) have no time component to localize.
+  if (value.length <= 10) return value;
+  const d = new Date(value);
+  if (Number.isNaN(d.getTime())) return value;
+  try {
+    // Static HTML can't know the viewer's clock, so default to Venezuela time.
+    return d.toLocaleString(locale === "es" ? "es-VE" : "en-US", {
+      day: "2-digit", month: "short", year: "numeric",
+      hour: "2-digit", minute: "2-digit",
+      timeZone: "America/Caracas", timeZoneName: "short"
+    });
+  } catch (error) {
+    return value;
+  }
+};
+
 const renderStatsStatic = (stats, locale, copy) => {
   if (!stats) return "";
   const parts = [];
@@ -1475,7 +1522,7 @@ const renderStatsStatic = (stats, locale, copy) => {
   if (stats.found != null) parts.push(`<strong>${formatNumberStatic(stats.found, locale)}</strong> ${escapeHtml(copy.statFound)}`);
   if (stats.located != null) parts.push(`<strong>${formatNumberStatic(stats.located, locale)}</strong> ${escapeHtml(copy.statLocated)}`);
   if (!parts.length) return "";
-  const attribution = `${escapeHtml(copy.statBySite)}${stats.as_of ? ` · ${escapeHtml(stats.as_of)}` : ""}`;
+  const attribution = `${escapeHtml(copy.statBySite)}${stats.as_of ? ` · ${escapeHtml(formatAsOfStatic(stats.as_of, locale))}` : ""}`;
   return `<p class="source-stats" style="margin-top:0.85rem">${parts.join(" · ")} <span class="source-stats-note">— ${attribution}</span></p>`;
 };
 

@@ -605,6 +605,19 @@ summary:focus-visible,
   font-size: 0.94rem;
 }
 
+.detail-link {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.detail-link:hover,
+.detail-link:focus-visible {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
 .language-switcher {
   display: inline-flex;
   flex-wrap: wrap;

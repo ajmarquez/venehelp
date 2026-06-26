@@ -15,7 +15,7 @@ import path from "node:path";
 
 const rootDir = path.resolve(new URL("..", import.meta.url).pathname);
 const sourceFile = path.join(rootDir, "data", "sources.json");
-const today = new Date().toISOString().slice(0, 10);
+const nowIso = new Date().toISOString();
 const dryRun = process.argv.includes("--dry-run");
 const UA = "VeneHelpStatsBot/1.0 (+https://directorioterremotovenezuela.org)";
 const TIMEOUT_MS = 15000;
@@ -68,6 +68,19 @@ const adapters = {
       found: numberNear(html, ["encontrad", "localizad", "found"])
     };
   },
+  "venezuela-te-busca": async () => {
+    // Counts are server-rendered into the public homepage HTML
+    // ("32.149 registradas", "7.720 localizadas").
+    const html = await fetchText("https://venezuelatebusca.com/");
+    return {
+      reported: numberNear(html, ["registrad", "reportad", "desaparecid"]),
+      found: numberNear(html, ["localizad", "encontrad", "found"])
+    };
+  },
+  // NOTE: red-ayuda-venezuela renders its counters client-side from a Supabase
+  // backend (no public counts endpoint in the static HTML). Reading them would
+  // mean calling that backend with the app's anon key, which we do not do, so
+  // it has no adapter here and any report_stats would be maintained manually.
   // NOTE: desaparecidos-terremoto-venezuela loads its counters client-side from
   // https://desaparecidos-terremoto-api.theempire.tech/api/personas/*, which is
   // reCAPTCHA-gated (every data request returns 403 "Verificación reCAPTCHA
@@ -123,7 +136,7 @@ for (const source of sources) {
   }
 
   if (updatedAny) {
-    next.as_of = today;
+    next.as_of = nowIso;
     next.source = "self-reported";
     source.report_stats = next;
     changed = true;
