@@ -4,7 +4,8 @@ const basePath = config.basePath || "";
 
 const state = {
   sources: [],
-  query: ""
+  query: "",
+  filters: { public_search: false, accepts_new_reports: false, report_found: false }
 };
 
 const sectionEls = Array.from(document.querySelectorAll("[data-section-list]"));
@@ -25,6 +26,9 @@ const escapeHtml = (value) =>
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
+
+const matchesFilters = (source, filters) =>
+  Object.keys(filters).every((key) => !filters[key] || Boolean(source[key]));
 
 const matchesQuery = (source, query) => {
   if (!query) return true;
@@ -145,7 +149,9 @@ const renderDeveloperCard = (resource) => {
 };
 
 const render = () => {
-  const filtered = state.sources.filter((source) => matchesQuery(source, state.query));
+  const filtered = state.sources.filter(
+    (source) => matchesQuery(source, state.query) && matchesFilters(source, state.filters)
+  );
 
   if (registryCountEl) {
     registryCountEl.textContent = interpolate(messages.resultsShown, { count: filtered.length });
@@ -198,5 +204,15 @@ if (searchEl) {
     render();
   });
 }
+
+Array.from(document.querySelectorAll("[data-filter]")).forEach((button) => {
+  button.addEventListener("click", () => {
+    const key = button.getAttribute("data-filter");
+    state.filters[key] = !state.filters[key];
+    button.setAttribute("aria-pressed", String(state.filters[key]));
+    button.classList.toggle("filter-btn--active", state.filters[key]);
+    render();
+  });
+});
 
 load();

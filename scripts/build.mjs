@@ -300,6 +300,43 @@ select:focus {
   border-top: 1px solid var(--line);
 }
 
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.filters-label {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.filter-btn {
+  min-height: 2.4rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.86rem;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  border-color: var(--blue);
+}
+
+.filter-btn--active {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+}
+
 .directory-sections {
   display: grid;
   gap: 2.5rem;
@@ -884,6 +921,7 @@ const localeCopy = {
     capReport: "Acepta reportes",
     capFound: "Marca encontrado / a salvo",
     checkedShort: "Revisado",
+    filterLabel: "Mostrar solo",
     venehelpDatasetTitle: "Dataset público de VeneHelp",
     venehelpDatasetSummary:
       "Exportación JSON del directorio de VeneHelp para LLMs, buscadores e integraciones simples.",
@@ -1002,6 +1040,7 @@ const localeCopy = {
     capReport: "Accepts reports",
     capFound: "Mark found / safe",
     checkedShort: "Checked",
+    filterLabel: "Show only",
     venehelpDatasetTitle: "VeneHelp public dataset",
     venehelpDatasetSummary:
       "JSON export of the VeneHelp directory for LLMs, search systems, and lightweight integrations.",
@@ -1055,7 +1094,8 @@ const basePath = config.basePath || "";
 
 const state = {
   sources: [],
-  query: ""
+  query: "",
+  filters: { public_search: false, accepts_new_reports: false, report_found: false }
 };
 
 const sectionEls = Array.from(document.querySelectorAll("[data-section-list]"));
@@ -1076,6 +1116,9 @@ const escapeHtml = (value) =>
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
+
+const matchesFilters = (source, filters) =>
+  Object.keys(filters).every((key) => !filters[key] || Boolean(source[key]));
 
 const matchesQuery = (source, query) => {
   if (!query) return true;
@@ -1196,7 +1239,9 @@ const renderDeveloperCard = (resource) => {
 };
 
 const render = () => {
-  const filtered = state.sources.filter((source) => matchesQuery(source, state.query));
+  const filtered = state.sources.filter(
+    (source) => matchesQuery(source, state.query) && matchesFilters(source, state.filters)
+  );
 
   if (registryCountEl) {
     registryCountEl.textContent = interpolate(messages.resultsShown, { count: filtered.length });
@@ -1249,6 +1294,16 @@ if (searchEl) {
     render();
   });
 }
+
+Array.from(document.querySelectorAll("[data-filter]")).forEach((button) => {
+  button.addEventListener("click", () => {
+    const key = button.getAttribute("data-filter");
+    state.filters[key] = !state.filters[key];
+    button.setAttribute("aria-pressed", String(state.filters[key]));
+    button.classList.toggle("filter-btn--active", state.filters[key]);
+    render();
+  });
+});
 
 load();
 `.trimStart();
@@ -1477,6 +1532,12 @@ ${renderHead({
               <label for="search">${escapeHtml(copy.searchLabel)}</label>
               <input id="search" type="search" placeholder="${escapeHtml(copy.searchPlaceholder)}" data-search>
             </div>
+          </div>
+          <div class="filters" role="group" aria-label="${escapeHtml(copy.filterLabel)}">
+            <span class="filters-label">${escapeHtml(copy.filterLabel)}</span>
+            <button type="button" class="filter-btn" data-filter="public_search" aria-pressed="false">${escapeHtml(copy.capSearch)}</button>
+            <button type="button" class="filter-btn" data-filter="accepts_new_reports" aria-pressed="false">${escapeHtml(copy.capReport)}</button>
+            <button type="button" class="filter-btn" data-filter="report_found" aria-pressed="false">${escapeHtml(copy.capFound)}</button>
           </div>
           <p class="small" data-results-count>${escapeHtml(copy.loadingSources)}</p>
           <div class="directory-sections">
