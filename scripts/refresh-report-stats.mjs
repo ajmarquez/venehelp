@@ -68,22 +68,16 @@ const adapters = {
       found: numberNear(html, ["encontrad", "localizad", "found"])
     };
   },
-  "desaparecidos-terremoto-venezuela": async () => {
-    const html = await fetchText("https://desaparecidosterremotovenezuela.com/");
-    return {
-      reported: numberNear(html, ["reportad", "desaparecid", "registrad"]),
-      found: numberNear(html, ["encontrad", "localizad"])
-    };
-  },
+  // NOTE: desaparecidos-terremoto-venezuela loads its counters client-side from
+  // https://desaparecidos-terremoto-api.theempire.tech/api/personas/*, which is
+  // reCAPTCHA-gated (every data request returns 403 "Verificación reCAPTCHA
+  // requerida"). We deliberately do not try to bypass that anti-abuse control,
+  // so its report_stats are maintained manually in data/sources.json and only
+  // the as_of date tells you how fresh they are.
   "localizados-venezuela": async () => {
-    // Public read API documented at /api (CORS-enabled GET endpoints).
-    const data = await fetchJson("https://localizadosvenezuela.com/api/v1/people?limit=1");
-    const located =
-      firstNumber(data?.total) ??
-      firstNumber(data?.count) ??
-      firstNumber(data?.meta?.total) ??
-      firstNumber(data?.pagination?.total);
-    return { located };
+    // Public read API (CORS-enabled). meta.total is the located-people count.
+    const data = await fetchJson("https://localizadosvenezuela.com/api/v1/localizados?limit=1");
+    return { located: firstNumber(data?.meta?.total) };
   }
 };
 

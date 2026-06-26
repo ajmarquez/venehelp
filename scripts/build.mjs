@@ -12,6 +12,7 @@ const sitePath = (process.env.SITE_PATH || "").replace(/\/+$/, "");
 const cloudflareAnalyticsToken = (process.env.CLOUDFLARE_ANALYTICS_TOKEN ?? defaultCloudflareAnalyticsToken).trim();
 const showRegistry = false;
 const generatedAt = new Date().toISOString();
+const assetVersion = generatedAt.replace(/[^0-9]/g, "");
 const rawSources = JSON.parse(await fs.readFile(sourceFile, "utf8"));
 const supportedLocales = ["es", "en"];
 const rawRegistry = {
@@ -409,6 +410,16 @@ summary:focus-visible,
 
 .directory-block .small {
   margin: 0.5rem 0 0;
+}
+
+.section-note {
+  margin: 0.75rem 0 0;
+  padding: 0.65rem 0.85rem;
+  border-left: 4px solid var(--yellow);
+  background: var(--surface-muted);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .directory-block .source-list {
@@ -903,7 +914,7 @@ const spanishSourceCopy = {
   },
   "localizados-venezuela": {
     summary:
-      "Plataforma pública y de código abierto para buscar y aportar registros de personas ya localizadas tras el terremoto, con API pública de solo lectura para integraciones.",
+      "Plataforma pública y de código abierto que consolida listados de pacientes en hospitales para ayudar a ubicar a personas ya localizadas tras el terremoto. Incluye API pública de solo lectura.",
     notes: [
       "La documentación de la API pública está disponible en /api y los endpoints GET de la v1 responden JSON con CORS habilitado para lectura.",
       "El proyecto aclara que es solo para personas localizadas y redirige los casos de desaparecidos a desaparecidosterremotovenezuela.com."
@@ -953,15 +964,11 @@ const localeCopy = {
       "Directorio público de plataformas para buscar y reportar personas, ver localizados y encontrar ayuda de emergencia tras el terremoto en Venezuela.",
     eyebrow: "Directorio del terremoto en Venezuela",
     heroTitle: "Dónde buscar personas y encontrar ayuda",
-    heroLede:
-      "VeneHelp reúne las plataformas públicas para buscar y reportar personas desaparecidas, ver quién ya fue localizado y encontrar ayuda de emergencia tras el terremoto en Venezuela.",
     heroPromise: "No recibimos reportes aquí; te ayudamos a elegir el sitio correcto.",
-    directoryNote:
-      "Mostramos en un solo lugar qué sitios aceptan casos nuevos, cuáles tienen búsqueda pública y cuáles permiten marcar a alguien como encontrado o a salvo.",
     triageTitle: "¿Por dónde empiezo?",
     triageMissingQ: "¿Buscas o reportas a una persona desaparecida?",
     triageMissingA: "Empieza por Personas desaparecidas",
-    triageLocatedQ: "¿Crees que ya fue localizada o trasladada?",
+    triageLocatedQ: "¿Podría estar hospitalizada o ya localizada?",
     triageLocatedA: "Revisa Personas localizadas",
     triageAidQ: "¿Necesitas rescate, refugio o ayuda?",
     triageAidA: "Revisa Ayuda y emergencia",
@@ -997,14 +1004,13 @@ const localeCopy = {
     registryPageIntro:
       "Tabla beta de trazabilidad con búsqueda y filtros por estado. Los datos siguen siendo parciales y dependen de adaptadores públicos por sitio.",
     findSourceTitle: "Directorio",
-    findSourceIntro:
-      "Agrupamos las plataformas por lo que necesitas: personas desaparecidas, personas ya localizadas y ayuda de emergencia. Los recursos técnicos para desarrolladores están al final.",
     searchLabel: "Buscar",
     searchPlaceholder: "Busca por nombre, servicio o etiqueta",
     missingSectionTitle: "Personas desaparecidas",
     missingSectionIntro: "Plataformas para buscar y reportar personas desaparecidas tras el terremoto.",
+    missingSectionNote: "Los contadores los publica cada plataforma y pueden incluir duplicados, registros sin verificar o entradas obsoletas, así que no equivalen al número real de personas desaparecidas.",
     locatedSectionTitle: "Personas localizadas",
-    locatedSectionIntro: "Plataformas para personas que ya fueron localizadas o trasladadas. No son para reportar desaparecidos.",
+    locatedSectionIntro: "Listados de personas ya localizadas, como pacientes en hospitales. No son para reportar desaparecidos.",
     aidSectionTitle: "Ayuda y emergencia",
     aidSectionIntro: "Plataformas para coordinar rescate, refugio, daños y otros recursos de emergencia. No son para buscar o reportar personas desaparecidas.",
     developerEyebrow: "Sección técnica",
@@ -1074,15 +1080,11 @@ const localeCopy = {
       "Public directory of platforms to search for and report people, see who's been located, and find emergency aid after the earthquake in Venezuela.",
     eyebrow: "Venezuela earthquake directory",
     heroTitle: "Where to find people and get help",
-    heroLede:
-      "VeneHelp gathers the public platforms to search for and report missing people, see who has already been located, and find emergency aid after the earthquake in Venezuela.",
     heroPromise: "We don't take reports here; we help you choose the right site.",
-    directoryNote:
-      "We show in one place which sites accept new cases, which offer public search, and which let someone be marked as found or safe.",
     triageTitle: "Where do I start?",
     triageMissingQ: "Searching for or reporting a missing person?",
     triageMissingA: "Start with Missing people",
-    triageLocatedQ: "Think they were already located or moved?",
+    triageLocatedQ: "Could they be in a hospital or already located?",
     triageLocatedA: "Check Located people",
     triageAidQ: "Need rescue, shelter, or aid?",
     triageAidA: "Check Aid & emergency",
@@ -1118,14 +1120,13 @@ const localeCopy = {
     registryPageIntro:
       "Beta provenance table with search and status filters. The data is still partial and depends on public per-site adapters.",
     findSourceTitle: "Directory",
-    findSourceIntro:
-      "We group platforms by what you need: missing people, people already located, and emergency aid. Technical resources for developers are at the end.",
     searchLabel: "Search",
     searchPlaceholder: "Search by name, service, or tag",
     missingSectionTitle: "Missing people",
     missingSectionIntro: "Platforms to search for and report missing people after the earthquake.",
+    missingSectionNote: "The counts are published by each platform and may include duplicate, unverified, or outdated entries, so they do not equal the real number of missing people.",
     locatedSectionTitle: "Located people",
-    locatedSectionIntro: "Platforms for people who have already been located or moved. Not for reporting missing people.",
+    locatedSectionIntro: "Listings of people already located, such as hospital patients. Not for reporting missing people.",
     aidSectionTitle: "Aid & emergency",
     aidSectionIntro: "Platforms to coordinate rescue, shelter, damage, and other emergency resources. Not for searching or reporting missing people.",
     developerEyebrow: "Technical section",
@@ -1192,6 +1193,7 @@ const appJs = `
 const config = window.VENEHELP_CONFIG || {};
 const messages = config.messages || {};
 const basePath = config.basePath || "";
+const assetVersion = config.assetVersion ? "?v=" + encodeURIComponent(config.assetVersion) : "";
 
 const state = {
   sources: [],
@@ -1302,7 +1304,7 @@ const renderRegistryCard = (source) => {
 };
 
 const buildDeveloperResources = (sources) => {
-  const datasetPath = basePath + "/data/sources.json";
+  const datasetPath = basePath + "/data/sources.json" + assetVersion;
   const items = [
     {
       key: "venehelp-dataset",
@@ -1396,7 +1398,7 @@ const load = async () => {
   }
 
   try {
-    const response = await fetch(basePath + "/data/sources.json");
+    const response = await fetch(basePath + "/data/sources.json" + assetVersion);
     const sources = await response.json();
     state.sources = sources
       .slice()
@@ -1593,6 +1595,8 @@ const renderCloudflareAnalyticsSnippet = () => {
   return `    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='${beaconConfig}'></script>\n`;
 };
 
+const withAssetVersion = (assetPath) => `${withSitePath(assetPath)}?v=${encodeURIComponent(assetVersion)}`;
+
 const renderHead = ({ lang, title, description, canonical, alternates }) => `  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1600,7 +1604,7 @@ const renderHead = ({ lang, title, description, canonical, alternates }) => `  <
     <meta name="description" content="${escapeHtml(description)}">
     <link rel="canonical" href="${escapeHtml(canonical)}">
     ${alternates}
-    <link rel="stylesheet" href="${withSitePath("/styles.css")}">
+    <link rel="stylesheet" href="${withAssetVersion("/styles.css")}">
   </head>`;
 
 const renderLanguageSwitcher = (locale, pathname, { rootDefault = false } = {}) => {
@@ -1648,8 +1652,6 @@ ${renderHead({
             <p class="eyebrow">${escapeHtml(copy.eyebrow)}</p>
             <h1>${escapeHtml(copy.heroTitle)}</h1>
             <p class="hero-promise">${escapeHtml(copy.heroPromise)}</p>
-            <p class="lede">${escapeHtml(copy.heroLede)}</p>
-            <p class="directory-note">${escapeHtml(copy.directoryNote)}</p>
           </div>
           <div class="triage">
             <h2 class="triage-title">${escapeHtml(copy.triageTitle)}</h2>
@@ -1674,7 +1676,6 @@ ${renderHead({
       <section class="section">
         <div class="shell panel" id="directorio">
           <h2>${escapeHtml(copy.findSourceTitle)}</h2>
-          <p class="page-intro">${escapeHtml(copy.findSourceIntro)}</p>
           <div class="controls">
             <div class="field">
               <label for="search">${escapeHtml(copy.searchLabel)}</label>
@@ -1692,6 +1693,7 @@ ${renderHead({
             <section class="directory-block" id="section-missing">
               <h3>${escapeHtml(copy.missingSectionTitle)}</h3>
               <p class="small">${escapeHtml(copy.missingSectionIntro)}</p>
+              <p class="section-note">${escapeHtml(copy.missingSectionNote)}</p>
               <div class="source-list" data-section-list="missing"></div>
             </section>
             <section class="directory-block" id="section-located">
@@ -1725,8 +1727,8 @@ ${renderHead({
         <p>${escapeHtml(interpolate(copy.footer, { generatedAt }))}</p>
       </div>
     </footer>
-${renderCloudflareAnalyticsSnippet()}    <script>window.VENEHELP_CONFIG = ${JSON.stringify({ basePath: appBasePath, messages: copy })};</script>
-    <script src="${withSitePath("/app.js")}" defer></script>
+${renderCloudflareAnalyticsSnippet()}    <script>window.VENEHELP_CONFIG = ${JSON.stringify({ basePath: appBasePath, assetVersion, messages: copy })};</script>
+    <script src="${withAssetVersion("/app.js")}" defer></script>
   </body>
 </html>`;
 };
@@ -1805,8 +1807,8 @@ ${renderHead({
         </section>
       </div>
     </main>
-${renderCloudflareAnalyticsSnippet()}    <script>window.VENEHELP_CONFIG = ${JSON.stringify({ basePath: localeBasePath(locale), messages: copy })};</script>
-    <script src="${withSitePath("/app.js")}" defer></script>
+${renderCloudflareAnalyticsSnippet()}    <script>window.VENEHELP_CONFIG = ${JSON.stringify({ basePath: localeBasePath(locale), assetVersion, messages: copy })};</script>
+    <script src="${withAssetVersion("/app.js")}" defer></script>
   </body>
 </html>`;
 };

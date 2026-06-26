@@ -23,6 +23,12 @@
       "missing-search",
       "found-report"
     ],
+    "report_stats": {
+      "reported": 62161,
+      "found": 9991,
+      "as_of": "2026-06-26",
+      "source": "self-reported"
+    },
     "summary": "Registro ciudadano para reportar y buscar personas desaparecidas tras el terremoto. Se ha citado como una de las plataformas públicas más referenciadas.",
     "use_when": {
       "es": "Úsalo si buscas o quieres reportar a una persona desaparecida.",
@@ -279,14 +285,19 @@
       "located-search",
       "located-report"
     ],
-    "summary": "Plataforma pública y de código abierto para buscar y aportar registros de personas ya localizadas tras el terremoto, con API pública de solo lectura para integraciones.",
+    "report_stats": {
+      "located": 1997,
+      "as_of": "2026-06-26",
+      "source": "self-reported"
+    },
+    "summary": "Plataforma pública y de código abierto que consolida listados de pacientes en hospitales para ayudar a ubicar a personas ya localizadas tras el terremoto. Incluye API pública de solo lectura.",
     "use_when": {
-      "es": "Úsalo si la persona ya fue localizada — no es para reportar desaparecidos.",
-      "en": "Use this if the person has already been located — not for reporting missing people."
+      "es": "Úsalo para buscar a una persona en los listados de pacientes de hospitales.",
+      "en": "Use this to search for a person in hospital patient listings."
     },
     "warning": {
-      "es": "Solo para personas ya localizadas. Si buscas a alguien desaparecido, usa la sección Personas desaparecidas.",
-      "en": "Only for people already located. To search for someone missing, use the Missing people section."
+      "es": "Reúne listados de pacientes en hospitales, no reportes de desaparecidos. Si buscas a alguien desaparecido, usa la sección Personas desaparecidas.",
+      "en": "It gathers hospital patient listings, not missing-person reports. To search for someone missing, use the Missing people section."
     },
     "notes": [
       "La documentación de la API pública está disponible en /api y los endpoints GET de la v1 responden JSON con CORS habilitado para lectura.",
@@ -299,8 +310,8 @@
       "api",
       "hospitales"
     ],
-    "use_when_label": "Úsalo si la persona ya fue localizada — no es para reportar desaparecidos.",
-    "warning_label": "Solo para personas ya localizadas. Si buscas a alguien desaparecido, usa la sección Personas desaparecidas.",
+    "use_when_label": "Úsalo para buscar a una persona en los listados de pacientes de hospitales.",
+    "warning_label": "Reúne listados de pacientes en hospitales, no reportes de desaparecidos. Si buscas a alguien desaparecido, usa la sección Personas desaparecidas.",
     "category_label": "Sitio web",
     "purpose_label": "Personas localizadas",
     "status_label": "Activa",

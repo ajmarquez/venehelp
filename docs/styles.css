@@ -362,6 +362,16 @@ summary:focus-visible,
   margin: 0.5rem 0 0;
 }
 
+.section-note {
+  margin: 0.75rem 0 0;
+  padding: 0.65rem 0.85rem;
+  border-left: 4px solid var(--yellow);
+  background: var(--surface-muted);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .directory-block .source-list {
   margin-top: 1rem;
 }
