@@ -1,6 +1,7 @@
 [
   {
     "slug": "desaparecidos-terremoto-venezuela",
+    "section": "missing",
     "name": "Desaparecidos Terremoto Venezuela",
     "url": "https://desaparecidosterremotovenezuela.com/",
     "category": "website",
@@ -23,6 +24,10 @@
       "found-report"
     ],
     "summary": "Citizen-led registry for reporting and searching missing persons after the earthquake. Reportedly one of the most referenced public platforms.",
+    "use_when": {
+      "es": "Úsalo si buscas o quieres reportar a una persona desaparecida.",
+      "en": "Use this to search for or report a missing person."
+    },
     "notes": [
       "URL loaded successfully during the June 26, 2026 link check.",
       "Intended to support reporting missing people, searching records, and marking someone as found."
@@ -33,6 +38,7 @@
       "public-registry",
       "volunteer-run"
     ],
+    "use_when_label": "Use this to search for or report a missing person.",
     "category_label": "Website",
     "purpose_label": "Report and search",
     "status_label": "Active",
@@ -56,6 +62,7 @@
   },
   {
     "slug": "venezuela-te-busca",
+    "section": "missing",
     "name": "Venezuela Te Busca",
     "url": "https://venezuelatebusca.com/",
     "category": "website",
@@ -78,6 +85,10 @@
       "found-report"
     ],
     "summary": "Collaborative registry for disappeared persons with search and reporting flows.",
+    "use_when": {
+      "es": "Úsalo si buscas o quieres reportar a una persona desaparecida.",
+      "en": "Use this to search for or report a missing person."
+    },
     "notes": [
       "URL loaded successfully during the June 26, 2026 link check.",
       "Reportedly allows searching by person name, ID, or location."
@@ -88,6 +99,7 @@
       "search",
       "registry"
     ],
+    "use_when_label": "Use this to search for or report a missing person.",
     "category_label": "Website",
     "purpose_label": "Report and search",
     "status_label": "Active",
@@ -111,6 +123,7 @@
   },
   {
     "slug": "venezuela-reporta",
+    "section": "missing",
     "name": "Venezuela Reporta",
     "url": "https://venezuelareporta.org/",
     "category": "website",
@@ -133,6 +146,10 @@
       "found-report"
     ],
     "summary": "Citizen platform for reporting, searching, and marking missing people as found after the earthquake.",
+    "use_when": {
+      "es": "Úsalo si buscas o quieres reportar a una persona desaparecida.",
+      "en": "Use this to search for or report a missing person."
+    },
     "notes": [
       "URL loaded successfully during the June 26, 2026 link check.",
       "Public navigation and metadata show people-search, report intake, and found-status flows."
@@ -143,6 +160,7 @@
       "emergency",
       "citizen-platform"
     ],
+    "use_when_label": "Use this to search for or report a missing person.",
     "category_label": "Website",
     "purpose_label": "Report and search",
     "status_label": "Active",
@@ -166,6 +184,7 @@
   },
   {
     "slug": "red-ayuda-venezuela",
+    "section": "missing",
     "name": "Red Ayuda Venezuela",
     "url": "https://redayudavenezuela.com/",
     "category": "website",
@@ -188,6 +207,10 @@
       "safe-checkin"
     ],
     "summary": "Citizen emergency platform for marking people as safe, searching people, and coordinating help after the earthquake.",
+    "use_when": {
+      "es": "Úsalo si quieres avisar que alguien está a salvo o buscar a una persona.",
+      "en": "Use this to mark someone safe or search for a person."
+    },
     "notes": [
       "URL loaded successfully during the June 26, 2026 link check.",
       "The site describes itself as a citizen emergency network for safe-status reports, people search, and aid coordination."
@@ -199,6 +222,7 @@
       "citizen-platform",
       "reporting"
     ],
+    "use_when_label": "Use this to mark someone safe or search for a person.",
     "category_label": "Website",
     "purpose_label": "Report and search",
     "status_label": "Active",
@@ -222,6 +246,7 @@
   },
   {
     "slug": "kobotoolbox-terremotove",
+    "section": "missing",
     "name": "KoboToolbox TerremotoVE",
     "url": "https://ee.kobotoolbox.org/x/eaEmQ9YW",
     "category": "form",
@@ -242,6 +267,10 @@
       "missing-report"
     ],
     "summary": "Community reporting form for missing or trapped people after the earthquake.",
+    "use_when": {
+      "es": "Úsalo si necesitas una vía adicional para reportar a alguien desaparecido o atrapado.",
+      "en": "Use this as an extra channel to report someone missing or trapped."
+    },
     "notes": [
       "URL loaded successfully during the June 26, 2026 link check.",
       "Useful when a family or volunteer needs an additional public intake path for a missing-person case."
@@ -252,6 +281,7 @@
       "reporting",
       "community"
     ],
+    "use_when_label": "Use this as an extra channel to report someone missing or trapped.",
     "category_label": "Form",
     "purpose_label": "Reporting",
     "status_label": "Active",
@@ -273,6 +303,7 @@
   },
   {
     "slug": "icrc-family-links-venezuela",
+    "section": "humanitarian",
     "name": "ICRC Family Links - Venezuelan Red Cross",
     "url": "https://familylinks.icrc.org/organization/venezuelan-red-cross",
     "category": "website",
@@ -293,6 +324,10 @@
       "family-tracing"
     ],
     "summary": "Official Red Cross family-links entrypoint for restoring contact and tracing requests connected to emergencies in Venezuela.",
+    "use_when": {
+      "es": "Úsalo si necesitas una vía humanitaria oficial de la Cruz Roja para restablecer contacto.",
+      "en": "Use this if you need an official Red Cross humanitarian path to restore contact."
+    },
     "notes": [
       "Primary humanitarian tracing route for families who need a higher-trust escalation path.",
       "The site uses access controls that may block automated checks, so availability should be verified manually."
@@ -303,6 +338,7 @@
       "official",
       "humanitarian"
     ],
+    "use_when_label": "Use this if you need an official Red Cross humanitarian path to restore contact.",
     "category_label": "Website",
     "purpose_label": "Family tracing",
     "status_label": "Manual verification",
@@ -324,6 +360,7 @@
   },
   {
     "slug": "localizados-venezuela",
+    "section": "located",
     "name": "Localizados Venezuela",
     "url": "https://localizadosvenezuela.com/",
     "api_url": "https://localizadosvenezuela.com/api",
@@ -347,6 +384,10 @@
       "located-report"
     ],
     "summary": "Open-source public platform for searching and contributing records of people already located after the earthquake, with a public read API for integrations.",
+    "use_when": {
+      "es": "Úsalo si la persona ya fue localizada — no es para reportar desaparecidos.",
+      "en": "Use this if the person has already been located — not for reporting missing people."
+    },
     "notes": [
       "Public API documentation is available at /api and the v1 GET endpoints return JSON with CORS enabled for read access.",
       "The project README explicitly says it is only for people already located and points missing-person cases to desaparecidosterremotovenezuela.com."
@@ -358,6 +399,7 @@
       "api",
       "hospitals"
     ],
+    "use_when_label": "Use this if the person has already been located — not for reporting missing people.",
     "category_label": "Website",
     "purpose_label": "Located people",
     "status_label": "Active",

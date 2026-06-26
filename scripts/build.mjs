@@ -1127,6 +1127,8 @@ const localizeSource = (source, locale) => {
     ...source,
     summary: sourceCopy?.summary || source.summary,
     notes: sourceCopy?.notes || source.notes,
+    use_when_label: source.use_when?.[locale] || source.use_when?.es || "",
+    section: source.section || "missing",
     category_label: translateMappedValue(categoryLabels, source.category, locale),
     purpose_label: translateMappedValue(purposeLabels, source.purpose, locale),
     status_label: translateMappedValue(statusLabels, source.status, locale),
