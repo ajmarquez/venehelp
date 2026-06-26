@@ -251,10 +251,15 @@ select:focus {
   border-top: 1px solid var(--line);
 }
 
-.directory-split {
+.directory-sections {
   display: grid;
-  gap: 2rem;
+  gap: 2.5rem;
   margin-top: 1.5rem;
+}
+
+.directory-developers {
+  border-top: 1px solid var(--line);
+  padding-top: 1.25rem;
 }
 
 .directory-block h3 {

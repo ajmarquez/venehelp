@@ -300,10 +300,15 @@ select:focus {
   border-top: 1px solid var(--line);
 }
 
-.directory-split {
+.directory-sections {
   display: grid;
-  gap: 2rem;
+  gap: 2.5rem;
   margin-top: 1.5rem;
+}
+
+.directory-developers {
+  border-top: 1px solid var(--line);
+  padding-top: 1.25rem;
 }
 
 .directory-block h3 {
@@ -795,12 +800,18 @@ const localeCopy = {
       "Tabla beta de trazabilidad con búsqueda y filtros por estado. Los datos siguen siendo parciales y dependen de adaptadores públicos por sitio.",
     findSourceTitle: "Directorio",
     findSourceIntro:
-      "Separamos el directorio entre registros para familias y recursos para desarrolladores. Usa la búsqueda para ubicar una plataforma concreta y luego revisa la sección técnica si necesitas APIs o datasets.",
+      "Agrupamos las plataformas por lo que necesitas: personas desaparecidas, personas ya localizadas y la ruta humanitaria oficial. Los recursos técnicos para desarrolladores están al final.",
     searchLabel: "Buscar",
     searchPlaceholder: "Busca por nombre, servicio o etiqueta",
     registrySectionTitle: "Registros",
     registrySectionIntro:
       "Plataformas públicas para buscar personas, reportar casos, avisar que alguien está a salvo o escalar a una ruta humanitaria.",
+    missingSectionTitle: "Personas desaparecidas",
+    missingSectionIntro: "Plataformas para buscar y reportar personas desaparecidas tras el terremoto.",
+    locatedSectionTitle: "Personas localizadas",
+    locatedSectionIntro: "Plataformas para personas que ya fueron localizadas o trasladadas. No son para reportar desaparecidos.",
+    humanitarianSectionTitle: "Ruta humanitaria",
+    humanitarianSectionIntro: "Vía oficial de escalamiento, con mayor confianza, para restablecer el contacto familiar.",
     developerSectionTitle: "Desarrolladores",
     developerSectionIntro:
       "APIs, datasets y proyectos open source útiles para integraciones, agentes y análisis técnico.",
@@ -902,12 +913,18 @@ const localeCopy = {
       "Beta provenance table with search and status filters. The data is still partial and depends on public per-site adapters.",
     findSourceTitle: "Directory",
     findSourceIntro:
-      "The directory is split between registry tools for families and technical resources for developers. Use search to find a specific platform, then review the technical section if you need APIs or datasets.",
+      "We group platforms by what you need: missing people, people already located, and the official humanitarian path. Technical resources for developers are at the end.",
     searchLabel: "Search",
     searchPlaceholder: "Search by name, service, or tag",
     registrySectionTitle: "Registries",
     registrySectionIntro:
       "Public platforms for searching for people, filing reports, marking someone safe, or escalating through a humanitarian path.",
+    missingSectionTitle: "Missing people",
+    missingSectionIntro: "Platforms to search for and report missing people after the earthquake.",
+    locatedSectionTitle: "Located people",
+    locatedSectionIntro: "Platforms for people who have already been located or moved. Not for reporting missing people.",
+    humanitarianSectionTitle: "Humanitarian path",
+    humanitarianSectionIntro: "Official, higher-trust escalation route to restore family contact.",
     developerSectionTitle: "Developers",
     developerSectionIntro:
       "APIs, datasets, and open-source projects that are useful for integrations, agents, and technical analysis.",
@@ -967,10 +984,11 @@ const state = {
   query: ""
 };
 
-const registryListEl = document.querySelector("[data-source-list]");
+const sectionEls = Array.from(document.querySelectorAll("[data-section-list]"));
 const registryCountEl = document.querySelector("[data-results-count]");
 const developerListEl = document.querySelector("[data-developer-list]");
 const searchEl = document.querySelector("[data-search]");
+const sectionOrder = ["missing", "located", "humanitarian"];
 
 const interpolate = (template, values = {}) =>
   String(template || "").replace(/\\{(\\w+)\\}/g, (_, key) => String(values[key] ?? ""));
@@ -1094,34 +1112,47 @@ const renderDeveloperCard = (resource) => {
 };
 
 const render = () => {
-  if (!registryCountEl || !registryListEl || !developerListEl) {
-    return;
+  const filtered = state.sources.filter((source) => matchesQuery(source, state.query));
+
+  if (registryCountEl) {
+    registryCountEl.textContent = interpolate(messages.resultsShown, { count: filtered.length });
   }
 
-  const filtered = state.sources.filter((source) => matchesQuery(source, state.query));
-  const developerResources = buildDeveloperResources(filtered);
+  sectionEls.forEach((el) => {
+    const key = el.getAttribute("data-section-list");
+    const inSection = filtered.filter((source) => (source.section || "missing") === key);
+    el.innerHTML = inSection.map(renderRegistryCard).join("") || '<p class="small">' + messages.noResults + '</p>';
+  });
 
-  registryCountEl.textContent = interpolate(messages.resultsShown, { count: filtered.length });
-  registryListEl.innerHTML = filtered.map(renderRegistryCard).join("") || '<p class="small">' + messages.noResults + '</p>';
-  developerListEl.innerHTML = developerResources.map(renderDeveloperCard).join("") || '<p class="small">' + messages.developerEmpty + '</p>';
+  if (developerListEl) {
+    const developerResources = buildDeveloperResources(filtered);
+    developerListEl.innerHTML = developerResources.map(renderDeveloperCard).join("") || '<p class="small">' + messages.developerEmpty + '</p>';
+  }
 };
 
 const load = async () => {
-  if (!registryListEl && !registryCountEl && !developerListEl) {
+  if (!sectionEls.length && !registryCountEl && !developerListEl) {
     return;
   }
 
   try {
     const response = await fetch(basePath + "/data/sources.json");
-    state.sources = await response.json();
+    const sources = await response.json();
+    state.sources = sources
+      .slice()
+      .sort((a, b) => {
+        const sectionDiff = sectionOrder.indexOf(a.section || "missing") - sectionOrder.indexOf(b.section || "missing");
+        if (sectionDiff !== 0) return sectionDiff;
+        return (a.crawler_priority || 99) - (b.crawler_priority || 99);
+      });
     render();
   } catch (error) {
     if (registryCountEl) {
       registryCountEl.textContent = messages.loadFailed;
     }
-    if (registryListEl) {
-      registryListEl.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
-    }
+    sectionEls.forEach((el) => {
+      el.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
+    });
     if (developerListEl) {
       developerListEl.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
     }
@@ -1353,19 +1384,32 @@ ${renderHead({
               <input id="search" type="search" placeholder="${escapeHtml(copy.searchPlaceholder)}" data-search>
             </div>
           </div>
-          <div class="directory-split">
-            <section class="directory-block">
-              <h3>${escapeHtml(copy.registrySectionTitle)}</h3>
-              <p class="small">${escapeHtml(copy.registrySectionIntro)}</p>
-              <p class="small" data-results-count>${escapeHtml(copy.loadingSources)}</p>
-              <div class="source-list" data-source-list></div>
+          <p class="small" data-results-count>${escapeHtml(copy.loadingSources)}</p>
+          <div class="directory-sections">
+            <section class="directory-block" id="section-missing">
+              <h3>${escapeHtml(copy.missingSectionTitle)}</h3>
+              <p class="small">${escapeHtml(copy.missingSectionIntro)}</p>
+              <div class="source-list" data-section-list="missing"></div>
             </section>
-            <section class="directory-block">
-              <h3>${escapeHtml(copy.developerSectionTitle)}</h3>
-              <p class="small">${escapeHtml(copy.developerSectionIntro)}</p>
-              <div class="source-list" data-developer-list></div>
+            <section class="directory-block" id="section-located">
+              <h3>${escapeHtml(copy.locatedSectionTitle)}</h3>
+              <p class="small">${escapeHtml(copy.locatedSectionIntro)}</p>
+              <div class="source-list" data-section-list="located"></div>
+            </section>
+            <section class="directory-block" id="section-humanitarian">
+              <h3>${escapeHtml(copy.humanitarianSectionTitle)}</h3>
+              <p class="small">${escapeHtml(copy.humanitarianSectionIntro)}</p>
+              <div class="source-list" data-section-list="humanitarian"></div>
             </section>
           </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell panel directory-developers">
+          <h2>${escapeHtml(copy.developerSectionTitle)}</h2>
+          <p class="page-intro">${escapeHtml(copy.developerSectionIntro)}</p>
+          <div class="source-list" data-developer-list></div>
         </div>
       </section>
     </main>

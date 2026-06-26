@@ -7,10 +7,11 @@ const state = {
   query: ""
 };
 
-const registryListEl = document.querySelector("[data-source-list]");
+const sectionEls = Array.from(document.querySelectorAll("[data-section-list]"));
 const registryCountEl = document.querySelector("[data-results-count]");
 const developerListEl = document.querySelector("[data-developer-list]");
 const searchEl = document.querySelector("[data-search]");
+const sectionOrder = ["missing", "located", "humanitarian"];
 
 const interpolate = (template, values = {}) =>
   String(template || "").replace(/\{(\w+)\}/g, (_, key) => String(values[key] ?? ""));
@@ -134,34 +135,47 @@ const renderDeveloperCard = (resource) => {
 };
 
 const render = () => {
-  if (!registryCountEl || !registryListEl || !developerListEl) {
-    return;
+  const filtered = state.sources.filter((source) => matchesQuery(source, state.query));
+
+  if (registryCountEl) {
+    registryCountEl.textContent = interpolate(messages.resultsShown, { count: filtered.length });
   }
 
-  const filtered = state.sources.filter((source) => matchesQuery(source, state.query));
-  const developerResources = buildDeveloperResources(filtered);
+  sectionEls.forEach((el) => {
+    const key = el.getAttribute("data-section-list");
+    const inSection = filtered.filter((source) => (source.section || "missing") === key);
+    el.innerHTML = inSection.map(renderRegistryCard).join("") || '<p class="small">' + messages.noResults + '</p>';
+  });
 
-  registryCountEl.textContent = interpolate(messages.resultsShown, { count: filtered.length });
-  registryListEl.innerHTML = filtered.map(renderRegistryCard).join("") || '<p class="small">' + messages.noResults + '</p>';
-  developerListEl.innerHTML = developerResources.map(renderDeveloperCard).join("") || '<p class="small">' + messages.developerEmpty + '</p>';
+  if (developerListEl) {
+    const developerResources = buildDeveloperResources(filtered);
+    developerListEl.innerHTML = developerResources.map(renderDeveloperCard).join("") || '<p class="small">' + messages.developerEmpty + '</p>';
+  }
 };
 
 const load = async () => {
-  if (!registryListEl && !registryCountEl && !developerListEl) {
+  if (!sectionEls.length && !registryCountEl && !developerListEl) {
     return;
   }
 
   try {
     const response = await fetch(basePath + "/data/sources.json");
-    state.sources = await response.json();
+    const sources = await response.json();
+    state.sources = sources
+      .slice()
+      .sort((a, b) => {
+        const sectionDiff = sectionOrder.indexOf(a.section || "missing") - sectionOrder.indexOf(b.section || "missing");
+        if (sectionDiff !== 0) return sectionDiff;
+        return (a.crawler_priority || 99) - (b.crawler_priority || 99);
+      });
     render();
   } catch (error) {
     if (registryCountEl) {
       registryCountEl.textContent = messages.loadFailed;
     }
-    if (registryListEl) {
-      registryListEl.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
-    }
+    sectionEls.forEach((el) => {
+      el.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
+    });
     if (developerListEl) {
       developerListEl.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
     }
