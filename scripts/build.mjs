@@ -676,7 +676,7 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-Sitemap: ${siteUrl}/sitemap.xml
+Sitemap: ${absoluteUrl("/sitemap.xml")}
 `;
 
 const renderLlms = () => `# VeneHelp
