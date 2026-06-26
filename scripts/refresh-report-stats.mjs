@@ -77,10 +77,41 @@ const adapters = {
       found: numberNear(html, ["localizad", "encontrad", "found"])
     };
   },
-  // NOTE: red-ayuda-venezuela renders its counters client-side from a Supabase
-  // backend (no public counts endpoint in the static HTML). Reading them would
-  // mean calling that backend with the app's anon key, which we do not do, so
-  // it has no adapter here and any report_stats would be maintained manually.
+  "red-ayuda-venezuela": async () => {
+    // Counts come from the platform's public Supabase backend. The anon key
+    // below is the RLS-gated client key shipped in their own frontend; we use
+    // it only to request exact row counts and never read the personal records.
+    const table = "https://cpavwkdonvkvrwygfzfo.supabase.co/rest/v1/missing_persons";
+    const key =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9." +
+      "eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwYXZ3a2RvbnZrdnJ3eWdmemZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIzNjAyODMsImV4cCI6MjA5NzkzNjI4M30." +
+      "-_FAsA2csTrB9qt267pBfjJkczMP7pcaUi4plMv3kv4";
+    const countOnly = async (filter) => {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+      try {
+        const res = await fetch(`${table}?select=id${filter}`, {
+          headers: {
+            "user-agent": UA,
+            apikey: key,
+            authorization: `Bearer ${key}`,
+            prefer: "count=exact",
+            range: "0-0"
+          },
+          signal: controller.signal
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const total = parseInt((res.headers.get("content-range") || "").split("/")[1], 10);
+        return Number.isFinite(total) ? total : null;
+      } finally {
+        clearTimeout(timer);
+      }
+    };
+    return {
+      reported: await countOnly(""),
+      found: await countOnly("&status=eq.found")
+    };
+  },
   // NOTE: desaparecidos-terremoto-venezuela loads its counters client-side from
   // https://desaparecidos-terremoto-api.theempire.tech/api/personas/*, which is
   // reCAPTCHA-gated (every data request returns 403 "Verificación reCAPTCHA
