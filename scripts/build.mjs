@@ -360,8 +360,26 @@ summary:focus-visible,
 }
 
 .directory-developers {
-  border-top: 1px solid var(--line);
-  padding-top: 1.25rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem 1.6rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface-muted);
+}
+
+.developer-eyebrow {
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.directory-developers .source-card {
+  border-bottom-color: #e3e7ef;
+}
+
+.directory-developers .source-card:last-child {
+  border-bottom: 0;
 }
 
 .directory-block {
@@ -957,6 +975,7 @@ const localeCopy = {
     locatedSectionIntro: "Plataformas para personas que ya fueron localizadas o trasladadas. No son para reportar desaparecidos.",
     humanitarianSectionTitle: "Ruta humanitaria",
     humanitarianSectionIntro: "Vía oficial de escalamiento, con mayor confianza, para restablecer el contacto familiar.",
+    developerEyebrow: "Sección técnica",
     developerSectionTitle: "Desarrolladores",
     developerSectionIntro:
       "APIs, datasets y proyectos open source útiles para integraciones, agentes y análisis técnico.",
@@ -1076,6 +1095,7 @@ const localeCopy = {
     locatedSectionIntro: "Platforms for people who have already been located or moved. Not for reporting missing people.",
     humanitarianSectionTitle: "Humanitarian path",
     humanitarianSectionIntro: "Official, higher-trust escalation route to restore family contact.",
+    developerEyebrow: "Technical section",
     developerSectionTitle: "Developers",
     developerSectionIntro:
       "APIs, datasets, and open-source projects that are useful for integrations, agents, and technical analysis.",
@@ -1608,10 +1628,13 @@ ${renderHead({
       </section>
 
       <section class="section">
-        <div class="shell panel directory-developers">
-          <h2>${escapeHtml(copy.developerSectionTitle)}</h2>
-          <p class="page-intro">${escapeHtml(copy.developerSectionIntro)}</p>
-          <div class="source-list" data-developer-list></div>
+        <div class="shell">
+          <div class="directory-developers">
+            <p class="eyebrow developer-eyebrow">${escapeHtml(copy.developerEyebrow)}</p>
+            <h2>${escapeHtml(copy.developerSectionTitle)}</h2>
+            <p class="page-intro">${escapeHtml(copy.developerSectionIntro)}</p>
+            <div class="source-list" data-developer-list></div>
+          </div>
         </div>
       </section>
     </main>

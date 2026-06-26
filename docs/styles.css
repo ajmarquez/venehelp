@@ -311,8 +311,26 @@ summary:focus-visible,
 }
 
 .directory-developers {
-  border-top: 1px solid var(--line);
-  padding-top: 1.25rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem 1.6rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface-muted);
+}
+
+.developer-eyebrow {
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.directory-developers .source-card {
+  border-bottom-color: #e3e7ef;
+}
+
+.directory-developers .source-card:last-child {
+  border-bottom: 0;
 }
 
 .directory-block {
