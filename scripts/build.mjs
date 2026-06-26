@@ -412,6 +412,16 @@ summary:focus-visible,
   margin: 0.5rem 0 0;
 }
 
+.section-note {
+  margin: 0.75rem 0 0;
+  padding: 0.65rem 0.85rem;
+  border-left: 4px solid var(--yellow);
+  background: var(--surface-muted);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .directory-block .source-list {
   margin-top: 1rem;
 }
@@ -1004,6 +1014,7 @@ const localeCopy = {
     searchPlaceholder: "Busca por nombre, servicio o etiqueta",
     missingSectionTitle: "Personas desaparecidas",
     missingSectionIntro: "Plataformas para buscar y reportar personas desaparecidas tras el terremoto.",
+    missingSectionNote: "Los contadores los publica cada plataforma y pueden incluir duplicados, registros sin verificar o entradas obsoletas, así que no equivalen al número real de personas desaparecidas.",
     locatedSectionTitle: "Personas localizadas",
     locatedSectionIntro: "Plataformas para personas que ya fueron localizadas o trasladadas. No son para reportar desaparecidos.",
     aidSectionTitle: "Ayuda y emergencia",
@@ -1125,6 +1136,7 @@ const localeCopy = {
     searchPlaceholder: "Search by name, service, or tag",
     missingSectionTitle: "Missing people",
     missingSectionIntro: "Platforms to search for and report missing people after the earthquake.",
+    missingSectionNote: "The counts are published by each platform and may include duplicate, unverified, or outdated entries, so they do not equal the real number of missing people.",
     locatedSectionTitle: "Located people",
     locatedSectionIntro: "Platforms for people who have already been located or moved. Not for reporting missing people.",
     aidSectionTitle: "Aid & emergency",
@@ -1696,6 +1708,7 @@ ${renderHead({
             <section class="directory-block" id="section-missing">
               <h3>${escapeHtml(copy.missingSectionTitle)}</h3>
               <p class="small">${escapeHtml(copy.missingSectionIntro)}</p>
+              <p class="section-note">${escapeHtml(copy.missingSectionNote)}</p>
               <div class="source-list" data-section-list="missing"></div>
             </section>
             <section class="directory-block" id="section-located">
