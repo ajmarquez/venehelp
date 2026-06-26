@@ -4,6 +4,7 @@
   "private": true,
   "description": "Crawler-friendly directory of search, reporting, and aid resources for Venezuela.",
   "scripts": {
-    "build": "node scripts/build.mjs"
+    "build": "node scripts/build.mjs",
+    "refresh:stats": "node scripts/refresh-report-stats.mjs"
   }
 }

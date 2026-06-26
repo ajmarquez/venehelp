@@ -1,0 +1,42 @@
+name: Refresh report stats
+
+on:
+  schedule:
+    # Every 6 hours. Adjust the cadence here if needed.
+    - cron: "0 */6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-report-stats
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Refresh self-reported stats
+        run: node scripts/refresh-report-stats.mjs
+
+      - name: Rebuild static site
+        run: npm run build
+
+      - name: Commit and push if changed
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "venehelp-bot"
+          git config user.email "bot@directorioterremotovenezuela.org"
+          git add -A
+          git commit -m "Auto: refresh self-reported case counts"
+          git push
