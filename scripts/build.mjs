@@ -463,6 +463,14 @@ const spanishSourceCopy = {
       "Necesita verificación manual antes de publicarse."
     ]
   },
+  "red-ayuda-venezuela": {
+    summary:
+      "Plataforma ciudadana de emergencia para avisar que una persona está a salvo, buscar personas y coordinar ayuda tras el terremoto.",
+    notes: [
+      "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026.",
+      "El sitio se describe como una red ciudadana de emergencia para reportes de estado, búsqueda de personas y coordinación de ayuda."
+    ]
+  },
   "terremoto-venezuela-mapa": {
     summary:
       "Sitio de mapeo de incidentes y daños que puede ayudar a contextualizar ubicaciones vinculadas con reportes de personas desaparecidas.",
@@ -479,28 +487,12 @@ const spanishSourceCopy = {
       "Podría conectarse con mapas o paneles públicos de Kobo."
     ]
   },
-  "talcual-digital-lead": {
-    summary:
-      "Pista sobre un posible formulario o canal específico para reportar personas desaparecidas promovido por el medio.",
-    notes: [
-      "La URL exacta del formulario sigue pendiente de verificación.",
-      "Mantenerlo como pista hasta confirmar la página o formulario directo de emergencia."
-    ]
-  },
   "reconectemos-a-cada-familia-lead": {
     summary:
       "Pista sobre una iniciativa de reporte vinculada a una campaña, mencionada junto a las principales plataformas públicas.",
     notes: [
       "Todavía no hay una URL directa verificada.",
       "Agregarla solo después de confirmar la página o el registro exacto."
-    ]
-  },
-  venapp: {
-    summary:
-      "Aplicación móvil del gobierno, presuntamente adaptada para reportes de emergencia relacionados con el terremoto.",
-    notes: [
-      "Está basada en una app móvil y probablemente no sea rastreable de forma directa por agentes web públicos.",
-      "Conviene mantenerla por completitud, pero tratarla distinto a las fuentes web."
     ]
   }
 };
@@ -817,6 +809,13 @@ const renderPageTopbar = (locale, pathname = "/") => `<div class="topbar">
 const persistLocaleScript = (locale) =>
   `<script>try { localStorage.setItem("venehelp-locale", ${JSON.stringify(locale)}); } catch (error) {}</script>`;
 
+const renderFilterOptions = (locale, field, labels) => {
+  const values = [...new Set(localizedSources[locale].map((source) => source[field]))];
+  return values
+    .map((value) => `<option value="${escapeHtml(value)}">${escapeHtml(labels[value]?.[locale] || value)}</option>`)
+    .join("");
+};
+
 const renderLocaleIndexHtml = (locale) => {
   const copy = localeCopy[locale];
   const dataPath = localePath(locale, "/data/sources.json");
@@ -862,18 +861,14 @@ ${renderHead({
               <label for="category">${escapeHtml(copy.categoryLabel)}</label>
               <select id="category" data-category>
                 <option value="all">${escapeHtml(copy.allCategories)}</option>
-                ${Object.entries(categoryLabels)
-                  .map(([value, labels]) => `<option value="${escapeHtml(value)}">${escapeHtml(labels[locale])}</option>`)
-                  .join("")}
+                ${renderFilterOptions(locale, "category", categoryLabels)}
               </select>
             </div>
             <div class="field">
               <label for="purpose">${escapeHtml(copy.purposeLabel)}</label>
               <select id="purpose" data-purpose>
                 <option value="all">${escapeHtml(copy.allPurposes)}</option>
-                ${Object.entries(purposeLabels)
-                  .map(([value, labels]) => `<option value="${escapeHtml(value)}">${escapeHtml(labels[locale])}</option>`)
-                  .join("")}
+                ${renderFilterOptions(locale, "purpose", purposeLabels)}
               </select>
             </div>
           </div>
@@ -1171,6 +1166,7 @@ ${entries
 `;
 };
 
+await fs.rm(docsDir, { recursive: true, force: true });
 await ensureDir(docsDir);
 await fs.writeFile(path.join(docsDir, "styles.css"), styles);
 await fs.writeFile(path.join(docsDir, "app.js"), appJs);

@@ -74,6 +74,32 @@
     ]
   },
   {
+    "slug": "red-ayuda-venezuela",
+    "name": "Red Ayuda Venezuela",
+    "url": "https://redayudavenezuela.com/",
+    "category": "website",
+    "purpose": "report-and-search",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "status": "unverified",
+    "last_verified_at": "2026-06-26",
+    "owner": "Citizen platform",
+    "crawler_priority": 1,
+    "summary": "Citizen emergency platform for marking people as safe, searching people, and coordinating help after the earthquake.",
+    "notes": [
+      "URL loaded successfully during the June 26, 2026 link check.",
+      "The site describes itself as a citizen emergency network for safe-status reports, people search, and aid coordination."
+    ],
+    "tags": [
+      "earthquake",
+      "missing-persons",
+      "emergency",
+      "citizen-platform",
+      "reporting"
+    ]
+  },
+  {
     "slug": "terremoto-venezuela-mapa",
     "name": "Terremoto Venezuela",
     "url": "http://terremotovenezuela.com/",
@@ -124,30 +150,6 @@
     ]
   },
   {
-    "slug": "talcual-digital-lead",
-    "name": "TalCual Digital",
-    "url": "https://talcualdigital.com/",
-    "category": "media",
-    "purpose": "lead",
-    "coverage": "national",
-    "language": "es",
-    "requires_login": false,
-    "status": "lead",
-    "last_verified_at": null,
-    "owner": "Media outlet",
-    "crawler_priority": 4,
-    "summary": "Lead for a possible dedicated missing-person reporting form or channel promoted by the outlet.",
-    "notes": [
-      "Exact reporting URL is still pending verification.",
-      "Keep as a lead until the direct emergency form or page is confirmed."
-    ],
-    "tags": [
-      "lead",
-      "media",
-      "missing-persons"
-    ]
-  },
-  {
     "slug": "reconectemos-a-cada-familia-lead",
     "name": "Reconectemos a Cada Familia",
     "url": null,
@@ -169,30 +171,6 @@
       "lead",
       "campaign",
       "missing-persons"
-    ]
-  },
-  {
-    "slug": "venapp",
-    "name": "VenApp",
-    "url": null,
-    "category": "app",
-    "purpose": "official-reporting",
-    "coverage": "national",
-    "language": "es",
-    "requires_login": true,
-    "status": "lead",
-    "last_verified_at": null,
-    "owner": "Government",
-    "crawler_priority": 5,
-    "summary": "Government mobile application reportedly adapted for earthquake emergency reporting.",
-    "notes": [
-      "Mobile-app based and likely not directly crawlable by public web agents.",
-      "Keep for completeness, but treat it differently from web sources."
-    ],
-    "tags": [
-      "official",
-      "app",
-      "reporting"
     ]
   }
 ]
