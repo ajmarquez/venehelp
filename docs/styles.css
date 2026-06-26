@@ -520,6 +520,21 @@ ul {
   margin-top: 0;
 }
 
+.detail-usewhen {
+  margin-top: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.tech-details summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.tech-details[open] summary {
+  margin-bottom: 0.5rem;
+}
+
 .definition-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

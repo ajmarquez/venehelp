@@ -569,6 +569,21 @@ ul {
   margin-top: 0;
 }
 
+.detail-usewhen {
+  margin-top: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.tech-details summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.tech-details[open] summary {
+  margin-bottom: 0.5rem;
+}
+
 .definition-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -908,6 +923,7 @@ const localeCopy = {
     notYetChecked: "No revisado",
     notesTitle: "Notas",
     tagsTitle: "Etiquetas",
+    techDetailsTitle: "Detalles técnicos",
     viewJson: "Ver JSON",
     languageNavLabel: "Idioma",
     sourceListTitle: "Todos los recursos | VeneHelp"
@@ -1025,6 +1041,7 @@ const localeCopy = {
     notYetChecked: "Not checked",
     notesTitle: "Notes",
     tagsTitle: "Tags",
+    techDetailsTitle: "Technical details",
     viewJson: "View JSON",
     languageNavLabel: "Language",
     sourceListTitle: "All Sources | VeneHelp"
@@ -1253,6 +1270,15 @@ const interpolate = (template, values = {}) =>
 
 const valueOrFallback = (value, fallback) =>
   value === null || value === undefined || value === "" ? fallback : escapeHtml(value);
+
+const renderCapabilityStatic = (on, label) =>
+  `<span class="cap ${on ? "cap--on" : "cap--off"}">${on ? "✓ " : "✕ "}${escapeHtml(label)}</span>`;
+
+const renderDefinitionRows = (rows) =>
+  rows
+    .filter((row) => row.value !== null && row.value !== undefined && row.value !== "")
+    .map((row) => `<div><dt>${escapeHtml(row.label)}</dt><dd>${row.html || escapeHtml(row.value)}</dd></div>`)
+    .join("");
 
 const renderNotes = (notes = []) =>
   notes.length ? `<ul>${notes.map((note) => `<li>${escapeHtml(note)}</li>`).join("")}</ul>` : "";
@@ -1636,6 +1662,7 @@ ${renderHead({
         ${renderPageTopbar(locale, sourcePath)}
         <p class="eyebrow"><a href="${localePath(locale, "/")}">VeneHelp</a> / <a href="${localePath(locale, "/sources/")}">${escapeHtml(copy.breadcrumbsSources)}</a></p>
         <h1>${escapeHtml(source.name)}</h1>
+        ${source.use_when_label ? `<p class="source-usewhen detail-usewhen">${escapeHtml(source.use_when_label)}</p>` : ""}
         <p class="page-intro">${escapeHtml(source.summary)}</p>
 
         <section class="page-card">
@@ -1645,92 +1672,20 @@ ${renderHead({
             <span class="pill">${escapeHtml(source.category_label)}</span>
             <span class="pill">${escapeHtml(source.purpose_label)}</span>
           </div>
+          ${source.warning_label ? `<p class="source-warning" style="margin-top:1rem">${escapeHtml(source.warning_label)}</p>` : ""}
+          <div class="cap-row" style="margin-top:1rem">
+            ${renderCapabilityStatic(source.public_search, copy.capSearch)}
+            ${renderCapabilityStatic(source.accepts_new_reports, copy.capReport)}
+            ${renderCapabilityStatic(source.report_found, copy.capFound)}
+          </div>
+          <p class="small source-trust" style="margin-top:0.85rem">${escapeHtml(source.owner_label || "")}${source.last_checked_at ? ` · ${escapeHtml(copy.checkedShort)} ${escapeHtml(source.last_checked_at)}` : ""}</p>
           <div class="page-links" style="margin-top:1rem">
             ${
               source.url
                 ? `<a class="button" href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">${escapeHtml(copy.openSource)}</a>`
                 : `<span class="small">${escapeHtml(copy.directLinkPending)}</span>`
             }
-            <a class="button secondary" href="${localePath(locale, "/data/sources.json")}">${escapeHtml(copy.viewJson)}</a>
           </div>
-        </section>
-
-        <section class="page-card">
-          <h2>${escapeHtml(copy.metadataTitle)}</h2>
-          <dl class="definition-list">
-            <div>
-              <dt>${escapeHtml(copy.statusLabelDetail)}</dt>
-              <dd>${valueOrFallback(source.status_label, copy.notYetChecked)}</dd>
-            </div>
-            <div>
-              <dt>${escapeHtml(copy.operatorTypeLabelDetail)}</dt>
-              <dd>${valueOrFallback(source.operator_type_label, copy.notYetChecked)}</dd>
-            </div>
-            <div>
-              <dt>${escapeHtml(copy.coverageLabelDetail)}</dt>
-              <dd>${valueOrFallback(source.coverage_label, copy.notYetChecked)}</dd>
-            </div>
-            <div>
-              <dt>${escapeHtml(copy.languageLabelDetail)}</dt>
-              <dd>${valueOrFallback(source.language_label, copy.notYetChecked)}</dd>
-            </div>
-            <div>
-              <dt>${escapeHtml(copy.requiresLoginLabel)}</dt>
-              <dd>${valueOrFallback(source.requires_login_label, copy.notYetChecked)}</dd>
-            </div>
-            <div>
-              <dt>${escapeHtml(copy.acceptsReportsLabelDetail)}</dt>
-              <dd>${valueOrFallback(source.accepts_reports_label_value, copy.notYetChecked)}</dd>
-            </div>
-            <div>
-              <dt>${escapeHtml(copy.publicSearchLabelDetail)}</dt>
-              <dd>${valueOrFallback(source.public_search_label_value, copy.notYetChecked)}</dd>
-            </div>
-            <div>
-              <dt>${escapeHtml(copy.reportFoundLabelDetail)}</dt>
-              <dd>${valueOrFallback(source.report_found_label_value, copy.notYetChecked)}</dd>
-            </div>
-            <div>
-              <dt>${escapeHtml(copy.publicContactLabelDetail)}</dt>
-              <dd>${
-                source.public_contact && source.public_contact !== copy.notYetChecked
-                  ? `<a href="${escapeHtml(source.public_contact)}" target="_blank" rel="noreferrer">${escapeHtml(source.public_contact)}</a>`
-                  : escapeHtml(copy.notYetChecked)
-              }</dd>
-            </div>
-            <div>
-              <dt>${escapeHtml(copy.publicApiLabelDetail)}</dt>
-              <dd>${
-                source.api_url && source.api_url !== copy.notYetChecked
-                  ? `<a href="${escapeHtml(source.api_url)}" target="_blank" rel="noreferrer">${escapeHtml(source.api_url)}</a>`
-                  : escapeHtml(copy.notYetChecked)
-              }</dd>
-            </div>
-            <div>
-              <dt>${escapeHtml(copy.sourceCodeLabelDetail)}</dt>
-              <dd>${
-                source.source_code_url && source.source_code_url !== copy.notYetChecked
-                  ? `<a href="${escapeHtml(source.source_code_url)}" target="_blank" rel="noreferrer">${escapeHtml(source.source_code_url)}</a>`
-                  : escapeHtml(copy.notYetChecked)
-              }</dd>
-            </div>
-            <div>
-              <dt>${escapeHtml(copy.ownerLabelDetail)}</dt>
-              <dd>${valueOrFallback(source.owner_label, copy.notYetChecked)}</dd>
-            </div>
-            <div>
-              <dt>${escapeHtml(copy.servicesLabelDetail)}</dt>
-              <dd>${(source.service_labels || []).map((label) => `<span class="pill">${escapeHtml(label)}</span>`).join(" ") || escapeHtml(copy.notYetChecked)}</dd>
-            </div>
-            <div>
-              <dt>${escapeHtml(copy.crawlerPriorityLabel)}</dt>
-              <dd>${valueOrFallback(source.crawler_priority, copy.notYetChecked)}</dd>
-            </div>
-            <div>
-              <dt>${escapeHtml(copy.lastCheckedLabel)}</dt>
-              <dd>${valueOrFallback(source.last_checked_label, copy.notYetChecked)}</dd>
-            </div>
-          </dl>
         </section>
 
         <section class="page-card">
@@ -1743,6 +1698,50 @@ ${renderHead({
           <div class="meta-row">
             ${(source.tags || []).map((tag) => `<span class="pill">${escapeHtml(tag)}</span>`).join("")}
           </div>
+        </section>
+
+        <section class="page-card">
+          <details class="tech-details">
+            <summary>${escapeHtml(copy.techDetailsTitle)}</summary>
+            <dl class="definition-list">
+              ${renderDefinitionRows([
+                { label: copy.statusLabelDetail, value: source.status_label },
+                { label: copy.operatorTypeLabelDetail, value: source.operator_type_label },
+                { label: copy.coverageLabelDetail, value: source.coverage_label },
+                { label: copy.languageLabelDetail, value: source.language_label },
+                { label: copy.requiresLoginLabel, value: source.requires_login_label },
+                { label: copy.acceptsReportsLabelDetail, value: source.accepts_reports_label_value },
+                { label: copy.publicSearchLabelDetail, value: source.public_search_label_value },
+                { label: copy.reportFoundLabelDetail, value: source.report_found_label_value },
+                {
+                  label: copy.publicContactLabelDetail,
+                  value: source.public_contact,
+                  html: source.public_contact ? `<a href="${escapeHtml(source.public_contact)}" target="_blank" rel="noreferrer">${escapeHtml(source.public_contact)}</a>` : null
+                },
+                {
+                  label: copy.publicApiLabelDetail,
+                  value: source.api_url,
+                  html: source.api_url ? `<a href="${escapeHtml(source.api_url)}" target="_blank" rel="noreferrer">${escapeHtml(source.api_url)}</a>` : null
+                },
+                {
+                  label: copy.sourceCodeLabelDetail,
+                  value: source.source_code_url,
+                  html: source.source_code_url ? `<a href="${escapeHtml(source.source_code_url)}" target="_blank" rel="noreferrer">${escapeHtml(source.source_code_url)}</a>` : null
+                },
+                { label: copy.ownerLabelDetail, value: source.owner_label },
+                {
+                  label: copy.servicesLabelDetail,
+                  value: (source.service_labels || []).length ? "x" : null,
+                  html: (source.service_labels || []).map((label) => `<span class="pill">${escapeHtml(label)}</span>`).join(" ")
+                },
+                { label: copy.crawlerPriorityLabel, value: source.crawler_priority },
+                { label: copy.lastCheckedLabel, value: source.last_checked_at }
+              ])}
+            </dl>
+            <div class="page-links" style="margin-top:1rem">
+              <a class="button secondary" href="${localePath(locale, "/data/sources.json")}">${escapeHtml(copy.viewJson)}</a>
+            </div>
+          </details>
         </section>
       </div>
     </main>
