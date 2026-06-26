@@ -197,7 +197,7 @@ summary:focus-visible,
 .route-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   margin-top: 0.85rem;
 }
 
@@ -351,6 +351,10 @@ summary:focus-visible,
 
 #section-humanitarian {
   border-top-color: var(--blue);
+}
+
+#section-aid {
+  border-top-color: var(--success);
 }
 
 .directory-block h3 {

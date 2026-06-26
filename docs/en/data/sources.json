@@ -430,5 +430,255 @@
     "public_contact_label": "Not checked",
     "api_url_label": "https://localizadosvenezuela.com/api",
     "source_code_url_label": "https://github.com/ggangix/localizados-venezuela"
+  },
+  {
+    "slug": "venezuela-resiste-terremotove",
+    "section": "missing",
+    "name": "Venezuela Resiste (TerremotoVE)",
+    "url": "https://terremotove.netlify.app/",
+    "category": "map",
+    "purpose": "report-and-search",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "last_checked_at": "2026-06-26",
+    "owner": "Acceso Libre",
+    "operator_type": "citizen",
+    "status": "active",
+    "crawler_priority": 2,
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "missing-report",
+      "missing-search",
+      "damage-reports"
+    ],
+    "summary": "Collaborative map from Acceso Libre for reporting collapsed buildings and missing people, mainly in Yaracuy, to coordinate search and rescue.",
+    "use_when": {
+      "es": "Úsalo si quieres reportar o ubicar personas desaparecidas y edificios colapsados en el mapa.",
+      "en": "Use this to report or locate missing people and collapsed buildings on the map."
+    },
+    "notes": [
+      "URL loaded successfully during the June 26, 2026 link check.",
+      "Open citizen map; reports are not independently verified and public corrections are invited."
+    ],
+    "tags": [
+      "earthquake",
+      "missing-persons",
+      "map",
+      "damage",
+      "community"
+    ],
+    "use_when_label": "Use this to report or locate missing people and collapsed buildings on the map.",
+    "warning_label": "",
+    "category_label": "Map",
+    "purpose_label": "Report and search",
+    "status_label": "Active",
+    "operator_type_label": "Citizen-led",
+    "coverage_label": "National",
+    "language_label": "Spanish",
+    "requires_login_label": "No",
+    "accepts_reports_label_value": "Yes",
+    "public_search_label_value": "Yes",
+    "report_found_label_value": "No",
+    "owner_label": "Acceso Libre",
+    "service_labels": [
+      "Report missing people",
+      "Search people",
+      "Damage reports"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
+  },
+  {
+    "slug": "enlaza-venezuela",
+    "section": "aid",
+    "name": "Enlaza Venezuela",
+    "url": "https://www.enlazavenezuela.com/",
+    "category": "website",
+    "purpose": "aid-and-updates",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "last_checked_at": "2026-06-26",
+    "owner": "Community responders",
+    "operator_type": "community",
+    "status": "active",
+    "crawler_priority": 3,
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "aid-resources",
+      "shelters",
+      "situation-updates"
+    ],
+    "summary": "Community platform that connects people who need rescue, shelter, food, or transport with volunteers through WhatsApp, with on-the-way and rescued status updates.",
+    "use_when": {
+      "es": "Úsalo si necesitas o puedes ofrecer ayuda: rescate, refugio, comida o transporte.",
+      "en": "Use this if you need or can offer help: rescue, shelter, food, or transport."
+    },
+    "notes": [
+      "URL loaded successfully during the June 26, 2026 link check.",
+      "Coordinates aid requests and offers; it is not a missing-person search or family-tracing tool."
+    ],
+    "tags": [
+      "earthquake",
+      "emergency",
+      "aid",
+      "community",
+      "rescue"
+    ],
+    "use_when_label": "Use this if you need or can offer help: rescue, shelter, food, or transport.",
+    "warning_label": "",
+    "category_label": "Website",
+    "purpose_label": "Aid and updates",
+    "status_label": "Active",
+    "operator_type_label": "Community",
+    "coverage_label": "National",
+    "language_label": "Spanish",
+    "requires_login_label": "No",
+    "accepts_reports_label_value": "Yes",
+    "public_search_label_value": "Yes",
+    "report_found_label_value": "No",
+    "owner_label": "Community responders",
+    "service_labels": [
+      "Aid resources",
+      "Shelters",
+      "Situation updates"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
+  },
+  {
+    "slug": "yummy-sos",
+    "section": "aid",
+    "name": "Yummy SOS",
+    "url": "https://sos.yummyrides.com/",
+    "category": "website",
+    "purpose": "aid-and-updates",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "last_checked_at": "2026-06-26",
+    "owner": "Company platform",
+    "operator_type": "company",
+    "status": "active",
+    "crawler_priority": 3,
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "damage-reports",
+      "shelters",
+      "aid-resources"
+    ],
+    "summary": "Emergency site operated by Yummy for reporting structural damage with photos and location, viewing public damage reports, and finding shelters and emergency resources.",
+    "use_when": {
+      "es": "Úsalo para reportar o consultar daños estructurales y encontrar refugios y recursos de emergencia.",
+      "en": "Use this to report or check structural damage and find shelters and emergency resources."
+    },
+    "notes": [
+      "URL loaded successfully during the June 26, 2026 link check.",
+      "The site states it complements, not replaces, official agencies; it is for damage and aid, not missing-person tracing."
+    ],
+    "tags": [
+      "earthquake",
+      "emergency",
+      "damage",
+      "shelter",
+      "company"
+    ],
+    "use_when_label": "Use this to report or check structural damage and find shelters and emergency resources.",
+    "warning_label": "",
+    "category_label": "Website",
+    "purpose_label": "Aid and updates",
+    "status_label": "Active",
+    "operator_type_label": "Company",
+    "coverage_label": "National",
+    "language_label": "Spanish",
+    "requires_login_label": "No",
+    "accepts_reports_label_value": "Yes",
+    "public_search_label_value": "Yes",
+    "report_found_label_value": "No",
+    "owner_label": "Company platform",
+    "service_labels": [
+      "Damage reports",
+      "Shelters",
+      "Aid resources"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
+  },
+  {
+    "slug": "ayuda-venezuela-2026",
+    "section": "aid",
+    "name": "Ayuda Venezuela 2026",
+    "url": "https://ayudavenezuela2026.com/",
+    "category": "website",
+    "purpose": "aid-and-updates",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": null,
+    "last_checked_at": "2026-06-26",
+    "owner": "Unknown",
+    "operator_type": "unknown",
+    "status": "monitor",
+    "crawler_priority": 3,
+    "accepts_new_reports": null,
+    "public_search": null,
+    "report_found": null,
+    "public_contact": null,
+    "services": [
+      "aid-resources"
+    ],
+    "summary": "Aid platform related to the 2026 Venezuela earthquake. Capabilities are not yet verified.",
+    "use_when": {
+      "es": "Úsalo como vía adicional de ayuda; verifica primero porque aún no está confirmada.",
+      "en": "Use this as an additional aid channel; verify first, as it is not yet confirmed."
+    },
+    "warning": {
+      "es": "Aún no verificado. La revisión automática fue bloqueada (403); confirma el sitio antes de confiar en él.",
+      "en": "Not yet verified. The automated check was blocked (403); confirm the site before relying on it."
+    },
+    "notes": [
+      "Automated link check returned HTTP 403 on June 26, 2026, so availability and capabilities must be verified manually.",
+      "Listed provisionally as an aid resource pending manual review."
+    ],
+    "tags": [
+      "earthquake",
+      "emergency",
+      "aid"
+    ],
+    "use_when_label": "Use this as an additional aid channel; verify first, as it is not yet confirmed.",
+    "warning_label": "Not yet verified. The automated check was blocked (403); confirm the site before relying on it.",
+    "category_label": "Website",
+    "purpose_label": "Aid and updates",
+    "status_label": "Manual verification",
+    "operator_type_label": "Unverified",
+    "coverage_label": "National",
+    "language_label": "Spanish",
+    "requires_login_label": "Not checked",
+    "accepts_reports_label_value": "Not checked",
+    "public_search_label_value": "Not checked",
+    "report_found_label_value": "Not checked",
+    "owner_label": "Unknown",
+    "service_labels": [
+      "Aid resources"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
   }
 ]

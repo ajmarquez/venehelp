@@ -12,7 +12,7 @@ const sectionEls = Array.from(document.querySelectorAll("[data-section-list]"));
 const registryCountEl = document.querySelector("[data-results-count]");
 const developerListEl = document.querySelector("[data-developer-list]");
 const searchEl = document.querySelector("[data-search]");
-const sectionOrder = ["missing", "located", "humanitarian"];
+const sectionOrder = ["missing", "located", "humanitarian", "aid"];
 
 const interpolate = (template, values = {}) =>
   String(template || "").replace(/\{(\w+)\}/g, (_, key) => String(values[key] ?? ""));

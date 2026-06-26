@@ -246,7 +246,7 @@ summary:focus-visible,
 .route-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   margin-top: 0.85rem;
 }
 
@@ -400,6 +400,10 @@ summary:focus-visible,
 
 #section-humanitarian {
   border-top-color: var(--blue);
+}
+
+#section-aid {
+  border-top-color: var(--success);
 }
 
 .directory-block h3 {
@@ -830,7 +834,10 @@ const tagLabels = {
   updates: { es: "actualizaciones", en: "updates" },
   "open-source": { es: "codigo-abierto", en: "open-source" },
   api: { es: "api", en: "api" },
-  hospitals: { es: "hospitales", en: "hospitals" }
+  hospitals: { es: "hospitales", en: "hospitals" },
+  aid: { es: "ayuda", en: "aid" },
+  shelter: { es: "refugio", en: "shelter" },
+  rescue: { es: "rescate", en: "rescue" }
 };
 
 const spanishSourceCopy = {
@@ -905,6 +912,30 @@ const spanishSourceCopy = {
       "La documentación de la API pública está disponible en /api y los endpoints GET de la v1 responden JSON con CORS habilitado para lectura.",
       "El proyecto aclara que es solo para personas localizadas y redirige los casos de desaparecidos a desaparecidosterremotovenezuela.com."
     ]
+  },
+  "venezuela-resiste-terremotove": {
+    summary:
+      "Mapa colaborativo de Acceso Libre para reportar edificios colapsados y personas desaparecidas, sobre todo en Yaracuy, y coordinar búsqueda y rescate.",
+    notes: [
+      "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026.",
+      "Mapa ciudadano abierto; los reportes no están verificados de forma independiente y se invitan correcciones públicas."
+    ]
+  },
+  "enlaza-venezuela": {
+    summary:
+      "Plataforma comunitaria que conecta a quienes necesitan rescate, refugio, comida o transporte con voluntarios a través de WhatsApp, con estados de \"voy en camino\" y \"rescatados\".",
+    notes: [
+      "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026.",
+      "Coordina solicitudes y ofertas de ayuda; no es una herramienta de búsqueda de personas ni de restablecimiento de contacto."
+    ]
+  },
+  "ayuda-venezuela-2026": {
+    summary:
+      "Plataforma de ayuda relacionada con el terremoto de Venezuela de 2026. Sus capacidades aún no están verificadas.",
+    notes: [
+      "La revisión automática de enlaces devolvió HTTP 403 el 26 de junio de 2026, así que la disponibilidad y las capacidades deben verificarse manualmente.",
+      "Se incluye de forma provisional como recurso de ayuda, pendiente de revisión manual."
+    ]
   }
 };
 
@@ -930,6 +961,8 @@ const localeCopy = {
     triageLocatedA: "Revisa Personas localizadas",
     triageHumanitarianQ: "¿Necesitas una vía oficial?",
     triageHumanitarianA: "Usa la Ruta humanitaria",
+    triageAidQ: "¿Necesitas rescate, refugio o ayuda?",
+    triageAidA: "Revisa Ayuda y emergencia",
     registryTitle: "Registro consolidado (beta)",
     registryIntro:
       "Mostramos un contador principal y una tabla de trazabilidad a partir de un registro público consolidado. Esta vista es beta y hoy usa una recolección parcial de páginas públicas mientras se agregan más adaptadores.",
@@ -975,6 +1008,8 @@ const localeCopy = {
     locatedSectionIntro: "Plataformas para personas que ya fueron localizadas o trasladadas. No son para reportar desaparecidos.",
     humanitarianSectionTitle: "Ruta humanitaria",
     humanitarianSectionIntro: "Vía oficial de escalamiento, con mayor confianza, para restablecer el contacto familiar.",
+    aidSectionTitle: "Ayuda y emergencia",
+    aidSectionIntro: "Plataformas para coordinar rescate, refugio, daños y otros recursos de emergencia. No son para buscar o reportar personas desaparecidas.",
     developerEyebrow: "Sección técnica",
     developerSectionTitle: "Desarrolladores",
     developerSectionIntro:
@@ -1050,6 +1085,8 @@ const localeCopy = {
     triageLocatedA: "Check Located people",
     triageHumanitarianQ: "Need an official channel?",
     triageHumanitarianA: "Use the Humanitarian path",
+    triageAidQ: "Need rescue, shelter, or aid?",
+    triageAidA: "Check Aid & emergency",
     registryTitle: "Unified registry (beta)",
     registryIntro:
       "We show a primary counter and a provenance table from a consolidated public registry. This view is beta and currently uses a partial crawl of public pages while more adapters are added.",
@@ -1095,6 +1132,8 @@ const localeCopy = {
     locatedSectionIntro: "Platforms for people who have already been located or moved. Not for reporting missing people.",
     humanitarianSectionTitle: "Humanitarian path",
     humanitarianSectionIntro: "Official, higher-trust escalation route to restore family contact.",
+    aidSectionTitle: "Aid & emergency",
+    aidSectionIntro: "Platforms to coordinate rescue, shelter, damage, and other emergency resources. Not for searching or reporting missing people.",
     developerEyebrow: "Technical section",
     developerSectionTitle: "Developers",
     developerSectionIntro:
@@ -1166,7 +1205,7 @@ const sectionEls = Array.from(document.querySelectorAll("[data-section-list]"));
 const registryCountEl = document.querySelector("[data-results-count]");
 const developerListEl = document.querySelector("[data-developer-list]");
 const searchEl = document.querySelector("[data-search]");
-const sectionOrder = ["missing", "located", "humanitarian"];
+const sectionOrder = ["missing", "located", "humanitarian", "aid"];
 
 const interpolate = (template, values = {}) =>
   String(template || "").replace(/\\{(\\w+)\\}/g, (_, key) => String(values[key] ?? ""));
@@ -1585,6 +1624,10 @@ ${renderHead({
                 <p class="route-q">${escapeHtml(copy.triageHumanitarianQ)}</p>
                 <p class="route-a">${escapeHtml(copy.triageHumanitarianA)} &rarr;</p>
               </a>
+              <a class="route-card" href="#section-aid">
+                <p class="route-q">${escapeHtml(copy.triageAidQ)}</p>
+                <p class="route-a">${escapeHtml(copy.triageAidA)} &rarr;</p>
+              </a>
             </div>
           </div>
         </div>
@@ -1622,6 +1665,11 @@ ${renderHead({
               <h3>${escapeHtml(copy.humanitarianSectionTitle)}</h3>
               <p class="small">${escapeHtml(copy.humanitarianSectionIntro)}</p>
               <div class="source-list" data-section-list="humanitarian"></div>
+            </section>
+            <section class="directory-block" id="section-aid">
+              <h3>${escapeHtml(copy.aidSectionTitle)}</h3>
+              <p class="small">${escapeHtml(copy.aidSectionIntro)}</p>
+              <div class="source-list" data-section-list="aid"></div>
             </section>
           </div>
         </div>
