@@ -168,27 +168,57 @@ select:focus {
   max-width: 76ch;
 }
 
-.route-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-top: 1rem;
+.hero-promise {
+  margin: 0.85rem 0 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
 }
 
-.route-card {
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1rem;
-  background: var(--surface-muted);
+.triage {
+  margin-top: 1.75rem;
 }
 
-.route-card p {
-  margin: 0.75rem 0 0;
+.triage-title {
+  font-size: 1.05rem;
   color: var(--muted);
 }
 
-.route-links a {
+.route-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 0.85rem;
+}
+
+.route-card {
+  display: block;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--blue);
+  border-radius: var(--radius);
+  padding: 1rem;
+  background: var(--surface-muted);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.route-card:hover,
+.route-card:focus-visible {
+  border-color: var(--blue);
+  background: #eef2fb;
+}
+
+.route-q {
+  margin: 0;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.route-a {
+  margin: 0.5rem 0 0;
   color: var(--blue);
+  font-weight: 700;
 }
 
 .meta-row {
@@ -464,8 +494,11 @@ code {
 @media (max-width: 860px) {
   .controls,
   .definition-list,
-  .route-grid,
   .registry-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .route-grid {
     grid-template-columns: 1fr;
   }
 

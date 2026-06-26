@@ -217,27 +217,57 @@ select:focus {
   max-width: 76ch;
 }
 
-.route-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-top: 1rem;
+.hero-promise {
+  margin: 0.85rem 0 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
 }
 
-.route-card {
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1rem;
-  background: var(--surface-muted);
+.triage {
+  margin-top: 1.75rem;
 }
 
-.route-card p {
-  margin: 0.75rem 0 0;
+.triage-title {
+  font-size: 1.05rem;
   color: var(--muted);
 }
 
-.route-links a {
+.route-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 0.85rem;
+}
+
+.route-card {
+  display: block;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--blue);
+  border-radius: var(--radius);
+  padding: 1rem;
+  background: var(--surface-muted);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.route-card:hover,
+.route-card:focus-visible {
+  border-color: var(--blue);
+  background: #eef2fb;
+}
+
+.route-q {
+  margin: 0;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.route-a {
+  margin: 0.5rem 0 0;
   color: var(--blue);
+  font-weight: 700;
 }
 
 .meta-row {
@@ -513,8 +543,11 @@ code {
 @media (max-width: 860px) {
   .controls,
   .definition-list,
-  .route-grid,
   .registry-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .route-grid {
     grid-template-columns: 1fr;
   }
 
@@ -719,8 +752,16 @@ const localeCopy = {
     heroTitle: "Dónde buscar y reportar personas",
     heroLede:
       "VeneHelp reúne las plataformas públicas donde familias, voluntarios y buscadores están reportando, buscando y marcando personas como encontradas tras el terremoto en Venezuela.",
+    heroPromise: "No recibimos reportes aquí; te ayudamos a elegir el sitio correcto.",
     directoryNote:
-      "No recibimos reportes aquí. El objetivo es mostrar en un solo lugar qué sitios aceptan casos nuevos, cuáles tienen búsqueda pública y cuáles permiten marcar a alguien como encontrado o a salvo.",
+      "Mostramos en un solo lugar qué sitios aceptan casos nuevos, cuáles tienen búsqueda pública y cuáles permiten marcar a alguien como encontrado o a salvo.",
+    triageTitle: "¿Por dónde empiezo?",
+    triageMissingQ: "¿Buscas o reportas a una persona desaparecida?",
+    triageMissingA: "Empieza por Personas desaparecidas",
+    triageLocatedQ: "¿Crees que ya fue localizada o trasladada?",
+    triageLocatedA: "Revisa Personas localizadas",
+    triageHumanitarianQ: "¿Necesitas una vía oficial?",
+    triageHumanitarianA: "Usa la Ruta humanitaria",
     registryTitle: "Registro consolidado (beta)",
     registryIntro:
       "Mostramos un contador principal y una tabla de trazabilidad a partir de un registro público consolidado. Esta vista es beta y hoy usa una recolección parcial de páginas públicas mientras se agregan más adaptadores.",
@@ -818,8 +859,16 @@ const localeCopy = {
     heroTitle: "Where to search for and report people",
     heroLede:
       "VeneHelp gathers the public platforms where families, volunteers, and searchers are reporting, searching for, and marking people as found after the earthquake in Venezuela.",
+    heroPromise: "We don't take reports here; we help you choose the right site.",
     directoryNote:
-      "We do not take reports here. The goal is to show in one place which sites accept new cases, which offer public search, and which let someone be marked as found or safe.",
+      "We show in one place which sites accept new cases, which offer public search, and which let someone be marked as found or safe.",
+    triageTitle: "Where do I start?",
+    triageMissingQ: "Searching for or reporting a missing person?",
+    triageMissingA: "Start with Missing people",
+    triageLocatedQ: "Think they were already located or moved?",
+    triageLocatedA: "Check Located people",
+    triageHumanitarianQ: "Need an official channel?",
+    triageHumanitarianA: "Use the Humanitarian path",
     registryTitle: "Unified registry (beta)",
     registryIntro:
       "We show a primary counter and a provenance table from a consolidated public registry. This view is beta and currently uses a partial crawl of public pages while more adapters are added.",
@@ -1270,8 +1319,26 @@ ${renderHead({
           <div class="hero-grid">
             <p class="eyebrow">${escapeHtml(copy.eyebrow)}</p>
             <h1>${escapeHtml(copy.heroTitle)}</h1>
+            <p class="hero-promise">${escapeHtml(copy.heroPromise)}</p>
             <p class="lede">${escapeHtml(copy.heroLede)}</p>
             <p class="directory-note">${escapeHtml(copy.directoryNote)}</p>
+          </div>
+          <div class="triage">
+            <h2 class="triage-title">${escapeHtml(copy.triageTitle)}</h2>
+            <div class="route-grid">
+              <a class="route-card" href="#section-missing">
+                <p class="route-q">${escapeHtml(copy.triageMissingQ)}</p>
+                <p class="route-a">${escapeHtml(copy.triageMissingA)} &rarr;</p>
+              </a>
+              <a class="route-card" href="#section-located">
+                <p class="route-q">${escapeHtml(copy.triageLocatedQ)}</p>
+                <p class="route-a">${escapeHtml(copy.triageLocatedA)} &rarr;</p>
+              </a>
+              <a class="route-card" href="#section-humanitarian">
+                <p class="route-q">${escapeHtml(copy.triageHumanitarianQ)}</p>
+                <p class="route-a">${escapeHtml(copy.triageHumanitarianA)} &rarr;</p>
+              </a>
+            </div>
           </div>
         </div>
       </section>
