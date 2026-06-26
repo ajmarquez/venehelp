@@ -578,6 +578,22 @@ summary:focus-visible,
   margin: 0;
 }
 
+.source-stats {
+  margin: 0;
+  font-size: 0.98rem;
+  color: var(--ink);
+}
+
+.source-stats strong {
+  color: var(--blue);
+}
+
+.source-stats-note {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 400;
+}
+
 .source-warning {
   margin: 0;
   padding: 0.6rem 0.75rem;
@@ -1000,6 +1016,10 @@ const localeCopy = {
     capReport: "Acepta reportes",
     capFound: "Marca encontrado / a salvo",
     checkedShort: "Revisado",
+    statReported: "reportadas",
+    statFound: "encontradas",
+    statLocated: "localizadas",
+    statBySite: "según el sitio",
     filterLabel: "Mostrar solo",
     venehelpDatasetTitle: "Dataset público de VeneHelp",
     venehelpDatasetSummary:
@@ -1117,6 +1137,10 @@ const localeCopy = {
     capReport: "Accepts reports",
     capFound: "Mark found / safe",
     checkedShort: "Checked",
+    statReported: "reported",
+    statFound: "found",
+    statLocated: "located",
+    statBySite: "per the site",
     filterLabel: "Show only",
     venehelpDatasetTitle: "VeneHelp public dataset",
     venehelpDatasetSummary:
@@ -1219,6 +1243,27 @@ const renderCapability = (on, label) =>
   '<span class="cap ' + (on ? 'cap--on' : 'cap--off') + '">' +
   (on ? '✓ ' : '✕ ') + escapeHtml(label) + '</span>';
 
+const formatNumber = (value) => {
+  const n = Number(value);
+  if (!Number.isFinite(n)) return String(value);
+  try {
+    return n.toLocaleString(messages.lang === 'es' ? 'es-VE' : 'en-US');
+  } catch (error) {
+    return String(n);
+  }
+};
+
+const renderStats = (stats) => {
+  if (!stats) return '';
+  const parts = [];
+  if (stats.reported != null) parts.push('<strong>' + formatNumber(stats.reported) + '</strong> ' + escapeHtml(messages.statReported));
+  if (stats.found != null) parts.push('<strong>' + formatNumber(stats.found) + '</strong> ' + escapeHtml(messages.statFound));
+  if (stats.located != null) parts.push('<strong>' + formatNumber(stats.located) + '</strong> ' + escapeHtml(messages.statLocated));
+  if (!parts.length) return '';
+  const attribution = escapeHtml(messages.statBySite) + (stats.as_of ? ' · ' + escapeHtml(stats.as_of) : '');
+  return '<p class="source-stats">' + parts.join(' · ') + ' <span class="source-stats-note">— ' + attribution + '</span></p>';
+};
+
 const renderRegistryCard = (source) => {
   const detailsPath = basePath + '/sources/' + source.slug + '/';
   const linkHtml = source.url
@@ -1245,6 +1290,7 @@ const renderRegistryCard = (source) => {
     useWhenHtml,
     warningHtml,
     '<p>' + escapeHtml(source.summary) + '</p>',
+    renderStats(source.report_stats),
     '<div class="cap-row">' + capHtml + '</div>',
     trustHtml,
     '<footer>',
@@ -1413,6 +1459,23 @@ const valueOrFallback = (value, fallback) =>
 
 const renderCapabilityStatic = (on, label) =>
   `<span class="cap ${on ? "cap--on" : "cap--off"}">${on ? "✓ " : "✕ "}${escapeHtml(label)}</span>`;
+
+const formatNumberStatic = (value, locale) => {
+  const n = Number(value);
+  if (!Number.isFinite(n)) return String(value);
+  return n.toLocaleString(locale === "es" ? "es-VE" : "en-US");
+};
+
+const renderStatsStatic = (stats, locale, copy) => {
+  if (!stats) return "";
+  const parts = [];
+  if (stats.reported != null) parts.push(`<strong>${formatNumberStatic(stats.reported, locale)}</strong> ${escapeHtml(copy.statReported)}`);
+  if (stats.found != null) parts.push(`<strong>${formatNumberStatic(stats.found, locale)}</strong> ${escapeHtml(copy.statFound)}`);
+  if (stats.located != null) parts.push(`<strong>${formatNumberStatic(stats.located, locale)}</strong> ${escapeHtml(copy.statLocated)}`);
+  if (!parts.length) return "";
+  const attribution = `${escapeHtml(copy.statBySite)}${stats.as_of ? ` · ${escapeHtml(stats.as_of)}` : ""}`;
+  return `<p class="source-stats" style="margin-top:0.85rem">${parts.join(" · ")} <span class="source-stats-note">— ${attribution}</span></p>`;
+};
 
 const renderDefinitionRows = (rows) =>
   rows
@@ -1828,6 +1891,7 @@ ${renderHead({
             ${renderCapabilityStatic(source.report_found, copy.capFound)}
           </div>
           <p class="small source-trust" style="margin-top:0.85rem">${escapeHtml(source.owner_label || "")}${source.last_checked_at ? ` · ${escapeHtml(copy.checkedShort)} ${escapeHtml(source.last_checked_at)}` : ""}</p>
+          ${renderStatsStatic(source.report_stats, locale, copy)}
           <div class="page-links" style="margin-top:1rem">
             ${
               source.url

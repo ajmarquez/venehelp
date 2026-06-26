@@ -103,6 +103,12 @@
       "missing-search",
       "found-report"
     ],
+    "report_stats": {
+      "reported": 71092,
+      "found": 5972,
+      "as_of": "2026-06-26",
+      "source": "self-reported"
+    },
     "summary": "Citizen platform for reporting, searching, and marking missing people as found after the earthquake.",
     "use_when": {
       "es": "Úsalo si buscas o quieres reportar a una persona desaparecida.",

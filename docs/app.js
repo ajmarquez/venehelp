@@ -52,6 +52,27 @@ const renderCapability = (on, label) =>
   '<span class="cap ' + (on ? 'cap--on' : 'cap--off') + '">' +
   (on ? '✓ ' : '✕ ') + escapeHtml(label) + '</span>';
 
+const formatNumber = (value) => {
+  const n = Number(value);
+  if (!Number.isFinite(n)) return String(value);
+  try {
+    return n.toLocaleString(messages.lang === 'es' ? 'es-VE' : 'en-US');
+  } catch (error) {
+    return String(n);
+  }
+};
+
+const renderStats = (stats) => {
+  if (!stats) return '';
+  const parts = [];
+  if (stats.reported != null) parts.push('<strong>' + formatNumber(stats.reported) + '</strong> ' + escapeHtml(messages.statReported));
+  if (stats.found != null) parts.push('<strong>' + formatNumber(stats.found) + '</strong> ' + escapeHtml(messages.statFound));
+  if (stats.located != null) parts.push('<strong>' + formatNumber(stats.located) + '</strong> ' + escapeHtml(messages.statLocated));
+  if (!parts.length) return '';
+  const attribution = escapeHtml(messages.statBySite) + (stats.as_of ? ' · ' + escapeHtml(stats.as_of) : '');
+  return '<p class="source-stats">' + parts.join(' · ') + ' <span class="source-stats-note">— ' + attribution + '</span></p>';
+};
+
 const renderRegistryCard = (source) => {
   const detailsPath = basePath + '/sources/' + source.slug + '/';
   const linkHtml = source.url
@@ -78,6 +99,7 @@ const renderRegistryCard = (source) => {
     useWhenHtml,
     warningHtml,
     '<p>' + escapeHtml(source.summary) + '</p>',
+    renderStats(source.report_stats),
     '<div class="cap-row">' + capHtml + '</div>',
     trustHtml,
     '<footer>',

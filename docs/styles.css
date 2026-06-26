@@ -529,6 +529,22 @@ summary:focus-visible,
   margin: 0;
 }
 
+.source-stats {
+  margin: 0;
+  font-size: 0.98rem;
+  color: var(--ink);
+}
+
+.source-stats strong {
+  color: var(--blue);
+}
+
+.source-stats-note {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 400;
+}
+
 .source-warning {
   margin: 0;
   padding: 0.6rem 0.75rem;
