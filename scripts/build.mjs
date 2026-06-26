@@ -21,19 +21,19 @@ const absoluteLocaleUrl = (locale, pathname = "/") => `${siteUrl}${localePath(lo
 
 const styles = `
 :root {
-  --bg: #f3ede2;
-  --paper: #fffaf2;
-  --card: #fffdf8;
-  --ink: #1f1a17;
-  --muted: #6f655f;
-  --line: #d6c6b6;
-  --accent: #a8381f;
-  --accent-soft: #f6ddd3;
-  --success: #2d6a4f;
-  --warn: #9a6700;
-  --shadow: 0 18px 48px rgba(64, 41, 24, 0.08);
-  --radius: 18px;
-  --max: 1120px;
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-muted: #f7f8fb;
+  --ink: #15171d;
+  --muted: #5d6675;
+  --line: #d9dee8;
+  --blue: #1f4ea8;
+  --red: #d21f26;
+  --yellow: #f6c600;
+  --success: #20744a;
+  --warn: #8a5a00;
+  --radius: 8px;
+  --max: 1080px;
 }
 
 * {
@@ -46,16 +46,14 @@ html {
 
 body {
   margin: 0;
-  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
   color: var(--ink);
-  background:
-    radial-gradient(circle at top left, rgba(168, 56, 31, 0.10), transparent 28rem),
-    linear-gradient(180deg, #fbf6ee 0%, #f0e4d2 100%);
-  line-height: 1.5;
+  background: var(--bg);
+  line-height: 1.55;
 }
 
 a {
-  color: var(--accent);
+  color: var(--blue);
 }
 
 main {
@@ -67,98 +65,86 @@ main {
   margin: 0 auto;
 }
 
-.hero {
-  padding: 4rem 0 2.5rem;
+.flag-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 6px;
+}
+
+.flag-bar span:nth-child(1) {
+  background: var(--yellow);
+}
+
+.flag-bar span:nth-child(2) {
+  background: var(--blue);
+}
+
+.flag-bar span:nth-child(3) {
+  background: var(--red);
+}
+
+.hero,
+.page {
+  padding: 1.5rem 0 2rem;
 }
 
 .eyebrow,
 .brand-link {
   display: inline-block;
-  margin: 0 0 1rem;
-  padding: 0.35rem 0.7rem;
+  margin: 0;
+  padding: 0.25rem 0;
   border-radius: 999px;
-  background: rgba(255, 250, 242, 0.9);
-  border: 1px solid rgba(168, 56, 31, 0.18);
-  color: var(--accent);
-  font-size: 0.9rem;
-  letter-spacing: 0.02em;
+  color: var(--blue);
+  font-size: 0.95rem;
+  font-weight: 700;
   text-decoration: none;
 }
 
 h1, h2, h3 {
-  line-height: 1.1;
+  line-height: 1.15;
   margin: 0;
 }
 
 h1 {
-  max-width: 14ch;
-  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  max-width: 20ch;
+  font-size: 3rem;
+  letter-spacing: 0;
+}
+
+h2 {
+  font-size: 1.35rem;
 }
 
 .hero-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: minmax(0, 1.4fr) minmax(18rem, 0.8fr);
-  align-items: start;
+  max-width: 760px;
 }
 
 .lede {
-  margin: 1rem 0 0;
-  max-width: 62ch;
+  margin: 0.75rem 0 0;
+  max-width: 68ch;
   color: var(--muted);
-  font-size: 1.08rem;
-}
-
-.hero-card,
-.panel,
-.source-card,
-.page-card {
-  background: rgba(255, 250, 242, 0.92);
-  border: 1px solid rgba(111, 101, 95, 0.16);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.hero-card {
-  padding: 1.2rem 1.2rem 1rem;
-}
-
-.hero-card p,
-.page-intro {
-  color: var(--muted);
-}
-
-.stats {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 2rem;
-}
-
-.stat {
-  padding: 1rem 1.1rem;
-  background: rgba(255, 253, 248, 0.92);
-  border: 1px solid rgba(111, 101, 95, 0.14);
-  border-radius: 16px;
-}
-
-.stat strong {
-  display: block;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .section {
-  padding: 0 0 2.5rem;
+  padding: 0 0 2rem;
 }
 
-.panel {
-  padding: 1.25rem;
+.panel,
+.page-card {
+  border-top: 1px solid var(--line);
+  padding-top: 1.25rem;
+}
+
+.page-intro {
+  color: var(--muted);
+  max-width: 68ch;
 }
 
 .controls {
   display: grid;
-  gap: 0.9rem;
-  grid-template-columns: 2fr 1fr 1fr;
+  gap: 0.75rem;
+  grid-template-columns: minmax(16rem, 2fr) minmax(10rem, 1fr) minmax(10rem, 1fr);
   margin-top: 1rem;
 }
 
@@ -168,71 +154,102 @@ h1 {
 }
 
 .field label {
-  font-size: 0.92rem;
+  font-size: 0.86rem;
+  font-weight: 700;
   color: var(--muted);
 }
 
 input,
 select {
   width: 100%;
-  padding: 0.88rem 0.95rem;
+  min-height: 2.8rem;
+  padding: 0.75rem 0.85rem;
   font: inherit;
   color: var(--ink);
-  background: var(--paper);
+  background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: var(--radius);
+}
+
+input:focus,
+select:focus {
+  outline: 3px solid rgba(31, 78, 168, 0.18);
+  border-color: var(--blue);
+}
+
+.directory-note {
+  margin: 1rem 0 0;
+  padding-left: 0.85rem;
+  border-left: 4px solid var(--yellow);
+  color: var(--muted);
+  max-width: 76ch;
 }
 
 .meta-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.65rem;
-  margin-top: 0.9rem;
+  gap: 0.45rem;
+  margin-top: 0.75rem;
 }
 
 .pill,
 .status {
   display: inline-flex;
   align-items: center;
-  min-height: 2rem;
-  padding: 0.25rem 0.7rem;
+  min-height: 1.65rem;
+  padding: 0.2rem 0.55rem;
   border-radius: 999px;
-  font-size: 0.88rem;
-  border: 1px solid rgba(111, 101, 95, 0.18);
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid var(--line);
 }
 
 .pill {
-  background: rgba(246, 221, 211, 0.7);
+  background: var(--surface-muted);
+  color: var(--muted);
 }
 
 .status-unverified,
 .status-lead {
-  background: #f6e9c3;
+  background: #fff5c8;
   color: var(--warn);
+  border-color: #f0da83;
 }
 
 .status-verified {
-  background: #d8f0e3;
+  background: #e3f4ea;
   color: var(--success);
+  border-color: #b9dfc9;
 }
 
 .source-list {
   display: grid;
-  gap: 1rem;
+  gap: 0;
   margin-top: 1.25rem;
+  border-top: 1px solid var(--line);
 }
 
 .source-card {
-  padding: 1.2rem;
+  display: grid;
+  gap: 0.8rem;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid var(--line);
 }
 
 .source-card h3 {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
+}
+
+.source-card h3 a {
+  color: var(--ink);
+  text-decoration-color: rgba(31, 78, 168, 0.28);
+  text-underline-offset: 0.18em;
 }
 
 .source-card p {
-  margin: 0.9rem 0;
+  margin: 0;
   color: var(--muted);
+  max-width: 76ch;
 }
 
 .source-card footer,
@@ -247,25 +264,28 @@ select {
 
 .topbar {
   justify-content: space-between;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line);
 }
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2.75rem;
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
+  min-height: 2.55rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--radius);
   text-decoration: none;
-  background: var(--accent);
-  color: #fffaf2;
+  font-weight: 700;
+  background: var(--red);
+  color: #fff;
 }
 
 .button.secondary {
   background: transparent;
-  color: var(--accent);
-  border: 1px solid rgba(168, 56, 31, 0.25);
+  color: var(--blue);
+  border: 1px solid var(--line);
 }
 
 .small {
@@ -277,22 +297,23 @@ select {
   display: inline-flex;
   flex-wrap: wrap;
   gap: 0.35rem;
-  padding: 0.3rem;
+  padding: 0.2rem;
   border-radius: 999px;
-  background: rgba(255, 250, 242, 0.9);
-  border: 1px solid rgba(111, 101, 95, 0.18);
+  background: var(--surface-muted);
+  border: 1px solid var(--line);
 }
 
 .language-switcher a {
-  padding: 0.45rem 0.8rem;
+  padding: 0.35rem 0.7rem;
   border-radius: 999px;
   text-decoration: none;
   color: var(--muted);
+  font-weight: 700;
 }
 
 .language-switcher a[aria-current="page"] {
-  background: var(--accent);
-  color: #fffaf2;
+  background: var(--blue);
+  color: #fff;
 }
 
 ul {
@@ -300,33 +321,28 @@ ul {
 }
 
 .footer {
-  padding: 0 0 3rem;
+  padding: 0 0 2rem;
   color: var(--muted);
 }
 
-.page {
-  padding: 3rem 0;
-}
-
 .page-card {
-  padding: 1.4rem;
+  padding-bottom: 1.25rem;
 }
 
 .page-card + .page-card {
-  margin-top: 1rem;
+  margin-top: 0;
 }
 
 .definition-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 0;
+  border-top: 1px solid var(--line);
 }
 
 .definition-list div {
-  padding: 0.85rem 0.95rem;
-  border-radius: 14px;
-  background: rgba(255, 253, 248, 0.82);
-  border: 1px solid rgba(111, 101, 95, 0.12);
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
 }
 
 .definition-list dt {
@@ -341,7 +357,7 @@ ul {
 .chooser-card {
   max-width: 44rem;
   margin: 0 auto;
-  padding: 1.6rem;
+  padding: 1.5rem 0;
 }
 
 code {
@@ -349,11 +365,13 @@ code {
 }
 
 @media (max-width: 860px) {
-  .hero-grid,
   .controls,
-  .definition-list,
-  .stats {
+  .definition-list {
     grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2.25rem;
   }
 
   .topbar {
@@ -492,54 +510,38 @@ const localeCopy = {
     lang: "es",
     localeLabel: "Español",
     alternateLocaleLabel: "English",
-    htmlTitle: "Directorio VeneHelp",
+    htmlTitle: "VeneHelp",
     siteDescription:
-      "Directorio público de recursos para reportar personas desaparecidas relacionados con la emergencia del terremoto en Venezuela.",
-    eyebrow: "Directorio VeneHelp",
-    heroTitle: "Un punto de entrada público para recursos fragmentados de personas desaparecidas",
+      "Directorio de recursos de ayuda a afectados por el Terremoto en Venezuela.",
+    eyebrow: "Directorio de ayuda",
+    heroTitle: "VeneHelp",
     heroLede:
-      "Este sitio no reemplaza los registros originales. Ayuda a familias, voluntarios, periodistas y agentes LLM a encontrarlos desde un solo directorio público.",
-    cautionTitle: "Usa esta información con cuidado",
-    cautionBody:
-      "Cada fuente de esta primera versión debe verificarse manualmente. Mantén los enlaces públicos, actuales y claramente etiquetados para reducir daños durante una crisis.",
-    initialDataset: "dataset inicial",
-    machineReadable: "legible por máquinas",
-    githubPagesReady: "listo para GitHub Pages",
-    stats: {
-      knownSources: "fuentes conocidas",
-      primaryTargets: "fuentes prioritarias para rastreo",
-      unverifiedLeads: "pistas sin verificar"
-    },
-    findSourceTitle: "Encontrar una fuente",
+      "Directorio de recursos de ayuda a afectados por el Terremoto en Venezuela.",
+    directoryNote:
+      "Agrupamos sitios, formularios, mapas y registros que han aparecido de forma fragmentada o redundante. La meta es que personas afectadas, voluntarios, periodistas y LLMs encuentren recursos confiables desde un solo lugar.",
+    findSourceTitle: "Recursos disponibles",
     findSourceIntro:
-      "Usa los filtros para acotar el directorio, o consulta el dataset en <a href=\"{dataUrl}\"><code>{dataPath}</code></a>.",
+      "Busca por nombre o filtra por tipo de recurso. El dataset para agentes y buscadores está disponible en <a href=\"{dataUrl}\"><code>{dataPath}</code></a>.",
     searchLabel: "Buscar",
     searchPlaceholder: "Busca por nombre, categoría o etiqueta",
     categoryLabel: "Categoría",
     purposeLabel: "Propósito",
     allCategories: "Todas las categorías",
     allPurposes: "Todos los propósitos",
-    loadingSources: "Cargando fuentes",
-    resultsShown: "{count} fuentes visibles",
-    noResults: "Ninguna fuente coincide con los filtros actuales.",
+    loadingSources: "Cargando recursos",
+    resultsShown: "{count} recursos visibles",
+    noResults: "Ningún recurso coincide con los filtros actuales.",
     loadFailed: "No se pudieron cargar las fuentes",
     loadFailedHelp: "Verifica que exista el archivo JSON generado y que el sitio se esté sirviendo desde la carpeta docs.",
-    openSource: "Abrir fuente",
-    details: "Ver detalles",
+    openSource: "Abrir recurso",
+    details: "Detalles",
     directLinkPending: "Enlace directo pendiente de verificación",
-    crawlersTitle: "Para rastreadores y agentes",
-    crawlerNotes: [
-      "Empieza por la portada o por el índice JSON.",
-      "Prioriza las fuentes con <code>crawler_priority</code> 1 o 2.",
-      "Trata las entradas con estado <code>lead</code> o <code>unverified</code> como pistas, no como verdad confiable.",
-      "Revisa <code>last_verified_at</code> y <code>status</code> antes de depender de una fuente."
-    ],
     footer:
-      "Generado {generatedAt}. Construido como directorio público, no como reemplazo de las fuentes originales.",
-    allSourcesEyebrow: "Todas las fuentes",
-    allSourcesTitle: "Directorio de fuentes",
-    allSourcesIntro: "Cada fuente tiene una página estable de detalle y una exportación JSON canónica por idioma.",
-    breadcrumbsSources: "Fuentes",
+      "VeneHelp agrupa enlaces públicos y datos estructurados para facilitar el acceso humano y la búsqueda por LLMs. Última generación: {generatedAt}.",
+    allSourcesEyebrow: "Todos los recursos",
+    allSourcesTitle: "Directorio de recursos",
+    allSourcesIntro: "Cada recurso tiene una página estable de detalle y una exportación JSON canónica por idioma.",
+    breadcrumbsSources: "Recursos",
     metadataTitle: "Metadatos",
     coverageLabelDetail: "Cobertura",
     languageLabelDetail: "Idioma",
@@ -558,33 +560,24 @@ const localeCopy = {
     chooserEn: "Continue in English",
     chooserRedirecting: "Redirigiendo a la versión sugerida...",
     languageNavLabel: "Idioma",
-    sourceListTitle: "Todas las fuentes | VeneHelp"
+    sourceListTitle: "Todos los recursos | VeneHelp"
   },
   en: {
     lang: "en",
     localeLabel: "English",
     alternateLocaleLabel: "Español",
-    htmlTitle: "VeneHelp Directory",
+    htmlTitle: "VeneHelp",
     siteDescription:
-      "Public directory of missing-person reporting resources related to the Venezuela earthquake emergency.",
-    eyebrow: "VeneHelp directory",
-    heroTitle: "One public entrypoint for fragmented missing-person resources",
+      "Directory of help resources for people affected by the earthquake in Venezuela.",
+    eyebrow: "Help directory",
+    heroTitle: "VeneHelp",
     heroLede:
-      "This site does not replace the original registries. It helps families, volunteers, journalists, and LLM agents discover them from a single public directory.",
-    cautionTitle: "Use carefully",
-    cautionBody:
-      "Every source in the first version should be manually verified. Keep links public, current, and clearly labeled to reduce harm during a crisis.",
-    initialDataset: "initial dataset",
-    machineReadable: "machine-readable",
-    githubPagesReady: "GitHub Pages ready",
-    stats: {
-      knownSources: "known sources",
-      primaryTargets: "primary crawl targets",
-      unverifiedLeads: "unverified leads"
-    },
-    findSourceTitle: "Find a source",
+      "Directory of help resources for people affected by the earthquake in Venezuela.",
+    directoryNote:
+      "We group sites, forms, maps, and registries that have appeared with fragmented or redundant information. The goal is to help affected people, volunteers, journalists, and LLMs find useful resources from one place.",
+    findSourceTitle: "Available resources",
     findSourceIntro:
-      "Use filters to narrow the directory, or consume the dataset at <a href=\"{dataUrl}\"><code>{dataPath}</code></a>.",
+      "Search by name or filter by resource type. The dataset for agents and search systems is available at <a href=\"{dataUrl}\"><code>{dataPath}</code></a>.",
     searchLabel: "Search",
     searchPlaceholder: "Search by name, category, or tag",
     categoryLabel: "Category",
@@ -592,25 +585,18 @@ const localeCopy = {
     allCategories: "All categories",
     allPurposes: "All purposes",
     loadingSources: "Loading sources",
-    resultsShown: "{count} sources shown",
-    noResults: "No sources match the current filters.",
+    resultsShown: "{count} resources shown",
+    noResults: "No resources match the current filters.",
     loadFailed: "Unable to load sources",
     loadFailedHelp: "Check that the generated JSON file exists and the site is being served from the docs folder.",
-    openSource: "Open source",
-    details: "View details",
+    openSource: "Open resource",
+    details: "Details",
     directLinkPending: "Direct link pending verification",
-    crawlersTitle: "For crawlers and agents",
-    crawlerNotes: [
-      "Start at the homepage or the JSON index.",
-      "Prioritize sources with <code>crawler_priority</code> 1 or 2.",
-      "Treat entries with status <code>lead</code> or <code>unverified</code> as discovery pointers, not trusted truth.",
-      "Check <code>last_verified_at</code> and <code>status</code> before relying on a source."
-    ],
     footer:
-      "Generated {generatedAt}. Built as a public directory, not a replacement for the original sources.",
+      "VeneHelp groups public links and structured data to support human access and LLM search. Last generated: {generatedAt}.",
     allSourcesEyebrow: "All sources",
-    allSourcesTitle: "Source directory",
-    allSourcesIntro: "Each source has a stable detail page plus a canonical per-language JSON export.",
+    allSourcesTitle: "Resource directory",
+    allSourcesIntro: "Each resource has a stable detail page plus a canonical per-language JSON export.",
     breadcrumbsSources: "Sources",
     metadataTitle: "Metadata",
     coverageLabelDetail: "Coverage",
@@ -651,9 +637,6 @@ const countEl = document.querySelector("[data-results-count]");
 const searchEl = document.querySelector("[data-search]");
 const categoryEl = document.querySelector("[data-category]");
 const purposeEl = document.querySelector("[data-purpose]");
-const totalEl = document.querySelector("[data-total-sources]");
-const primaryEl = document.querySelector("[data-primary-sources]");
-const leadEl = document.querySelector("[data-lead-sources]");
 
 const interpolate = (template, values = {}) =>
   String(template || "").replace(/\\{(\\w+)\\}/g, (_, key) => String(values[key] ?? ""));
@@ -684,13 +667,13 @@ const renderCard = (source) => {
 
   return [
     '<article class="source-card">',
+    '<h3><a href="' + detailsPath + '">' + source.name + '</a></h3>',
+    '<p>' + source.summary + '</p>',
     '<div class="meta-row">',
     renderBadge(source.category_label),
     renderBadge(source.purpose_label),
     renderBadge(source.status_label, 'status status-' + source.status),
     '</div>',
-    '<h3><a href="' + detailsPath + '">' + source.name + '</a></h3>',
-    '<p>' + source.summary + '</p>',
     '<footer>',
     linkHtml,
     '<a class="button secondary" href="' + detailsPath + '">' + messages.details + '</a>',
@@ -713,10 +696,6 @@ const render = () => {
 const load = async () => {
   const response = await fetch(basePath + "/data/sources.json");
   state.sources = await response.json();
-
-  totalEl.textContent = String(state.sources.length);
-  primaryEl.textContent = String(state.sources.filter((item) => item.crawler_priority <= 2).length);
-  leadEl.textContent = String(state.sources.filter((item) => item.status === "lead").length);
 
   render();
 };
@@ -856,39 +835,16 @@ ${renderHead({
   alternates: renderAlternateLinks("/")
 })}
   <body>
+    <div class="flag-bar" aria-hidden="true"><span></span><span></span><span></span></div>
     <main>
       <section class="hero">
         <div class="shell">
           ${renderPageTopbar(locale, "/")}
-        </div>
-        <div class="shell hero-grid">
-          <div>
+          <div class="hero-grid">
             <p class="eyebrow">${escapeHtml(copy.eyebrow)}</p>
             <h1>${escapeHtml(copy.heroTitle)}</h1>
             <p class="lede">${escapeHtml(copy.heroLede)}</p>
-          </div>
-          <aside class="hero-card">
-            <h2>${escapeHtml(copy.cautionTitle)}</h2>
-            <p>${escapeHtml(copy.cautionBody)}</p>
-            <div class="meta-row">
-              <span class="status status-unverified">${escapeHtml(copy.initialDataset)}</span>
-              <span class="pill">${escapeHtml(copy.machineReadable)}</span>
-              <span class="pill">${escapeHtml(copy.githubPagesReady)}</span>
-            </div>
-          </aside>
-        </div>
-        <div class="shell stats">
-          <div class="stat">
-            <strong data-total-sources>0</strong>
-            <span>${escapeHtml(copy.stats.knownSources)}</span>
-          </div>
-          <div class="stat">
-            <strong data-primary-sources>0</strong>
-            <span>${escapeHtml(copy.stats.primaryTargets)}</span>
-          </div>
-          <div class="stat">
-            <strong data-lead-sources>0</strong>
-            <span>${escapeHtml(copy.stats.unverifiedLeads)}</span>
+            <p class="directory-note">${escapeHtml(copy.directoryNote)}</p>
           </div>
         </div>
       </section>
@@ -925,15 +881,6 @@ ${renderHead({
           <div class="source-list" data-source-list></div>
         </div>
       </section>
-
-      <section class="section">
-        <div class="shell panel">
-          <h2>${escapeHtml(copy.crawlersTitle)}</h2>
-          <ul>
-            ${copy.crawlerNotes.map((note) => `<li>${note}</li>`).join("")}
-          </ul>
-        </div>
-      </section>
     </main>
 
     <footer class="footer">
@@ -961,6 +908,7 @@ ${renderHead({
   alternates: renderAlternateLinks("/sources/")
 })}
   <body>
+    <div class="flag-bar" aria-hidden="true"><span></span><span></span><span></span></div>
     <main class="page">
       <div class="shell">
         ${renderPageTopbar(locale, "/sources/")}
@@ -1004,6 +952,7 @@ ${renderHead({
   alternates: renderAlternateLinks(sourcePath)
 })}
   <body>
+    <div class="flag-bar" aria-hidden="true"><span></span><span></span><span></span></div>
     <main class="page">
       <div class="shell">
         ${renderPageTopbar(locale, sourcePath)}
@@ -1085,6 +1034,7 @@ ${renderHead({
   alternates: renderAlternateLinks("/")
 })}
   <body>
+    <div class="flag-bar" aria-hidden="true"><span></span><span></span><span></span></div>
     <main class="page">
       <div class="shell">
         <section class="panel chooser-card">

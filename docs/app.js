@@ -14,9 +14,6 @@ const countEl = document.querySelector("[data-results-count]");
 const searchEl = document.querySelector("[data-search]");
 const categoryEl = document.querySelector("[data-category]");
 const purposeEl = document.querySelector("[data-purpose]");
-const totalEl = document.querySelector("[data-total-sources]");
-const primaryEl = document.querySelector("[data-primary-sources]");
-const leadEl = document.querySelector("[data-lead-sources]");
 
 const interpolate = (template, values = {}) =>
   String(template || "").replace(/\{(\w+)\}/g, (_, key) => String(values[key] ?? ""));
@@ -47,13 +44,13 @@ const renderCard = (source) => {
 
   return [
     '<article class="source-card">',
+    '<h3><a href="' + detailsPath + '">' + source.name + '</a></h3>',
+    '<p>' + source.summary + '</p>',
     '<div class="meta-row">',
     renderBadge(source.category_label),
     renderBadge(source.purpose_label),
     renderBadge(source.status_label, 'status status-' + source.status),
     '</div>',
-    '<h3><a href="' + detailsPath + '">' + source.name + '</a></h3>',
-    '<p>' + source.summary + '</p>',
     '<footer>',
     linkHtml,
     '<a class="button secondary" href="' + detailsPath + '">' + messages.details + '</a>',
@@ -76,10 +73,6 @@ const render = () => {
 const load = async () => {
   const response = await fetch(basePath + "/data/sources.json");
   state.sources = await response.json();
-
-  totalEl.textContent = String(state.sources.length);
-  primaryEl.textContent = String(state.sources.filter((item) => item.crawler_priority <= 2).length);
-  leadEl.textContent = String(state.sources.filter((item) => item.status === "lead").length);
 
   render();
 };
