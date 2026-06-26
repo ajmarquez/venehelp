@@ -440,6 +440,45 @@ select:focus {
   font-size: 0.92rem;
 }
 
+.source-usewhen {
+  margin: 0;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.cap-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.cap {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.65rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+
+.cap--on {
+  background: #e5f3eb;
+  color: var(--success);
+  border-color: #bfe2cd;
+}
+
+.cap--off {
+  background: var(--surface-muted);
+  color: var(--muted);
+  border-color: var(--line);
+}
+
+.source-trust {
+  margin: 0;
+}
+
 .source-card footer,
 .page-links,
 .topbar {
@@ -816,6 +855,10 @@ const localeCopy = {
     developerSectionIntro:
       "APIs, datasets y proyectos open source útiles para integraciones, agentes y análisis técnico.",
     developerEmpty: "Todavía no hay recursos técnicos publicados en esta versión.",
+    capSearch: "Búsqueda pública",
+    capReport: "Acepta reportes",
+    capFound: "Marca encontrado / a salvo",
+    checkedShort: "Revisado",
     venehelpDatasetTitle: "Dataset público de VeneHelp",
     venehelpDatasetSummary:
       "Exportación JSON del directorio de VeneHelp para LLMs, buscadores e integraciones simples.",
@@ -929,6 +972,10 @@ const localeCopy = {
     developerSectionIntro:
       "APIs, datasets, and open-source projects that are useful for integrations, agents, and technical analysis.",
     developerEmpty: "No technical resources are published in this version yet.",
+    capSearch: "Public search",
+    capReport: "Accepts reports",
+    capFound: "Mark found / safe",
+    checkedShort: "Checked",
     venehelpDatasetTitle: "VeneHelp public dataset",
     venehelpDatasetSummary:
       "JSON export of the VeneHelp directory for LLMs, search systems, and lightweight integrations.",
@@ -1021,28 +1068,34 @@ const matchesQuery = (source, query) => {
 const renderBadge = (label, className = "pill") =>
   '<span class="' + className + '">' + label + "</span>";
 
+const renderCapability = (on, label) =>
+  '<span class="cap ' + (on ? 'cap--on' : 'cap--off') + '">' +
+  (on ? '✓ ' : '✕ ') + escapeHtml(label) + '</span>';
+
 const renderRegistryCard = (source) => {
   const detailsPath = basePath + '/sources/' + source.slug + '/';
   const linkHtml = source.url
     ? '<a class="button" href="' + source.url + '" target="_blank" rel="noreferrer">' + messages.openSource + '</a>'
     : '<span class="small">' + messages.directLinkPending + '</span>';
-  const serviceHtml = (source.service_labels || [])
-    .slice(0, 4)
-    .map((label) => renderBadge(label))
-    .join("");
+  const useWhenHtml = source.use_when_label
+    ? '<p class="source-usewhen">' + escapeHtml(source.use_when_label) + '</p>'
+    : '';
+  const capHtml =
+    renderCapability(source.public_search, messages.capSearch) +
+    renderCapability(source.accepts_new_reports, messages.capReport) +
+    renderCapability(source.report_found, messages.capFound);
+  const trustHtml = '<p class="small source-trust">' +
+    escapeHtml(source.owner_label || '') +
+    (source.last_checked_at ? ' · ' + escapeHtml(messages.checkedShort) + ' ' + escapeHtml(source.last_checked_at) : '') +
+    '</p>';
 
   return [
     '<article class="source-card">',
-    '<h3><a href="' + detailsPath + '">' + source.name + '</a></h3>',
-    '<p>' + source.summary + '</p>',
-    '<p class="small source-facts">' +
-      escapeHtml(messages.publicSearchLabelDetail) + ': ' + escapeHtml(source.public_search_label_value) +
-      ' · ' +
-      escapeHtml(messages.acceptsReportsLabelDetail) + ': ' + escapeHtml(source.accepts_reports_label_value) +
-      ' · ' +
-      escapeHtml(messages.reportFoundLabelDetail) + ': ' + escapeHtml(source.report_found_label_value) +
-      '</p>',
-    serviceHtml ? '<div class="meta-row">' + serviceHtml + '</div>' : '',
+    '<h3><a href="' + detailsPath + '">' + escapeHtml(source.name) + '</a></h3>',
+    useWhenHtml,
+    '<p>' + escapeHtml(source.summary) + '</p>',
+    '<div class="cap-row">' + capHtml + '</div>',
+    trustHtml,
     '<footer>',
     linkHtml,
     '<a class="button secondary" href="' + detailsPath + '">' + messages.details + '</a>',

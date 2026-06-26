@@ -44,28 +44,34 @@ const matchesQuery = (source, query) => {
 const renderBadge = (label, className = "pill") =>
   '<span class="' + className + '">' + label + "</span>";
 
+const renderCapability = (on, label) =>
+  '<span class="cap ' + (on ? 'cap--on' : 'cap--off') + '">' +
+  (on ? '✓ ' : '✕ ') + escapeHtml(label) + '</span>';
+
 const renderRegistryCard = (source) => {
   const detailsPath = basePath + '/sources/' + source.slug + '/';
   const linkHtml = source.url
     ? '<a class="button" href="' + source.url + '" target="_blank" rel="noreferrer">' + messages.openSource + '</a>'
     : '<span class="small">' + messages.directLinkPending + '</span>';
-  const serviceHtml = (source.service_labels || [])
-    .slice(0, 4)
-    .map((label) => renderBadge(label))
-    .join("");
+  const useWhenHtml = source.use_when_label
+    ? '<p class="source-usewhen">' + escapeHtml(source.use_when_label) + '</p>'
+    : '';
+  const capHtml =
+    renderCapability(source.public_search, messages.capSearch) +
+    renderCapability(source.accepts_new_reports, messages.capReport) +
+    renderCapability(source.report_found, messages.capFound);
+  const trustHtml = '<p class="small source-trust">' +
+    escapeHtml(source.owner_label || '') +
+    (source.last_checked_at ? ' · ' + escapeHtml(messages.checkedShort) + ' ' + escapeHtml(source.last_checked_at) : '') +
+    '</p>';
 
   return [
     '<article class="source-card">',
-    '<h3><a href="' + detailsPath + '">' + source.name + '</a></h3>',
-    '<p>' + source.summary + '</p>',
-    '<p class="small source-facts">' +
-      escapeHtml(messages.publicSearchLabelDetail) + ': ' + escapeHtml(source.public_search_label_value) +
-      ' · ' +
-      escapeHtml(messages.acceptsReportsLabelDetail) + ': ' + escapeHtml(source.accepts_reports_label_value) +
-      ' · ' +
-      escapeHtml(messages.reportFoundLabelDetail) + ': ' + escapeHtml(source.report_found_label_value) +
-      '</p>',
-    serviceHtml ? '<div class="meta-row">' + serviceHtml + '</div>' : '',
+    '<h3><a href="' + detailsPath + '">' + escapeHtml(source.name) + '</a></h3>',
+    useWhenHtml,
+    '<p>' + escapeHtml(source.summary) + '</p>',
+    '<div class="cap-row">' + capHtml + '</div>',
+    trustHtml,
     '<footer>',
     linkHtml,
     '<a class="button secondary" href="' + detailsPath + '">' + messages.details + '</a>',
