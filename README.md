@@ -55,6 +55,20 @@ If you plan to publish to a GitHub Pages project URL such as `https://username.g
 SITE_URL="https://username.github.io" SITE_PATH="/venehelp" npm run build
 ```
 
+Cloudflare Web Analytics is enabled by default for `directorioterremotovenezuela.org`.
+
+To override the token for another deployment, pass it when building:
+
+```bash
+CLOUDFLARE_ANALYTICS_TOKEN="your-token" npm run build
+```
+
+To disable the analytics snippet for a build, pass an empty token:
+
+```bash
+CLOUDFLARE_ANALYTICS_TOKEN="" npm run build
+```
+
 ## Publish on GitHub Pages
 
 1. Push the repository to GitHub.

@@ -5,11 +5,12 @@ const rootDir = path.resolve(new URL("..", import.meta.url).pathname);
 const docsDir = path.join(rootDir, "docs");
 const sourceFile = path.join(rootDir, "data", "sources.json");
 const registryFile = path.join(rootDir, "data", "registry.json");
+const defaultCloudflareAnalyticsToken = "4a80fe27b95e4d6b990cb960bf94699d";
 
 const customDomain = (process.env.SITE_DOMAIN || "directorioterremotovenezuela.org").replace(/^https?:\/\//, "").replace(/\/+$/, "");
 const siteUrl = (process.env.SITE_URL || `https://${customDomain}`).replace(/\/+$/, "");
 const sitePath = (process.env.SITE_PATH || "").replace(/\/+$/, "");
-const cloudflareAnalyticsToken = (process.env.CLOUDFLARE_ANALYTICS_TOKEN || "").trim();
+const cloudflareAnalyticsToken = (process.env.CLOUDFLARE_ANALYTICS_TOKEN ?? defaultCloudflareAnalyticsToken).trim();
 const generatedAt = new Date().toISOString();
 const rawSources = JSON.parse(await fs.readFile(sourceFile, "utf8"));
 const supportedLocales = ["es", "en"];
