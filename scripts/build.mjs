@@ -347,9 +347,15 @@ summary:focus-visible,
   border-color: var(--blue);
 }
 
+.results-count {
+  margin-top: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
 .directory-sections {
   display: grid;
-  gap: 2.5rem;
+  gap: 1.75rem;
   margin-top: 1.5rem;
 }
 
@@ -358,13 +364,41 @@ summary:focus-visible,
   padding-top: 1.25rem;
 }
 
+.directory-block {
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--blue);
+  border-radius: 12px;
+  padding: 1.25rem 1.4rem 0.5rem;
+  background: var(--surface);
+}
+
+#section-missing {
+  border-top-color: var(--red);
+}
+
+#section-located {
+  border-top-color: var(--yellow);
+}
+
+#section-humanitarian {
+  border-top-color: var(--blue);
+}
+
 .directory-block h3 {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
 }
 
 .directory-block .small {
   margin: 0.5rem 0 0;
+}
+
+.directory-block .source-list {
+  margin-top: 1rem;
+}
+
+.directory-block .source-card:last-child {
+  border-bottom: 0;
 }
 
 .registry-stats {
@@ -939,7 +973,7 @@ const localeCopy = {
     openApi: "Abrir API",
     openSourceCode: "Abrir código fuente",
     loadingSources: "Cargando recursos",
-    resultsShown: "{count} registros visibles",
+    resultsShown: "Mostrando {count} de {total} plataformas",
     noResults: "Ningún recurso coincide con los filtros actuales.",
     loadFailed: "No se pudieron cargar las fuentes",
     loadFailedHelp: "Verifica que exista el archivo JSON generado y que el sitio se esté sirviendo desde la carpeta docs.",
@@ -1058,7 +1092,7 @@ const localeCopy = {
     openApi: "Open API",
     openSourceCode: "Open source code",
     loadingSources: "Loading sources",
-    resultsShown: "{count} registries shown",
+    resultsShown: "Showing {count} of {total} platforms",
     noResults: "No resources match the current filters.",
     loadFailed: "Unable to load sources",
     loadFailedHelp: "Check that the generated JSON file exists and the site is being served from the docs folder.",
@@ -1254,7 +1288,10 @@ const render = () => {
   );
 
   if (registryCountEl) {
-    registryCountEl.textContent = interpolate(messages.resultsShown, { count: filtered.length });
+    registryCountEl.textContent = interpolate(messages.resultsShown, {
+      count: filtered.length,
+      total: state.sources.length
+    });
   }
 
   sectionEls.forEach((el) => {
@@ -1549,7 +1586,7 @@ ${renderHead({
             <button type="button" class="filter-btn" data-filter="accepts_new_reports" aria-pressed="false">${escapeHtml(copy.capReport)}</button>
             <button type="button" class="filter-btn" data-filter="report_found" aria-pressed="false">${escapeHtml(copy.capFound)}</button>
           </div>
-          <p class="small" data-results-count>${escapeHtml(copy.loadingSources)}</p>
+          <p class="results-count" data-results-count>${escapeHtml(copy.loadingSources)}</p>
           <div class="directory-sections">
             <section class="directory-block" id="section-missing">
               <h3>${escapeHtml(copy.missingSectionTitle)}</h3>

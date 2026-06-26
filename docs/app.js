@@ -154,7 +154,10 @@ const render = () => {
   );
 
   if (registryCountEl) {
-    registryCountEl.textContent = interpolate(messages.resultsShown, { count: filtered.length });
+    registryCountEl.textContent = interpolate(messages.resultsShown, {
+      count: filtered.length,
+      total: state.sources.length
+    });
   }
 
   sectionEls.forEach((el) => {
