@@ -39,6 +39,7 @@
       "volunteer-run"
     ],
     "use_when_label": "Use this to search for or report a missing person.",
+    "warning_label": "",
     "category_label": "Website",
     "purpose_label": "Report and search",
     "status_label": "Active",
@@ -100,6 +101,7 @@
       "registry"
     ],
     "use_when_label": "Use this to search for or report a missing person.",
+    "warning_label": "",
     "category_label": "Website",
     "purpose_label": "Report and search",
     "status_label": "Active",
@@ -161,6 +163,7 @@
       "citizen-platform"
     ],
     "use_when_label": "Use this to search for or report a missing person.",
+    "warning_label": "",
     "category_label": "Website",
     "purpose_label": "Report and search",
     "status_label": "Active",
@@ -223,6 +226,7 @@
       "reporting"
     ],
     "use_when_label": "Use this to mark someone safe or search for a person.",
+    "warning_label": "",
     "category_label": "Website",
     "purpose_label": "Report and search",
     "status_label": "Active",
@@ -282,6 +286,7 @@
       "community"
     ],
     "use_when_label": "Use this as an extra channel to report someone missing or trapped.",
+    "warning_label": "",
     "category_label": "Form",
     "purpose_label": "Reporting",
     "status_label": "Active",
@@ -339,6 +344,7 @@
       "humanitarian"
     ],
     "use_when_label": "Use this if you need an official Red Cross humanitarian path to restore contact.",
+    "warning_label": "",
     "category_label": "Website",
     "purpose_label": "Family tracing",
     "status_label": "Manual verification",
@@ -388,6 +394,10 @@
       "es": "Úsalo si la persona ya fue localizada — no es para reportar desaparecidos.",
       "en": "Use this if the person has already been located — not for reporting missing people."
     },
+    "warning": {
+      "es": "Solo para personas ya localizadas. Si buscas a alguien desaparecido, usa la sección Personas desaparecidas.",
+      "en": "Only for people already located. To search for someone missing, use the Missing people section."
+    },
     "notes": [
       "Public API documentation is available at /api and the v1 GET endpoints return JSON with CORS enabled for read access.",
       "The project README explicitly says it is only for people already located and points missing-person cases to desaparecidosterremotovenezuela.com."
@@ -400,6 +410,7 @@
       "hospitals"
     ],
     "use_when_label": "Use this if the person has already been located — not for reporting missing people.",
+    "warning_label": "Only for people already located. To search for someone missing, use the Missing people section.",
     "category_label": "Website",
     "purpose_label": "Located people",
     "status_label": "Active",

@@ -56,6 +56,9 @@ const renderRegistryCard = (source) => {
   const useWhenHtml = source.use_when_label
     ? '<p class="source-usewhen">' + escapeHtml(source.use_when_label) + '</p>'
     : '';
+  const warningHtml = source.warning_label
+    ? '<p class="source-warning">' + escapeHtml(source.warning_label) + '</p>'
+    : '';
   const capHtml =
     renderCapability(source.public_search, messages.capSearch) +
     renderCapability(source.accepts_new_reports, messages.capReport) +
@@ -69,6 +72,7 @@ const renderRegistryCard = (source) => {
     '<article class="source-card">',
     '<h3><a href="' + detailsPath + '">' + escapeHtml(source.name) + '</a></h3>',
     useWhenHtml,
+    warningHtml,
     '<p>' + escapeHtml(source.summary) + '</p>',
     '<div class="cap-row">' + capHtml + '</div>',
     trustHtml,

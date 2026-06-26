@@ -479,6 +479,16 @@ select:focus {
   margin: 0;
 }
 
+.source-warning {
+  margin: 0;
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--radius);
+  background: #fff1d8;
+  color: var(--warn);
+  font-weight: 700;
+  border: 1px solid #f0d9a6;
+}
+
 .source-card footer,
 .page-links,
 .topbar {
@@ -1080,6 +1090,9 @@ const renderRegistryCard = (source) => {
   const useWhenHtml = source.use_when_label
     ? '<p class="source-usewhen">' + escapeHtml(source.use_when_label) + '</p>'
     : '';
+  const warningHtml = source.warning_label
+    ? '<p class="source-warning">' + escapeHtml(source.warning_label) + '</p>'
+    : '';
   const capHtml =
     renderCapability(source.public_search, messages.capSearch) +
     renderCapability(source.accepts_new_reports, messages.capReport) +
@@ -1093,6 +1106,7 @@ const renderRegistryCard = (source) => {
     '<article class="source-card">',
     '<h3><a href="' + detailsPath + '">' + escapeHtml(source.name) + '</a></h3>',
     useWhenHtml,
+    warningHtml,
     '<p>' + escapeHtml(source.summary) + '</p>',
     '<div class="cap-row">' + capHtml + '</div>',
     trustHtml,
@@ -1261,6 +1275,7 @@ const localizeSource = (source, locale) => {
     summary: sourceCopy?.summary || source.summary,
     notes: sourceCopy?.notes || source.notes,
     use_when_label: source.use_when?.[locale] || source.use_when?.es || "",
+    warning_label: source.warning?.[locale] || source.warning?.es || "",
     section: source.section || "missing",
     category_label: translateMappedValue(categoryLabels, source.category, locale),
     purpose_label: translateMappedValue(purposeLabels, source.purpose, locale),

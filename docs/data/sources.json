@@ -266,6 +266,10 @@
       "es": "Úsalo si la persona ya fue localizada — no es para reportar desaparecidos.",
       "en": "Use this if the person has already been located — not for reporting missing people."
     },
+    "warning": {
+      "es": "Solo para personas ya localizadas. Si buscas a alguien desaparecido, usa la sección Personas desaparecidas.",
+      "en": "Only for people already located. To search for someone missing, use the Missing people section."
+    },
     "notes": [
       "Public API documentation is available at /api and the v1 GET endpoints return JSON with CORS enabled for read access.",
       "The project README explicitly says it is only for people already located and points missing-person cases to desaparecidosterremotovenezuela.com."

@@ -39,6 +39,7 @@
       "gestion-voluntaria"
     ],
     "use_when_label": "Úsalo si buscas o quieres reportar a una persona desaparecida.",
+    "warning_label": "",
     "category_label": "Sitio web",
     "purpose_label": "Reportar y buscar",
     "status_label": "Activa",
@@ -100,6 +101,7 @@
       "registro"
     ],
     "use_when_label": "Úsalo si buscas o quieres reportar a una persona desaparecida.",
+    "warning_label": "",
     "category_label": "Sitio web",
     "purpose_label": "Reportar y buscar",
     "status_label": "Activa",
@@ -161,6 +163,7 @@
       "plataforma-ciudadana"
     ],
     "use_when_label": "Úsalo si buscas o quieres reportar a una persona desaparecida.",
+    "warning_label": "",
     "category_label": "Sitio web",
     "purpose_label": "Reportar y buscar",
     "status_label": "Activa",
@@ -223,6 +226,7 @@
       "reporte"
     ],
     "use_when_label": "Úsalo si quieres avisar que alguien está a salvo o buscar a una persona.",
+    "warning_label": "",
     "category_label": "Sitio web",
     "purpose_label": "Reportar y buscar",
     "status_label": "Activa",
@@ -282,6 +286,7 @@
       "comunidad"
     ],
     "use_when_label": "Úsalo si necesitas una vía adicional para reportar a alguien desaparecido o atrapado.",
+    "warning_label": "",
     "category_label": "Formulario",
     "purpose_label": "Reporte",
     "status_label": "Activa",
@@ -339,6 +344,7 @@
       "humanitario"
     ],
     "use_when_label": "Úsalo si necesitas una vía humanitaria oficial de la Cruz Roja para restablecer contacto.",
+    "warning_label": "",
     "category_label": "Sitio web",
     "purpose_label": "Restablecimiento de contacto",
     "status_label": "Verificar manualmente",
@@ -388,6 +394,10 @@
       "es": "Úsalo si la persona ya fue localizada — no es para reportar desaparecidos.",
       "en": "Use this if the person has already been located — not for reporting missing people."
     },
+    "warning": {
+      "es": "Solo para personas ya localizadas. Si buscas a alguien desaparecido, usa la sección Personas desaparecidas.",
+      "en": "Only for people already located. To search for someone missing, use the Missing people section."
+    },
     "notes": [
       "La documentación de la API pública está disponible en /api y los endpoints GET de la v1 responden JSON con CORS habilitado para lectura.",
       "El proyecto aclara que es solo para personas localizadas y redirige los casos de desaparecidos a desaparecidosterremotovenezuela.com."
@@ -400,6 +410,7 @@
       "hospitales"
     ],
     "use_when_label": "Úsalo si la persona ya fue localizada — no es para reportar desaparecidos.",
+    "warning_label": "Solo para personas ya localizadas. Si buscas a alguien desaparecido, usa la sección Personas desaparecidas.",
     "category_label": "Sitio web",
     "purpose_label": "Personas localizadas",
     "status_label": "Activa",
