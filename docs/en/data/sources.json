@@ -279,6 +279,11 @@
       "located-search",
       "located-report"
     ],
+    "report_stats": {
+      "located": 1997,
+      "as_of": "2026-06-26",
+      "source": "self-reported"
+    },
     "summary": "Open-source public platform for searching and contributing records of people already located after the earthquake, with a public read API for integrations.",
     "use_when": {
       "es": "Úsalo si la persona ya fue localizada — no es para reportar desaparecidos.",

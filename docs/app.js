@@ -1,6 +1,7 @@
 const config = window.VENEHELP_CONFIG || {};
 const messages = config.messages || {};
 const basePath = config.basePath || "";
+const assetVersion = config.assetVersion ? "?v=" + encodeURIComponent(config.assetVersion) : "";
 
 const state = {
   sources: [],
@@ -111,7 +112,7 @@ const renderRegistryCard = (source) => {
 };
 
 const buildDeveloperResources = (sources) => {
-  const datasetPath = basePath + "/data/sources.json";
+  const datasetPath = basePath + "/data/sources.json" + assetVersion;
   const items = [
     {
       key: "venehelp-dataset",
@@ -205,7 +206,7 @@ const load = async () => {
   }
 
   try {
-    const response = await fetch(basePath + "/data/sources.json");
+    const response = await fetch(basePath + "/data/sources.json" + assetVersion);
     const sources = await response.json();
     state.sources = sources
       .slice()

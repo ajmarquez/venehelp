@@ -12,6 +12,7 @@ const sitePath = (process.env.SITE_PATH || "").replace(/\/+$/, "");
 const cloudflareAnalyticsToken = (process.env.CLOUDFLARE_ANALYTICS_TOKEN ?? defaultCloudflareAnalyticsToken).trim();
 const showRegistry = false;
 const generatedAt = new Date().toISOString();
+const assetVersion = generatedAt.replace(/[^0-9]/g, "");
 const rawSources = JSON.parse(await fs.readFile(sourceFile, "utf8"));
 const supportedLocales = ["es", "en"];
 const rawRegistry = {
@@ -1192,6 +1193,7 @@ const appJs = `
 const config = window.VENEHELP_CONFIG || {};
 const messages = config.messages || {};
 const basePath = config.basePath || "";
+const assetVersion = config.assetVersion ? "?v=" + encodeURIComponent(config.assetVersion) : "";
 
 const state = {
   sources: [],
@@ -1302,7 +1304,7 @@ const renderRegistryCard = (source) => {
 };
 
 const buildDeveloperResources = (sources) => {
-  const datasetPath = basePath + "/data/sources.json";
+  const datasetPath = basePath + "/data/sources.json" + assetVersion;
   const items = [
     {
       key: "venehelp-dataset",
@@ -1396,7 +1398,7 @@ const load = async () => {
   }
 
   try {
-    const response = await fetch(basePath + "/data/sources.json");
+    const response = await fetch(basePath + "/data/sources.json" + assetVersion);
     const sources = await response.json();
     state.sources = sources
       .slice()
@@ -1593,6 +1595,8 @@ const renderCloudflareAnalyticsSnippet = () => {
   return `    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='${beaconConfig}'></script>\n`;
 };
 
+const withAssetVersion = (assetPath) => `${withSitePath(assetPath)}?v=${encodeURIComponent(assetVersion)}`;
+
 const renderHead = ({ lang, title, description, canonical, alternates }) => `  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1600,7 +1604,7 @@ const renderHead = ({ lang, title, description, canonical, alternates }) => `  <
     <meta name="description" content="${escapeHtml(description)}">
     <link rel="canonical" href="${escapeHtml(canonical)}">
     ${alternates}
-    <link rel="stylesheet" href="${withSitePath("/styles.css")}">
+    <link rel="stylesheet" href="${withAssetVersion("/styles.css")}">
   </head>`;
 
 const renderLanguageSwitcher = (locale, pathname, { rootDefault = false } = {}) => {
@@ -1725,8 +1729,8 @@ ${renderHead({
         <p>${escapeHtml(interpolate(copy.footer, { generatedAt }))}</p>
       </div>
     </footer>
-${renderCloudflareAnalyticsSnippet()}    <script>window.VENEHELP_CONFIG = ${JSON.stringify({ basePath: appBasePath, messages: copy })};</script>
-    <script src="${withSitePath("/app.js")}" defer></script>
+${renderCloudflareAnalyticsSnippet()}    <script>window.VENEHELP_CONFIG = ${JSON.stringify({ basePath: appBasePath, assetVersion, messages: copy })};</script>
+    <script src="${withAssetVersion("/app.js")}" defer></script>
   </body>
 </html>`;
 };
@@ -1805,8 +1809,8 @@ ${renderHead({
         </section>
       </div>
     </main>
-${renderCloudflareAnalyticsSnippet()}    <script>window.VENEHELP_CONFIG = ${JSON.stringify({ basePath: localeBasePath(locale), messages: copy })};</script>
-    <script src="${withSitePath("/app.js")}" defer></script>
+${renderCloudflareAnalyticsSnippet()}    <script>window.VENEHELP_CONFIG = ${JSON.stringify({ basePath: localeBasePath(locale), assetVersion, messages: copy })};</script>
+    <script src="${withAssetVersion("/app.js")}" defer></script>
   </body>
 </html>`;
 };

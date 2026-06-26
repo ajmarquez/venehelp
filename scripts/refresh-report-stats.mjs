@@ -68,22 +68,15 @@ const adapters = {
       found: numberNear(html, ["encontrad", "localizad", "found"])
     };
   },
-  "desaparecidos-terremoto-venezuela": async () => {
-    const html = await fetchText("https://desaparecidosterremotovenezuela.com/");
-    return {
-      reported: numberNear(html, ["reportad", "desaparecid", "registrad"]),
-      found: numberNear(html, ["encontrad", "localizad"])
-    };
-  },
+  // NOTE: desaparecidos-terremoto-venezuela renders its counters client-side
+  // (Next.js) from a backend endpoint that is not exposed in the static HTML.
+  // Scraping the page only yields asset hashes, so it is intentionally not an
+  // adapter here. To enable it, capture the real counts endpoint from browser
+  // devtools and add an adapter that hits it directly.
   "localizados-venezuela": async () => {
-    // Public read API documented at /api (CORS-enabled GET endpoints).
-    const data = await fetchJson("https://localizadosvenezuela.com/api/v1/people?limit=1");
-    const located =
-      firstNumber(data?.total) ??
-      firstNumber(data?.count) ??
-      firstNumber(data?.meta?.total) ??
-      firstNumber(data?.pagination?.total);
-    return { located };
+    // Public read API (CORS-enabled). meta.total is the located-people count.
+    const data = await fetchJson("https://localizadosvenezuela.com/api/v1/localizados?limit=1");
+    return { located: firstNumber(data?.meta?.total) };
   }
 };
 
