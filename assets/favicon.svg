@@ -1,22 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
   <title id="title">VeneHelp favicon</title>
-  <desc id="desc">Blue help circle with a white cross and yellow blue red accent.</desc>
+  <desc id="desc">Blue circle with a white helping hand and yellow blue red accent.</desc>
   <defs>
-    <linearGradient id="blueField" x1="96" y1="76" x2="408" y2="436" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#1f66cf"/>
-      <stop offset="1" stop-color="#0d49a8"/>
-    </linearGradient>
-    <clipPath id="circleClip">
+    <clipPath id="icon-circle">
       <circle cx="256" cy="256" r="212"/>
     </clipPath>
   </defs>
-  <circle cx="256" cy="256" r="212" fill="url(#blueField)"/>
-  <path
-    fill="#fff"
-    d="M233 126c-10 0-18 8-18 18v82h-82c-10 0-18 8-18 18v24c0 10 8 18 18 18h82v82c0 10 8 18 18 18h46c10 0 18-8 18-18v-82h82c10 0 18-8 18-18v-24c0-10-8-18-18-18h-82v-82c0-10-8-18-18-18h-46z"/>
-  <g clip-path="url(#circleClip)">
-    <path fill="#f7c600" d="M430 300c-21 37-52 67-102 101-28 19-47 38-68 67 44-16 91-39 133-71 25-19 43-39 56-60z"/>
-    <path fill="#0d49a8" d="M421 319c-32 38-76 67-130 105-14 10-25 19-35 31 36-15 80-38 117-66 23-18 40-36 53-55z"/>
-    <path fill="#d81f28" d="M411 339c-34 31-72 54-119 87-11 8-20 15-29 24 31-10 70-30 104-56 20-15 35-31 48-48z"/>
+  <circle cx="256" cy="256" r="212" fill="#1558bf"/>
+  <g fill="#fff">
+    <rect x="182" y="214" width="148" height="136" rx="42"/>
+    <rect x="180" y="134" width="30" height="112" rx="15"/>
+    <rect x="216" y="126" width="30" height="120" rx="15"/>
+    <rect x="252" y="126" width="30" height="120" rx="15"/>
+    <rect x="288" y="138" width="30" height="108" rx="15"/>
+    <rect x="132" y="236" width="110" height="34" rx="17" transform="rotate(-32 132 236)"/>
+  </g>
+  <g clip-path="url(#icon-circle)">
+    <path fill="#f5c400" d="M399 334c-28 30-62 53-102 76-14 8-29 22-43 39 41-8 83-25 119-49 24-16 43-35 56-58z"/>
+    <path fill="#1558bf" d="M392 349c-28 27-61 48-100 71-14 8-28 20-40 35 39-8 79-24 113-45 23-15 40-32 53-52z"/>
+    <path fill="#d81f28" d="M385 364c-28 23-58 41-92 59-13 7-25 17-36 30 34-5 67-18 96-36 21-13 37-29 49-46z"/>
   </g>
 </svg>
