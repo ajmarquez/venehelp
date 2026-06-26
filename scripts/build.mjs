@@ -916,6 +916,14 @@ const spanishSourceCopy = {
       "La revisión automática de enlaces devolvió HTTP 403 el 26 de junio de 2026, así que la disponibilidad y las capacidades deben verificarse manualmente.",
       "Se incluye de forma provisional como recurso de ayuda, pendiente de revisión manual."
     ]
+  },
+  "copernicus-ems-emsr884": {
+    summary:
+      "Activación oficial de cartografía rápida por satélite de Copernicus EMS para el terremoto de Venezuela de 2026: mapas de evaluación de daños y datos geoespaciales para equipos de respuesta, periodistas y analistas.",
+    notes: [
+      "Activación EMSR884 del servicio de cartografía rápida de Copernicus EMS, solicitada para el terremoto del 24 de junio de 2026.",
+      "Ofrece productos de delineación y gradación de daños como mapas PDF y datos SIG; no tiene búsqueda de personas ni restablecimiento de contacto."
+    ]
   }
 };
 
@@ -1177,7 +1185,7 @@ const sectionEls = Array.from(document.querySelectorAll("[data-section-list]"));
 const registryCountEl = document.querySelector("[data-results-count]");
 const developerListEl = document.querySelector("[data-developer-list]");
 const searchEl = document.querySelector("[data-search]");
-const sectionOrder = ["missing", "located", "aid"];
+const sectionOrder = ["missing", "located", "aid", "developer"];
 
 const interpolate = (template, values = {}) =>
   String(template || "").replace(/\\{(\\w+)\\}/g, (_, key) => String(values[key] ?? ""));
@@ -1267,7 +1275,7 @@ const buildDeveloperResources = (sources) => {
   ];
 
   sources
-    .filter((source) => source.api_url || source.source_code_url)
+    .filter((source) => source.api_url || source.source_code_url || source.section === "developer")
     .forEach((source) => {
       const links = [];
       if (source.api_url) {
@@ -1275,6 +1283,9 @@ const buildDeveloperResources = (sources) => {
       }
       if (source.source_code_url) {
         links.push({ href: source.source_code_url, label: messages.openSourceCode, secondary: true, external: true });
+      }
+      if (!source.api_url && !source.source_code_url && source.url) {
+        links.push({ href: source.url, label: messages.openSource, primary: true, external: true });
       }
       links.push({ href: basePath + '/sources/' + source.slug + '/', label: messages.details, secondary: true, external: false });
 
@@ -1314,25 +1325,27 @@ const renderDeveloperCard = (resource) => {
 };
 
 const render = () => {
-  const filtered = state.sources.filter(
+  const humanSources = state.sources.filter((source) => (source.section || "missing") !== "developer");
+  const filteredHuman = humanSources.filter(
     (source) => matchesQuery(source, state.query) && matchesFilters(source, state.filters)
   );
 
   if (registryCountEl) {
     registryCountEl.textContent = interpolate(messages.resultsShown, {
-      count: filtered.length,
-      total: state.sources.length
+      count: filteredHuman.length,
+      total: humanSources.length
     });
   }
 
   sectionEls.forEach((el) => {
     const key = el.getAttribute("data-section-list");
-    const inSection = filtered.filter((source) => (source.section || "missing") === key);
+    const inSection = filteredHuman.filter((source) => (source.section || "missing") === key);
     el.innerHTML = inSection.map(renderRegistryCard).join("") || '<p class="small">' + messages.noResults + '</p>';
   });
 
   if (developerListEl) {
-    const developerResources = buildDeveloperResources(filtered);
+    const devSources = state.sources.filter((source) => matchesQuery(source, state.query));
+    const developerResources = buildDeveloperResources(devSources);
     developerListEl.innerHTML = developerResources.map(renderDeveloperCard).join("") || '<p class="small">' + messages.developerEmpty + '</p>';
   }
 };

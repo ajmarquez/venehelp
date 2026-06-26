@@ -369,5 +369,44 @@
       "emergency",
       "aid"
     ]
+  },
+  {
+    "slug": "copernicus-ems-emsr884",
+    "section": "developer",
+    "name": "Copernicus EMS Damage Maps (EMSR884)",
+    "url": "https://mapping.emergency.copernicus.eu/activations/EMSR884/reporting/",
+    "category": "map",
+    "purpose": "context-and-location",
+    "coverage": "national",
+    "language": "en",
+    "requires_login": false,
+    "last_checked_at": "2026-06-26",
+    "owner": "Copernicus EMS",
+    "operator_type": "official",
+    "status": "active",
+    "crawler_priority": 2,
+    "accepts_new_reports": false,
+    "public_search": true,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "damage-reports",
+      "situation-updates"
+    ],
+    "summary": "Official Copernicus satellite rapid-mapping activation for the 2026 Venezuela earthquake: authoritative damage-assessment maps and geospatial data for responders, journalists, and analysts.",
+    "use_when": {
+      "es": "Úsalo para consultar mapas oficiales de daños por satélite y datos geoespaciales del terremoto.",
+      "en": "Use this for official satellite damage maps and geospatial data of the earthquake."
+    },
+    "notes": [
+      "Copernicus EMS Rapid Mapping activation EMSR884, requested for the June 24, 2026 earthquake.",
+      "Provides delineation and grading damage products as PDF maps and GIS data; it has no person-search or family-tracing."
+    ],
+    "tags": [
+      "earthquake",
+      "map",
+      "damage",
+      "official"
+    ]
   }
 ]

@@ -564,5 +564,65 @@
     "public_contact_label": "Not checked",
     "api_url_label": "Not checked",
     "source_code_url_label": "Not checked"
+  },
+  {
+    "slug": "copernicus-ems-emsr884",
+    "section": "developer",
+    "name": "Copernicus EMS Damage Maps (EMSR884)",
+    "url": "https://mapping.emergency.copernicus.eu/activations/EMSR884/reporting/",
+    "category": "map",
+    "purpose": "context-and-location",
+    "coverage": "national",
+    "language": "en",
+    "requires_login": false,
+    "last_checked_at": "2026-06-26",
+    "owner": "Copernicus EMS",
+    "operator_type": "official",
+    "status": "active",
+    "crawler_priority": 2,
+    "accepts_new_reports": false,
+    "public_search": true,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "damage-reports",
+      "situation-updates"
+    ],
+    "summary": "Official Copernicus satellite rapid-mapping activation for the 2026 Venezuela earthquake: authoritative damage-assessment maps and geospatial data for responders, journalists, and analysts.",
+    "use_when": {
+      "es": "Úsalo para consultar mapas oficiales de daños por satélite y datos geoespaciales del terremoto.",
+      "en": "Use this for official satellite damage maps and geospatial data of the earthquake."
+    },
+    "notes": [
+      "Copernicus EMS Rapid Mapping activation EMSR884, requested for the June 24, 2026 earthquake.",
+      "Provides delineation and grading damage products as PDF maps and GIS data; it has no person-search or family-tracing."
+    ],
+    "tags": [
+      "earthquake",
+      "map",
+      "damage",
+      "official"
+    ],
+    "use_when_label": "Use this for official satellite damage maps and geospatial data of the earthquake.",
+    "warning_label": "",
+    "category_label": "Map",
+    "purpose_label": "Context and location",
+    "status_label": "Active",
+    "operator_type_label": "Official",
+    "coverage_label": "National",
+    "language_label": "English",
+    "requires_login_label": "No",
+    "accepts_reports_label_value": "No",
+    "public_search_label_value": "Yes",
+    "report_found_label_value": "No",
+    "owner_label": "Copernicus EMS",
+    "service_labels": [
+      "Damage reports",
+      "Situation updates"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
   }
 ]
