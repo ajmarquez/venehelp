@@ -6,11 +6,19 @@ const docsDir = path.join(rootDir, "docs");
 const sourceFile = path.join(rootDir, "data", "sources.json");
 const registryFile = path.join(rootDir, "data", "registry.json");
 const defaultCloudflareAnalyticsToken = "4a80fe27b95e4d6b990cb960bf94699d";
+const parseBooleanFlag = (value, defaultValue = false) => {
+  if (value === undefined) {
+    return defaultValue;
+  }
+
+  return /^(1|true|yes|on)$/i.test(String(value).trim());
+};
 
 const customDomain = (process.env.SITE_DOMAIN || "directorioterremotovenezuela.org").replace(/^https?:\/\//, "").replace(/\/+$/, "");
 const siteUrl = (process.env.SITE_URL || `https://${customDomain}`).replace(/\/+$/, "");
 const sitePath = (process.env.SITE_PATH || "").replace(/\/+$/, "");
 const cloudflareAnalyticsToken = (process.env.CLOUDFLARE_ANALYTICS_TOKEN ?? defaultCloudflareAnalyticsToken).trim();
+const showRegistry = parseBooleanFlag(process.env.SHOW_REGISTRY, false);
 const generatedAt = new Date().toISOString();
 const rawSources = JSON.parse(await fs.readFile(sourceFile, "utf8"));
 const supportedLocales = ["es", "en"];
@@ -1191,7 +1199,8 @@ ${renderHead({
         </div>
       </section>
 
-      <section class="section">
+      ${showRegistry
+        ? `<section class="section">
         <div class="shell panel">
           <h2>${escapeHtml(copy.registryTitle)}</h2>
           <p class="page-intro">${escapeHtml(copy.registryIntro)}</p>
@@ -1201,7 +1210,8 @@ ${renderHead({
             <a class="button" href="${registryUrl}">${escapeHtml(copy.registryLinkLabel)}</a>
           </div>
         </div>
-      </section>
+      </section>`
+        : ""}
 
       <section class="section">
         <div class="shell panel">
@@ -1484,10 +1494,10 @@ VeneHelp is a public directory of missing-person reporting sources related to th
 - Spanish default homepage: ${absoluteUrl("/")}
 - Spanish homepage: ${absoluteLocaleUrl("es", "/")}
 - English homepage: ${absoluteLocaleUrl("en", "/")}
-- Spanish beta registry page: ${absoluteRegistryUrl("es")}
-- English beta registry page: ${absoluteRegistryUrl("en")}
 - Canonical raw dataset: ${absoluteUrl("/data/sources.json")}
-- Beta registry dataset: ${absoluteUrl("/data/registry.json")}
+${showRegistry ? `- Spanish beta registry page: ${absoluteRegistryUrl("es")}
+- English beta registry page: ${absoluteRegistryUrl("en")}
+- Beta registry dataset: ${absoluteUrl("/data/registry.json")}` : ""}
 
 ## Usage notes
 
@@ -1500,13 +1510,12 @@ const renderSitemap = () => {
   const entries = [
     absoluteUrl("/"),
     absoluteUrl("/data/sources.json"),
-    absoluteUrl("/data/registry.json"),
+    ...(showRegistry ? [absoluteUrl("/data/registry.json")] : []),
     ...supportedLocales.flatMap((locale) => [
       absoluteLocaleUrl(locale, "/"),
-      absoluteRegistryUrl(locale),
       absoluteLocaleUrl(locale, "/sources/"),
       absoluteLocaleUrl(locale, "/data/sources.json"),
-      absoluteLocaleUrl(locale, "/data/registry.json"),
+      ...(showRegistry ? [absoluteRegistryUrl(locale), absoluteLocaleUrl(locale, "/data/registry.json")] : []),
       ...localizedSources[locale].map((source) => absoluteLocaleUrl(locale, `/sources/${source.slug}/`))
     ])
   ];
@@ -1538,7 +1547,9 @@ await fs.writeFile(path.join(docsDir, "CNAME"), `${customDomain}\n`);
 const rawDataDir = path.join(docsDir, "data");
 await ensureDir(rawDataDir);
 await fs.writeFile(path.join(rawDataDir, "sources.json"), JSON.stringify(rawSources, null, 2) + "\n");
-await fs.writeFile(path.join(rawDataDir, "registry.json"), JSON.stringify(rawRegistry, null, 2) + "\n");
+if (showRegistry) {
+  await fs.writeFile(path.join(rawDataDir, "registry.json"), JSON.stringify(rawRegistry, null, 2) + "\n");
+}
 
 for (const locale of supportedLocales) {
   const localeDir = path.join(docsDir, locale);
@@ -1548,12 +1559,18 @@ for (const locale of supportedLocales) {
   await ensureDir(localeDir);
   await ensureDir(localeDataDir);
   await ensureDir(localeSourcesDir);
-  await ensureDir(path.join(localeDir, "registro"));
+  if (showRegistry) {
+    await ensureDir(path.join(localeDir, "registro"));
+  }
 
   await fs.writeFile(path.join(localeDir, "index.html"), renderLocaleIndexHtml(locale));
-  await fs.writeFile(path.join(localeDir, "registro", "index.html"), renderRegistryPageHtml(locale));
+  if (showRegistry) {
+    await fs.writeFile(path.join(localeDir, "registro", "index.html"), renderRegistryPageHtml(locale));
+  }
   await fs.writeFile(path.join(localeDataDir, "sources.json"), JSON.stringify(localizedSources[locale], null, 2) + "\n");
-  await fs.writeFile(path.join(localeDataDir, "registry.json"), JSON.stringify(localizedRegistry[locale], null, 2) + "\n");
+  if (showRegistry) {
+    await fs.writeFile(path.join(localeDataDir, "registry.json"), JSON.stringify(localizedRegistry[locale], null, 2) + "\n");
+  }
   await fs.writeFile(path.join(localeSourcesDir, "index.html"), renderLocalizedSourcesIndexHtml(locale));
 
   for (const source of localizedSources[locale]) {

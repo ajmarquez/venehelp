@@ -37,6 +37,12 @@ Recommended verification workflow:
 npm run build
 ```
 
+The registry and counters are hidden by default in production builds. To review them locally or in staging, enable them explicitly:
+
+```bash
+SHOW_REGISTRY=true npm run build
+```
+
 The default build target is:
 
 ```bash
@@ -67,6 +73,12 @@ To disable the analytics snippet for a build, pass an empty token:
 
 ```bash
 CLOUDFLARE_ANALYTICS_TOKEN="" npm run build
+```
+
+Example staging-style build with the registry visible:
+
+```bash
+SITE_URL="https://staging.example.org" SHOW_REGISTRY=true npm run build
 ```
 
 ## Publish on GitHub Pages
