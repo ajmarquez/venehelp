@@ -7,4 +7,4 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-Sitemap: https://ajmarquez.github.io/venehelp/sitemap.xml
+Sitemap: https://directorioterremotovenezuela.org/sitemap.xml

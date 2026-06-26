@@ -4,9 +4,10 @@ VeneHelp is a public directory of missing-person reporting sources related to th
 
 ## Preferred entrypoints
 
-- Homepage: https://ajmarquez.github.io/venehelp/
-- Source list: https://ajmarquez.github.io/venehelp/sources/
-- JSON dataset: https://ajmarquez.github.io/venehelp/data/sources.json
+- Language chooser: https://directorioterremotovenezuela.org/
+- Spanish homepage: https://directorioterremotovenezuela.org/es/
+- English homepage: https://directorioterremotovenezuela.org/en/
+- Canonical raw dataset: https://directorioterremotovenezuela.org/data/sources.json
 
 ## Usage notes
 

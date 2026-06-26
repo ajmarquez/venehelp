@@ -3,103 +3,77 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>VeneHelp Directory</title>
-    <meta name="description" content="A public directory of missing-person reporting resources related to the Venezuela earthquake emergency.">
-    <link rel="canonical" href="https://ajmarquez.github.io/venehelp/">
-    <link rel="stylesheet" href="/venehelp/styles.css">
+    <title>VeneHelp</title>
+    <meta name="description" content="Choose a language for the VeneHelp directory.">
+    <link rel="canonical" href="https://directorioterremotovenezuela.org/">
+    <link rel="alternate" hreflang="es" href="https://directorioterremotovenezuela.org/es/">
+    <link rel="alternate" hreflang="en" href="https://directorioterremotovenezuela.org/en/">
+    <link rel="alternate" hreflang="x-default" href="https://directorioterremotovenezuela.org/">
+    <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
-    <main>
-      <section class="hero">
-        <div class="shell hero-grid">
-          <div>
-            <p class="eyebrow">VeneHelp directory</p>
-            <h1>One public entrypoint for fragmented missing-person resources</h1>
-            <p class="lede">This site does not replace the original registries. It helps families, volunteers, journalists, and LLM agents discover them from a single public directory.</p>
-          </div>
-          <aside class="hero-card">
-            <h2>Use carefully</h2>
-            <p>Every source in the first version should be manually verified. Keep links public, current, and clearly labeled to reduce harm during a crisis.</p>
-            <div class="meta-row">
-              <span class="status status-unverified">initial dataset</span>
-              <span class="pill">machine-readable</span>
-              <span class="pill">GitHub Pages ready</span>
-            </div>
-          </aside>
-        </div>
-        <div class="shell stats">
-          <div class="stat">
-            <strong data-total-sources>0</strong>
-            <span>known sources</span>
-          </div>
-          <div class="stat">
-            <strong data-primary-sources>0</strong>
-            <span>primary crawl targets</span>
-          </div>
-          <div class="stat">
-            <strong data-lead-sources>0</strong>
-            <span>unverified leads</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="shell panel">
-          <h2>Find a source</h2>
-          <p class="page-intro">Use filters to narrow the directory, or consume the raw dataset at <a href="/venehelp/data/sources.json"><code>/data/sources.json</code></a>.</p>
-          <div class="controls">
-            <div class="field">
-              <label for="search">Search</label>
-              <input id="search" type="search" placeholder="Search by name, category, or tag" data-search>
-            </div>
-            <div class="field">
-              <label for="category">Category</label>
-              <select id="category" data-category>
-                <option value="all">All categories</option>
-                <option value="website">Website</option>
-                <option value="map">Map</option>
-                <option value="form">Form</option>
-                <option value="media">Media</option>
-                <option value="campaign">Campaign</option>
-                <option value="app">App</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="purpose">Purpose</label>
-              <select id="purpose" data-purpose>
-                <option value="all">All purposes</option>
-                <option value="report-and-search">Report and search</option>
-                <option value="reporting">Reporting</option>
-                <option value="context-and-location">Context and location</option>
-                <option value="official-reporting">Official reporting</option>
-                <option value="lead">Lead</option>
-              </select>
-            </div>
-          </div>
-          <p class="small" data-results-count>Loading sources</p>
-          <div class="source-list" data-source-list></div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="shell panel">
-          <h2>For crawlers and agents</h2>
-          <ul>
-            <li>Start at the homepage or the JSON index.</li>
-            <li>Prioritize sources with <code>crawler_priority</code> 1 or 2.</li>
-            <li>Treat <code>lead</code> and <code>unverified</code> entries as discovery pointers, not trusted truth.</li>
-            <li>Check <code>last_verified_at</code> and <code>status</code> before relying on a source.</li>
-          </ul>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
+    <main class="page">
       <div class="shell">
-        <p>Generated 2026-06-26T05:23:39.576Z. Built as a public directory, not a replacement for the original sources.</p>
+        <section class="panel chooser-card">
+          <p class="eyebrow">VeneHelp</p>
+          <h1>Choose language / Elige idioma</h1>
+          <p class="page-intro">We suggest a version based on your browser language and remember your choice. You can also switch languages manually on any page. Sugerimos una versión según el idioma del navegador y recordamos tu elección. También puedes cambiar de idioma manualmente en cualquier página.</p>
+          <div class="chooser-actions">
+            <a class="button" href="/es/" data-locale-choice="es">Continuar en Español</a>
+            <a class="button secondary" href="/en/" data-locale-choice="en">Continue in English</a>
+          </div>
+          <p class="small" id="redirect-note">Redirecting to the suggested version... Redirigiendo a la versión sugerida...</p>
+        </section>
       </div>
-    </footer>
-    <script>window.VENEHELP_BASE_PATH = "/venehelp";</script>
-    <script src="/venehelp/app.js" defer></script>
+    </main>
+    <script>
+      const supported = ["es","en"];
+      const links = {
+        es: "/es/",
+        en: "/en/"
+      };
+
+      const detectLocale = () => {
+        const stored = (() => {
+          try {
+            return localStorage.getItem("venehelp-locale");
+          } catch (error) {
+            return null;
+          }
+        })();
+
+        if (stored && supported.includes(stored)) {
+          return stored;
+        }
+
+        const candidates = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
+        for (const candidate of candidates) {
+          const normalized = String(candidate || "").toLowerCase();
+          if (normalized.startsWith("es")) return "es";
+          if (normalized.startsWith("en")) return "en";
+        }
+        return "es";
+      };
+
+      const targetLocale = detectLocale();
+      const note = document.getElementById("redirect-note");
+      if (note) {
+        note.textContent = targetLocale === "es"
+          ? "Redirigiendo a la versión sugerida..."
+          : "Redirecting to the suggested version...";
+      }
+
+      document.querySelectorAll("[data-locale-choice]").forEach((link) => {
+        link.addEventListener("click", () => {
+          try {
+            localStorage.setItem("venehelp-locale", link.getAttribute("data-locale-choice"));
+          } catch (error) {}
+        });
+      });
+
+      window.setTimeout(() => {
+        window.location.replace(links[targetLocale] || links.es);
+      }, 900);
+    </script>
   </body>
 </html>

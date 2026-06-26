@@ -1,0 +1,262 @@
+[
+  {
+    "slug": "desaparecidos-terremoto-venezuela",
+    "name": "Desaparecidos Terremoto Venezuela",
+    "url": "https://desaparecidosterremotovenezuela.com/",
+    "category": "website",
+    "purpose": "report-and-search",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "status": "unverified",
+    "last_verified_at": null,
+    "owner": "Volunteer initiative",
+    "crawler_priority": 1,
+    "summary": "Registro ciudadano para reportar y buscar personas desaparecidas tras el terremoto. Se ha citado como una de las plataformas públicas más referenciadas.",
+    "notes": [
+      "Necesita verificación manual antes de tratarse como una fuente autoritativa.",
+      "Está orientado a reportar personas desaparecidas, buscar registros y marcar a alguien como encontrado."
+    ],
+    "tags": [
+      "terremoto",
+      "personas-desaparecidas",
+      "registro-publico",
+      "gestion-voluntaria"
+    ],
+    "category_label": "Sitio web",
+    "purpose_label": "Reportar y buscar",
+    "status_label": "Sin verificar",
+    "coverage_label": "Nacional",
+    "language_label": "Español",
+    "requires_login_label": "No",
+    "owner_label": "Iniciativa voluntaria",
+    "last_verified_label": "Aún sin verificar"
+  },
+  {
+    "slug": "venezuela-te-busca",
+    "name": "Venezuela Te Busca",
+    "url": "https://venezuelatebusca.com/",
+    "category": "website",
+    "purpose": "report-and-search",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "status": "unverified",
+    "last_verified_at": null,
+    "owner": "Volunteer initiative",
+    "crawler_priority": 1,
+    "summary": "Registro colaborativo de personas desaparecidas con flujos de búsqueda y reporte.",
+    "notes": [
+      "Necesita verificación manual antes de publicarse.",
+      "Se reporta que permite buscar por nombre, cédula o ubicación."
+    ],
+    "tags": [
+      "terremoto",
+      "personas-desaparecidas",
+      "busqueda",
+      "registro"
+    ],
+    "category_label": "Sitio web",
+    "purpose_label": "Reportar y buscar",
+    "status_label": "Sin verificar",
+    "coverage_label": "Nacional",
+    "language_label": "Español",
+    "requires_login_label": "No",
+    "owner_label": "Iniciativa voluntaria",
+    "last_verified_label": "Aún sin verificar"
+  },
+  {
+    "slug": "venezuela-reporta",
+    "name": "Venezuela Reporta",
+    "url": "https://venezuelareporta.org/",
+    "category": "website",
+    "purpose": "report-and-search",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "status": "unverified",
+    "last_verified_at": null,
+    "owner": "Citizen platform",
+    "crawler_priority": 2,
+    "summary": "Plataforma ciudadana para reportes de personas desaparecidas y otras emergencias, mencionada como un registro alternativo.",
+    "notes": [
+      "Necesita verificación manual antes de publicarse."
+    ],
+    "tags": [
+      "terremoto",
+      "personas-desaparecidas",
+      "emergencia",
+      "plataforma-ciudadana"
+    ],
+    "category_label": "Sitio web",
+    "purpose_label": "Reportar y buscar",
+    "status_label": "Sin verificar",
+    "coverage_label": "Nacional",
+    "language_label": "Español",
+    "requires_login_label": "No",
+    "owner_label": "Plataforma ciudadana",
+    "last_verified_label": "Aún sin verificar"
+  },
+  {
+    "slug": "terremoto-venezuela-mapa",
+    "name": "Terremoto Venezuela",
+    "url": "http://terremotovenezuela.com/",
+    "category": "map",
+    "purpose": "context-and-location",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "status": "unverified",
+    "last_verified_at": null,
+    "owner": "Unknown",
+    "crawler_priority": 3,
+    "summary": "Sitio de mapeo de incidentes y daños que puede ayudar a contextualizar ubicaciones vinculadas con reportes de personas desaparecidas.",
+    "notes": [
+      "Sirve como contexto complementario, no como registro principal de personas desaparecidas.",
+      "Necesita verificación manual antes de publicarse."
+    ],
+    "tags": [
+      "terremoto",
+      "mapa",
+      "danos",
+      "contexto"
+    ],
+    "category_label": "Mapa",
+    "purpose_label": "Contexto y ubicación",
+    "status_label": "Sin verificar",
+    "coverage_label": "Nacional",
+    "language_label": "Español",
+    "requires_login_label": "No",
+    "owner_label": "Desconocido",
+    "last_verified_label": "Aún sin verificar"
+  },
+  {
+    "slug": "kobotoolbox-terremotove",
+    "name": "KoboToolbox TerremotoVE",
+    "url": "https://ee.kobotoolbox.org/x/eaEmQ9YW",
+    "category": "form",
+    "purpose": "reporting",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "status": "unverified",
+    "last_verified_at": null,
+    "owner": "Community responders",
+    "crawler_priority": 2,
+    "summary": "Formulario comunitario para reportar personas desaparecidas o atrapadas, daños y necesidades de ayuda.",
+    "notes": [
+      "Necesita verificación manual antes de publicarse.",
+      "Podría conectarse con mapas o paneles públicos de Kobo."
+    ],
+    "tags": [
+      "terremoto",
+      "formulario",
+      "reporte",
+      "comunidad"
+    ],
+    "category_label": "Formulario",
+    "purpose_label": "Reporte",
+    "status_label": "Sin verificar",
+    "coverage_label": "Nacional",
+    "language_label": "Español",
+    "requires_login_label": "No",
+    "owner_label": "Respondedores comunitarios",
+    "last_verified_label": "Aún sin verificar"
+  },
+  {
+    "slug": "talcual-digital-lead",
+    "name": "TalCual Digital",
+    "url": "https://talcualdigital.com/",
+    "category": "media",
+    "purpose": "lead",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "status": "lead",
+    "last_verified_at": null,
+    "owner": "Media outlet",
+    "crawler_priority": 4,
+    "summary": "Pista sobre un posible formulario o canal específico para reportar personas desaparecidas promovido por el medio.",
+    "notes": [
+      "La URL exacta del formulario sigue pendiente de verificación.",
+      "Mantenerlo como pista hasta confirmar la página o formulario directo de emergencia."
+    ],
+    "tags": [
+      "pista",
+      "medio",
+      "personas-desaparecidas"
+    ],
+    "category_label": "Medio",
+    "purpose_label": "Pista",
+    "status_label": "Pista",
+    "coverage_label": "Nacional",
+    "language_label": "Español",
+    "requires_login_label": "No",
+    "owner_label": "Medio de comunicación",
+    "last_verified_label": "Aún sin verificar"
+  },
+  {
+    "slug": "reconectemos-a-cada-familia-lead",
+    "name": "Reconectemos a Cada Familia",
+    "url": null,
+    "category": "campaign",
+    "purpose": "lead",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": null,
+    "status": "lead",
+    "last_verified_at": null,
+    "owner": "Campaign network",
+    "crawler_priority": 4,
+    "summary": "Pista sobre una iniciativa de reporte vinculada a una campaña, mencionada junto a las principales plataformas públicas.",
+    "notes": [
+      "Todavía no hay una URL directa verificada.",
+      "Agregarla solo después de confirmar la página o el registro exacto."
+    ],
+    "tags": [
+      "pista",
+      "campana",
+      "personas-desaparecidas"
+    ],
+    "category_label": "Campaña",
+    "purpose_label": "Pista",
+    "status_label": "Pista",
+    "coverage_label": "Nacional",
+    "language_label": "Español",
+    "requires_login_label": "Aún sin verificar",
+    "owner_label": "Red de campaña",
+    "last_verified_label": "Aún sin verificar"
+  },
+  {
+    "slug": "venapp",
+    "name": "VenApp",
+    "url": null,
+    "category": "app",
+    "purpose": "official-reporting",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": true,
+    "status": "lead",
+    "last_verified_at": null,
+    "owner": "Government",
+    "crawler_priority": 5,
+    "summary": "Aplicación móvil del gobierno, presuntamente adaptada para reportes de emergencia relacionados con el terremoto.",
+    "notes": [
+      "Está basada en una app móvil y probablemente no sea rastreable de forma directa por agentes web públicos.",
+      "Conviene mantenerla por completitud, pero tratarla distinto a las fuentes web."
+    ],
+    "tags": [
+      "oficial",
+      "aplicacion",
+      "reporte"
+    ],
+    "category_label": "Aplicación",
+    "purpose_label": "Reporte oficial",
+    "status_label": "Pista",
+    "coverage_label": "Nacional",
+    "language_label": "Español",
+    "requires_login_label": "Sí",
+    "owner_label": "Gobierno",
+    "last_verified_label": "Aún sin verificar"
+  }
+]

@@ -1,47 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ajmarquez.github.io/venehelp/</loc>
-    <lastmod>2026-06-26T05:23:39.576Z</lastmod>
+    <loc>https://directorioterremotovenezuela.org/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
   </url>
   <url>
-    <loc>https://ajmarquez.github.io/venehelp/sources/</loc>
-    <lastmod>2026-06-26T05:23:39.576Z</lastmod>
+    <loc>https://directorioterremotovenezuela.org/data/sources.json</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
   </url>
   <url>
-    <loc>https://ajmarquez.github.io/venehelp/data/sources.json</loc>
-    <lastmod>2026-06-26T05:23:39.576Z</lastmod>
+    <loc>https://directorioterremotovenezuela.org/es/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
   </url>
   <url>
-    <loc>https://ajmarquez.github.io/venehelp/sources/desaparecidos-terremoto-venezuela/</loc>
-    <lastmod>2026-06-26T05:23:39.576Z</lastmod>
+    <loc>https://directorioterremotovenezuela.org/es/sources/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
   </url>
   <url>
-    <loc>https://ajmarquez.github.io/venehelp/sources/venezuela-te-busca/</loc>
-    <lastmod>2026-06-26T05:23:39.576Z</lastmod>
+    <loc>https://directorioterremotovenezuela.org/es/data/sources.json</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
   </url>
   <url>
-    <loc>https://ajmarquez.github.io/venehelp/sources/venezuela-reporta/</loc>
-    <lastmod>2026-06-26T05:23:39.576Z</lastmod>
+    <loc>https://directorioterremotovenezuela.org/es/sources/desaparecidos-terremoto-venezuela/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
   </url>
   <url>
-    <loc>https://ajmarquez.github.io/venehelp/sources/terremoto-venezuela-mapa/</loc>
-    <lastmod>2026-06-26T05:23:39.576Z</lastmod>
+    <loc>https://directorioterremotovenezuela.org/es/sources/venezuela-te-busca/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
   </url>
   <url>
-    <loc>https://ajmarquez.github.io/venehelp/sources/kobotoolbox-terremotove/</loc>
-    <lastmod>2026-06-26T05:23:39.576Z</lastmod>
+    <loc>https://directorioterremotovenezuela.org/es/sources/venezuela-reporta/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
   </url>
   <url>
-    <loc>https://ajmarquez.github.io/venehelp/sources/talcual-digital-lead/</loc>
-    <lastmod>2026-06-26T05:23:39.576Z</lastmod>
+    <loc>https://directorioterremotovenezuela.org/es/sources/terremoto-venezuela-mapa/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
   </url>
   <url>
-    <loc>https://ajmarquez.github.io/venehelp/sources/reconectemos-a-cada-familia-lead/</loc>
-    <lastmod>2026-06-26T05:23:39.576Z</lastmod>
+    <loc>https://directorioterremotovenezuela.org/es/sources/kobotoolbox-terremotove/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
   </url>
   <url>
-    <loc>https://ajmarquez.github.io/venehelp/sources/venapp/</loc>
-    <lastmod>2026-06-26T05:23:39.576Z</lastmod>
+    <loc>https://directorioterremotovenezuela.org/es/sources/talcual-digital-lead/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
+  </url>
+  <url>
+    <loc>https://directorioterremotovenezuela.org/es/sources/reconectemos-a-cada-familia-lead/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
+  </url>
+  <url>
+    <loc>https://directorioterremotovenezuela.org/es/sources/venapp/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
+  </url>
+  <url>
+    <loc>https://directorioterremotovenezuela.org/en/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
+  </url>
+  <url>
+    <loc>https://directorioterremotovenezuela.org/en/sources/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
+  </url>
+  <url>
+    <loc>https://directorioterremotovenezuela.org/en/data/sources.json</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
+  </url>
+  <url>
+    <loc>https://directorioterremotovenezuela.org/en/sources/desaparecidos-terremoto-venezuela/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
+  </url>
+  <url>
+    <loc>https://directorioterremotovenezuela.org/en/sources/venezuela-te-busca/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
+  </url>
+  <url>
+    <loc>https://directorioterremotovenezuela.org/en/sources/venezuela-reporta/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
+  </url>
+  <url>
+    <loc>https://directorioterremotovenezuela.org/en/sources/terremoto-venezuela-mapa/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
+  </url>
+  <url>
+    <loc>https://directorioterremotovenezuela.org/en/sources/kobotoolbox-terremotove/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
+  </url>
+  <url>
+    <loc>https://directorioterremotovenezuela.org/en/sources/talcual-digital-lead/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
+  </url>
+  <url>
+    <loc>https://directorioterremotovenezuela.org/en/sources/reconectemos-a-cada-familia-lead/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
+  </url>
+  <url>
+    <loc>https://directorioterremotovenezuela.org/en/sources/venapp/</loc>
+    <lastmod>2026-06-26T07:22:10.085Z</lastmod>
   </url>
 </urlset>

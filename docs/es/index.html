@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Directorio VeneHelp</title>
+    <meta name="description" content="Directorio público de recursos para reportar personas desaparecidas relacionados con la emergencia del terremoto en Venezuela.">
+    <link rel="canonical" href="https://directorioterremotovenezuela.org/es/">
+    <link rel="alternate" hreflang="es" href="https://directorioterremotovenezuela.org/es/">
+    <link rel="alternate" hreflang="en" href="https://directorioterremotovenezuela.org/en/">
+    <link rel="alternate" hreflang="x-default" href="https://directorioterremotovenezuela.org/">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="shell">
+          <div class="topbar">
+  <a class="brand-link" href="/es/">VeneHelp</a>
+  <nav class="language-switcher" aria-label="Idioma">
+    <a href="/es/" aria-current="page">Español</a><a href="/en/">English</a>
+  </nav>
+</div>
+        </div>
+        <div class="shell hero-grid">
+          <div>
+            <p class="eyebrow">Directorio VeneHelp</p>
+            <h1>Un punto de entrada público para recursos fragmentados de personas desaparecidas</h1>
+            <p class="lede">Este sitio no reemplaza los registros originales. Ayuda a familias, voluntarios, periodistas y agentes LLM a encontrarlos desde un solo directorio público.</p>
+          </div>
+          <aside class="hero-card">
+            <h2>Usa esta información con cuidado</h2>
+            <p>Cada fuente de esta primera versión debe verificarse manualmente. Mantén los enlaces públicos, actuales y claramente etiquetados para reducir daños durante una crisis.</p>
+            <div class="meta-row">
+              <span class="status status-unverified">dataset inicial</span>
+              <span class="pill">legible por máquinas</span>
+              <span class="pill">listo para GitHub Pages</span>
+            </div>
+          </aside>
+        </div>
+        <div class="shell stats">
+          <div class="stat">
+            <strong data-total-sources>0</strong>
+            <span>fuentes conocidas</span>
+          </div>
+          <div class="stat">
+            <strong data-primary-sources>0</strong>
+            <span>fuentes prioritarias para rastreo</span>
+          </div>
+          <div class="stat">
+            <strong data-lead-sources>0</strong>
+            <span>pistas sin verificar</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell panel">
+          <h2>Encontrar una fuente</h2>
+          <p class="page-intro">Usa los filtros para acotar el directorio, o consulta el dataset en <a href="/es/data/sources.json"><code>/es/data/sources.json</code></a>.</p>
+          <div class="controls">
+            <div class="field">
+              <label for="search">Buscar</label>
+              <input id="search" type="search" placeholder="Busca por nombre, categoría o etiqueta" data-search>
+            </div>
+            <div class="field">
+              <label for="category">Categoría</label>
+              <select id="category" data-category>
+                <option value="all">Todas las categorías</option>
+                <option value="website">Sitio web</option><option value="map">Mapa</option><option value="form">Formulario</option><option value="media">Medio</option><option value="campaign">Campaña</option><option value="app">Aplicación</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="purpose">Propósito</label>
+              <select id="purpose" data-purpose>
+                <option value="all">Todos los propósitos</option>
+                <option value="report-and-search">Reportar y buscar</option><option value="reporting">Reporte</option><option value="context-and-location">Contexto y ubicación</option><option value="official-reporting">Reporte oficial</option><option value="lead">Pista</option>
+              </select>
+            </div>
+          </div>
+          <p class="small" data-results-count>Cargando fuentes</p>
+          <div class="source-list" data-source-list></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell panel">
+          <h2>Para rastreadores y agentes</h2>
+          <ul>
+            <li>Empieza por la portada o por el índice JSON.</li><li>Prioriza las fuentes con <code>crawler_priority</code> 1 o 2.</li><li>Trata las entradas con estado <code>lead</code> o <code>unverified</code> como pistas, no como verdad confiable.</li><li>Revisa <code>last_verified_at</code> y <code>status</code> antes de depender de una fuente.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell">
+        <p>Generado 2026-06-26T07:22:10.085Z. Construido como directorio público, no como reemplazo de las fuentes originales.</p>
+      </div>
+    </footer>
+    <script>try { localStorage.setItem("venehelp-locale", "es"); } catch (error) {}</script>
+    <script>window.VENEHELP_CONFIG = {"basePath":"/es","messages":{"lang":"es","localeLabel":"Español","alternateLocaleLabel":"English","htmlTitle":"Directorio VeneHelp","siteDescription":"Directorio público de recursos para reportar personas desaparecidas relacionados con la emergencia del terremoto en Venezuela.","eyebrow":"Directorio VeneHelp","heroTitle":"Un punto de entrada público para recursos fragmentados de personas desaparecidas","heroLede":"Este sitio no reemplaza los registros originales. Ayuda a familias, voluntarios, periodistas y agentes LLM a encontrarlos desde un solo directorio público.","cautionTitle":"Usa esta información con cuidado","cautionBody":"Cada fuente de esta primera versión debe verificarse manualmente. Mantén los enlaces públicos, actuales y claramente etiquetados para reducir daños durante una crisis.","initialDataset":"dataset inicial","machineReadable":"legible por máquinas","githubPagesReady":"listo para GitHub Pages","stats":{"knownSources":"fuentes conocidas","primaryTargets":"fuentes prioritarias para rastreo","unverifiedLeads":"pistas sin verificar"},"findSourceTitle":"Encontrar una fuente","findSourceIntro":"Usa los filtros para acotar el directorio, o consulta el dataset en <a href=\"{dataUrl}\"><code>{dataPath}</code></a>.","searchLabel":"Buscar","searchPlaceholder":"Busca por nombre, categoría o etiqueta","categoryLabel":"Categoría","purposeLabel":"Propósito","allCategories":"Todas las categorías","allPurposes":"Todos los propósitos","loadingSources":"Cargando fuentes","resultsShown":"{count} fuentes visibles","noResults":"Ninguna fuente coincide con los filtros actuales.","loadFailed":"No se pudieron cargar las fuentes","loadFailedHelp":"Verifica que exista el archivo JSON generado y que el sitio se esté sirviendo desde la carpeta docs.","openSource":"Abrir fuente","details":"Ver detalles","directLinkPending":"Enlace directo pendiente de verificación","crawlersTitle":"Para rastreadores y agentes","crawlerNotes":["Empieza por la portada o por el índice JSON.","Prioriza las fuentes con <code>crawler_priority</code> 1 o 2.","Trata las entradas con estado <code>lead</code> o <code>unverified</code> como pistas, no como verdad confiable.","Revisa <code>last_verified_at</code> y <code>status</code> antes de depender de una fuente."],"footer":"Generado {generatedAt}. Construido como directorio público, no como reemplazo de las fuentes originales.","allSourcesEyebrow":"Todas las fuentes","allSourcesTitle":"Directorio de fuentes","allSourcesIntro":"Cada fuente tiene una página estable de detalle y una exportación JSON canónica por idioma.","breadcrumbsSources":"Fuentes","metadataTitle":"Metadatos","coverageLabelDetail":"Cobertura","languageLabelDetail":"Idioma","requiresLoginLabel":"Requiere inicio de sesión","ownerLabelDetail":"Responsable","crawlerPriorityLabel":"Prioridad para rastreo","lastVerifiedLabel":"Última verificación","notYetVerified":"Aún sin verificar","notesTitle":"Notas","tagsTitle":"Etiquetas","viewJson":"Ver JSON","chooserTitle":"Elige idioma","chooserBody":"Sugerimos una versión según el idioma del navegador y recordamos tu elección. También puedes cambiar de idioma manualmente en cualquier página.","chooserEs":"Continuar en Español","chooserEn":"Continue in English","chooserRedirecting":"Redirigiendo a la versión sugerida...","languageNavLabel":"Idioma","sourceListTitle":"Todas las fuentes | VeneHelp"}};</script>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

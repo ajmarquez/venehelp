@@ -49,7 +49,8 @@ main {
   padding: 4rem 0 2.5rem;
 }
 
-.eyebrow {
+.eyebrow,
+.brand-link {
   display: inline-block;
   margin: 0 0 1rem;
   padding: 0.35rem 0.7rem;
@@ -59,6 +60,7 @@ main {
   color: var(--accent);
   font-size: 0.9rem;
   letter-spacing: 0.02em;
+  text-decoration: none;
 }
 
 h1, h2, h3 {
@@ -212,11 +214,18 @@ select {
 }
 
 .source-card footer,
-.page-links {
+.page-links,
+.chooser-actions,
+.topbar {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
   align-items: center;
+}
+
+.topbar {
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
 }
 
 .button {
@@ -240,6 +249,28 @@ select {
 .small {
   color: var(--muted);
   font-size: 0.94rem;
+}
+
+.language-switcher {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  padding: 0.3rem;
+  border-radius: 999px;
+  background: rgba(255, 250, 242, 0.9);
+  border: 1px solid rgba(111, 101, 95, 0.18);
+}
+
+.language-switcher a {
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.language-switcher a[aria-current="page"] {
+  background: var(--accent);
+  color: #fffaf2;
 }
 
 ul {
@@ -285,6 +316,12 @@ ul {
   margin: 0.35rem 0 0;
 }
 
+.chooser-card {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1.6rem;
+}
+
 code {
   font-family: "SFMono-Regular", Menlo, Consolas, monospace;
 }
@@ -295,5 +332,9 @@ code {
   .definition-list,
   .stats {
     grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    align-items: flex-start;
   }
 }

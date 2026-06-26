@@ -6,8 +6,9 @@ The goal of this project is not to become a new authoritative database. Instead,
 
 ## What this repo includes
 
-- A public homepage with the full directory
-- Individual pages for each known source
+- A public root page that chooses a language based on browser preference
+- A Spanish site at `docs/es/` and an English site at `docs/en/`
+- Individual pages for each known source in both languages
 - A machine-readable JSON export at `docs/data/sources.json`
 - `robots.txt`, `sitemap.xml`, and `llms.txt` for discoverability
 - A simple build script that regenerates the static site from one data file
@@ -15,7 +16,7 @@ The goal of this project is not to become a new authoritative database. Instead,
 ## Project structure
 
 - `data/sources.json` contains the canonical source list
-- `scripts/build.mjs` generates the static site into `docs/`
+- `scripts/build.mjs` generates the localized static site into `docs/`
 - `docs/` is the publishable output for GitHub Pages
 
 ## Source verification
@@ -36,7 +37,13 @@ Recommended verification workflow:
 npm run build
 ```
 
-If you already know the final domain, build with:
+The default build target is:
+
+```bash
+https://directorioterremotovenezuela.org
+```
+
+If you need to override the final domain, build with:
 
 ```bash
 SITE_URL="https://your-domain.org" npm run build
@@ -54,6 +61,8 @@ SITE_URL="https://username.github.io" SITE_PATH="/venehelp" npm run build
 2. In repository settings, enable GitHub Pages.
 3. Choose `Deploy from a branch`.
 4. Select your default branch and the `/docs` folder.
+5. In the Pages custom domain setting, use `directorioterremotovenezuela.org`.
+6. Point the domain DNS to GitHub Pages and wait for certificate issuance.
 
 ## Suggested next steps
 
