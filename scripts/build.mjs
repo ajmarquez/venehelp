@@ -4,52 +4,38 @@ import path from "node:path";
 const rootDir = path.resolve(new URL("..", import.meta.url).pathname);
 const docsDir = path.join(rootDir, "docs");
 const sourceFile = path.join(rootDir, "data", "sources.json");
-const registryFile = path.join(rootDir, "data", "registry.json");
 const defaultCloudflareAnalyticsToken = "4a80fe27b95e4d6b990cb960bf94699d";
-const parseBooleanFlag = (value, defaultValue = false) => {
-  if (value === undefined) {
-    return defaultValue;
-  }
-
-  return /^(1|true|yes|on)$/i.test(String(value).trim());
-};
 
 const customDomain = (process.env.SITE_DOMAIN || "directorioterremotovenezuela.org").replace(/^https?:\/\//, "").replace(/\/+$/, "");
 const siteUrl = (process.env.SITE_URL || `https://${customDomain}`).replace(/\/+$/, "");
 const sitePath = (process.env.SITE_PATH || "").replace(/\/+$/, "");
 const cloudflareAnalyticsToken = (process.env.CLOUDFLARE_ANALYTICS_TOKEN ?? defaultCloudflareAnalyticsToken).trim();
-const showRegistry = parseBooleanFlag(process.env.SHOW_REGISTRY, false);
+const showRegistry = false;
 const generatedAt = new Date().toISOString();
 const rawSources = JSON.parse(await fs.readFile(sourceFile, "utf8"));
 const supportedLocales = ["es", "en"];
-let rawRegistry;
-
-try {
-  rawRegistry = JSON.parse(await fs.readFile(registryFile, "utf8"));
-} catch (error) {
-  rawRegistry = {
-    generated_at: generatedAt,
-    schema_version: 1,
-    beta: true,
-    notes: ["Registry preview not generated yet."],
-    sources: [],
-    summary: {
-      source_name: null,
-      source_slug: null,
-      total_results: null,
-      total_results_display: null,
-      missing_count: null,
-      missing_count_display: null,
-      found_count: null,
-      found_count_display: null,
-      sampled_pages: 0,
-      total_pages: 0,
-      preview_records: 0,
-      is_partial: true
-    },
-    records: []
-  };
-}
+const rawRegistry = {
+  generated_at: generatedAt,
+  schema_version: 1,
+  beta: false,
+  notes: ["Registry publishing is disabled in this build."],
+  sources: [],
+  summary: {
+    source_name: null,
+    source_slug: null,
+    total_results: null,
+    total_results_display: null,
+    missing_count: null,
+    missing_count_display: null,
+    found_count: null,
+    found_count_display: null,
+    sampled_pages: 0,
+    total_pages: 0,
+    preview_records: 0,
+    is_partial: true
+  },
+  records: []
+};
 
 const withSitePath = (pathname) => `${sitePath}${pathname.startsWith("/") ? pathname : `/${pathname}`}`;
 const absoluteUrl = (pathname) => `${siteUrl}${withSitePath(pathname)}`;
@@ -185,7 +171,7 @@ h2 {
 .controls {
   display: grid;
   gap: 0.75rem;
-  grid-template-columns: minmax(16rem, 2fr) minmax(10rem, 1fr) minmax(10rem, 1fr);
+  grid-template-columns: minmax(16rem, 1fr);
   margin-top: 1rem;
 }
 
@@ -231,6 +217,29 @@ select:focus {
   max-width: 76ch;
 }
 
+.route-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1rem;
+}
+
+.route-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem;
+  background: var(--surface-muted);
+}
+
+.route-card p {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+}
+
+.route-links a {
+  color: var(--blue);
+}
+
 .meta-row {
   display: flex;
   flex-wrap: wrap;
@@ -259,6 +268,21 @@ select:focus {
   gap: 0;
   margin-top: 1.25rem;
   border-top: 1px solid var(--line);
+}
+
+.directory-split {
+  display: grid;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.directory-block h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.directory-block .small {
+  margin: 0.5rem 0 0;
 }
 
 .registry-stats {
@@ -377,6 +401,10 @@ select:focus {
   max-width: 76ch;
 }
 
+.source-facts {
+  font-size: 0.92rem;
+}
+
 .source-card footer,
 .page-links,
 .topbar {
@@ -485,6 +513,7 @@ code {
 @media (max-width: 860px) {
   .controls,
   .definition-list,
+  .route-grid,
   .registry-stats {
     grid-template-columns: 1fr;
   }
@@ -511,7 +540,10 @@ const categoryLabels = {
 const purposeLabels = {
   "report-and-search": { es: "Reportar y buscar", en: "Report and search" },
   reporting: { es: "Reporte", en: "Reporting" },
+  "located-people": { es: "Personas localizadas", en: "Located people" },
   "context-and-location": { es: "Contexto y ubicación", en: "Context and location" },
+  "family-tracing": { es: "Restablecimiento de contacto", en: "Family tracing" },
+  "aid-and-updates": { es: "Ayuda y actualizaciones", en: "Aid and updates" },
   "official-reporting": { es: "Reporte oficial", en: "Official reporting" },
   lead: { es: "Pista", en: "Lead" }
 };
@@ -527,8 +559,49 @@ const ownerLabels = {
   "Community responders": { es: "Respondedores comunitarios", en: "Community responders" },
   "Media outlet": { es: "Medio de comunicación", en: "Media outlet" },
   "Campaign network": { es: "Red de campaña", en: "Campaign network" },
+  "International Committee of the Red Cross": {
+    es: "Comité Internacional de la Cruz Roja",
+    en: "International Committee of the Red Cross"
+  },
+  "International Federation of Red Cross and Red Crescent Societies": {
+    es: "Federación Internacional de Sociedades de la Cruz Roja y de la Media Luna Roja",
+    en: "International Federation of Red Cross and Red Crescent Societies"
+  },
   Government: { es: "Gobierno", en: "Government" },
   Unknown: { es: "Desconocido", en: "Unknown" }
+};
+
+const operatorTypeLabels = {
+  volunteer: { es: "Voluntario", en: "Volunteer" },
+  citizen: { es: "Ciudadano", en: "Citizen-led" },
+  community: { es: "Comunitario", en: "Community" },
+  company: { es: "Empresa", en: "Company" },
+  humanitarian: { es: "Humanitario", en: "Humanitarian" },
+  official: { es: "Oficial", en: "Official" },
+  unknown: { es: "No verificado", en: "Unverified" }
+};
+
+const statusLabels = {
+  active: { es: "Activa", en: "Active" },
+  monitor: { es: "Verificar manualmente", en: "Manual verification" },
+  down: { es: "Caída", en: "Down" },
+  unknown: { es: "Estado desconocido", en: "Unknown status" }
+};
+
+const serviceLabels = {
+  "missing-report": { es: "Reportar desaparecidos", en: "Report missing people" },
+  "missing-search": { es: "Buscar personas", en: "Search people" },
+  "found-report": { es: "Reportar encontrado / a salvo", en: "Mark found / safe" },
+  "located-search": { es: "Buscar personas localizadas", en: "Search located people" },
+  "located-report": { es: "Aportar personas localizadas", en: "Contribute located people" },
+  "safe-checkin": { es: "Avisar que alguien está a salvo", en: "Safe check-in" },
+  "family-tracing": { es: "Restablecer contacto familiar", en: "Restore family contact" },
+  shelters: { es: "Refugios", en: "Shelters" },
+  hospitals: { es: "Hospitales", en: "Hospitals" },
+  "aid-resources": { es: "Recursos de ayuda", en: "Aid resources" },
+  donations: { es: "Donaciones", en: "Donations" },
+  "damage-reports": { es: "Reportes de daños", en: "Damage reports" },
+  "situation-updates": { es: "Actualizaciones de situación", en: "Situation updates" }
 };
 
 const tagLabels = {
@@ -550,7 +623,13 @@ const tagLabels = {
   media: { es: "medio", en: "media" },
   campaign: { es: "campana", en: "campaign" },
   official: { es: "oficial", en: "official" },
-  app: { es: "aplicacion", en: "app" }
+  app: { es: "aplicacion", en: "app" },
+  humanitarian: { es: "humanitario", en: "humanitarian" },
+  donations: { es: "donaciones", en: "donations" },
+  updates: { es: "actualizaciones", en: "updates" },
+  "open-source": { es: "codigo-abierto", en: "open-source" },
+  api: { es: "api", en: "api" },
+  hospitals: { es: "hospitales", en: "hospitals" }
 };
 
 const spanishSourceCopy = {
@@ -572,9 +651,10 @@ const spanishSourceCopy = {
   },
   "venezuela-reporta": {
     summary:
-      "Plataforma ciudadana para reportes de personas desaparecidas y otras emergencias, mencionada como un registro alternativo.",
+      "Plataforma ciudadana para reportar, buscar y marcar personas desaparecidas como encontradas tras el terremoto.",
     notes: [
-      "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026."
+      "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026.",
+      "La navegación pública visible muestra flujos de búsqueda, reporte y marcado de encontrado."
     ]
   },
   "red-ayuda-venezuela": {
@@ -595,10 +675,10 @@ const spanishSourceCopy = {
   },
   "kobotoolbox-terremotove": {
     summary:
-      "Formulario comunitario para reportar personas desaparecidas o atrapadas, daños y necesidades de ayuda.",
+      "Formulario comunitario para reportar personas desaparecidas o atrapadas tras el terremoto.",
     notes: [
       "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026.",
-      "Podría conectarse con mapas o paneles públicos de Kobo."
+      "Sirve como una vía adicional de ingreso para reportes públicos de personas."
     ]
   },
   "yummy-sos": {
@@ -607,6 +687,22 @@ const spanishSourceCopy = {
     notes: [
       "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026.",
       "Los metadatos de la página y la navegación visible muestran flujos públicos para reportar daños, ver reportes, refugios y recursos."
+    ]
+  },
+  "icrc-family-links-venezuela": {
+    summary:
+      "Punto de entrada humanitario de la Cruz Roja para restablecer contacto y gestionar solicitudes de búsqueda familiar relacionadas con emergencias en Venezuela.",
+    notes: [
+      "Ruta humanitaria prioritaria para familias que necesitan una vía de escalamiento con mayor confianza.",
+      "El sitio usa controles de acceso que pueden bloquear revisiones automáticas, así que conviene verificarlo manualmente."
+    ]
+  },
+  "localizados-venezuela": {
+    summary:
+      "Plataforma pública y de código abierto para buscar y aportar registros de personas ya localizadas tras el terremoto, con API pública de solo lectura para integraciones.",
+    notes: [
+      "La documentación de la API pública está disponible en /api y los endpoints GET de la v1 responden JSON con CORS habilitado para lectura.",
+      "El proyecto aclara que es solo para personas localizadas y redirige los casos de desaparecidos a desaparecidosterremotovenezuela.com."
     ]
   }
 };
@@ -618,13 +714,13 @@ const localeCopy = {
     alternateLocaleLabel: "English",
     htmlTitle: "VeneHelp",
     siteDescription:
-      "Directorio de recursos de ayuda a afectados por el Terremoto en Venezuela.",
-    eyebrow: "Directorio de ayuda",
-    heroTitle: "VeneHelp",
+      "Directorio público de plataformas para buscar, reportar y marcar personas encontradas tras el terremoto en Venezuela.",
+    eyebrow: "Directorio de personas desaparecidas",
+    heroTitle: "Dónde buscar y reportar personas",
     heroLede:
-      "Directorio de recursos de ayuda a afectados por el Terremoto en Venezuela.",
+      "VeneHelp reúne las plataformas públicas donde familias, voluntarios y buscadores están reportando, buscando y marcando personas como encontradas tras el terremoto en Venezuela.",
     directoryNote:
-      "Agrupamos sitios, formularios, mapas y registros que han aparecido de forma fragmentada o redundante. La meta es que personas afectadas, voluntarios, periodistas y LLMs encuentren recursos confiables desde un solo lugar.",
+      "No recibimos reportes aquí. El objetivo es mostrar en un solo lugar qué sitios aceptan casos nuevos, cuáles tienen búsqueda pública y cuáles permiten marcar a alguien como encontrado o a salvo.",
     registryTitle: "Registro consolidado (beta)",
     registryIntro:
       "Mostramos un contador principal y una tabla de trazabilidad a partir de un registro público consolidado. Esta vista es beta y hoy usa una recolección parcial de páginas públicas mientras se agregan más adaptadores.",
@@ -656,17 +752,26 @@ const localeCopy = {
     registryPageEyebrow: "Registro beta",
     registryPageIntro:
       "Tabla beta de trazabilidad con búsqueda y filtros por estado. Los datos siguen siendo parciales y dependen de adaptadores públicos por sitio.",
-    findSourceTitle: "Recursos disponibles",
+    findSourceTitle: "Directorio",
     findSourceIntro:
-      "Busca por nombre o filtra por tipo de recurso. El dataset para agentes y buscadores está disponible en <a href=\"{dataUrl}\"><code>{dataPath}</code></a>.",
+      "Separamos el directorio entre registros para familias y recursos para desarrolladores. Usa la búsqueda para ubicar una plataforma concreta y luego revisa la sección técnica si necesitas APIs o datasets.",
     searchLabel: "Buscar",
-    searchPlaceholder: "Busca por nombre, categoría o etiqueta",
-    categoryLabel: "Categoría",
-    purposeLabel: "Propósito",
-    allCategories: "Todas las categorías",
-    allPurposes: "Todos los propósitos",
+    searchPlaceholder: "Busca por nombre, servicio o etiqueta",
+    registrySectionTitle: "Registros",
+    registrySectionIntro:
+      "Plataformas públicas para buscar personas, reportar casos, avisar que alguien está a salvo o escalar a una ruta humanitaria.",
+    developerSectionTitle: "Desarrolladores",
+    developerSectionIntro:
+      "APIs, datasets y proyectos open source útiles para integraciones, agentes y análisis técnico.",
+    developerEmpty: "Todavía no hay recursos técnicos publicados en esta versión.",
+    venehelpDatasetTitle: "Dataset público de VeneHelp",
+    venehelpDatasetSummary:
+      "Exportación JSON del directorio de VeneHelp para LLMs, buscadores e integraciones simples.",
+    openDataset: "Abrir dataset",
+    openApi: "Abrir API",
+    openSourceCode: "Abrir código fuente",
     loadingSources: "Cargando recursos",
-    resultsShown: "{count} recursos visibles",
+    resultsShown: "{count} registros visibles",
     noResults: "Ningún recurso coincide con los filtros actuales.",
     loadFailed: "No se pudieron cargar las fuentes",
     loadFailedHelp: "Verifica que exista el archivo JSON generado y que el sitio se esté sirviendo desde la carpeta docs.",
@@ -674,15 +779,24 @@ const localeCopy = {
     details: "Detalles",
     directLinkPending: "Enlace directo pendiente",
     footer:
-      "VeneHelp agrupa enlaces públicos y datos estructurados para facilitar el acceso humano y la búsqueda por LLMs. Última generación: {generatedAt}.",
+      "VeneHelp es un directorio público de plataformas para buscar y reportar personas tras el terremoto en Venezuela. Última generación: {generatedAt}.",
     allSourcesEyebrow: "Todos los recursos",
     allSourcesTitle: "Directorio de recursos",
     allSourcesIntro: "Cada recurso tiene una página estable de detalle y una exportación JSON canónica por idioma.",
     breadcrumbsSources: "Recursos",
     metadataTitle: "Metadatos",
+    statusLabelDetail: "Estado",
+    operatorTypeLabelDetail: "Tipo de operador",
     coverageLabelDetail: "Cobertura",
     languageLabelDetail: "Idioma",
     requiresLoginLabel: "Requiere inicio de sesión",
+    acceptsReportsLabelDetail: "Acepta nuevos reportes",
+    publicSearchLabelDetail: "Tiene búsqueda pública",
+    reportFoundLabelDetail: "Permite marcar encontrado / a salvo",
+    servicesLabelDetail: "Qué ofrece",
+    publicContactLabelDetail: "Contacto público",
+    publicApiLabelDetail: "API pública",
+    sourceCodeLabelDetail: "Código fuente",
     ownerLabelDetail: "Responsable",
     crawlerPriorityLabel: "Prioridad para rastreo",
     lastCheckedLabel: "Última revisión de enlace",
@@ -699,13 +813,13 @@ const localeCopy = {
     alternateLocaleLabel: "Español",
     htmlTitle: "VeneHelp",
     siteDescription:
-      "Directory of help resources for people affected by the earthquake in Venezuela.",
-    eyebrow: "Help directory",
-    heroTitle: "VeneHelp",
+      "Public directory of platforms to search for, report, and mark people found after the earthquake in Venezuela.",
+    eyebrow: "Missing-person directory",
+    heroTitle: "Where to search for and report people",
     heroLede:
-      "Directory of help resources for people affected by the earthquake in Venezuela.",
+      "VeneHelp gathers the public platforms where families, volunteers, and searchers are reporting, searching for, and marking people as found after the earthquake in Venezuela.",
     directoryNote:
-      "We group sites, forms, maps, and registries that have appeared with fragmented or redundant information. The goal is to help affected people, volunteers, journalists, and LLMs find useful resources from one place.",
+      "We do not take reports here. The goal is to show in one place which sites accept new cases, which offer public search, and which let someone be marked as found or safe.",
     registryTitle: "Unified registry (beta)",
     registryIntro:
       "We show a primary counter and a provenance table from a consolidated public registry. This view is beta and currently uses a partial crawl of public pages while more adapters are added.",
@@ -737,17 +851,26 @@ const localeCopy = {
     registryPageEyebrow: "Beta registry",
     registryPageIntro:
       "Beta provenance table with search and status filters. The data is still partial and depends on public per-site adapters.",
-    findSourceTitle: "Available resources",
+    findSourceTitle: "Directory",
     findSourceIntro:
-      "Search by name or filter by resource type. The dataset for agents and search systems is available at <a href=\"{dataUrl}\"><code>{dataPath}</code></a>.",
+      "The directory is split between registry tools for families and technical resources for developers. Use search to find a specific platform, then review the technical section if you need APIs or datasets.",
     searchLabel: "Search",
-    searchPlaceholder: "Search by name, category, or tag",
-    categoryLabel: "Category",
-    purposeLabel: "Purpose",
-    allCategories: "All categories",
-    allPurposes: "All purposes",
+    searchPlaceholder: "Search by name, service, or tag",
+    registrySectionTitle: "Registries",
+    registrySectionIntro:
+      "Public platforms for searching for people, filing reports, marking someone safe, or escalating through a humanitarian path.",
+    developerSectionTitle: "Developers",
+    developerSectionIntro:
+      "APIs, datasets, and open-source projects that are useful for integrations, agents, and technical analysis.",
+    developerEmpty: "No technical resources are published in this version yet.",
+    venehelpDatasetTitle: "VeneHelp public dataset",
+    venehelpDatasetSummary:
+      "JSON export of the VeneHelp directory for LLMs, search systems, and lightweight integrations.",
+    openDataset: "Open dataset",
+    openApi: "Open API",
+    openSourceCode: "Open source code",
     loadingSources: "Loading sources",
-    resultsShown: "{count} resources shown",
+    resultsShown: "{count} registries shown",
     noResults: "No resources match the current filters.",
     loadFailed: "Unable to load sources",
     loadFailedHelp: "Check that the generated JSON file exists and the site is being served from the docs folder.",
@@ -755,15 +878,24 @@ const localeCopy = {
     details: "Details",
     directLinkPending: "Direct link pending",
     footer:
-      "VeneHelp groups public links and structured data to support human access and LLM search. Last generated: {generatedAt}.",
+      "VeneHelp is a public directory of platforms for searching for and reporting people after the earthquake in Venezuela. Last generated: {generatedAt}.",
     allSourcesEyebrow: "All sources",
     allSourcesTitle: "Resource directory",
     allSourcesIntro: "Each resource has a stable detail page plus a canonical per-language JSON export.",
     breadcrumbsSources: "Sources",
     metadataTitle: "Metadata",
+    statusLabelDetail: "Status",
+    operatorTypeLabelDetail: "Operator type",
     coverageLabelDetail: "Coverage",
     languageLabelDetail: "Language",
     requiresLoginLabel: "Requires login",
+    acceptsReportsLabelDetail: "Accepts new reports",
+    publicSearchLabelDetail: "Public search",
+    reportFoundLabelDetail: "Can mark found / safe",
+    servicesLabelDetail: "What it offers",
+    publicContactLabelDetail: "Public contact",
+    publicApiLabelDetail: "Public API",
+    sourceCodeLabelDetail: "Source code",
     ownerLabelDetail: "Owner",
     crawlerPriorityLabel: "Crawler priority",
     lastCheckedLabel: "Last link check",
@@ -782,26 +914,14 @@ const messages = config.messages || {};
 const basePath = config.basePath || "";
 
 const state = {
-  registry: null,
-  registryQuery: "",
-  registryStatus: "all",
   sources: [],
-  query: "",
-  category: "all",
-  purpose: "all"
+  query: ""
 };
 
-const registryStatsEl = document.querySelector("[data-registry-stats]");
-const registryMetaEl = document.querySelector("[data-registry-meta]");
-const registryBodyEl = document.querySelector("[data-registry-body]");
-const registryResultsEl = document.querySelector("[data-registry-results]");
-const registrySearchEl = document.querySelector("[data-registry-search]");
-const registryStatusEl = document.querySelector("[data-registry-status]");
-const listEl = document.querySelector("[data-source-list]");
-const countEl = document.querySelector("[data-results-count]");
+const registryListEl = document.querySelector("[data-source-list]");
+const registryCountEl = document.querySelector("[data-results-count]");
+const developerListEl = document.querySelector("[data-developer-list]");
 const searchEl = document.querySelector("[data-search]");
-const categoryEl = document.querySelector("[data-category]");
-const purposeEl = document.querySelector("[data-purpose]");
 
 const interpolate = (template, values = {}) =>
   String(template || "").replace(/\\{(\\w+)\\}/g, (_, key) => String(values[key] ?? ""));
@@ -823,6 +943,9 @@ const matchesQuery = (source, query) => {
     source.summary,
     source.category_label,
     source.purpose_label,
+    source.status_label,
+    source.operator_type_label,
+    ...(source.service_labels || []),
     ...(source.tags || [])
   ].join(" ").toLowerCase();
   return haystack.includes(query);
@@ -831,99 +954,28 @@ const matchesQuery = (source, query) => {
 const renderBadge = (label, className = "pill") =>
   '<span class="' + className + '">' + label + "</span>";
 
-const matchesRegistryQuery = (record, query) => {
-  if (!query) return true;
-  const haystack = [
-    record.name,
-    record.location,
-    record.source_name,
-    record.status_label,
-    ...(record.reported_on || [])
-  ].join(" ").toLowerCase();
-  return haystack.includes(query);
-};
-
-const getFilteredRegistryRecords = () =>
-  (state.registry?.records || []).filter((record) => {
-    const matchesStatus = state.registryStatus === "all" || record.status === state.registryStatus;
-    return matchesStatus && matchesRegistryQuery(record, state.registryQuery);
-  });
-
-const renderRegistry = () => {
-  if (!registryStatsEl && !registryMetaEl && !registryBodyEl && !registryResultsEl) {
-    return;
-  }
-
-  if (!state.registry) {
-    if (registryMetaEl) {
-      registryMetaEl.textContent = messages.registryLoading;
-    }
-    return;
-  }
-
-  const summary = state.registry.summary || {};
-  if (registryMetaEl) {
-    registryMetaEl.textContent = summary.is_partial
-      ? interpolate(messages.registryPartialNote, {
-          sampledPages: summary.sampled_pages ?? 0,
-          totalPages: summary.total_pages ?? 0,
-          sourceName: summary.source_name || ""
-        })
-      : interpolate(messages.registryFullNote, {
-          sourceName: summary.source_name || ""
-        });
-  }
-
-  if (registryStatsEl) {
-    registryStatsEl.innerHTML = [
-      '<article class="registry-stat registry-stat--missing"><strong>' + (summary.missing_count_display || "-") + '</strong><span>' + messages.registryMissingLabel + '</span></article>',
-      '<article class="registry-stat registry-stat--found"><strong>' + (summary.found_count_display || "-") + '</strong><span>' + messages.registryFoundLabel + '</span></article>',
-      '<article class="registry-stat registry-stat--preview"><strong>' + (summary.preview_records || 0) + '</strong><span>' + messages.registryPreviewLabel + '</span></article>'
-    ].join("");
-  }
-
-  const records = getFilteredRegistryRecords();
-
-  if (registryResultsEl) {
-    registryResultsEl.textContent = interpolate(messages.registryResultsShown, { count: records.length });
-  }
-
-  if (!registryBodyEl) {
-    return;
-  }
-
-  const rows = records.map((record) => {
-    const nameHtml = record.detail_url
-      ? '<a href="' + escapeHtml(record.detail_url) + '" target="_blank" rel="noreferrer">' + escapeHtml(record.name) + '</a>'
-      : escapeHtml(record.name);
-
-    return [
-      '<tr>',
-      '<td>' + nameHtml + '</td>',
-      '<td><span class="status-chip status-chip--' + escapeHtml(record.status) + '">' + escapeHtml(record.status_label) + '</span></td>',
-      '<td>' + escapeHtml(record.location || '') + '</td>',
-      '<td>' + escapeHtml((record.reported_on || []).join(', ')) + '</td>',
-      '</tr>'
-    ].join("");
-  });
-
-  registryBodyEl.innerHTML = rows.join("") || '<tr><td colspan="4" class="small">' + messages.registryEmpty + '</td></tr>';
-};
-
-const renderCard = (source) => {
+const renderRegistryCard = (source) => {
   const detailsPath = basePath + '/sources/' + source.slug + '/';
   const linkHtml = source.url
     ? '<a class="button" href="' + source.url + '" target="_blank" rel="noreferrer">' + messages.openSource + '</a>'
     : '<span class="small">' + messages.directLinkPending + '</span>';
+  const serviceHtml = (source.service_labels || [])
+    .slice(0, 4)
+    .map((label) => renderBadge(label))
+    .join("");
 
   return [
     '<article class="source-card">',
     '<h3><a href="' + detailsPath + '">' + source.name + '</a></h3>',
     '<p>' + source.summary + '</p>',
-    '<div class="meta-row">',
-    renderBadge(source.category_label),
-    renderBadge(source.purpose_label),
-    '</div>',
+    '<p class="small source-facts">' +
+      escapeHtml(messages.publicSearchLabelDetail) + ': ' + escapeHtml(source.public_search_label_value) +
+      ' · ' +
+      escapeHtml(messages.acceptsReportsLabelDetail) + ': ' + escapeHtml(source.accepts_reports_label_value) +
+      ' · ' +
+      escapeHtml(messages.reportFoundLabelDetail) + ': ' + escapeHtml(source.report_found_label_value) +
+      '</p>',
+    serviceHtml ? '<div class="meta-row">' + serviceHtml + '</div>' : '',
     '<footer>',
     linkHtml,
     '<a class="button secondary" href="' + detailsPath + '">' + messages.details + '</a>',
@@ -932,94 +984,105 @@ const renderCard = (source) => {
   ].join("");
 };
 
+const buildDeveloperResources = (sources) => {
+  const datasetPath = basePath + "/data/sources.json";
+  const items = [
+    {
+      key: "venehelp-dataset",
+      title: messages.venehelpDatasetTitle,
+      summary: messages.venehelpDatasetSummary,
+      links: [
+        { href: datasetPath, label: messages.openDataset, primary: true }
+      ]
+    }
+  ];
+
+  sources
+    .filter((source) => source.api_url || source.source_code_url)
+    .forEach((source) => {
+      const links = [];
+      if (source.api_url) {
+        links.push({ href: source.api_url, label: messages.openApi, primary: true, external: true });
+      }
+      if (source.source_code_url) {
+        links.push({ href: source.source_code_url, label: messages.openSourceCode, secondary: true, external: true });
+      }
+      links.push({ href: basePath + '/sources/' + source.slug + '/', label: messages.details, secondary: true, external: false });
+
+      items.push({
+        key: source.slug,
+        title: source.name,
+        summary: source.summary,
+        services: source.service_labels || [],
+        links
+      });
+    });
+
+  return items;
+};
+
+const renderDeveloperCard = (resource) => {
+  const serviceHtml = (resource.services || [])
+    .slice(0, 4)
+    .map((label) => renderBadge(label))
+    .join("");
+  const linksHtml = (resource.links || [])
+    .map((link) => {
+      const className = link.secondary ? "button secondary" : "button";
+      const targetAttrs = link.external ? ' target="_blank" rel="noreferrer"' : '';
+      return '<a class="' + className + '" href="' + escapeHtml(link.href) + '"' + targetAttrs + '>' + escapeHtml(link.label) + '</a>';
+    })
+    .join("");
+
+  return [
+    '<article class="source-card">',
+    '<h3>' + escapeHtml(resource.title) + '</h3>',
+    '<p>' + escapeHtml(resource.summary) + '</p>',
+    serviceHtml ? '<div class="meta-row">' + serviceHtml + '</div>' : '',
+    '<footer>' + linksHtml + '</footer>',
+    '</article>'
+  ].join("");
+};
+
 const render = () => {
-  if (!countEl || !listEl) {
+  if (!registryCountEl || !registryListEl || !developerListEl) {
     return;
   }
 
-  const filtered = state.sources.filter((source) => {
-    const matchesCategory = state.category === "all" || source.category === state.category;
-    const matchesPurposeFilter = state.purpose === "all" || source.purpose === state.purpose;
-    return matchesCategory && matchesPurposeFilter && matchesQuery(source, state.query);
-  });
+  const filtered = state.sources.filter((source) => matchesQuery(source, state.query));
+  const developerResources = buildDeveloperResources(filtered);
 
-  countEl.textContent = interpolate(messages.resultsShown, { count: filtered.length });
-  listEl.innerHTML = filtered.map(renderCard).join("") || '<p class="small">' + messages.noResults + '</p>';
+  registryCountEl.textContent = interpolate(messages.resultsShown, { count: filtered.length });
+  registryListEl.innerHTML = filtered.map(renderRegistryCard).join("") || '<p class="small">' + messages.noResults + '</p>';
+  developerListEl.innerHTML = developerResources.map(renderDeveloperCard).join("") || '<p class="small">' + messages.developerEmpty + '</p>';
 };
 
 const load = async () => {
-  const tasks = [];
-
-  if (registryStatsEl || registryMetaEl || registryBodyEl || registryResultsEl) {
-    tasks.push(
-      fetch(basePath + "/data/registry.json")
-        .then((response) => response.json())
-        .then((data) => {
-          state.registry = data;
-          renderRegistry();
-        })
-        .catch(() => {
-          if (registryMetaEl) {
-            registryMetaEl.textContent = messages.registryLoadFailed;
-          }
-        })
-    );
+  if (!registryListEl && !registryCountEl && !developerListEl) {
+    return;
   }
 
-  if (listEl || countEl) {
-    tasks.push(
-      fetch(basePath + "/data/sources.json")
-        .then((response) => response.json())
-        .then((data) => {
-          state.sources = data;
-          render();
-        })
-        .catch(() => {
-          if (countEl) {
-            countEl.textContent = messages.loadFailed;
-          }
-          if (listEl) {
-            listEl.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
-          }
-        })
-    );
+  try {
+    const response = await fetch(basePath + "/data/sources.json");
+    state.sources = await response.json();
+    render();
+  } catch (error) {
+    if (registryCountEl) {
+      registryCountEl.textContent = messages.loadFailed;
+    }
+    if (registryListEl) {
+      registryListEl.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
+    }
+    if (developerListEl) {
+      developerListEl.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
+    }
   }
-
-  await Promise.all(tasks);
 };
 
 if (searchEl) {
   searchEl.addEventListener("input", (event) => {
     state.query = normalize(event.target.value.trim());
     render();
-  });
-}
-
-if (categoryEl) {
-  categoryEl.addEventListener("change", (event) => {
-    state.category = event.target.value;
-    render();
-  });
-}
-
-if (purposeEl) {
-  purposeEl.addEventListener("change", (event) => {
-    state.purpose = event.target.value;
-    render();
-  });
-}
-
-if (registrySearchEl) {
-  registrySearchEl.addEventListener("input", (event) => {
-    state.registryQuery = normalize(event.target.value.trim());
-    renderRegistry();
-  });
-}
-
-if (registryStatusEl) {
-  registryStatusEl.addEventListener("change", (event) => {
-    state.registryStatus = event.target.value;
-    renderRegistry();
   });
 }
 
@@ -1048,6 +1111,13 @@ const renderNotes = (notes = []) =>
   notes.length ? `<ul>${notes.map((note) => `<li>${escapeHtml(note)}</li>`).join("")}</ul>` : "";
 
 const translateMappedValue = (dictionary, value, locale) => dictionary[value]?.[locale] || value;
+const booleanLabel = (value, locale, copy) => {
+  if (value === null || value === undefined) {
+    return copy.notYetChecked;
+  }
+
+  return value ? (locale === "es" ? "Sí" : "Yes") : locale === "es" ? "No" : "No";
+};
 
 const localizeSource = (source, locale) => {
   const sourceCopy = locale === "es" ? spanishSourceCopy[source.slug] : null;
@@ -1059,8 +1129,19 @@ const localizeSource = (source, locale) => {
     notes: sourceCopy?.notes || source.notes,
     category_label: translateMappedValue(categoryLabels, source.category, locale),
     purpose_label: translateMappedValue(purposeLabels, source.purpose, locale),
+    status_label: translateMappedValue(statusLabels, source.status, locale),
+    operator_type_label: translateMappedValue(operatorTypeLabels, source.operator_type, locale),
     coverage_label: translateMappedValue(coverageLabels, source.coverage, locale),
-    language_label: source.language === "es" ? (locale === "es" ? "Español" : "Spanish") : source.language,
+    language_label:
+      source.language === "es"
+        ? locale === "es"
+          ? "Español"
+          : "Spanish"
+        : source.language === "en"
+          ? locale === "es"
+            ? "Inglés"
+            : "English"
+          : source.language,
     requires_login_label:
       source.requires_login === null
         ? copy.notYetChecked
@@ -1071,9 +1152,16 @@ const localizeSource = (source, locale) => {
           : locale === "es"
             ? "No"
             : "No",
+    accepts_reports_label_value: booleanLabel(source.accepts_new_reports, locale, copy),
+    public_search_label_value: booleanLabel(source.public_search, locale, copy),
+    report_found_label_value: booleanLabel(source.report_found, locale, copy),
     owner_label: translateMappedValue(ownerLabels, source.owner, locale),
+    service_labels: (source.services || []).map((service) => translateMappedValue(serviceLabels, service, locale)),
     tags: (source.tags || []).map((tag) => translateMappedValue(tagLabels, tag, locale)),
-    last_checked_label: source.last_checked_at || copy.notYetChecked
+    last_checked_label: source.last_checked_at || copy.notYetChecked,
+    public_contact_label: source.public_contact || copy.notYetChecked,
+    api_url_label: source.api_url || copy.notYetChecked,
+    source_code_url_label: source.source_code_url || copy.notYetChecked
   };
 };
 
@@ -1156,21 +1244,8 @@ const renderPageTopbar = (locale, pathname = "/", options = {}) => `<div class="
   ${renderLanguageSwitcher(locale, pathname, options)}
 </div>`;
 
-const renderFilterOptions = (locale, field, labels) => {
-  const values = [...new Set(localizedSources[locale].map((source) => source[field]))];
-  return values
-    .map((value) => `<option value="${escapeHtml(value)}">${escapeHtml(labels[value]?.[locale] || value)}</option>`)
-    .join("");
-};
-
 const renderLocaleIndexHtml = (locale, options = {}) => {
   const copy = localeCopy[locale];
-  const dataPath = localePath(locale, "/data/sources.json");
-  const registryUrl = registryPath(locale);
-  const introHtml = interpolate(copy.findSourceIntro, {
-    dataUrl: dataPath,
-    dataPath
-  });
   const canonical = options.canonical || absoluteLocaleUrl(locale, "/");
   const alternates = options.alternates || renderAlternateLinks("/");
   const appBasePath = options.appBasePath || localeBasePath(locale);
@@ -1199,46 +1274,29 @@ ${renderHead({
         </div>
       </section>
 
-      ${showRegistry
-        ? `<section class="section">
-        <div class="shell panel">
-          <h2>${escapeHtml(copy.registryTitle)}</h2>
-          <p class="page-intro">${escapeHtml(copy.registryIntro)}</p>
-          <p class="small" data-registry-meta>${escapeHtml(copy.registryLoading)}</p>
-          <div class="registry-stats" data-registry-stats></div>
-          <div class="page-links" style="margin-top:1rem">
-            <a class="button" href="${registryUrl}">${escapeHtml(copy.registryLinkLabel)}</a>
-          </div>
-        </div>
-      </section>`
-        : ""}
-
       <section class="section">
-        <div class="shell panel">
+        <div class="shell panel" id="directorio">
           <h2>${escapeHtml(copy.findSourceTitle)}</h2>
-          <p class="page-intro">${introHtml}</p>
+          <p class="page-intro">${escapeHtml(copy.findSourceIntro)}</p>
           <div class="controls">
             <div class="field">
               <label for="search">${escapeHtml(copy.searchLabel)}</label>
               <input id="search" type="search" placeholder="${escapeHtml(copy.searchPlaceholder)}" data-search>
             </div>
-            <div class="field">
-              <label for="category">${escapeHtml(copy.categoryLabel)}</label>
-              <select id="category" data-category>
-                <option value="all">${escapeHtml(copy.allCategories)}</option>
-                ${renderFilterOptions(locale, "category", categoryLabels)}
-              </select>
-            </div>
-            <div class="field">
-              <label for="purpose">${escapeHtml(copy.purposeLabel)}</label>
-              <select id="purpose" data-purpose>
-                <option value="all">${escapeHtml(copy.allPurposes)}</option>
-                ${renderFilterOptions(locale, "purpose", purposeLabels)}
-              </select>
-            </div>
           </div>
-          <p class="small" data-results-count>${escapeHtml(copy.loadingSources)}</p>
-          <div class="source-list" data-source-list></div>
+          <div class="directory-split">
+            <section class="directory-block">
+              <h3>${escapeHtml(copy.registrySectionTitle)}</h3>
+              <p class="small">${escapeHtml(copy.registrySectionIntro)}</p>
+              <p class="small" data-results-count>${escapeHtml(copy.loadingSources)}</p>
+              <div class="source-list" data-source-list></div>
+            </section>
+            <section class="directory-block">
+              <h3>${escapeHtml(copy.developerSectionTitle)}</h3>
+              <p class="small">${escapeHtml(copy.developerSectionIntro)}</p>
+              <div class="source-list" data-developer-list></div>
+            </section>
+          </div>
         </div>
       </section>
     </main>
@@ -1360,6 +1418,8 @@ ${renderHead({
               (source) => `
               <article class="source-card">
                 <div class="meta-row">
+                  <span class="pill">${escapeHtml(source.status_label)}</span>
+                  <span class="pill">${escapeHtml(source.operator_type_label)}</span>
                   <span class="pill">${escapeHtml(source.category_label)}</span>
                   <span class="pill">${escapeHtml(source.purpose_label)}</span>
                 </div>
@@ -1399,6 +1459,8 @@ ${renderHead({
 
         <section class="page-card">
           <div class="meta-row">
+            <span class="pill">${escapeHtml(source.status_label)}</span>
+            <span class="pill">${escapeHtml(source.operator_type_label)}</span>
             <span class="pill">${escapeHtml(source.category_label)}</span>
             <span class="pill">${escapeHtml(source.purpose_label)}</span>
           </div>
@@ -1416,6 +1478,14 @@ ${renderHead({
           <h2>${escapeHtml(copy.metadataTitle)}</h2>
           <dl class="definition-list">
             <div>
+              <dt>${escapeHtml(copy.statusLabelDetail)}</dt>
+              <dd>${valueOrFallback(source.status_label, copy.notYetChecked)}</dd>
+            </div>
+            <div>
+              <dt>${escapeHtml(copy.operatorTypeLabelDetail)}</dt>
+              <dd>${valueOrFallback(source.operator_type_label, copy.notYetChecked)}</dd>
+            </div>
+            <div>
               <dt>${escapeHtml(copy.coverageLabelDetail)}</dt>
               <dd>${valueOrFallback(source.coverage_label, copy.notYetChecked)}</dd>
             </div>
@@ -1428,8 +1498,48 @@ ${renderHead({
               <dd>${valueOrFallback(source.requires_login_label, copy.notYetChecked)}</dd>
             </div>
             <div>
+              <dt>${escapeHtml(copy.acceptsReportsLabelDetail)}</dt>
+              <dd>${valueOrFallback(source.accepts_reports_label_value, copy.notYetChecked)}</dd>
+            </div>
+            <div>
+              <dt>${escapeHtml(copy.publicSearchLabelDetail)}</dt>
+              <dd>${valueOrFallback(source.public_search_label_value, copy.notYetChecked)}</dd>
+            </div>
+            <div>
+              <dt>${escapeHtml(copy.reportFoundLabelDetail)}</dt>
+              <dd>${valueOrFallback(source.report_found_label_value, copy.notYetChecked)}</dd>
+            </div>
+            <div>
+              <dt>${escapeHtml(copy.publicContactLabelDetail)}</dt>
+              <dd>${
+                source.public_contact && source.public_contact !== copy.notYetChecked
+                  ? `<a href="${escapeHtml(source.public_contact)}" target="_blank" rel="noreferrer">${escapeHtml(source.public_contact)}</a>`
+                  : escapeHtml(copy.notYetChecked)
+              }</dd>
+            </div>
+            <div>
+              <dt>${escapeHtml(copy.publicApiLabelDetail)}</dt>
+              <dd>${
+                source.api_url && source.api_url !== copy.notYetChecked
+                  ? `<a href="${escapeHtml(source.api_url)}" target="_blank" rel="noreferrer">${escapeHtml(source.api_url)}</a>`
+                  : escapeHtml(copy.notYetChecked)
+              }</dd>
+            </div>
+            <div>
+              <dt>${escapeHtml(copy.sourceCodeLabelDetail)}</dt>
+              <dd>${
+                source.source_code_url && source.source_code_url !== copy.notYetChecked
+                  ? `<a href="${escapeHtml(source.source_code_url)}" target="_blank" rel="noreferrer">${escapeHtml(source.source_code_url)}</a>`
+                  : escapeHtml(copy.notYetChecked)
+              }</dd>
+            </div>
+            <div>
               <dt>${escapeHtml(copy.ownerLabelDetail)}</dt>
               <dd>${valueOrFallback(source.owner_label, copy.notYetChecked)}</dd>
+            </div>
+            <div>
+              <dt>${escapeHtml(copy.servicesLabelDetail)}</dt>
+              <dd>${(source.service_labels || []).map((label) => `<span class="pill">${escapeHtml(label)}</span>`).join(" ") || escapeHtml(copy.notYetChecked)}</dd>
             </div>
             <div>
               <dt>${escapeHtml(copy.crawlerPriorityLabel)}</dt>
@@ -1487,7 +1597,7 @@ Sitemap: ${absoluteUrl("/sitemap.xml")}
 
 const renderLlms = () => `# VeneHelp
 
-VeneHelp is a public directory of missing-person reporting sources related to the Venezuela earthquake emergency.
+VeneHelp is a public directory of search, reporting, and aid sources related to the Venezuela earthquake emergency.
 
 ## Preferred entrypoints
 

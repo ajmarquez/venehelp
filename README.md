@@ -1,12 +1,12 @@
 # VeneHelp
 
-VeneHelp is a static, crawler-friendly directory for missing-person reporting resources related to the Venezuela earthquake emergency.
+VeneHelp is a static, crawler-friendly public directory of platforms for searching for, reporting, and marking missing people as found after the Venezuela earthquake.
 
-The goal of this project is not to become a new authoritative database. Instead, it creates one public entrypoint where families, volunteers, journalists, and LLM agents can discover the main registries, forms, and reporting platforms without depending on fragmented posts or scattered links.
+The goal of this project is not to become a new authoritative database or collect reports directly. Instead, it creates one public entrypoint where families, volunteers, journalists, and LLM agents can compare the active public places where the same case may be searched, reported, or escalated through a humanitarian tracing path.
 
 ## What this repo includes
 
-- A public root page that chooses a language based on browser preference
+- A public root page in Spanish plus a dedicated English version
 - A Spanish site at `docs/es/` and an English site at `docs/en/`
 - Individual pages for each known source in both languages
 - A machine-readable JSON export at `docs/data/sources.json`
@@ -21,26 +21,20 @@ The goal of this project is not to become a new authoritative database. Instead,
 
 ## Source verification
 
-The initial data in this repository was compiled from user-provided research and third-party summaries. Every source should be manually reviewed before the directory is treated as production-quality.
+The initial data in this repository was compiled from direct site checks plus external reporting. Every source should still be manually reviewed before the directory is treated as production-quality.
 
 Recommended verification workflow:
 
-1. Confirm the URL loads and is relevant to the earthquake response.
-2. Confirm whether it supports reporting, searching, or both.
-3. Record whether login is required.
-4. Update `last_verified_at`, `status`, and `notes`.
+1. Confirm the URL loads and is relevant to missing-person search, reporting, or family tracing after the earthquake.
+2. Confirm what it actually offers: public search, report intake, found or safe updates, or humanitarian family tracing.
+3. Record whether login is required and whether public search is available.
+4. Update `status`, `last_checked_at`, `accepts_new_reports`, `public_search`, `report_found`, and `notes`.
 5. Remove stale or misleading entries.
 
 ## Build
 
 ```bash
 npm run build
-```
-
-The registry and counters are hidden by default in production builds. To review them locally or in staging, enable them explicitly:
-
-```bash
-SHOW_REGISTRY=true npm run build
 ```
 
 The default build target is:
@@ -75,12 +69,6 @@ To disable the analytics snippet for a build, pass an empty token:
 CLOUDFLARE_ANALYTICS_TOKEN="" npm run build
 ```
 
-Example staging-style build with the registry visible:
-
-```bash
-SITE_URL="https://staging.example.org" SHOW_REGISTRY=true npm run build
-```
-
 ## Publish on GitHub Pages
 
 1. Push the repository to GitHub.
@@ -92,7 +80,7 @@ SITE_URL="https://staging.example.org" SHOW_REGISTRY=true npm run build
 
 ## Suggested next steps
 
-1. Verify each resource manually.
-2. Add a contact/corrections channel.
-3. Add a submission flow for new sources.
-4. Add periodic checks for downtime and redirects.
+1. Keep enriching source metadata so families can quickly judge trust and usefulness.
+2. Add a public corrections channel for broken links or changed capabilities.
+3. Add more official and humanitarian missing-person tracing resources when they are publicly relevant.
+4. Add periodic checks for downtime, redirects, and changes to search or report flows.

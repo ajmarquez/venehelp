@@ -10,7 +10,18 @@
     "requires_login": false,
     "last_checked_at": "2026-06-26",
     "owner": "Volunteer initiative",
+    "operator_type": "volunteer",
+    "status": "active",
     "crawler_priority": 1,
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": true,
+    "public_contact": null,
+    "services": [
+      "missing-report",
+      "missing-search",
+      "found-report"
+    ],
     "summary": "Citizen-led registry for reporting and searching missing persons after the earthquake. Reportedly one of the most referenced public platforms.",
     "notes": [
       "URL loaded successfully during the June 26, 2026 link check.",
@@ -34,7 +45,18 @@
     "requires_login": false,
     "last_checked_at": "2026-06-26",
     "owner": "Volunteer initiative",
+    "operator_type": "volunteer",
+    "status": "active",
     "crawler_priority": 1,
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": true,
+    "public_contact": null,
+    "services": [
+      "missing-report",
+      "missing-search",
+      "found-report"
+    ],
     "summary": "Collaborative registry for disappeared persons with search and reporting flows.",
     "notes": [
       "URL loaded successfully during the June 26, 2026 link check.",
@@ -58,10 +80,22 @@
     "requires_login": false,
     "last_checked_at": "2026-06-26",
     "owner": "Citizen platform",
+    "operator_type": "citizen",
+    "status": "active",
     "crawler_priority": 2,
-    "summary": "Citizen platform for missing-person and emergency reporting that has been referenced as an alternative registry.",
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": true,
+    "public_contact": null,
+    "services": [
+      "missing-report",
+      "missing-search",
+      "found-report"
+    ],
+    "summary": "Citizen platform for reporting, searching, and marking missing people as found after the earthquake.",
     "notes": [
-      "URL loaded successfully during the June 26, 2026 link check."
+      "URL loaded successfully during the June 26, 2026 link check.",
+      "Public navigation and metadata show people-search, report intake, and found-status flows."
     ],
     "tags": [
       "earthquake",
@@ -81,7 +115,18 @@
     "requires_login": false,
     "last_checked_at": "2026-06-26",
     "owner": "Citizen platform",
+    "operator_type": "citizen",
+    "status": "active",
     "crawler_priority": 1,
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": true,
+    "public_contact": null,
+    "services": [
+      "missing-report",
+      "missing-search",
+      "safe-checkin"
+    ],
     "summary": "Citizen emergency platform for marking people as safe, searching people, and coordinating help after the earthquake.",
     "notes": [
       "URL loaded successfully during the June 26, 2026 link check.",
@@ -96,30 +141,6 @@
     ]
   },
   {
-    "slug": "terremoto-venezuela-mapa",
-    "name": "Terremoto Venezuela",
-    "url": "http://terremotovenezuela.com/",
-    "category": "map",
-    "purpose": "context-and-location",
-    "coverage": "national",
-    "language": "es",
-    "requires_login": false,
-    "last_checked_at": "2026-06-26",
-    "owner": "Unknown",
-    "crawler_priority": 3,
-    "summary": "Incident and damage mapping site that may help contextualize locations linked to missing-person reports.",
-    "notes": [
-      "Useful as supporting context, not as a primary missing-person registry.",
-      "URL redirects to HTTPS and loaded successfully during the June 26, 2026 link check."
-    ],
-    "tags": [
-      "earthquake",
-      "map",
-      "damage",
-      "context"
-    ]
-  },
-  {
     "slug": "kobotoolbox-terremotove",
     "name": "KoboToolbox TerremotoVE",
     "url": "https://ee.kobotoolbox.org/x/eaEmQ9YW",
@@ -130,11 +151,20 @@
     "requires_login": false,
     "last_checked_at": "2026-06-26",
     "owner": "Community responders",
+    "operator_type": "community",
+    "status": "active",
     "crawler_priority": 2,
-    "summary": "Community reporting form for missing or trapped people, damage, and relief information.",
+    "accepts_new_reports": true,
+    "public_search": false,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "missing-report"
+    ],
+    "summary": "Community reporting form for missing or trapped people after the earthquake.",
     "notes": [
       "URL loaded successfully during the June 26, 2026 link check.",
-      "May connect to public Kobo maps or dashboards."
+      "Useful when a family or volunteer needs an additional public intake path for a missing-person case."
     ],
     "tags": [
       "earthquake",
@@ -144,27 +174,73 @@
     ]
   },
   {
-    "slug": "yummy-sos",
-    "name": "Yummy - SOS",
-    "url": "https://sos.yummyrides.com",
+    "slug": "icrc-family-links-venezuela",
+    "name": "ICRC Family Links - Venezuelan Red Cross",
+    "url": "https://familylinks.icrc.org/organization/venezuelan-red-cross",
     "category": "website",
-    "purpose": "reporting",
+    "purpose": "family-tracing",
     "coverage": "national",
     "language": "es",
     "requires_login": false,
     "last_checked_at": "2026-06-26",
-    "owner": "Company platform",
-    "crawler_priority": 2,
-    "summary": "Yummy-operated emergency website for reporting structural damage, viewing public incident reports, and finding shelters after the earthquake.",
+    "owner": "International Committee of the Red Cross",
+    "operator_type": "humanitarian",
+    "status": "monitor",
+    "crawler_priority": 1,
+    "accepts_new_reports": true,
+    "public_search": false,
+    "report_found": false,
+    "public_contact": "https://familylinks.icrc.org/organization/venezuelan-red-cross",
+    "services": [
+      "family-tracing"
+    ],
+    "summary": "Official Red Cross family-links entrypoint for restoring contact and tracing requests connected to emergencies in Venezuela.",
     "notes": [
-      "URL loaded successfully during the June 26, 2026 link check.",
-      "Page metadata and visible navigation show public flows for reporting damage, browsing reports, shelters, and resources."
+      "Primary humanitarian tracing route for families who need a higher-trust escalation path.",
+      "The site uses access controls that may block automated checks, so availability should be verified manually."
     ],
     "tags": [
       "earthquake",
-      "damage",
-      "reporting",
-      "emergency"
+      "missing-persons",
+      "official",
+      "humanitarian"
+    ]
+  },
+  {
+    "slug": "localizados-venezuela",
+    "name": "Localizados Venezuela",
+    "url": "https://localizadosvenezuela.com/",
+    "api_url": "https://localizadosvenezuela.com/api",
+    "source_code_url": "https://github.com/ggangix/localizados-venezuela",
+    "category": "website",
+    "purpose": "located-people",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "last_checked_at": "2026-06-26",
+    "owner": "Volunteer initiative",
+    "operator_type": "volunteer",
+    "status": "active",
+    "crawler_priority": 1,
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "located-search",
+      "located-report"
+    ],
+    "summary": "Open-source public platform for searching and contributing records of people already located after the earthquake, with a public read API for integrations.",
+    "notes": [
+      "Public API documentation is available at /api and the v1 GET endpoints return JSON with CORS enabled for read access.",
+      "The project README explicitly says it is only for people already located and points missing-person cases to desaparecidosterremotovenezuela.com."
+    ],
+    "tags": [
+      "earthquake",
+      "missing-persons",
+      "open-source",
+      "api",
+      "hospitals"
     ]
   }
 ]

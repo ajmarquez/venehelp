@@ -3,26 +3,14 @@ const messages = config.messages || {};
 const basePath = config.basePath || "";
 
 const state = {
-  registry: null,
-  registryQuery: "",
-  registryStatus: "all",
   sources: [],
-  query: "",
-  category: "all",
-  purpose: "all"
+  query: ""
 };
 
-const registryStatsEl = document.querySelector("[data-registry-stats]");
-const registryMetaEl = document.querySelector("[data-registry-meta]");
-const registryBodyEl = document.querySelector("[data-registry-body]");
-const registryResultsEl = document.querySelector("[data-registry-results]");
-const registrySearchEl = document.querySelector("[data-registry-search]");
-const registryStatusEl = document.querySelector("[data-registry-status]");
-const listEl = document.querySelector("[data-source-list]");
-const countEl = document.querySelector("[data-results-count]");
+const registryListEl = document.querySelector("[data-source-list]");
+const registryCountEl = document.querySelector("[data-results-count]");
+const developerListEl = document.querySelector("[data-developer-list]");
 const searchEl = document.querySelector("[data-search]");
-const categoryEl = document.querySelector("[data-category]");
-const purposeEl = document.querySelector("[data-purpose]");
 
 const interpolate = (template, values = {}) =>
   String(template || "").replace(/\{(\w+)\}/g, (_, key) => String(values[key] ?? ""));
@@ -44,6 +32,9 @@ const matchesQuery = (source, query) => {
     source.summary,
     source.category_label,
     source.purpose_label,
+    source.status_label,
+    source.operator_type_label,
+    ...(source.service_labels || []),
     ...(source.tags || [])
   ].join(" ").toLowerCase();
   return haystack.includes(query);
@@ -52,99 +43,28 @@ const matchesQuery = (source, query) => {
 const renderBadge = (label, className = "pill") =>
   '<span class="' + className + '">' + label + "</span>";
 
-const matchesRegistryQuery = (record, query) => {
-  if (!query) return true;
-  const haystack = [
-    record.name,
-    record.location,
-    record.source_name,
-    record.status_label,
-    ...(record.reported_on || [])
-  ].join(" ").toLowerCase();
-  return haystack.includes(query);
-};
-
-const getFilteredRegistryRecords = () =>
-  (state.registry?.records || []).filter((record) => {
-    const matchesStatus = state.registryStatus === "all" || record.status === state.registryStatus;
-    return matchesStatus && matchesRegistryQuery(record, state.registryQuery);
-  });
-
-const renderRegistry = () => {
-  if (!registryStatsEl && !registryMetaEl && !registryBodyEl && !registryResultsEl) {
-    return;
-  }
-
-  if (!state.registry) {
-    if (registryMetaEl) {
-      registryMetaEl.textContent = messages.registryLoading;
-    }
-    return;
-  }
-
-  const summary = state.registry.summary || {};
-  if (registryMetaEl) {
-    registryMetaEl.textContent = summary.is_partial
-      ? interpolate(messages.registryPartialNote, {
-          sampledPages: summary.sampled_pages ?? 0,
-          totalPages: summary.total_pages ?? 0,
-          sourceName: summary.source_name || ""
-        })
-      : interpolate(messages.registryFullNote, {
-          sourceName: summary.source_name || ""
-        });
-  }
-
-  if (registryStatsEl) {
-    registryStatsEl.innerHTML = [
-      '<article class="registry-stat registry-stat--missing"><strong>' + (summary.missing_count_display || "-") + '</strong><span>' + messages.registryMissingLabel + '</span></article>',
-      '<article class="registry-stat registry-stat--found"><strong>' + (summary.found_count_display || "-") + '</strong><span>' + messages.registryFoundLabel + '</span></article>',
-      '<article class="registry-stat registry-stat--preview"><strong>' + (summary.preview_records || 0) + '</strong><span>' + messages.registryPreviewLabel + '</span></article>'
-    ].join("");
-  }
-
-  const records = getFilteredRegistryRecords();
-
-  if (registryResultsEl) {
-    registryResultsEl.textContent = interpolate(messages.registryResultsShown, { count: records.length });
-  }
-
-  if (!registryBodyEl) {
-    return;
-  }
-
-  const rows = records.map((record) => {
-    const nameHtml = record.detail_url
-      ? '<a href="' + escapeHtml(record.detail_url) + '" target="_blank" rel="noreferrer">' + escapeHtml(record.name) + '</a>'
-      : escapeHtml(record.name);
-
-    return [
-      '<tr>',
-      '<td>' + nameHtml + '</td>',
-      '<td><span class="status-chip status-chip--' + escapeHtml(record.status) + '">' + escapeHtml(record.status_label) + '</span></td>',
-      '<td>' + escapeHtml(record.location || '') + '</td>',
-      '<td>' + escapeHtml((record.reported_on || []).join(', ')) + '</td>',
-      '</tr>'
-    ].join("");
-  });
-
-  registryBodyEl.innerHTML = rows.join("") || '<tr><td colspan="4" class="small">' + messages.registryEmpty + '</td></tr>';
-};
-
-const renderCard = (source) => {
+const renderRegistryCard = (source) => {
   const detailsPath = basePath + '/sources/' + source.slug + '/';
   const linkHtml = source.url
     ? '<a class="button" href="' + source.url + '" target="_blank" rel="noreferrer">' + messages.openSource + '</a>'
     : '<span class="small">' + messages.directLinkPending + '</span>';
+  const serviceHtml = (source.service_labels || [])
+    .slice(0, 4)
+    .map((label) => renderBadge(label))
+    .join("");
 
   return [
     '<article class="source-card">',
     '<h3><a href="' + detailsPath + '">' + source.name + '</a></h3>',
     '<p>' + source.summary + '</p>',
-    '<div class="meta-row">',
-    renderBadge(source.category_label),
-    renderBadge(source.purpose_label),
-    '</div>',
+    '<p class="small source-facts">' +
+      escapeHtml(messages.publicSearchLabelDetail) + ': ' + escapeHtml(source.public_search_label_value) +
+      ' · ' +
+      escapeHtml(messages.acceptsReportsLabelDetail) + ': ' + escapeHtml(source.accepts_reports_label_value) +
+      ' · ' +
+      escapeHtml(messages.reportFoundLabelDetail) + ': ' + escapeHtml(source.report_found_label_value) +
+      '</p>',
+    serviceHtml ? '<div class="meta-row">' + serviceHtml + '</div>' : '',
     '<footer>',
     linkHtml,
     '<a class="button secondary" href="' + detailsPath + '">' + messages.details + '</a>',
@@ -153,94 +73,105 @@ const renderCard = (source) => {
   ].join("");
 };
 
+const buildDeveloperResources = (sources) => {
+  const datasetPath = basePath + "/data/sources.json";
+  const items = [
+    {
+      key: "venehelp-dataset",
+      title: messages.venehelpDatasetTitle,
+      summary: messages.venehelpDatasetSummary,
+      links: [
+        { href: datasetPath, label: messages.openDataset, primary: true }
+      ]
+    }
+  ];
+
+  sources
+    .filter((source) => source.api_url || source.source_code_url)
+    .forEach((source) => {
+      const links = [];
+      if (source.api_url) {
+        links.push({ href: source.api_url, label: messages.openApi, primary: true, external: true });
+      }
+      if (source.source_code_url) {
+        links.push({ href: source.source_code_url, label: messages.openSourceCode, secondary: true, external: true });
+      }
+      links.push({ href: basePath + '/sources/' + source.slug + '/', label: messages.details, secondary: true, external: false });
+
+      items.push({
+        key: source.slug,
+        title: source.name,
+        summary: source.summary,
+        services: source.service_labels || [],
+        links
+      });
+    });
+
+  return items;
+};
+
+const renderDeveloperCard = (resource) => {
+  const serviceHtml = (resource.services || [])
+    .slice(0, 4)
+    .map((label) => renderBadge(label))
+    .join("");
+  const linksHtml = (resource.links || [])
+    .map((link) => {
+      const className = link.secondary ? "button secondary" : "button";
+      const targetAttrs = link.external ? ' target="_blank" rel="noreferrer"' : '';
+      return '<a class="' + className + '" href="' + escapeHtml(link.href) + '"' + targetAttrs + '>' + escapeHtml(link.label) + '</a>';
+    })
+    .join("");
+
+  return [
+    '<article class="source-card">',
+    '<h3>' + escapeHtml(resource.title) + '</h3>',
+    '<p>' + escapeHtml(resource.summary) + '</p>',
+    serviceHtml ? '<div class="meta-row">' + serviceHtml + '</div>' : '',
+    '<footer>' + linksHtml + '</footer>',
+    '</article>'
+  ].join("");
+};
+
 const render = () => {
-  if (!countEl || !listEl) {
+  if (!registryCountEl || !registryListEl || !developerListEl) {
     return;
   }
 
-  const filtered = state.sources.filter((source) => {
-    const matchesCategory = state.category === "all" || source.category === state.category;
-    const matchesPurposeFilter = state.purpose === "all" || source.purpose === state.purpose;
-    return matchesCategory && matchesPurposeFilter && matchesQuery(source, state.query);
-  });
+  const filtered = state.sources.filter((source) => matchesQuery(source, state.query));
+  const developerResources = buildDeveloperResources(filtered);
 
-  countEl.textContent = interpolate(messages.resultsShown, { count: filtered.length });
-  listEl.innerHTML = filtered.map(renderCard).join("") || '<p class="small">' + messages.noResults + '</p>';
+  registryCountEl.textContent = interpolate(messages.resultsShown, { count: filtered.length });
+  registryListEl.innerHTML = filtered.map(renderRegistryCard).join("") || '<p class="small">' + messages.noResults + '</p>';
+  developerListEl.innerHTML = developerResources.map(renderDeveloperCard).join("") || '<p class="small">' + messages.developerEmpty + '</p>';
 };
 
 const load = async () => {
-  const tasks = [];
-
-  if (registryStatsEl || registryMetaEl || registryBodyEl || registryResultsEl) {
-    tasks.push(
-      fetch(basePath + "/data/registry.json")
-        .then((response) => response.json())
-        .then((data) => {
-          state.registry = data;
-          renderRegistry();
-        })
-        .catch(() => {
-          if (registryMetaEl) {
-            registryMetaEl.textContent = messages.registryLoadFailed;
-          }
-        })
-    );
+  if (!registryListEl && !registryCountEl && !developerListEl) {
+    return;
   }
 
-  if (listEl || countEl) {
-    tasks.push(
-      fetch(basePath + "/data/sources.json")
-        .then((response) => response.json())
-        .then((data) => {
-          state.sources = data;
-          render();
-        })
-        .catch(() => {
-          if (countEl) {
-            countEl.textContent = messages.loadFailed;
-          }
-          if (listEl) {
-            listEl.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
-          }
-        })
-    );
+  try {
+    const response = await fetch(basePath + "/data/sources.json");
+    state.sources = await response.json();
+    render();
+  } catch (error) {
+    if (registryCountEl) {
+      registryCountEl.textContent = messages.loadFailed;
+    }
+    if (registryListEl) {
+      registryListEl.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
+    }
+    if (developerListEl) {
+      developerListEl.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
+    }
   }
-
-  await Promise.all(tasks);
 };
 
 if (searchEl) {
   searchEl.addEventListener("input", (event) => {
     state.query = normalize(event.target.value.trim());
     render();
-  });
-}
-
-if (categoryEl) {
-  categoryEl.addEventListener("change", (event) => {
-    state.category = event.target.value;
-    render();
-  });
-}
-
-if (purposeEl) {
-  purposeEl.addEventListener("change", (event) => {
-    state.purpose = event.target.value;
-    render();
-  });
-}
-
-if (registrySearchEl) {
-  registrySearchEl.addEventListener("input", (event) => {
-    state.registryQuery = normalize(event.target.value.trim());
-    renderRegistry();
-  });
-}
-
-if (registryStatusEl) {
-  registryStatusEl.addEventListener("change", (event) => {
-    state.registryStatus = event.target.value;
-    renderRegistry();
   });
 }
 

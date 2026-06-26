@@ -1,6 +1,6 @@
 # VeneHelp
 
-VeneHelp is a public directory of missing-person reporting sources related to the Venezuela earthquake emergency.
+VeneHelp is a public directory of search, reporting, and aid sources related to the Venezuela earthquake emergency.
 
 ## Preferred entrypoints
 

@@ -122,7 +122,7 @@ h2 {
 .controls {
   display: grid;
   gap: 0.75rem;
-  grid-template-columns: minmax(16rem, 2fr) minmax(10rem, 1fr) minmax(10rem, 1fr);
+  grid-template-columns: minmax(16rem, 1fr);
   margin-top: 1rem;
 }
 
@@ -168,6 +168,29 @@ select:focus {
   max-width: 76ch;
 }
 
+.route-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1rem;
+}
+
+.route-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem;
+  background: var(--surface-muted);
+}
+
+.route-card p {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+}
+
+.route-links a {
+  color: var(--blue);
+}
+
 .meta-row {
   display: flex;
   flex-wrap: wrap;
@@ -196,6 +219,21 @@ select:focus {
   gap: 0;
   margin-top: 1.25rem;
   border-top: 1px solid var(--line);
+}
+
+.directory-split {
+  display: grid;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.directory-block h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.directory-block .small {
+  margin: 0.5rem 0 0;
 }
 
 .registry-stats {
@@ -314,6 +352,10 @@ select:focus {
   max-width: 76ch;
 }
 
+.source-facts {
+  font-size: 0.92rem;
+}
+
 .source-card footer,
 .page-links,
 .topbar {
@@ -422,6 +464,7 @@ code {
 @media (max-width: 860px) {
   .controls,
   .definition-list,
+  .route-grid,
   .registry-stats {
     grid-template-columns: 1fr;
   }
