@@ -1039,6 +1039,8 @@ const localeCopy = {
     statFound: "encontradas",
     statLocated: "localizadas",
     statBySite: "según el sitio",
+    localTimeNote: "hora local",
+    venezuelaTimeNote: "hora de Venezuela",
     filterLabel: "Mostrar solo",
     venehelpDatasetTitle: "Dataset público de VeneHelp",
     venehelpDatasetSummary:
@@ -1155,6 +1157,8 @@ const localeCopy = {
     statFound: "found",
     statLocated: "located",
     statBySite: "per the site",
+    localTimeNote: "local time",
+    venezuelaTimeNote: "Venezuela time",
     filterLabel: "Show only",
     venehelpDatasetTitle: "VeneHelp public dataset",
     venehelpDatasetSummary:
@@ -1278,7 +1282,7 @@ const formatAsOf = (value) => {
     // No timeZone option -> the browser renders it in the viewer's local time.
     return d.toLocaleString(messages.lang === 'es' ? 'es-VE' : 'en-US', {
       day: '2-digit', month: 'short', year: 'numeric',
-      hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
+      hour: '2-digit', minute: '2-digit'
     });
   } catch (error) {
     return value;
@@ -1292,7 +1296,10 @@ const renderStats = (stats) => {
   if (stats.found != null) parts.push('<strong>' + formatNumber(stats.found) + '</strong> ' + escapeHtml(messages.statFound));
   if (stats.located != null) parts.push('<strong>' + formatNumber(stats.located) + '</strong> ' + escapeHtml(messages.statLocated));
   if (!parts.length) return '';
-  const attribution = escapeHtml(messages.statBySite) + (stats.as_of ? ' · ' + escapeHtml(formatAsOf(stats.as_of)) : '');
+  const asOfText = stats.as_of
+    ? ' · ' + formatAsOf(stats.as_of) + (stats.as_of.length > 10 ? ' (' + messages.localTimeNote + ')' : '')
+    : '';
+  const attribution = escapeHtml(messages.statBySite) + escapeHtml(asOfText);
   return '<p class="source-stats">' + parts.join(' · ') + ' <span class="source-stats-note">— ' + attribution + '</span></p>';
 };
 
@@ -1508,7 +1515,7 @@ const formatAsOfStatic = (value, locale) => {
     return d.toLocaleString(locale === "es" ? "es-VE" : "en-US", {
       day: "2-digit", month: "short", year: "numeric",
       hour: "2-digit", minute: "2-digit",
-      timeZone: "America/Caracas", timeZoneName: "short"
+      timeZone: "America/Caracas"
     });
   } catch (error) {
     return value;
@@ -1522,7 +1529,10 @@ const renderStatsStatic = (stats, locale, copy) => {
   if (stats.found != null) parts.push(`<strong>${formatNumberStatic(stats.found, locale)}</strong> ${escapeHtml(copy.statFound)}`);
   if (stats.located != null) parts.push(`<strong>${formatNumberStatic(stats.located, locale)}</strong> ${escapeHtml(copy.statLocated)}`);
   if (!parts.length) return "";
-  const attribution = `${escapeHtml(copy.statBySite)}${stats.as_of ? ` · ${escapeHtml(formatAsOfStatic(stats.as_of, locale))}` : ""}`;
+  const asOfText = stats.as_of
+    ? ` · ${formatAsOfStatic(stats.as_of, locale)}${stats.as_of.length > 10 ? ` (${copy.venezuelaTimeNote})` : ""}`
+    : "";
+  const attribution = `${escapeHtml(copy.statBySite)}${escapeHtml(asOfText)}`;
   return `<p class="source-stats" style="margin-top:0.85rem">${parts.join(" · ")} <span class="source-stats-note">— ${attribution}</span></p>`;
 };
 

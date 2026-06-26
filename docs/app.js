@@ -73,7 +73,7 @@ const formatAsOf = (value) => {
     // No timeZone option -> the browser renders it in the viewer's local time.
     return d.toLocaleString(messages.lang === 'es' ? 'es-VE' : 'en-US', {
       day: '2-digit', month: 'short', year: 'numeric',
-      hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
+      hour: '2-digit', minute: '2-digit'
     });
   } catch (error) {
     return value;
@@ -87,7 +87,10 @@ const renderStats = (stats) => {
   if (stats.found != null) parts.push('<strong>' + formatNumber(stats.found) + '</strong> ' + escapeHtml(messages.statFound));
   if (stats.located != null) parts.push('<strong>' + formatNumber(stats.located) + '</strong> ' + escapeHtml(messages.statLocated));
   if (!parts.length) return '';
-  const attribution = escapeHtml(messages.statBySite) + (stats.as_of ? ' · ' + escapeHtml(formatAsOf(stats.as_of)) : '');
+  const asOfText = stats.as_of
+    ? ' · ' + formatAsOf(stats.as_of) + (stats.as_of.length > 10 ? ' (' + messages.localTimeNote + ')' : '')
+    : '';
+  const attribution = escapeHtml(messages.statBySite) + escapeHtml(asOfText);
   return '<p class="source-stats">' + parts.join(' · ') + ' <span class="source-stats-note">— ' + attribution + '</span></p>';
 };
 
