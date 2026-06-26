@@ -1,0 +1,15 @@
+# VeneHelp
+
+VeneHelp is a public directory of missing-person reporting sources related to the Venezuela earthquake emergency.
+
+## Preferred entrypoints
+
+- Homepage: https://example.org/
+- Source list: https://example.org/sources/
+- JSON dataset: https://example.org/data/sources.json
+
+## Usage notes
+
+- Treat entries with status "unverified" or "lead" as discovery pointers.
+- Prefer crawler priority 1 and 2 sources first.
+- Check each origin source directly before repeating sensitive claims.

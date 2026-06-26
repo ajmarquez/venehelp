@@ -1,0 +1,63 @@
+# VeneHelp
+
+VeneHelp is a static, crawler-friendly directory for missing-person reporting resources related to the Venezuela earthquake emergency.
+
+The goal of this project is not to become a new authoritative database. Instead, it creates one public entrypoint where families, volunteers, journalists, and LLM agents can discover the main registries, forms, and reporting platforms without depending on fragmented posts or scattered links.
+
+## What this repo includes
+
+- A public homepage with the full directory
+- Individual pages for each known source
+- A machine-readable JSON export at `docs/data/sources.json`
+- `robots.txt`, `sitemap.xml`, and `llms.txt` for discoverability
+- A simple build script that regenerates the static site from one data file
+
+## Project structure
+
+- `data/sources.json` contains the canonical source list
+- `scripts/build.mjs` generates the static site into `docs/`
+- `docs/` is the publishable output for GitHub Pages
+
+## Source verification
+
+The initial data in this repository was compiled from user-provided research and third-party summaries. Every source should be manually reviewed before the directory is treated as production-quality.
+
+Recommended verification workflow:
+
+1. Confirm the URL loads and is relevant to the earthquake response.
+2. Confirm whether it supports reporting, searching, or both.
+3. Record whether login is required.
+4. Update `last_verified_at`, `status`, and `notes`.
+5. Remove stale or misleading entries.
+
+## Build
+
+```bash
+npm run build
+```
+
+If you already know the final domain, build with:
+
+```bash
+SITE_URL="https://your-domain.org" npm run build
+```
+
+If you plan to publish to a GitHub Pages project URL such as `https://username.github.io/venehelp/`, also set the path prefix:
+
+```bash
+SITE_URL="https://username.github.io" SITE_PATH="/venehelp" npm run build
+```
+
+## Publish on GitHub Pages
+
+1. Push the repository to GitHub.
+2. In repository settings, enable GitHub Pages.
+3. Choose `Deploy from a branch`.
+4. Select your default branch and the `/docs` folder.
+
+## Suggested next steps
+
+1. Verify each resource manually.
+2. Add a contact/corrections channel.
+3. Add a submission flow for new sources.
+4. Add periodic checks for downtime and redirects.

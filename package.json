@@ -1,0 +1,9 @@
+{
+  "name": "venehelp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Crawler-friendly directory of missing persons resources for Venezuela.",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  }
+}

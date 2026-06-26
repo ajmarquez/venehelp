@@ -1,0 +1,198 @@
+[
+  {
+    "slug": "desaparecidos-terremoto-venezuela",
+    "name": "Desaparecidos Terremoto Venezuela",
+    "url": "https://desaparecidosterremotovenezuela.com/",
+    "category": "website",
+    "purpose": "report-and-search",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "status": "unverified",
+    "last_verified_at": null,
+    "owner": "Volunteer initiative",
+    "crawler_priority": 1,
+    "summary": "Citizen-led registry for reporting and searching missing persons after the earthquake. Reportedly one of the most referenced public platforms.",
+    "notes": [
+      "Needs manual verification before being treated as authoritative.",
+      "Intended to support reporting missing people, searching records, and marking someone as found."
+    ],
+    "tags": [
+      "earthquake",
+      "missing-persons",
+      "public-registry",
+      "volunteer-run"
+    ]
+  },
+  {
+    "slug": "venezuela-te-busca",
+    "name": "Venezuela Te Busca",
+    "url": "https://venezuelatebusca.com/",
+    "category": "website",
+    "purpose": "report-and-search",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "status": "unverified",
+    "last_verified_at": null,
+    "owner": "Volunteer initiative",
+    "crawler_priority": 1,
+    "summary": "Collaborative registry for disappeared persons with search and reporting flows.",
+    "notes": [
+      "Needs manual verification before publication.",
+      "Reportedly allows searching by person name, ID, or location."
+    ],
+    "tags": [
+      "earthquake",
+      "missing-persons",
+      "search",
+      "registry"
+    ]
+  },
+  {
+    "slug": "venezuela-reporta",
+    "name": "Venezuela Reporta",
+    "url": "https://venezuelareporta.org/",
+    "category": "website",
+    "purpose": "report-and-search",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "status": "unverified",
+    "last_verified_at": null,
+    "owner": "Citizen platform",
+    "crawler_priority": 2,
+    "summary": "Citizen platform for missing-person and emergency reporting that has been referenced as an alternative registry.",
+    "notes": [
+      "Needs manual verification before publication."
+    ],
+    "tags": [
+      "earthquake",
+      "missing-persons",
+      "emergency",
+      "citizen-platform"
+    ]
+  },
+  {
+    "slug": "terremoto-venezuela-mapa",
+    "name": "Terremoto Venezuela",
+    "url": "http://terremotovenezuela.com/",
+    "category": "map",
+    "purpose": "context-and-location",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "status": "unverified",
+    "last_verified_at": null,
+    "owner": "Unknown",
+    "crawler_priority": 3,
+    "summary": "Incident and damage mapping site that may help contextualize locations linked to missing-person reports.",
+    "notes": [
+      "Useful as supporting context, not as a primary missing-person registry.",
+      "Needs manual verification before publication."
+    ],
+    "tags": [
+      "earthquake",
+      "map",
+      "damage",
+      "context"
+    ]
+  },
+  {
+    "slug": "kobotoolbox-terremotove",
+    "name": "KoboToolbox TerremotoVE",
+    "url": "https://ee.kobotoolbox.org/x/eaEmQ9YW",
+    "category": "form",
+    "purpose": "reporting",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "status": "unverified",
+    "last_verified_at": null,
+    "owner": "Community responders",
+    "crawler_priority": 2,
+    "summary": "Community reporting form for missing or trapped people, damage, and relief information.",
+    "notes": [
+      "Needs manual verification before publication.",
+      "May connect to public Kobo maps or dashboards."
+    ],
+    "tags": [
+      "earthquake",
+      "form",
+      "reporting",
+      "community"
+    ]
+  },
+  {
+    "slug": "talcual-digital-lead",
+    "name": "TalCual Digital",
+    "url": "https://talcualdigital.com/",
+    "category": "media",
+    "purpose": "lead",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "status": "lead",
+    "last_verified_at": null,
+    "owner": "Media outlet",
+    "crawler_priority": 4,
+    "summary": "Lead for a possible dedicated missing-person reporting form or channel promoted by the outlet.",
+    "notes": [
+      "Exact reporting URL is still pending verification.",
+      "Keep as a lead until the direct emergency form or page is confirmed."
+    ],
+    "tags": [
+      "lead",
+      "media",
+      "missing-persons"
+    ]
+  },
+  {
+    "slug": "reconectemos-a-cada-familia-lead",
+    "name": "Reconectemos a Cada Familia",
+    "url": null,
+    "category": "campaign",
+    "purpose": "lead",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": null,
+    "status": "lead",
+    "last_verified_at": null,
+    "owner": "Campaign network",
+    "crawler_priority": 4,
+    "summary": "Lead for a campaign-linked reporting initiative referenced alongside the major public platforms.",
+    "notes": [
+      "No direct verified URL yet.",
+      "Add only after confirming the exact reporting page or registry."
+    ],
+    "tags": [
+      "lead",
+      "campaign",
+      "missing-persons"
+    ]
+  },
+  {
+    "slug": "venapp",
+    "name": "VenApp",
+    "url": null,
+    "category": "app",
+    "purpose": "official-reporting",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": true,
+    "status": "lead",
+    "last_verified_at": null,
+    "owner": "Government",
+    "crawler_priority": 5,
+    "summary": "Government mobile application reportedly adapted for earthquake emergency reporting.",
+    "notes": [
+      "Mobile-app based and likely not directly crawlable by public web agents.",
+      "Keep for completeness, but treat it differently from web sources."
+    ],
+    "tags": [
+      "official",
+      "app",
+      "reporting"
+    ]
+  }
+]
