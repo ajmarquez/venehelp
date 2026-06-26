@@ -1,23 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
   <title id="title">VeneHelp favicon</title>
-  <desc id="desc">Blue circle with a white helping hand and yellow blue red accent.</desc>
-  <defs>
-    <clipPath id="icon-circle">
-      <circle cx="256" cy="256" r="212"/>
-    </clipPath>
-  </defs>
-  <circle cx="256" cy="256" r="212" fill="#1558bf"/>
-  <g fill="#fff">
-    <rect x="182" y="214" width="148" height="136" rx="42"/>
-    <rect x="180" y="134" width="30" height="112" rx="15"/>
-    <rect x="216" y="126" width="30" height="120" rx="15"/>
-    <rect x="252" y="126" width="30" height="120" rx="15"/>
-    <rect x="288" y="138" width="30" height="108" rx="15"/>
-    <rect x="132" y="236" width="110" height="34" rx="17" transform="rotate(-32 132 236)"/>
+  <desc id="desc">Helping hand icon with a blue medical cross and yellow blue red wrist accent.</desc>
+  <g fill="#1558bf">
+    <rect x="202" y="82" width="108" height="56" rx="14"/>
+    <rect x="228" y="56" width="56" height="108" rx="14"/>
+    <path d="M67 327c18-17 42-22 73-14l67 16c17 4 35 4 52-1l48-14c46-13 88-6 127 20-6 40-21 74-47 103l-43 17H215c-34 0-66-11-92-32L76 380c-19-17-22-37-9-53z"/>
+    <path d="M321 449c28-23 47-55 56-95 26-1 49 1 68 9-6 28-19 52-39 74l-54 23z"/>
   </g>
-  <g clip-path="url(#icon-circle)">
-    <path fill="#f5c400" d="M399 334c-28 30-62 53-102 76-14 8-29 22-43 39 41-8 83-25 119-49 24-16 43-35 56-58z"/>
-    <path fill="#1558bf" d="M392 349c-28 27-61 48-100 71-14 8-28 20-40 35 39-8 79-24 113-45 23-15 40-32 53-52z"/>
-    <path fill="#d81f28" d="M385 364c-28 23-58 41-92 59-13 7-25 17-36 30 34-5 67-18 96-36 21-13 37-29 49-46z"/>
-  </g>
+  <path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="14" d="M178 368c24-6 51-8 82-6 22 1 45 0 69-5"/>
+  <path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="12" d="M369 356c-6 29-18 54-37 77"/>
+  <path fill="#f5c400" d="M395 336c18-1 34 1 49 6-2 15-6 28-11 41-16-6-33-9-51-10 6-12 10-24 13-37z"/>
+  <path fill="#1558bf" d="M390 359c17-1 32 0 45 5-3 13-8 25-15 36-13-5-28-7-43-8 5-11 10-22 13-33z"/>
+  <path fill="#d81f28" d="M381 381c15 0 29 2 41 7-8 14-18 25-30 36l-36 15c9-17 18-36 25-58z"/>
 </svg>
