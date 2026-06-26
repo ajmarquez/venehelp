@@ -11,6 +11,6 @@ VeneHelp is a public directory of missing-person reporting sources related to th
 
 ## Usage notes
 
-- Treat entries with status "unverified" or "lead" as discovery pointers.
+- Treat entries as directory pointers, not as endorsements or authoritative claims.
 - Prefer crawler priority 1 and 2 sources first.
 - Check each origin source directly before repeating sensitive claims.

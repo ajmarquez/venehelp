@@ -8,13 +8,12 @@
     "coverage": "national",
     "language": "es",
     "requires_login": false,
-    "status": "unverified",
-    "last_verified_at": null,
+    "last_checked_at": "2026-06-26",
     "owner": "Volunteer initiative",
     "crawler_priority": 1,
     "summary": "Registro ciudadano para reportar y buscar personas desaparecidas tras el terremoto. Se ha citado como una de las plataformas públicas más referenciadas.",
     "notes": [
-      "Necesita verificación manual antes de tratarse como una fuente autoritativa.",
+      "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026.",
       "Está orientado a reportar personas desaparecidas, buscar registros y marcar a alguien como encontrado."
     ],
     "tags": [
@@ -25,12 +24,11 @@
     ],
     "category_label": "Sitio web",
     "purpose_label": "Reportar y buscar",
-    "status_label": "Sin verificar",
     "coverage_label": "Nacional",
     "language_label": "Español",
     "requires_login_label": "No",
     "owner_label": "Iniciativa voluntaria",
-    "last_verified_label": "Aún sin verificar"
+    "last_checked_label": "2026-06-26"
   },
   {
     "slug": "venezuela-te-busca",
@@ -41,13 +39,12 @@
     "coverage": "national",
     "language": "es",
     "requires_login": false,
-    "status": "unverified",
-    "last_verified_at": null,
+    "last_checked_at": "2026-06-26",
     "owner": "Volunteer initiative",
     "crawler_priority": 1,
     "summary": "Registro colaborativo de personas desaparecidas con flujos de búsqueda y reporte.",
     "notes": [
-      "Necesita verificación manual antes de publicarse.",
+      "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026.",
       "Se reporta que permite buscar por nombre, cédula o ubicación."
     ],
     "tags": [
@@ -58,12 +55,11 @@
     ],
     "category_label": "Sitio web",
     "purpose_label": "Reportar y buscar",
-    "status_label": "Sin verificar",
     "coverage_label": "Nacional",
     "language_label": "Español",
     "requires_login_label": "No",
     "owner_label": "Iniciativa voluntaria",
-    "last_verified_label": "Aún sin verificar"
+    "last_checked_label": "2026-06-26"
   },
   {
     "slug": "venezuela-reporta",
@@ -74,13 +70,12 @@
     "coverage": "national",
     "language": "es",
     "requires_login": false,
-    "status": "unverified",
-    "last_verified_at": null,
+    "last_checked_at": "2026-06-26",
     "owner": "Citizen platform",
     "crawler_priority": 2,
     "summary": "Plataforma ciudadana para reportes de personas desaparecidas y otras emergencias, mencionada como un registro alternativo.",
     "notes": [
-      "Necesita verificación manual antes de publicarse."
+      "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026."
     ],
     "tags": [
       "terremoto",
@@ -90,12 +85,11 @@
     ],
     "category_label": "Sitio web",
     "purpose_label": "Reportar y buscar",
-    "status_label": "Sin verificar",
     "coverage_label": "Nacional",
     "language_label": "Español",
     "requires_login_label": "No",
     "owner_label": "Plataforma ciudadana",
-    "last_verified_label": "Aún sin verificar"
+    "last_checked_label": "2026-06-26"
   },
   {
     "slug": "red-ayuda-venezuela",
@@ -106,8 +100,7 @@
     "coverage": "national",
     "language": "es",
     "requires_login": false,
-    "status": "unverified",
-    "last_verified_at": "2026-06-26",
+    "last_checked_at": "2026-06-26",
     "owner": "Citizen platform",
     "crawler_priority": 1,
     "summary": "Plataforma ciudadana de emergencia para avisar que una persona está a salvo, buscar personas y coordinar ayuda tras el terremoto.",
@@ -124,12 +117,11 @@
     ],
     "category_label": "Sitio web",
     "purpose_label": "Reportar y buscar",
-    "status_label": "Sin verificar",
     "coverage_label": "Nacional",
     "language_label": "Español",
     "requires_login_label": "No",
     "owner_label": "Plataforma ciudadana",
-    "last_verified_label": "2026-06-26"
+    "last_checked_label": "2026-06-26"
   },
   {
     "slug": "terremoto-venezuela-mapa",
@@ -140,14 +132,13 @@
     "coverage": "national",
     "language": "es",
     "requires_login": false,
-    "status": "unverified",
-    "last_verified_at": null,
+    "last_checked_at": "2026-06-26",
     "owner": "Unknown",
     "crawler_priority": 3,
     "summary": "Sitio de mapeo de incidentes y daños que puede ayudar a contextualizar ubicaciones vinculadas con reportes de personas desaparecidas.",
     "notes": [
       "Sirve como contexto complementario, no como registro principal de personas desaparecidas.",
-      "Necesita verificación manual antes de publicarse."
+      "La URL redirige a HTTPS y cargó correctamente durante la revisión de enlaces del 26 de junio de 2026."
     ],
     "tags": [
       "terremoto",
@@ -157,12 +148,11 @@
     ],
     "category_label": "Mapa",
     "purpose_label": "Contexto y ubicación",
-    "status_label": "Sin verificar",
     "coverage_label": "Nacional",
     "language_label": "Español",
     "requires_login_label": "No",
     "owner_label": "Desconocido",
-    "last_verified_label": "Aún sin verificar"
+    "last_checked_label": "2026-06-26"
   },
   {
     "slug": "kobotoolbox-terremotove",
@@ -173,13 +163,12 @@
     "coverage": "national",
     "language": "es",
     "requires_login": false,
-    "status": "unverified",
-    "last_verified_at": null,
+    "last_checked_at": "2026-06-26",
     "owner": "Community responders",
     "crawler_priority": 2,
     "summary": "Formulario comunitario para reportar personas desaparecidas o atrapadas, daños y necesidades de ayuda.",
     "notes": [
-      "Necesita verificación manual antes de publicarse.",
+      "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026.",
       "Podría conectarse con mapas o paneles públicos de Kobo."
     ],
     "tags": [
@@ -190,43 +179,10 @@
     ],
     "category_label": "Formulario",
     "purpose_label": "Reporte",
-    "status_label": "Sin verificar",
     "coverage_label": "Nacional",
     "language_label": "Español",
     "requires_login_label": "No",
     "owner_label": "Respondedores comunitarios",
-    "last_verified_label": "Aún sin verificar"
-  },
-  {
-    "slug": "reconectemos-a-cada-familia-lead",
-    "name": "Reconectemos a Cada Familia",
-    "url": null,
-    "category": "campaign",
-    "purpose": "lead",
-    "coverage": "national",
-    "language": "es",
-    "requires_login": null,
-    "status": "lead",
-    "last_verified_at": null,
-    "owner": "Campaign network",
-    "crawler_priority": 4,
-    "summary": "Pista sobre una iniciativa de reporte vinculada a una campaña, mencionada junto a las principales plataformas públicas.",
-    "notes": [
-      "Todavía no hay una URL directa verificada.",
-      "Agregarla solo después de confirmar la página o el registro exacto."
-    ],
-    "tags": [
-      "pista",
-      "campana",
-      "personas-desaparecidas"
-    ],
-    "category_label": "Campaña",
-    "purpose_label": "Pista",
-    "status_label": "Pista",
-    "coverage_label": "Nacional",
-    "language_label": "Español",
-    "requires_login_label": "Aún sin verificar",
-    "owner_label": "Red de campaña",
-    "last_verified_label": "Aún sin verificar"
+    "last_checked_label": "2026-06-26"
   }
 ]

@@ -27,7 +27,6 @@ const matchesQuery = (source, query) => {
     source.summary,
     source.category_label,
     source.purpose_label,
-    source.status_label,
     ...(source.tags || [])
   ].join(" ").toLowerCase();
   return haystack.includes(query);
@@ -49,7 +48,6 @@ const renderCard = (source) => {
     '<div class="meta-row">',
     renderBadge(source.category_label),
     renderBadge(source.purpose_label),
-    renderBadge(source.status_label, 'status status-' + source.status),
     '</div>',
     '<footer>',
     linkHtml,

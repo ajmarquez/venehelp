@@ -8,13 +8,12 @@
     "coverage": "national",
     "language": "es",
     "requires_login": false,
-    "status": "unverified",
-    "last_verified_at": null,
+    "last_checked_at": "2026-06-26",
     "owner": "Volunteer initiative",
     "crawler_priority": 1,
     "summary": "Citizen-led registry for reporting and searching missing persons after the earthquake. Reportedly one of the most referenced public platforms.",
     "notes": [
-      "Needs manual verification before being treated as authoritative.",
+      "URL loaded successfully during the June 26, 2026 link check.",
       "Intended to support reporting missing people, searching records, and marking someone as found."
     ],
     "tags": [
@@ -33,13 +32,12 @@
     "coverage": "national",
     "language": "es",
     "requires_login": false,
-    "status": "unverified",
-    "last_verified_at": null,
+    "last_checked_at": "2026-06-26",
     "owner": "Volunteer initiative",
     "crawler_priority": 1,
     "summary": "Collaborative registry for disappeared persons with search and reporting flows.",
     "notes": [
-      "Needs manual verification before publication.",
+      "URL loaded successfully during the June 26, 2026 link check.",
       "Reportedly allows searching by person name, ID, or location."
     ],
     "tags": [
@@ -58,13 +56,12 @@
     "coverage": "national",
     "language": "es",
     "requires_login": false,
-    "status": "unverified",
-    "last_verified_at": null,
+    "last_checked_at": "2026-06-26",
     "owner": "Citizen platform",
     "crawler_priority": 2,
     "summary": "Citizen platform for missing-person and emergency reporting that has been referenced as an alternative registry.",
     "notes": [
-      "Needs manual verification before publication."
+      "URL loaded successfully during the June 26, 2026 link check."
     ],
     "tags": [
       "earthquake",
@@ -82,8 +79,7 @@
     "coverage": "national",
     "language": "es",
     "requires_login": false,
-    "status": "unverified",
-    "last_verified_at": "2026-06-26",
+    "last_checked_at": "2026-06-26",
     "owner": "Citizen platform",
     "crawler_priority": 1,
     "summary": "Citizen emergency platform for marking people as safe, searching people, and coordinating help after the earthquake.",
@@ -108,14 +104,13 @@
     "coverage": "national",
     "language": "es",
     "requires_login": false,
-    "status": "unverified",
-    "last_verified_at": null,
+    "last_checked_at": "2026-06-26",
     "owner": "Unknown",
     "crawler_priority": 3,
     "summary": "Incident and damage mapping site that may help contextualize locations linked to missing-person reports.",
     "notes": [
       "Useful as supporting context, not as a primary missing-person registry.",
-      "Needs manual verification before publication."
+      "URL redirects to HTTPS and loaded successfully during the June 26, 2026 link check."
     ],
     "tags": [
       "earthquake",
@@ -133,13 +128,12 @@
     "coverage": "national",
     "language": "es",
     "requires_login": false,
-    "status": "unverified",
-    "last_verified_at": null,
+    "last_checked_at": "2026-06-26",
     "owner": "Community responders",
     "crawler_priority": 2,
     "summary": "Community reporting form for missing or trapped people, damage, and relief information.",
     "notes": [
-      "Needs manual verification before publication.",
+      "URL loaded successfully during the June 26, 2026 link check.",
       "May connect to public Kobo maps or dashboards."
     ],
     "tags": [
@@ -147,30 +141,6 @@
       "form",
       "reporting",
       "community"
-    ]
-  },
-  {
-    "slug": "reconectemos-a-cada-familia-lead",
-    "name": "Reconectemos a Cada Familia",
-    "url": null,
-    "category": "campaign",
-    "purpose": "lead",
-    "coverage": "national",
-    "language": "es",
-    "requires_login": null,
-    "status": "lead",
-    "last_verified_at": null,
-    "owner": "Campaign network",
-    "crawler_priority": 4,
-    "summary": "Lead for a campaign-linked reporting initiative referenced alongside the major public platforms.",
-    "notes": [
-      "No direct verified URL yet.",
-      "Add only after confirming the exact reporting page or registry."
-    ],
-    "tags": [
-      "lead",
-      "campaign",
-      "missing-persons"
     ]
   }
 ]

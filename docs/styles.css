@@ -170,8 +170,7 @@ select:focus {
   margin-top: 0.75rem;
 }
 
-.pill,
-.status {
+.pill {
   display: inline-flex;
   align-items: center;
   min-height: 1.65rem;
@@ -185,19 +184,6 @@ select:focus {
 .pill {
   background: var(--surface-muted);
   color: var(--muted);
-}
-
-.status-unverified,
-.status-lead {
-  background: #fff5c8;
-  color: var(--warn);
-  border-color: #f0da83;
-}
-
-.status-verified {
-  background: #e3f4ea;
-  color: var(--success);
-  border-color: #b9dfc9;
 }
 
 .source-list {

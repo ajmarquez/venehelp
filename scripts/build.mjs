@@ -192,8 +192,7 @@ select:focus {
   margin-top: 0.75rem;
 }
 
-.pill,
-.status {
+.pill {
   display: inline-flex;
   align-items: center;
   min-height: 1.65rem;
@@ -207,19 +206,6 @@ select:focus {
 .pill {
   background: var(--surface-muted);
   color: var(--muted);
-}
-
-.status-unverified,
-.status-lead {
-  background: #fff5c8;
-  color: var(--warn);
-  border-color: #f0da83;
-}
-
-.status-verified {
-  background: #e3f4ea;
-  color: var(--success);
-  border-color: #b9dfc9;
 }
 
 .source-list {
@@ -397,12 +383,6 @@ const purposeLabels = {
   lead: { es: "Pista", en: "Lead" }
 };
 
-const statusLabels = {
-  unverified: { es: "Sin verificar", en: "Unverified" },
-  verified: { es: "Verificado", en: "Verified" },
-  lead: { es: "Pista", en: "Lead" }
-};
-
 const coverageLabels = {
   national: { es: "Nacional", en: "National" }
 };
@@ -444,7 +424,7 @@ const spanishSourceCopy = {
     summary:
       "Registro ciudadano para reportar y buscar personas desaparecidas tras el terremoto. Se ha citado como una de las plataformas públicas más referenciadas.",
     notes: [
-      "Necesita verificación manual antes de tratarse como una fuente autoritativa.",
+      "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026.",
       "Está orientado a reportar personas desaparecidas, buscar registros y marcar a alguien como encontrado."
     ]
   },
@@ -452,7 +432,7 @@ const spanishSourceCopy = {
     summary:
       "Registro colaborativo de personas desaparecidas con flujos de búsqueda y reporte.",
     notes: [
-      "Necesita verificación manual antes de publicarse.",
+      "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026.",
       "Se reporta que permite buscar por nombre, cédula o ubicación."
     ]
   },
@@ -460,7 +440,7 @@ const spanishSourceCopy = {
     summary:
       "Plataforma ciudadana para reportes de personas desaparecidas y otras emergencias, mencionada como un registro alternativo.",
     notes: [
-      "Necesita verificación manual antes de publicarse."
+      "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026."
     ]
   },
   "red-ayuda-venezuela": {
@@ -476,23 +456,15 @@ const spanishSourceCopy = {
       "Sitio de mapeo de incidentes y daños que puede ayudar a contextualizar ubicaciones vinculadas con reportes de personas desaparecidas.",
     notes: [
       "Sirve como contexto complementario, no como registro principal de personas desaparecidas.",
-      "Necesita verificación manual antes de publicarse."
+      "La URL redirige a HTTPS y cargó correctamente durante la revisión de enlaces del 26 de junio de 2026."
     ]
   },
   "kobotoolbox-terremotove": {
     summary:
       "Formulario comunitario para reportar personas desaparecidas o atrapadas, daños y necesidades de ayuda.",
     notes: [
-      "Necesita verificación manual antes de publicarse.",
+      "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026.",
       "Podría conectarse con mapas o paneles públicos de Kobo."
-    ]
-  },
-  "reconectemos-a-cada-familia-lead": {
-    summary:
-      "Pista sobre una iniciativa de reporte vinculada a una campaña, mencionada junto a las principales plataformas públicas.",
-    notes: [
-      "Todavía no hay una URL directa verificada.",
-      "Agregarla solo después de confirmar la página o el registro exacto."
     ]
   }
 };
@@ -527,7 +499,7 @@ const localeCopy = {
     loadFailedHelp: "Verifica que exista el archivo JSON generado y que el sitio se esté sirviendo desde la carpeta docs.",
     openSource: "Abrir recurso",
     details: "Detalles",
-    directLinkPending: "Enlace directo pendiente de verificación",
+    directLinkPending: "Enlace directo pendiente",
     footer:
       "VeneHelp agrupa enlaces públicos y datos estructurados para facilitar el acceso humano y la búsqueda por LLMs. Última generación: {generatedAt}.",
     allSourcesEyebrow: "Todos los recursos",
@@ -540,8 +512,8 @@ const localeCopy = {
     requiresLoginLabel: "Requiere inicio de sesión",
     ownerLabelDetail: "Responsable",
     crawlerPriorityLabel: "Prioridad para rastreo",
-    lastVerifiedLabel: "Última verificación",
-    notYetVerified: "Aún sin verificar",
+    lastCheckedLabel: "Última revisión de enlace",
+    notYetChecked: "No revisado",
     notesTitle: "Notas",
     tagsTitle: "Etiquetas",
     viewJson: "Ver JSON",
@@ -583,7 +555,7 @@ const localeCopy = {
     loadFailedHelp: "Check that the generated JSON file exists and the site is being served from the docs folder.",
     openSource: "Open resource",
     details: "Details",
-    directLinkPending: "Direct link pending verification",
+    directLinkPending: "Direct link pending",
     footer:
       "VeneHelp groups public links and structured data to support human access and LLM search. Last generated: {generatedAt}.",
     allSourcesEyebrow: "All sources",
@@ -596,8 +568,8 @@ const localeCopy = {
     requiresLoginLabel: "Requires login",
     ownerLabelDetail: "Owner",
     crawlerPriorityLabel: "Crawler priority",
-    lastVerifiedLabel: "Last verified",
-    notYetVerified: "Not yet verified",
+    lastCheckedLabel: "Last link check",
+    notYetChecked: "Not checked",
     notesTitle: "Notes",
     tagsTitle: "Tags",
     viewJson: "View JSON",
@@ -642,7 +614,6 @@ const matchesQuery = (source, query) => {
     source.summary,
     source.category_label,
     source.purpose_label,
-    source.status_label,
     ...(source.tags || [])
   ].join(" ").toLowerCase();
   return haystack.includes(query);
@@ -664,7 +635,6 @@ const renderCard = (source) => {
     '<div class="meta-row">',
     renderBadge(source.category_label),
     renderBadge(source.purpose_label),
-    renderBadge(source.status_label, 'status status-' + source.status),
     '</div>',
     '<footer>',
     linkHtml,
@@ -746,12 +716,11 @@ const localizeSource = (source, locale) => {
     notes: sourceCopy?.notes || source.notes,
     category_label: translateMappedValue(categoryLabels, source.category, locale),
     purpose_label: translateMappedValue(purposeLabels, source.purpose, locale),
-    status_label: translateMappedValue(statusLabels, source.status, locale),
     coverage_label: translateMappedValue(coverageLabels, source.coverage, locale),
     language_label: source.language === "es" ? (locale === "es" ? "Español" : "Spanish") : source.language,
     requires_login_label:
       source.requires_login === null
-        ? copy.notYetVerified
+        ? copy.notYetChecked
         : source.requires_login
           ? locale === "es"
             ? "Sí"
@@ -761,7 +730,7 @@ const localizeSource = (source, locale) => {
             : "No",
     owner_label: translateMappedValue(ownerLabels, source.owner, locale),
     tags: (source.tags || []).map((tag) => translateMappedValue(tagLabels, tag, locale)),
-    last_verified_label: source.last_verified_at || copy.notYetVerified
+    last_checked_label: source.last_checked_at || copy.notYetChecked
   };
 };
 
@@ -918,7 +887,6 @@ ${renderHead({
                 <div class="meta-row">
                   <span class="pill">${escapeHtml(source.category_label)}</span>
                   <span class="pill">${escapeHtml(source.purpose_label)}</span>
-                  <span class="status status-${escapeHtml(source.status)}">${escapeHtml(source.status_label)}</span>
                 </div>
                 <h3><a href="${localePath(locale, `/sources/${source.slug}/`)}">${escapeHtml(source.name)}</a></h3>
                 <p>${escapeHtml(source.summary)}</p>
@@ -959,7 +927,6 @@ ${renderHead({
           <div class="meta-row">
             <span class="pill">${escapeHtml(source.category_label)}</span>
             <span class="pill">${escapeHtml(source.purpose_label)}</span>
-            <span class="status status-${escapeHtml(source.status)}">${escapeHtml(source.status_label)}</span>
           </div>
           <div class="page-links" style="margin-top:1rem">
             ${
@@ -976,27 +943,27 @@ ${renderHead({
           <dl class="definition-list">
             <div>
               <dt>${escapeHtml(copy.coverageLabelDetail)}</dt>
-              <dd>${valueOrFallback(source.coverage_label, copy.notYetVerified)}</dd>
+              <dd>${valueOrFallback(source.coverage_label, copy.notYetChecked)}</dd>
             </div>
             <div>
               <dt>${escapeHtml(copy.languageLabelDetail)}</dt>
-              <dd>${valueOrFallback(source.language_label, copy.notYetVerified)}</dd>
+              <dd>${valueOrFallback(source.language_label, copy.notYetChecked)}</dd>
             </div>
             <div>
               <dt>${escapeHtml(copy.requiresLoginLabel)}</dt>
-              <dd>${valueOrFallback(source.requires_login_label, copy.notYetVerified)}</dd>
+              <dd>${valueOrFallback(source.requires_login_label, copy.notYetChecked)}</dd>
             </div>
             <div>
               <dt>${escapeHtml(copy.ownerLabelDetail)}</dt>
-              <dd>${valueOrFallback(source.owner_label, copy.notYetVerified)}</dd>
+              <dd>${valueOrFallback(source.owner_label, copy.notYetChecked)}</dd>
             </div>
             <div>
               <dt>${escapeHtml(copy.crawlerPriorityLabel)}</dt>
-              <dd>${valueOrFallback(source.crawler_priority, copy.notYetVerified)}</dd>
+              <dd>${valueOrFallback(source.crawler_priority, copy.notYetChecked)}</dd>
             </div>
             <div>
-              <dt>${escapeHtml(copy.lastVerifiedLabel)}</dt>
-              <dd>${valueOrFallback(source.last_verified_label, copy.notYetVerified)}</dd>
+              <dt>${escapeHtml(copy.lastCheckedLabel)}</dt>
+              <dd>${valueOrFallback(source.last_checked_label, copy.notYetChecked)}</dd>
             </div>
           </dl>
         </section>
@@ -1135,7 +1102,7 @@ VeneHelp is a public directory of missing-person reporting sources related to th
 
 ## Usage notes
 
-- Treat entries with status "unverified" or "lead" as discovery pointers.
+- Treat entries as directory pointers, not as endorsements or authoritative claims.
 - Prefer crawler priority 1 and 2 sources first.
 - Check each origin source directly before repeating sensitive claims.
 `;
