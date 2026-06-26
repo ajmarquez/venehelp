@@ -4,6 +4,7 @@ import path from "node:path";
 const rootDir = path.resolve(new URL("..", import.meta.url).pathname);
 const docsDir = path.join(rootDir, "docs");
 const sourceFile = path.join(rootDir, "data", "sources.json");
+const assetsDir = path.join(rootDir, "assets");
 
 const customDomain = (process.env.SITE_DOMAIN || "directorioterremotovenezuela.org").replace(/^https?:\/\//, "").replace(/\/+$/, "");
 const siteUrl = (process.env.SITE_URL || `https://${customDomain}`).replace(/\/+$/, "");
@@ -741,6 +742,9 @@ const renderHead = ({ lang, title, description, canonical, alternates }) => `  <
     <meta name="description" content="${escapeHtml(description)}">
     <link rel="canonical" href="${escapeHtml(canonical)}">
     ${alternates}
+    <link rel="icon" href="${withSitePath("/favicon.svg")}" type="image/svg+xml">
+    <link rel="icon" href="${withSitePath("/favicon-32.png")}" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="${withSitePath("/apple-touch-icon.png")}">
     <link rel="stylesheet" href="${withSitePath("/styles.css")}">
   </head>`;
 
@@ -1052,6 +1056,9 @@ ${entries
 
 await fs.rm(docsDir, { recursive: true, force: true });
 await ensureDir(docsDir);
+for (const assetName of ["favicon.svg", "favicon-32.png", "favicon-16.png", "apple-touch-icon.png"]) {
+  await fs.copyFile(path.join(assetsDir, assetName), path.join(docsDir, assetName));
+}
 await fs.writeFile(path.join(docsDir, "styles.css"), styles);
 await fs.writeFile(path.join(docsDir, "app.js"), appJs);
 await fs.writeFile(path.join(docsDir, "index.html"), renderRootIndexHtml());
