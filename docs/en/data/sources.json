@@ -333,6 +333,195 @@
     "source_code_url_label": "https://github.com/ggangix/localizados-venezuela"
   },
   {
+    "slug": "hospitales-en-venezuela",
+    "section": "located",
+    "name": "Hospitales en Venezuela",
+    "url": "https://hospitalesenvenezuela.com/",
+    "category": "website",
+    "purpose": "located-people",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "last_checked_at": "2026-06-26",
+    "owner": "Volunteer initiative",
+    "operator_type": "volunteer",
+    "status": "active",
+    "crawler_priority": 2,
+    "accepts_new_reports": null,
+    "public_search": true,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "located-search",
+      "hospitals"
+    ],
+    "summary": "Directory to find a relative admitted to hospitals and health centers in Venezuela after the earthquake.",
+    "use_when": {
+      "es": "Úsalo para buscar a un familiar ingresado en un hospital o centro de salud.",
+      "en": "Use this to find a relative admitted to a hospital or health center."
+    },
+    "warning": {
+      "es": "Reúne listados de pacientes en hospitales, no reportes de desaparecidos. Si buscas a alguien que no está hospitalizado, usa la sección Personas desaparecidas.",
+      "en": "It gathers hospital patient listings, not missing-person reports. If the person is not hospitalized, use the Missing people section."
+    },
+    "notes": [
+      "URL loaded successfully during the June 26, 2026 link check.",
+      "The site explicitly redirects non-hospitalized missing-person cases to redayudavenezuela.com."
+    ],
+    "tags": [
+      "earthquake",
+      "hospitals",
+      "search"
+    ],
+    "use_when_label": "Use this to find a relative admitted to a hospital or health center.",
+    "warning_label": "It gathers hospital patient listings, not missing-person reports. If the person is not hospitalized, use the Missing people section.",
+    "category_label": "Website",
+    "purpose_label": "Located people",
+    "status_label": "Active",
+    "operator_type_label": "Volunteer",
+    "coverage_label": "National",
+    "language_label": "Spanish",
+    "requires_login_label": "No",
+    "accepts_reports_label_value": "Not checked",
+    "public_search_label_value": "Yes",
+    "report_found_label_value": "No",
+    "owner_label": "Volunteer initiative",
+    "service_labels": [
+      "Search located people",
+      "Hospitals"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
+  },
+  {
+    "slug": "asistencia-medica-fvivemas",
+    "section": "located",
+    "name": "Asistencia Médica Fvivemas",
+    "url": "https://asistencia-medica-fvivemas.web.app/",
+    "category": "website",
+    "purpose": "located-people",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "last_checked_at": "2026-06-26",
+    "owner": "Volunteer initiative",
+    "operator_type": "volunteer",
+    "status": "active",
+    "crawler_priority": 2,
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "located-search",
+      "located-report"
+    ],
+    "summary": "Solidarity platform built by medical students from Fundación Vive Más to search for hospitalized patients and report medical emergencies after the earthquake.",
+    "use_when": {
+      "es": "Úsalo para buscar pacientes hospitalizados o reportar una emergencia médica.",
+      "en": "Use this to search for hospitalized patients or report a medical emergency."
+    },
+    "warning": {
+      "es": "Se enfoca en pacientes hospitalizados y emergencias médicas, no en reportes de desaparecidos. Si buscas a una persona desaparecida, usa la sección Personas desaparecidas.",
+      "en": "It focuses on hospitalized patients and medical emergencies, not missing-person reports. To search for a missing person, use the Missing people section."
+    },
+    "notes": [
+      "URL loaded successfully during the June 26, 2026 link check.",
+      "Built by medical students who are members of Fundación Vive Más."
+    ],
+    "tags": [
+      "earthquake",
+      "hospitals",
+      "medical",
+      "volunteer-run"
+    ],
+    "use_when_label": "Use this to search for hospitalized patients or report a medical emergency.",
+    "warning_label": "It focuses on hospitalized patients and medical emergencies, not missing-person reports. To search for a missing person, use the Missing people section.",
+    "category_label": "Website",
+    "purpose_label": "Located people",
+    "status_label": "Active",
+    "operator_type_label": "Volunteer",
+    "coverage_label": "National",
+    "language_label": "Spanish",
+    "requires_login_label": "No",
+    "accepts_reports_label_value": "Yes",
+    "public_search_label_value": "Yes",
+    "report_found_label_value": "No",
+    "owner_label": "Volunteer initiative",
+    "service_labels": [
+      "Search located people",
+      "Contribute located people"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
+  },
+  {
+    "slug": "siviv",
+    "section": "located",
+    "name": "SIVIV — Sistema de Información de Víctimas",
+    "url": "https://siviv.pages.dev/",
+    "category": "website",
+    "purpose": "located-people",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "last_checked_at": "2026-06-26",
+    "owner": "Volunteer initiative",
+    "operator_type": "volunteer",
+    "status": "active",
+    "crawler_priority": 3,
+    "accepts_new_reports": false,
+    "public_search": true,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "located-search"
+    ],
+    "summary": "Search tool for people affected by the earthquake, to find relatives admitted to health and care centers.",
+    "use_when": {
+      "es": "Úsalo para buscar a un familiar en los centros de atención.",
+      "en": "Use this to search for a relative in care centers."
+    },
+    "warning": {
+      "es": "Reúne listados de personas en centros de atención, no reportes de desaparecidos. Si buscas a alguien que no está en un centro de salud, usa la sección Personas desaparecidas.",
+      "en": "It gathers listings of people in care centers, not missing-person reports. If the person is not in a health center, use the Missing people section."
+    },
+    "notes": [
+      "URL loaded successfully during the June 26, 2026 link check.",
+      "Hosted on a free static host (pages.dev); confirm it is still online before relying on it."
+    ],
+    "tags": [
+      "earthquake",
+      "hospitals",
+      "search",
+      "volunteer-run"
+    ],
+    "use_when_label": "Use this to search for a relative in care centers.",
+    "warning_label": "It gathers listings of people in care centers, not missing-person reports. If the person is not in a health center, use the Missing people section.",
+    "category_label": "Website",
+    "purpose_label": "Located people",
+    "status_label": "Active",
+    "operator_type_label": "Volunteer",
+    "coverage_label": "National",
+    "language_label": "Spanish",
+    "requires_login_label": "No",
+    "accepts_reports_label_value": "No",
+    "public_search_label_value": "Yes",
+    "report_found_label_value": "No",
+    "owner_label": "Volunteer initiative",
+    "service_labels": [
+      "Search located people"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
+  },
+  {
     "slug": "venezuela-resiste-terremotove",
     "section": "missing",
     "name": "Venezuela Resiste (TerremotoVE)",
@@ -583,6 +772,127 @@
     "source_code_url_label": "Not checked"
   },
   {
+    "slug": "punto-de-apoyo-venezuela",
+    "section": "aid",
+    "name": "Punto de Apoyo Venezuela",
+    "url": "https://www.puntodeapoyovenezuela.com/",
+    "category": "map",
+    "purpose": "aid-and-updates",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "last_checked_at": "2026-06-26",
+    "owner": "Citizen platform",
+    "operator_type": "citizen",
+    "status": "active",
+    "crawler_priority": 2,
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "aid-resources",
+      "shelters",
+      "situation-updates"
+    ],
+    "summary": "Collaborative non-profit emergency map where people mark and find nearby resources — collection centers, mutual aid, shelters, hospitals, WiFi, and power — to request or offer help.",
+    "use_when": {
+      "es": "Úsalo para marcar o encontrar recursos cercanos: acopios, refugios, hospitales, WiFi o energía.",
+      "en": "Use this to mark or find nearby resources: collection centers, shelters, hospitals, WiFi, or power."
+    },
+    "notes": [
+      "URL loaded successfully during the June 26, 2026 link check.",
+      "Built by Valentín Fuentes (X: @VxlentinF); markers can both request and offer help."
+    ],
+    "tags": [
+      "earthquake",
+      "emergency",
+      "aid",
+      "map",
+      "community"
+    ],
+    "use_when_label": "Use this to mark or find nearby resources: collection centers, shelters, hospitals, WiFi, or power.",
+    "warning_label": "",
+    "category_label": "Map",
+    "purpose_label": "Aid and updates",
+    "status_label": "Active",
+    "operator_type_label": "Citizen-led",
+    "coverage_label": "National",
+    "language_label": "Spanish",
+    "requires_login_label": "No",
+    "accepts_reports_label_value": "Yes",
+    "public_search_label_value": "Yes",
+    "report_found_label_value": "No",
+    "owner_label": "Citizen platform",
+    "service_labels": [
+      "Aid resources",
+      "Shelters",
+      "Situation updates"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
+  },
+  {
+    "slug": "acopiove",
+    "section": "aid",
+    "name": "AcopioVE",
+    "url": "https://acopiove.org/",
+    "category": "map",
+    "purpose": "aid-and-updates",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "last_checked_at": "2026-06-26",
+    "owner": "Volunteer initiative",
+    "operator_type": "volunteer",
+    "status": "active",
+    "crawler_priority": 2,
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "aid-resources"
+    ],
+    "summary": "Interactive map of 350+ collection centers across Venezuela and the diaspora (16 countries) showing where to drop off food, medicine, clothing, and water. Updated in real time.",
+    "use_when": {
+      "es": "Úsalo para encontrar el centro de acopio más cercano donde llevar alimentos, medicinas, ropa o agua.",
+      "en": "Use this to find the nearest collection center to drop off food, medicine, clothing, or water."
+    },
+    "notes": [
+      "URL loaded successfully during the June 26, 2026 link check.",
+      "Covers collection centers in Venezuela, Colombia, the United States, Ecuador, Spain, and other countries."
+    ],
+    "tags": [
+      "earthquake",
+      "aid",
+      "acopios",
+      "map"
+    ],
+    "use_when_label": "Use this to find the nearest collection center to drop off food, medicine, clothing, or water.",
+    "warning_label": "",
+    "category_label": "Map",
+    "purpose_label": "Aid and updates",
+    "status_label": "Active",
+    "operator_type_label": "Volunteer",
+    "coverage_label": "National",
+    "language_label": "Spanish",
+    "requires_login_label": "No",
+    "accepts_reports_label_value": "Yes",
+    "public_search_label_value": "Yes",
+    "report_found_label_value": "No",
+    "owner_label": "Volunteer initiative",
+    "service_labels": [
+      "Aid resources"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
+  },
+  {
     "slug": "copernicus-ems-emsr884",
     "section": "developer",
     "name": "Copernicus EMS Damage Maps (EMSR884)",
@@ -633,6 +943,66 @@
     "public_search_label_value": "Yes",
     "report_found_label_value": "No",
     "owner_label": "Copernicus EMS",
+    "service_labels": [
+      "Damage reports",
+      "Situation updates"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
+  },
+  {
+    "slug": "sismo-venezuela",
+    "section": "developer",
+    "name": "Sismo Venezuela",
+    "url": "https://sismovenezuela.org/",
+    "category": "map",
+    "purpose": "context-and-location",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "last_checked_at": "2026-06-26",
+    "owner": "Volunteer initiative",
+    "operator_type": "citizen",
+    "status": "active",
+    "crawler_priority": 2,
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "damage-reports",
+      "situation-updates"
+    ],
+    "summary": "Real-time collaborative map of buildings damaged by the earthquake across Venezuela (Caracas, La Guaira, and nationwide), where people report damage and find nearby aid centers.",
+    "use_when": {
+      "es": "Úsalo para reportar o consultar edificios dañados y encontrar centros de ayuda cercanos.",
+      "en": "Use this to report or check damaged buildings and find nearby aid centers."
+    },
+    "notes": [
+      "URL loaded successfully during the June 26, 2026 link check.",
+      "Open citizen map; reports are crowd-sourced and not independently verified."
+    ],
+    "tags": [
+      "earthquake",
+      "map",
+      "damage",
+      "community"
+    ],
+    "use_when_label": "Use this to report or check damaged buildings and find nearby aid centers.",
+    "warning_label": "",
+    "category_label": "Map",
+    "purpose_label": "Context and location",
+    "status_label": "Active",
+    "operator_type_label": "Citizen-led",
+    "coverage_label": "National",
+    "language_label": "Spanish",
+    "requires_login_label": "No",
+    "accepts_reports_label_value": "Yes",
+    "public_search_label_value": "Yes",
+    "report_found_label_value": "No",
+    "owner_label": "Volunteer initiative",
     "service_labels": [
       "Damage reports",
       "Situation updates"
