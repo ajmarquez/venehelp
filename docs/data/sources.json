@@ -161,44 +161,6 @@
     ]
   },
   {
-    "slug": "icrc-family-links-venezuela",
-    "section": "humanitarian",
-    "name": "ICRC Family Links - Venezuelan Red Cross",
-    "url": "https://familylinks.icrc.org/organization/venezuelan-red-cross",
-    "category": "website",
-    "purpose": "family-tracing",
-    "coverage": "national",
-    "language": "es",
-    "requires_login": false,
-    "last_checked_at": "2026-06-26",
-    "owner": "International Committee of the Red Cross",
-    "operator_type": "humanitarian",
-    "status": "monitor",
-    "crawler_priority": 1,
-    "accepts_new_reports": true,
-    "public_search": false,
-    "report_found": false,
-    "public_contact": "https://familylinks.icrc.org/organization/venezuelan-red-cross",
-    "services": [
-      "family-tracing"
-    ],
-    "summary": "Official Red Cross family-links entrypoint for restoring contact and tracing requests connected to emergencies in Venezuela.",
-    "use_when": {
-      "es": "Úsalo si necesitas una vía humanitaria oficial de la Cruz Roja para restablecer contacto.",
-      "en": "Use this if you need an official Red Cross humanitarian path to restore contact."
-    },
-    "notes": [
-      "Primary humanitarian tracing route for families who need a higher-trust escalation path.",
-      "The site uses access controls that may block automated checks, so availability should be verified manually."
-    ],
-    "tags": [
-      "earthquake",
-      "missing-persons",
-      "official",
-      "humanitarian"
-    ]
-  },
-  {
     "slug": "localizados-venezuela",
     "section": "located",
     "name": "Localizados Venezuela",

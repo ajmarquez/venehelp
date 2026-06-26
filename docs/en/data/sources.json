@@ -249,64 +249,6 @@
     "source_code_url_label": "Not checked"
   },
   {
-    "slug": "icrc-family-links-venezuela",
-    "section": "humanitarian",
-    "name": "ICRC Family Links - Venezuelan Red Cross",
-    "url": "https://familylinks.icrc.org/organization/venezuelan-red-cross",
-    "category": "website",
-    "purpose": "family-tracing",
-    "coverage": "national",
-    "language": "es",
-    "requires_login": false,
-    "last_checked_at": "2026-06-26",
-    "owner": "International Committee of the Red Cross",
-    "operator_type": "humanitarian",
-    "status": "monitor",
-    "crawler_priority": 1,
-    "accepts_new_reports": true,
-    "public_search": false,
-    "report_found": false,
-    "public_contact": "https://familylinks.icrc.org/organization/venezuelan-red-cross",
-    "services": [
-      "family-tracing"
-    ],
-    "summary": "Official Red Cross family-links entrypoint for restoring contact and tracing requests connected to emergencies in Venezuela.",
-    "use_when": {
-      "es": "Úsalo si necesitas una vía humanitaria oficial de la Cruz Roja para restablecer contacto.",
-      "en": "Use this if you need an official Red Cross humanitarian path to restore contact."
-    },
-    "notes": [
-      "Primary humanitarian tracing route for families who need a higher-trust escalation path.",
-      "The site uses access controls that may block automated checks, so availability should be verified manually."
-    ],
-    "tags": [
-      "earthquake",
-      "missing-persons",
-      "official",
-      "humanitarian"
-    ],
-    "use_when_label": "Use this if you need an official Red Cross humanitarian path to restore contact.",
-    "warning_label": "",
-    "category_label": "Website",
-    "purpose_label": "Family tracing",
-    "status_label": "Manual verification",
-    "operator_type_label": "Humanitarian",
-    "coverage_label": "National",
-    "language_label": "Spanish",
-    "requires_login_label": "No",
-    "accepts_reports_label_value": "Yes",
-    "public_search_label_value": "No",
-    "report_found_label_value": "No",
-    "owner_label": "International Committee of the Red Cross",
-    "service_labels": [
-      "Restore family contact"
-    ],
-    "last_checked_label": "2026-06-26",
-    "public_contact_label": "https://familylinks.icrc.org/organization/venezuelan-red-cross",
-    "api_url_label": "Not checked",
-    "source_code_url_label": "Not checked"
-  },
-  {
     "slug": "localizados-venezuela",
     "section": "located",
     "name": "Localizados Venezuela",

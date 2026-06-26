@@ -398,10 +398,6 @@ summary:focus-visible,
   border-top-color: var(--yellow);
 }
 
-#section-humanitarian {
-  border-top-color: var(--blue);
-}
-
 #section-aid {
   border-top-color: var(--success);
 }
@@ -889,14 +885,6 @@ const spanishSourceCopy = {
       "Los metadatos de la página y la navegación visible muestran flujos públicos para reportar daños, ver reportes, refugios y recursos."
     ]
   },
-  "icrc-family-links-venezuela": {
-    summary:
-      "Punto de entrada humanitario de la Cruz Roja para restablecer contacto y gestionar solicitudes de búsqueda familiar relacionadas con emergencias en Venezuela.",
-    notes: [
-      "Ruta humanitaria prioritaria para familias que necesitan una vía de escalamiento con mayor confianza.",
-      "El sitio usa controles de acceso que pueden bloquear revisiones automáticas, así que conviene verificarlo manualmente."
-    ]
-  },
   "localizados-venezuela": {
     summary:
       "Plataforma pública y de código abierto para buscar y aportar registros de personas ya localizadas tras el terremoto, con API pública de solo lectura para integraciones.",
@@ -951,8 +939,6 @@ const localeCopy = {
     triageMissingA: "Empieza por Personas desaparecidas",
     triageLocatedQ: "¿Crees que ya fue localizada o trasladada?",
     triageLocatedA: "Revisa Personas localizadas",
-    triageHumanitarianQ: "¿Necesitas una vía oficial?",
-    triageHumanitarianA: "Usa la Ruta humanitaria",
     triageAidQ: "¿Necesitas rescate, refugio o ayuda?",
     triageAidA: "Revisa Ayuda y emergencia",
     registryTitle: "Registro consolidado (beta)",
@@ -998,8 +984,6 @@ const localeCopy = {
     missingSectionIntro: "Plataformas para buscar y reportar personas desaparecidas tras el terremoto.",
     locatedSectionTitle: "Personas localizadas",
     locatedSectionIntro: "Plataformas para personas que ya fueron localizadas o trasladadas. No son para reportar desaparecidos.",
-    humanitarianSectionTitle: "Ruta humanitaria",
-    humanitarianSectionIntro: "Vía oficial de escalamiento, con mayor confianza, para restablecer el contacto familiar.",
     aidSectionTitle: "Ayuda y emergencia",
     aidSectionIntro: "Plataformas para coordinar rescate, refugio, daños y otros recursos de emergencia. No son para buscar o reportar personas desaparecidas.",
     developerEyebrow: "Sección técnica",
@@ -1075,8 +1059,6 @@ const localeCopy = {
     triageMissingA: "Start with Missing people",
     triageLocatedQ: "Think they were already located or moved?",
     triageLocatedA: "Check Located people",
-    triageHumanitarianQ: "Need an official channel?",
-    triageHumanitarianA: "Use the Humanitarian path",
     triageAidQ: "Need rescue, shelter, or aid?",
     triageAidA: "Check Aid & emergency",
     registryTitle: "Unified registry (beta)",
@@ -1122,8 +1104,6 @@ const localeCopy = {
     missingSectionIntro: "Platforms to search for and report missing people after the earthquake.",
     locatedSectionTitle: "Located people",
     locatedSectionIntro: "Platforms for people who have already been located or moved. Not for reporting missing people.",
-    humanitarianSectionTitle: "Humanitarian path",
-    humanitarianSectionIntro: "Official, higher-trust escalation route to restore family contact.",
     aidSectionTitle: "Aid & emergency",
     aidSectionIntro: "Platforms to coordinate rescue, shelter, damage, and other emergency resources. Not for searching or reporting missing people.",
     developerEyebrow: "Technical section",
@@ -1197,7 +1177,7 @@ const sectionEls = Array.from(document.querySelectorAll("[data-section-list]"));
 const registryCountEl = document.querySelector("[data-results-count]");
 const developerListEl = document.querySelector("[data-developer-list]");
 const searchEl = document.querySelector("[data-search]");
-const sectionOrder = ["missing", "located", "humanitarian", "aid"];
+const sectionOrder = ["missing", "located", "aid"];
 
 const interpolate = (template, values = {}) =>
   String(template || "").replace(/\\{(\\w+)\\}/g, (_, key) => String(values[key] ?? ""));
@@ -1612,10 +1592,6 @@ ${renderHead({
                 <p class="route-q">${escapeHtml(copy.triageLocatedQ)}</p>
                 <p class="route-a">${escapeHtml(copy.triageLocatedA)} &rarr;</p>
               </a>
-              <a class="route-card" href="#section-humanitarian">
-                <p class="route-q">${escapeHtml(copy.triageHumanitarianQ)}</p>
-                <p class="route-a">${escapeHtml(copy.triageHumanitarianA)} &rarr;</p>
-              </a>
               <a class="route-card" href="#section-aid">
                 <p class="route-q">${escapeHtml(copy.triageAidQ)}</p>
                 <p class="route-a">${escapeHtml(copy.triageAidA)} &rarr;</p>
@@ -1652,11 +1628,6 @@ ${renderHead({
               <h3>${escapeHtml(copy.locatedSectionTitle)}</h3>
               <p class="small">${escapeHtml(copy.locatedSectionIntro)}</p>
               <div class="source-list" data-section-list="located"></div>
-            </section>
-            <section class="directory-block" id="section-humanitarian">
-              <h3>${escapeHtml(copy.humanitarianSectionTitle)}</h3>
-              <p class="small">${escapeHtml(copy.humanitarianSectionIntro)}</p>
-              <div class="source-list" data-section-list="humanitarian"></div>
             </section>
             <section class="directory-block" id="section-aid">
               <h3>${escapeHtml(copy.aidSectionTitle)}</h3>

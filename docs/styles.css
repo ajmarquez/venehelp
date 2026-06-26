@@ -349,10 +349,6 @@ summary:focus-visible,
   border-top-color: var(--yellow);
 }
 
-#section-humanitarian {
-  border-top-color: var(--blue);
-}
-
 #section-aid {
   border-top-color: var(--success);
 }
