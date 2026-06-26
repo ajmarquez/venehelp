@@ -249,64 +249,6 @@
     "source_code_url_label": "No revisado"
   },
   {
-    "slug": "kobotoolbox-terremotove",
-    "section": "missing",
-    "name": "KoboToolbox TerremotoVE",
-    "url": "https://ee.kobotoolbox.org/x/eaEmQ9YW",
-    "category": "form",
-    "purpose": "reporting",
-    "coverage": "national",
-    "language": "es",
-    "requires_login": false,
-    "last_checked_at": "2026-06-26",
-    "owner": "Community responders",
-    "operator_type": "community",
-    "status": "active",
-    "crawler_priority": 2,
-    "accepts_new_reports": true,
-    "public_search": false,
-    "report_found": false,
-    "public_contact": null,
-    "services": [
-      "missing-report"
-    ],
-    "summary": "Formulario comunitario para reportar personas desaparecidas o atrapadas tras el terremoto.",
-    "use_when": {
-      "es": "Úsalo si necesitas una vía adicional para reportar a alguien desaparecido o atrapado.",
-      "en": "Use this as an extra channel to report someone missing or trapped."
-    },
-    "notes": [
-      "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026.",
-      "Sirve como una vía adicional de ingreso para reportes públicos de personas."
-    ],
-    "tags": [
-      "terremoto",
-      "formulario",
-      "reporte",
-      "comunidad"
-    ],
-    "use_when_label": "Úsalo si necesitas una vía adicional para reportar a alguien desaparecido o atrapado.",
-    "warning_label": "",
-    "category_label": "Formulario",
-    "purpose_label": "Reporte",
-    "status_label": "Activa",
-    "operator_type_label": "Comunitario",
-    "coverage_label": "Nacional",
-    "language_label": "Español",
-    "requires_login_label": "No",
-    "accepts_reports_label_value": "Sí",
-    "public_search_label_value": "No",
-    "report_found_label_value": "No",
-    "owner_label": "Respondedores comunitarios",
-    "service_labels": [
-      "Reportar desaparecidos"
-    ],
-    "last_checked_label": "2026-06-26",
-    "public_contact_label": "No revisado",
-    "api_url_label": "No revisado",
-    "source_code_url_label": "No revisado"
-  },
-  {
     "slug": "icrc-family-links-venezuela",
     "section": "humanitarian",
     "name": "ICRC Family Links - Venezuelan Red Cross",

@@ -881,14 +881,6 @@ const spanishSourceCopy = {
       "La URL redirige a HTTPS y cargó correctamente durante la revisión de enlaces del 26 de junio de 2026."
     ]
   },
-  "kobotoolbox-terremotove": {
-    summary:
-      "Formulario comunitario para reportar personas desaparecidas o atrapadas tras el terremoto.",
-    notes: [
-      "La URL cargó correctamente durante la revisión de enlaces del 26 de junio de 2026.",
-      "Sirve como una vía adicional de ingreso para reportes públicos de personas."
-    ]
-  },
   "yummy-sos": {
     summary:
       "Sitio de emergencia operado por Yummy para reportar daños estructurales, ver reportes públicos y encontrar refugios tras el terremoto.",

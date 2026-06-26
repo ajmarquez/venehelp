@@ -161,44 +161,6 @@
     ]
   },
   {
-    "slug": "kobotoolbox-terremotove",
-    "section": "missing",
-    "name": "KoboToolbox TerremotoVE",
-    "url": "https://ee.kobotoolbox.org/x/eaEmQ9YW",
-    "category": "form",
-    "purpose": "reporting",
-    "coverage": "national",
-    "language": "es",
-    "requires_login": false,
-    "last_checked_at": "2026-06-26",
-    "owner": "Community responders",
-    "operator_type": "community",
-    "status": "active",
-    "crawler_priority": 2,
-    "accepts_new_reports": true,
-    "public_search": false,
-    "report_found": false,
-    "public_contact": null,
-    "services": [
-      "missing-report"
-    ],
-    "summary": "Community reporting form for missing or trapped people after the earthquake.",
-    "use_when": {
-      "es": "Úsalo si necesitas una vía adicional para reportar a alguien desaparecido o atrapado.",
-      "en": "Use this as an extra channel to report someone missing or trapped."
-    },
-    "notes": [
-      "URL loaded successfully during the June 26, 2026 link check.",
-      "Useful when a family or volunteer needs an additional public intake path for a missing-person case."
-    ],
-    "tags": [
-      "earthquake",
-      "form",
-      "reporting",
-      "community"
-    ]
-  },
-  {
     "slug": "icrc-family-links-venezuela",
     "section": "humanitarian",
     "name": "ICRC Family Links - Venezuelan Red Cross",
