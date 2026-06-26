@@ -209,6 +209,16 @@ select:focus {
   border-color: var(--blue);
 }
 
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+.route-card:focus-visible,
+.source-card h3 a:focus-visible {
+  outline: 3px solid rgba(31, 78, 168, 0.5);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 .directory-note {
   margin: 1rem 0 0;
   padding-left: 0.85rem;
@@ -290,7 +300,7 @@ select:focus {
 
 .pill {
   background: var(--surface-muted);
-  color: var(--muted);
+  color: #404856;
 }
 
 .source-list {
@@ -551,7 +561,7 @@ select:focus {
   border-radius: var(--radius);
   text-decoration: none;
   font-weight: 700;
-  background: var(--red);
+  background: var(--blue);
   color: #fff;
 }
 
