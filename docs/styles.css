@@ -193,6 +193,99 @@ select:focus {
   border-top: 1px solid var(--line);
 }
 
+.registry-stats {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1rem;
+}
+
+.registry-stat {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem;
+  background: var(--surface-muted);
+}
+
+.registry-stat strong {
+  display: block;
+  font-size: 1.65rem;
+  line-height: 1;
+}
+
+.registry-stat span {
+  display: block;
+  margin-top: 0.45rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.registry-stat--missing strong {
+  color: var(--warn);
+}
+
+.registry-stat--found strong {
+  color: var(--success);
+}
+
+.registry-stat--preview strong {
+  color: var(--blue);
+}
+
+.table-scroll {
+  overflow: auto;
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.registry-table {
+  width: 100%;
+  min-width: 42rem;
+  border-collapse: collapse;
+}
+
+.registry-table th,
+.registry-table td {
+  padding: 0.8rem 0.85rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+
+.registry-table th {
+  background: var(--surface-muted);
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.registry-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.6rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.status-chip--missing {
+  background: #fff1d8;
+  color: var(--warn);
+}
+
+.status-chip--safe,
+.status-chip--found {
+  background: #e5f3eb;
+  color: var(--success);
+}
+
 .source-card {
   display: grid;
   gap: 0.8rem;
@@ -323,7 +416,8 @@ code {
 
 @media (max-width: 860px) {
   .controls,
-  .definition-list {
+  .definition-list,
+  .registry-stats {
     grid-template-columns: 1fr;
   }
 

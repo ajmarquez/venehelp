@@ -4,13 +4,43 @@ import path from "node:path";
 const rootDir = path.resolve(new URL("..", import.meta.url).pathname);
 const docsDir = path.join(rootDir, "docs");
 const sourceFile = path.join(rootDir, "data", "sources.json");
+const registryFile = path.join(rootDir, "data", "registry.json");
 
 const customDomain = (process.env.SITE_DOMAIN || "directorioterremotovenezuela.org").replace(/^https?:\/\//, "").replace(/\/+$/, "");
 const siteUrl = (process.env.SITE_URL || `https://${customDomain}`).replace(/\/+$/, "");
 const sitePath = (process.env.SITE_PATH || "").replace(/\/+$/, "");
-const rawSources = JSON.parse(await fs.readFile(sourceFile, "utf8"));
+const cloudflareAnalyticsToken = (process.env.CLOUDFLARE_ANALYTICS_TOKEN || "").trim();
 const generatedAt = new Date().toISOString();
+const rawSources = JSON.parse(await fs.readFile(sourceFile, "utf8"));
 const supportedLocales = ["es", "en"];
+let rawRegistry;
+
+try {
+  rawRegistry = JSON.parse(await fs.readFile(registryFile, "utf8"));
+} catch (error) {
+  rawRegistry = {
+    generated_at: generatedAt,
+    schema_version: 1,
+    beta: true,
+    notes: ["Registry preview not generated yet."],
+    sources: [],
+    summary: {
+      source_name: null,
+      source_slug: null,
+      total_results: null,
+      total_results_display: null,
+      missing_count: null,
+      missing_count_display: null,
+      found_count: null,
+      found_count_display: null,
+      sampled_pages: 0,
+      total_pages: 0,
+      preview_records: 0,
+      is_partial: true
+    },
+    records: []
+  };
+}
 
 const withSitePath = (pathname) => `${sitePath}${pathname.startsWith("/") ? pathname : `/${pathname}`}`;
 const absoluteUrl = (pathname) => `${siteUrl}${withSitePath(pathname)}`;
@@ -215,6 +245,99 @@ select:focus {
   border-top: 1px solid var(--line);
 }
 
+.registry-stats {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1rem;
+}
+
+.registry-stat {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem;
+  background: var(--surface-muted);
+}
+
+.registry-stat strong {
+  display: block;
+  font-size: 1.65rem;
+  line-height: 1;
+}
+
+.registry-stat span {
+  display: block;
+  margin-top: 0.45rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.registry-stat--missing strong {
+  color: var(--warn);
+}
+
+.registry-stat--found strong {
+  color: var(--success);
+}
+
+.registry-stat--preview strong {
+  color: var(--blue);
+}
+
+.table-scroll {
+  overflow: auto;
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.registry-table {
+  width: 100%;
+  min-width: 42rem;
+  border-collapse: collapse;
+}
+
+.registry-table th,
+.registry-table td {
+  padding: 0.8rem 0.85rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+
+.registry-table th {
+  background: var(--surface-muted);
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.registry-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.6rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.status-chip--missing {
+  background: #fff1d8;
+  color: var(--warn);
+}
+
+.status-chip--safe,
+.status-chip--found {
+  background: #e5f3eb;
+  color: var(--success);
+}
+
 .source-card {
   display: grid;
   gap: 0.8rem;
@@ -345,7 +468,8 @@ code {
 
 @media (max-width: 860px) {
   .controls,
-  .definition-list {
+  .definition-list,
+  .registry-stats {
     grid-template-columns: 1fr;
   }
 
@@ -476,6 +600,26 @@ const localeCopy = {
       "Directorio de recursos de ayuda a afectados por el Terremoto en Venezuela.",
     directoryNote:
       "Agrupamos sitios, formularios, mapas y registros que han aparecido de forma fragmentada o redundante. La meta es que personas afectadas, voluntarios, periodistas y LLMs encuentren recursos confiables desde un solo lugar.",
+    registryTitle: "Registro consolidado (beta)",
+    registryIntro:
+      "Mostramos un contador principal y una tabla de trazabilidad a partir de un registro público consolidado. Esta vista es beta y hoy usa una recolección parcial de páginas públicas mientras se agregan más adaptadores.",
+    registryLoading: "Cargando registro beta",
+    registryLoadFailed: "No se pudo cargar el registro beta.",
+    registryEmpty: "Todavía no hay filas en el registro beta.",
+    registryMissingLabel: "Se busca",
+    registryFoundLabel: "Encontradas / a salvo",
+    registryPreviewLabel: "Filas en vista previa",
+    registryPartialNote:
+      "Vista previa tomada de {sampledPages} de {totalPages} páginas públicas de {sourceName}.",
+    registryFullNote:
+      "Vista completa tomada de {sourceName}.",
+    registryNameColumn: "Nombre",
+    registryStatusColumn: "Estado",
+    registryLocationColumn: "Ubicación",
+    registryReportedOnColumn: "Reportado en",
+    registryStatusMissing: "Se busca",
+    registryStatusSafe: "A salvo",
+    registryStatusFound: "Encontrado",
     findSourceTitle: "Recursos disponibles",
     findSourceIntro:
       "Busca por nombre o filtra por tipo de recurso. El dataset para agentes y buscadores está disponible en <a href=\"{dataUrl}\"><code>{dataPath}</code></a>.",
@@ -526,6 +670,26 @@ const localeCopy = {
       "Directory of help resources for people affected by the earthquake in Venezuela.",
     directoryNote:
       "We group sites, forms, maps, and registries that have appeared with fragmented or redundant information. The goal is to help affected people, volunteers, journalists, and LLMs find useful resources from one place.",
+    registryTitle: "Unified registry (beta)",
+    registryIntro:
+      "We show a primary counter and a provenance table from a consolidated public registry. This view is beta and currently uses a partial crawl of public pages while more adapters are added.",
+    registryLoading: "Loading beta registry",
+    registryLoadFailed: "Unable to load the beta registry.",
+    registryEmpty: "No beta registry rows yet.",
+    registryMissingLabel: "Missing",
+    registryFoundLabel: "Found / safe",
+    registryPreviewLabel: "Preview rows",
+    registryPartialNote:
+      "Preview sampled from {sampledPages} of {totalPages} public pages from {sourceName}.",
+    registryFullNote:
+      "Full view collected from {sourceName}.",
+    registryNameColumn: "Name",
+    registryStatusColumn: "Status",
+    registryLocationColumn: "Location",
+    registryReportedOnColumn: "Reported on",
+    registryStatusMissing: "Missing",
+    registryStatusSafe: "Safe",
+    registryStatusFound: "Found",
     findSourceTitle: "Available resources",
     findSourceIntro:
       "Search by name or filter by resource type. The dataset for agents and search systems is available at <a href=\"{dataUrl}\"><code>{dataPath}</code></a>.",
@@ -571,12 +735,16 @@ const messages = config.messages || {};
 const basePath = config.basePath || "";
 
 const state = {
+  registry: null,
   sources: [],
   query: "",
   category: "all",
   purpose: "all"
 };
 
+const registryStatsEl = document.querySelector("[data-registry-stats]");
+const registryMetaEl = document.querySelector("[data-registry-meta]");
+const registryBodyEl = document.querySelector("[data-registry-body]");
 const listEl = document.querySelector("[data-source-list]");
 const countEl = document.querySelector("[data-results-count]");
 const searchEl = document.querySelector("[data-search]");
@@ -587,6 +755,14 @@ const interpolate = (template, values = {}) =>
   String(template || "").replace(/\\{(\\w+)\\}/g, (_, key) => String(values[key] ?? ""));
 
 const normalize = (value) => String(value || "").toLowerCase();
+
+const escapeHtml = (value) =>
+  String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
 
 const matchesQuery = (source, query) => {
   if (!query) return true;
@@ -602,6 +778,51 @@ const matchesQuery = (source, query) => {
 
 const renderBadge = (label, className = "pill") =>
   '<span class="' + className + '">' + label + "</span>";
+
+const renderRegistry = () => {
+  if (!registryStatsEl || !registryMetaEl || !registryBodyEl) {
+    return;
+  }
+
+  if (!state.registry) {
+    registryMetaEl.textContent = messages.registryLoading;
+    return;
+  }
+
+  const summary = state.registry.summary || {};
+  registryMetaEl.textContent = summary.is_partial
+    ? interpolate(messages.registryPartialNote, {
+        sampledPages: summary.sampled_pages ?? 0,
+        totalPages: summary.total_pages ?? 0,
+        sourceName: summary.source_name || ""
+      })
+    : interpolate(messages.registryFullNote, {
+        sourceName: summary.source_name || ""
+      });
+
+  registryStatsEl.innerHTML = [
+    '<article class="registry-stat registry-stat--missing"><strong>' + (summary.missing_count_display || "-") + '</strong><span>' + messages.registryMissingLabel + '</span></article>',
+    '<article class="registry-stat registry-stat--found"><strong>' + (summary.found_count_display || "-") + '</strong><span>' + messages.registryFoundLabel + '</span></article>',
+    '<article class="registry-stat registry-stat--preview"><strong>' + (summary.preview_records || 0) + '</strong><span>' + messages.registryPreviewLabel + '</span></article>'
+  ].join("");
+
+  const rows = (state.registry.records || []).map((record) => {
+    const nameHtml = record.detail_url
+      ? '<a href="' + escapeHtml(record.detail_url) + '" target="_blank" rel="noreferrer">' + escapeHtml(record.name) + '</a>'
+      : escapeHtml(record.name);
+
+    return [
+      '<tr>',
+      '<td>' + nameHtml + '</td>',
+      '<td><span class="status-chip status-chip--' + escapeHtml(record.status) + '">' + escapeHtml(record.status_label) + '</span></td>',
+      '<td>' + escapeHtml(record.location || '') + '</td>',
+      '<td>' + escapeHtml((record.reported_on || []).join(', ')) + '</td>',
+      '</tr>'
+    ].join("");
+  });
+
+  registryBodyEl.innerHTML = rows.join("") || '<tr><td colspan="4" class="small">' + messages.registryEmpty + '</td></tr>';
+};
 
 const renderCard = (source) => {
   const detailsPath = basePath + '/sources/' + source.slug + '/';
@@ -637,28 +858,42 @@ const render = () => {
 };
 
 const load = async () => {
-  const response = await fetch(basePath + "/data/sources.json");
-  state.sources = await response.json();
+  const [registryResponse, sourcesResponse] = await Promise.all([
+    fetch(basePath + "/data/registry.json"),
+    fetch(basePath + "/data/sources.json")
+  ]);
+  state.registry = await registryResponse.json();
+  state.sources = await sourcesResponse.json();
 
+  renderRegistry();
   render();
 };
 
-searchEl.addEventListener("input", (event) => {
-  state.query = normalize(event.target.value.trim());
-  render();
-});
+if (searchEl) {
+  searchEl.addEventListener("input", (event) => {
+    state.query = normalize(event.target.value.trim());
+    render();
+  });
+}
 
-categoryEl.addEventListener("change", (event) => {
-  state.category = event.target.value;
-  render();
-});
+if (categoryEl) {
+  categoryEl.addEventListener("change", (event) => {
+    state.category = event.target.value;
+    render();
+  });
+}
 
-purposeEl.addEventListener("change", (event) => {
-  state.purpose = event.target.value;
-  render();
-});
+if (purposeEl) {
+  purposeEl.addEventListener("change", (event) => {
+    state.purpose = event.target.value;
+    render();
+  });
+}
 
 load().catch(() => {
+  if (registryMetaEl) {
+    registryMetaEl.textContent = messages.registryLoadFailed;
+  }
   countEl.textContent = messages.loadFailed;
   listEl.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
 });
@@ -719,6 +954,27 @@ const localizedSources = Object.fromEntries(
   supportedLocales.map((locale) => [locale, rawSources.map((source) => localizeSource(source, locale))])
 );
 
+const localizeRegistry = (registry, locale) => {
+  const copy = localeCopy[locale];
+
+  return {
+    ...registry,
+    records: (registry.records || []).map((record) => ({
+      ...record,
+      status_label:
+        record.status === "found"
+          ? copy.registryStatusFound
+          : record.status === "safe"
+            ? copy.registryStatusSafe
+            : copy.registryStatusMissing
+    }))
+  };
+};
+
+const localizedRegistry = Object.fromEntries(
+  supportedLocales.map((locale) => [locale, localizeRegistry(rawRegistry, locale)])
+);
+
 const renderAlternateLinks = (pathname) =>
   [
     ...supportedLocales.map(
@@ -733,6 +989,15 @@ const renderRootAlternateLinks = () =>
     `<link rel="alternate" hreflang="en" href="${absoluteLocaleUrl("en", "/")}">`,
     `<link rel="alternate" hreflang="x-default" href="${absoluteUrl("/")}">`
   ].join("\n    ");
+
+const renderCloudflareAnalyticsSnippet = () => {
+  if (!cloudflareAnalyticsToken) {
+    return "";
+  }
+
+  const beaconConfig = escapeHtml(JSON.stringify({ token: cloudflareAnalyticsToken }));
+  return `    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='${beaconConfig}'></script>\n`;
+};
 
 const renderHead = ({ lang, title, description, canonical, alternates }) => `  <head>
     <meta charset="utf-8">
@@ -808,6 +1073,30 @@ ${renderHead({
 
       <section class="section">
         <div class="shell panel">
+          <h2>${escapeHtml(copy.registryTitle)}</h2>
+          <p class="page-intro">${escapeHtml(copy.registryIntro)}</p>
+          <p class="small" data-registry-meta>${escapeHtml(copy.registryLoading)}</p>
+          <div class="registry-stats" data-registry-stats></div>
+          <div class="table-scroll">
+            <table class="registry-table">
+              <thead>
+                <tr>
+                  <th>${escapeHtml(copy.registryNameColumn)}</th>
+                  <th>${escapeHtml(copy.registryStatusColumn)}</th>
+                  <th>${escapeHtml(copy.registryLocationColumn)}</th>
+                  <th>${escapeHtml(copy.registryReportedOnColumn)}</th>
+                </tr>
+              </thead>
+              <tbody data-registry-body>
+                <tr><td colspan="4" class="small">${escapeHtml(copy.registryLoading)}</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell panel">
           <h2>${escapeHtml(copy.findSourceTitle)}</h2>
           <p class="page-intro">${introHtml}</p>
           <div class="controls">
@@ -841,7 +1130,7 @@ ${renderHead({
         <p>${escapeHtml(interpolate(copy.footer, { generatedAt }))}</p>
       </div>
     </footer>
-    <script>window.VENEHELP_CONFIG = ${JSON.stringify({ basePath: appBasePath, messages: copy })};</script>
+${renderCloudflareAnalyticsSnippet()}    <script>window.VENEHELP_CONFIG = ${JSON.stringify({ basePath: appBasePath, messages: copy })};</script>
     <script src="${withSitePath("/app.js")}" defer></script>
   </body>
 </html>`;
@@ -892,7 +1181,7 @@ ${renderHead({
         </div>
       </div>
     </main>
-  </body>
+${renderCloudflareAnalyticsSnippet()}  </body>
 </html>`;
 };
 
@@ -976,7 +1265,7 @@ ${renderHead({
         </section>
       </div>
     </main>
-  </body>
+${renderCloudflareAnalyticsSnippet()}  </body>
 </html>`;
 };
 
@@ -991,7 +1280,7 @@ const renderRedirectPage = (targetPath, title) => `<!doctype html>
   </head>
   <body>
     <p>Redirecting to <a href="${escapeHtml(targetPath)}">${escapeHtml(targetPath)}</a>.</p>
-  </body>
+${renderCloudflareAnalyticsSnippet()}  </body>
 </html>`;
 
 const renderRobots = () => `User-agent: *
@@ -1016,6 +1305,7 @@ VeneHelp is a public directory of missing-person reporting sources related to th
 - Spanish homepage: ${absoluteLocaleUrl("es", "/")}
 - English homepage: ${absoluteLocaleUrl("en", "/")}
 - Canonical raw dataset: ${absoluteUrl("/data/sources.json")}
+- Beta registry dataset: ${absoluteUrl("/data/registry.json")}
 
 ## Usage notes
 
@@ -1028,10 +1318,12 @@ const renderSitemap = () => {
   const entries = [
     absoluteUrl("/"),
     absoluteUrl("/data/sources.json"),
+    absoluteUrl("/data/registry.json"),
     ...supportedLocales.flatMap((locale) => [
       absoluteLocaleUrl(locale, "/"),
       absoluteLocaleUrl(locale, "/sources/"),
       absoluteLocaleUrl(locale, "/data/sources.json"),
+      absoluteLocaleUrl(locale, "/data/registry.json"),
       ...localizedSources[locale].map((source) => absoluteLocaleUrl(locale, `/sources/${source.slug}/`))
     ])
   ];
@@ -1063,6 +1355,7 @@ await fs.writeFile(path.join(docsDir, "CNAME"), `${customDomain}\n`);
 const rawDataDir = path.join(docsDir, "data");
 await ensureDir(rawDataDir);
 await fs.writeFile(path.join(rawDataDir, "sources.json"), JSON.stringify(rawSources, null, 2) + "\n");
+await fs.writeFile(path.join(rawDataDir, "registry.json"), JSON.stringify(rawRegistry, null, 2) + "\n");
 
 for (const locale of supportedLocales) {
   const localeDir = path.join(docsDir, locale);
@@ -1075,7 +1368,8 @@ for (const locale of supportedLocales) {
 
   await fs.writeFile(path.join(localeDir, "index.html"), renderLocaleIndexHtml(locale));
   await fs.writeFile(path.join(localeDataDir, "sources.json"), JSON.stringify(localizedSources[locale], null, 2) + "\n");
-await fs.writeFile(path.join(localeSourcesDir, "index.html"), renderLocalizedSourcesIndexHtml(locale));
+  await fs.writeFile(path.join(localeDataDir, "registry.json"), JSON.stringify(localizedRegistry[locale], null, 2) + "\n");
+  await fs.writeFile(path.join(localeSourcesDir, "index.html"), renderLocalizedSourcesIndexHtml(locale));
 
   for (const source of localizedSources[locale]) {
     const sourceDir = path.join(localeSourcesDir, source.slug);
