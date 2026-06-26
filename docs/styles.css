@@ -218,7 +218,6 @@ select:focus {
 
 .source-card footer,
 .page-links,
-.chooser-actions,
 .topbar {
   display: flex;
   flex-wrap: wrap;
@@ -316,12 +315,6 @@ ul {
 
 .definition-list dd {
   margin: 0.35rem 0 0;
-}
-
-.chooser-card {
-  max-width: 44rem;
-  margin: 0 auto;
-  padding: 1.5rem 0;
 }
 
 code {

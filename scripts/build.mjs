@@ -240,7 +240,6 @@ select:focus {
 
 .source-card footer,
 .page-links,
-.chooser-actions,
 .topbar {
   display: flex;
   flex-wrap: wrap;
@@ -338,12 +337,6 @@ ul {
 
 .definition-list dd {
   margin: 0.35rem 0 0;
-}
-
-.chooser-card {
-  max-width: 44rem;
-  margin: 0 auto;
-  padding: 1.5rem 0;
 }
 
 code {
@@ -517,12 +510,6 @@ const localeCopy = {
     notesTitle: "Notas",
     tagsTitle: "Etiquetas",
     viewJson: "Ver JSON",
-    chooserTitle: "Elige idioma",
-    chooserBody:
-      "Sugerimos una versión según el idioma del navegador y recordamos tu elección. También puedes cambiar de idioma manualmente en cualquier página.",
-    chooserEs: "Continuar en Español",
-    chooserEn: "Continue in English",
-    chooserRedirecting: "Redirigiendo a la versión sugerida...",
     languageNavLabel: "Idioma",
     sourceListTitle: "Todos los recursos | VeneHelp"
   },
@@ -573,12 +560,6 @@ const localeCopy = {
     notesTitle: "Notes",
     tagsTitle: "Tags",
     viewJson: "View JSON",
-    chooserTitle: "Choose language",
-    chooserBody:
-      "We suggest a version based on your browser language and remember your choice. You can also switch languages manually on any page.",
-    chooserEs: "Continuar en Español",
-    chooserEn: "Continue in English",
-    chooserRedirecting: "Redirecting to the suggested version...",
     languageNavLabel: "Language",
     sourceListTitle: "All Sources | VeneHelp"
   }
@@ -746,6 +727,13 @@ const renderAlternateLinks = (pathname) =>
     `<link rel="alternate" hreflang="x-default" href="${absoluteUrl("/")}">`
   ].join("\n    ");
 
+const renderRootAlternateLinks = () =>
+  [
+    `<link rel="alternate" hreflang="es" href="${absoluteUrl("/")}">`,
+    `<link rel="alternate" hreflang="en" href="${absoluteLocaleUrl("en", "/")}">`,
+    `<link rel="alternate" hreflang="x-default" href="${absoluteUrl("/")}">`
+  ].join("\n    ");
+
 const renderHead = ({ lang, title, description, canonical, alternates }) => `  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -756,27 +744,25 @@ const renderHead = ({ lang, title, description, canonical, alternates }) => `  <
     <link rel="stylesheet" href="${withSitePath("/styles.css")}">
   </head>`;
 
-const renderLanguageSwitcher = (locale, pathname) => {
+const renderLanguageSwitcher = (locale, pathname, { rootDefault = false } = {}) => {
   const copy = localeCopy[locale];
 
   return `<nav class="language-switcher" aria-label="${escapeHtml(copy.languageNavLabel)}">
     ${supportedLocales
       .map((candidate) => {
         const label = candidate === "es" ? "Español" : "English";
+        const href = rootDefault && candidate === "es" && pathname === "/" ? withSitePath("/") : localePath(candidate, pathname);
         const current = candidate === locale ? ' aria-current="page"' : "";
-        return `<a href="${localePath(candidate, pathname)}"${current}>${label}</a>`;
+        return `<a href="${href}"${current}>${label}</a>`;
       })
       .join("")}
   </nav>`;
 };
 
-const renderPageTopbar = (locale, pathname = "/") => `<div class="topbar">
-  <a class="brand-link" href="${localePath(locale, "/")}">VeneHelp</a>
-  ${renderLanguageSwitcher(locale, pathname)}
+const renderPageTopbar = (locale, pathname = "/", options = {}) => `<div class="topbar">
+  <a class="brand-link" href="${options.rootDefault ? withSitePath("/") : localePath(locale, "/")}">VeneHelp</a>
+  ${renderLanguageSwitcher(locale, pathname, options)}
 </div>`;
-
-const persistLocaleScript = (locale) =>
-  `<script>try { localStorage.setItem("venehelp-locale", ${JSON.stringify(locale)}); } catch (error) {}</script>`;
 
 const renderFilterOptions = (locale, field, labels) => {
   const values = [...new Set(localizedSources[locale].map((source) => source[field]))];
@@ -785,13 +771,16 @@ const renderFilterOptions = (locale, field, labels) => {
     .join("");
 };
 
-const renderLocaleIndexHtml = (locale) => {
+const renderLocaleIndexHtml = (locale, options = {}) => {
   const copy = localeCopy[locale];
   const dataPath = localePath(locale, "/data/sources.json");
   const introHtml = interpolate(copy.findSourceIntro, {
     dataUrl: dataPath,
     dataPath
   });
+  const canonical = options.canonical || absoluteLocaleUrl(locale, "/");
+  const alternates = options.alternates || renderAlternateLinks("/");
+  const appBasePath = options.appBasePath || localeBasePath(locale);
 
   return `<!doctype html>
 <html lang="${escapeHtml(copy.lang)}">
@@ -799,15 +788,15 @@ ${renderHead({
   lang: copy.lang,
   title: copy.htmlTitle,
   description: copy.siteDescription,
-  canonical: absoluteLocaleUrl(locale, "/"),
-  alternates: renderAlternateLinks("/")
+  canonical,
+  alternates
 })}
   <body>
     <div class="flag-bar" aria-hidden="true"><span></span><span></span><span></span></div>
     <main>
       <section class="hero">
         <div class="shell">
-          ${renderPageTopbar(locale, "/")}
+          ${renderPageTopbar(locale, "/", options)}
           <div class="hero-grid">
             <p class="eyebrow">${escapeHtml(copy.eyebrow)}</p>
             <h1>${escapeHtml(copy.heroTitle)}</h1>
@@ -852,12 +841,19 @@ ${renderHead({
         <p>${escapeHtml(interpolate(copy.footer, { generatedAt }))}</p>
       </div>
     </footer>
-    ${persistLocaleScript(locale)}
-    <script>window.VENEHELP_CONFIG = ${JSON.stringify({ basePath: localeBasePath(locale), messages: copy })};</script>
+    <script>window.VENEHELP_CONFIG = ${JSON.stringify({ basePath: appBasePath, messages: copy })};</script>
     <script src="${withSitePath("/app.js")}" defer></script>
   </body>
 </html>`;
 };
+
+const renderRootIndexHtml = () =>
+  renderLocaleIndexHtml("es", {
+    canonical: absoluteUrl("/"),
+    alternates: renderRootAlternateLinks(),
+    appBasePath: localeBasePath("es"),
+    rootDefault: true
+  });
 
 const renderLocalizedSourcesIndexHtml = (locale) => {
   const copy = localeCopy[locale];
@@ -896,7 +892,6 @@ ${renderHead({
         </div>
       </div>
     </main>
-    ${persistLocaleScript(locale)}
   </body>
 </html>`;
 };
@@ -981,87 +976,9 @@ ${renderHead({
         </section>
       </div>
     </main>
-    ${persistLocaleScript(locale)}
   </body>
 </html>`;
 };
-
-const renderRootChooserHtml = () => `<!doctype html>
-<html lang="en">
-${renderHead({
-  lang: "en",
-  title: "VeneHelp",
-  description: "Choose a language for the VeneHelp directory.",
-  canonical: absoluteUrl("/"),
-  alternates: renderAlternateLinks("/")
-})}
-  <body>
-    <div class="flag-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-    <main class="page">
-      <div class="shell">
-        <section class="panel chooser-card">
-          <p class="eyebrow">VeneHelp</p>
-          <h1>Choose language / Elige idioma</h1>
-          <p class="page-intro">${escapeHtml(localeCopy.en.chooserBody)} ${escapeHtml(localeCopy.es.chooserBody)}</p>
-          <div class="chooser-actions">
-            <a class="button" href="${localePath("es", "/")}" data-locale-choice="es">${escapeHtml(localeCopy.es.chooserEs)}</a>
-            <a class="button secondary" href="${localePath("en", "/")}" data-locale-choice="en">${escapeHtml(localeCopy.en.chooserEn)}</a>
-          </div>
-          <p class="small" id="redirect-note">${escapeHtml(localeCopy.en.chooserRedirecting)} ${escapeHtml(localeCopy.es.chooserRedirecting)}</p>
-        </section>
-      </div>
-    </main>
-    <script>
-      const supported = ${JSON.stringify(supportedLocales)};
-      const links = {
-        es: ${JSON.stringify(localePath("es", "/"))},
-        en: ${JSON.stringify(localePath("en", "/"))}
-      };
-
-      const detectLocale = () => {
-        const stored = (() => {
-          try {
-            return localStorage.getItem("venehelp-locale");
-          } catch (error) {
-            return null;
-          }
-        })();
-
-        if (stored && supported.includes(stored)) {
-          return stored;
-        }
-
-        const candidates = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
-        for (const candidate of candidates) {
-          const normalized = String(candidate || "").toLowerCase();
-          if (normalized.startsWith("es")) return "es";
-          if (normalized.startsWith("en")) return "en";
-        }
-        return "es";
-      };
-
-      const targetLocale = detectLocale();
-      const note = document.getElementById("redirect-note");
-      if (note) {
-        note.textContent = targetLocale === "es"
-          ? ${JSON.stringify(localeCopy.es.chooserRedirecting)}
-          : ${JSON.stringify(localeCopy.en.chooserRedirecting)};
-      }
-
-      document.querySelectorAll("[data-locale-choice]").forEach((link) => {
-        link.addEventListener("click", () => {
-          try {
-            localStorage.setItem("venehelp-locale", link.getAttribute("data-locale-choice"));
-          } catch (error) {}
-        });
-      });
-
-      window.setTimeout(() => {
-        window.location.replace(links[targetLocale] || links.es);
-      }, 900);
-    </script>
-  </body>
-</html>`;
 
 const renderRedirectPage = (targetPath, title) => `<!doctype html>
 <html lang="en">
@@ -1095,7 +1012,7 @@ VeneHelp is a public directory of missing-person reporting sources related to th
 
 ## Preferred entrypoints
 
-- Language chooser: ${absoluteUrl("/")}
+- Spanish default homepage: ${absoluteUrl("/")}
 - Spanish homepage: ${absoluteLocaleUrl("es", "/")}
 - English homepage: ${absoluteLocaleUrl("en", "/")}
 - Canonical raw dataset: ${absoluteUrl("/data/sources.json")}
@@ -1137,7 +1054,7 @@ await fs.rm(docsDir, { recursive: true, force: true });
 await ensureDir(docsDir);
 await fs.writeFile(path.join(docsDir, "styles.css"), styles);
 await fs.writeFile(path.join(docsDir, "app.js"), appJs);
-await fs.writeFile(path.join(docsDir, "index.html"), renderRootChooserHtml());
+await fs.writeFile(path.join(docsDir, "index.html"), renderRootIndexHtml());
 await fs.writeFile(path.join(docsDir, "robots.txt"), renderRobots());
 await fs.writeFile(path.join(docsDir, "llms.txt"), renderLlms());
 await fs.writeFile(path.join(docsDir, "sitemap.xml"), renderSitemap());
@@ -1158,7 +1075,7 @@ for (const locale of supportedLocales) {
 
   await fs.writeFile(path.join(localeDir, "index.html"), renderLocaleIndexHtml(locale));
   await fs.writeFile(path.join(localeDataDir, "sources.json"), JSON.stringify(localizedSources[locale], null, 2) + "\n");
-  await fs.writeFile(path.join(localeSourcesDir, "index.html"), renderLocalizedSourcesIndexHtml(locale));
+await fs.writeFile(path.join(localeSourcesDir, "index.html"), renderLocalizedSourcesIndexHtml(locale));
 
   for (const source of localizedSources[locale]) {
     const sourceDir = path.join(localeSourcesDir, source.slug);
@@ -1169,14 +1086,14 @@ for (const locale of supportedLocales) {
 
 const legacySourcesDir = path.join(docsDir, "sources");
 await ensureDir(legacySourcesDir);
-await fs.writeFile(path.join(legacySourcesDir, "index.html"), renderRedirectPage(localePath("en", "/sources/"), "Redirecting"));
+await fs.writeFile(path.join(legacySourcesDir, "index.html"), renderRedirectPage(localePath("es", "/sources/"), "Redirecting"));
 
 for (const source of rawSources) {
   const legacySourceDir = path.join(legacySourcesDir, source.slug);
   await ensureDir(legacySourceDir);
   await fs.writeFile(
     path.join(legacySourceDir, "index.html"),
-    renderRedirectPage(localePath("en", `/sources/${source.slug}/`), `Redirecting ${source.name}`)
+    renderRedirectPage(localePath("es", `/sources/${source.slug}/`), `Redirecting ${source.name}`)
   );
 }
 
