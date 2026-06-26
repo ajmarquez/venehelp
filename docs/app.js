@@ -3,26 +3,16 @@ const messages = config.messages || {};
 const basePath = config.basePath || "";
 
 const state = {
-  registry: null,
-  registryQuery: "",
-  registryStatus: "all",
   sources: [],
   query: "",
-  category: "all",
-  purpose: "all"
+  filters: { public_search: false, accepts_new_reports: false, report_found: false }
 };
 
-const registryStatsEl = document.querySelector("[data-registry-stats]");
-const registryMetaEl = document.querySelector("[data-registry-meta]");
-const registryBodyEl = document.querySelector("[data-registry-body]");
-const registryResultsEl = document.querySelector("[data-registry-results]");
-const registrySearchEl = document.querySelector("[data-registry-search]");
-const registryStatusEl = document.querySelector("[data-registry-status]");
-const listEl = document.querySelector("[data-source-list]");
-const countEl = document.querySelector("[data-results-count]");
+const sectionEls = Array.from(document.querySelectorAll("[data-section-list]"));
+const registryCountEl = document.querySelector("[data-results-count]");
+const developerListEl = document.querySelector("[data-developer-list]");
 const searchEl = document.querySelector("[data-search]");
-const categoryEl = document.querySelector("[data-category]");
-const purposeEl = document.querySelector("[data-purpose]");
+const sectionOrder = ["missing", "located", "aid", "developer"];
 
 const interpolate = (template, values = {}) =>
   String(template || "").replace(/\{(\w+)\}/g, (_, key) => String(values[key] ?? ""));
@@ -37,6 +27,9 @@ const escapeHtml = (value) =>
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
 
+const matchesFilters = (source, filters) =>
+  Object.keys(filters).every((key) => !filters[key] || Boolean(source[key]));
+
 const matchesQuery = (source, query) => {
   if (!query) return true;
   const haystack = [
@@ -44,6 +37,9 @@ const matchesQuery = (source, query) => {
     source.summary,
     source.category_label,
     source.purpose_label,
+    source.status_label,
+    source.operator_type_label,
+    ...(source.service_labels || []),
     ...(source.tags || [])
   ].join(" ").toLowerCase();
   return haystack.includes(query);
@@ -52,99 +48,60 @@ const matchesQuery = (source, query) => {
 const renderBadge = (label, className = "pill") =>
   '<span class="' + className + '">' + label + "</span>";
 
-const matchesRegistryQuery = (record, query) => {
-  if (!query) return true;
-  const haystack = [
-    record.name,
-    record.location,
-    record.source_name,
-    record.status_label,
-    ...(record.reported_on || [])
-  ].join(" ").toLowerCase();
-  return haystack.includes(query);
+const renderCapability = (on, label) =>
+  '<span class="cap ' + (on ? 'cap--on' : 'cap--off') + '">' +
+  (on ? '✓ ' : '✕ ') + escapeHtml(label) + '</span>';
+
+const formatNumber = (value) => {
+  const n = Number(value);
+  if (!Number.isFinite(n)) return String(value);
+  try {
+    return n.toLocaleString(messages.lang === 'es' ? 'es-VE' : 'en-US');
+  } catch (error) {
+    return String(n);
+  }
 };
 
-const getFilteredRegistryRecords = () =>
-  (state.registry?.records || []).filter((record) => {
-    const matchesStatus = state.registryStatus === "all" || record.status === state.registryStatus;
-    return matchesStatus && matchesRegistryQuery(record, state.registryQuery);
-  });
-
-const renderRegistry = () => {
-  if (!registryStatsEl && !registryMetaEl && !registryBodyEl && !registryResultsEl) {
-    return;
-  }
-
-  if (!state.registry) {
-    if (registryMetaEl) {
-      registryMetaEl.textContent = messages.registryLoading;
-    }
-    return;
-  }
-
-  const summary = state.registry.summary || {};
-  if (registryMetaEl) {
-    registryMetaEl.textContent = summary.is_partial
-      ? interpolate(messages.registryPartialNote, {
-          sampledPages: summary.sampled_pages ?? 0,
-          totalPages: summary.total_pages ?? 0,
-          sourceName: summary.source_name || ""
-        })
-      : interpolate(messages.registryFullNote, {
-          sourceName: summary.source_name || ""
-        });
-  }
-
-  if (registryStatsEl) {
-    registryStatsEl.innerHTML = [
-      '<article class="registry-stat registry-stat--missing"><strong>' + (summary.missing_count_display || "-") + '</strong><span>' + messages.registryMissingLabel + '</span></article>',
-      '<article class="registry-stat registry-stat--found"><strong>' + (summary.found_count_display || "-") + '</strong><span>' + messages.registryFoundLabel + '</span></article>',
-      '<article class="registry-stat registry-stat--preview"><strong>' + (summary.preview_records || 0) + '</strong><span>' + messages.registryPreviewLabel + '</span></article>'
-    ].join("");
-  }
-
-  const records = getFilteredRegistryRecords();
-
-  if (registryResultsEl) {
-    registryResultsEl.textContent = interpolate(messages.registryResultsShown, { count: records.length });
-  }
-
-  if (!registryBodyEl) {
-    return;
-  }
-
-  const rows = records.map((record) => {
-    const nameHtml = record.detail_url
-      ? '<a href="' + escapeHtml(record.detail_url) + '" target="_blank" rel="noreferrer">' + escapeHtml(record.name) + '</a>'
-      : escapeHtml(record.name);
-
-    return [
-      '<tr>',
-      '<td>' + nameHtml + '</td>',
-      '<td><span class="status-chip status-chip--' + escapeHtml(record.status) + '">' + escapeHtml(record.status_label) + '</span></td>',
-      '<td>' + escapeHtml(record.location || '') + '</td>',
-      '<td>' + escapeHtml((record.reported_on || []).join(', ')) + '</td>',
-      '</tr>'
-    ].join("");
-  });
-
-  registryBodyEl.innerHTML = rows.join("") || '<tr><td colspan="4" class="small">' + messages.registryEmpty + '</td></tr>';
+const renderStats = (stats) => {
+  if (!stats) return '';
+  const parts = [];
+  if (stats.reported != null) parts.push('<strong>' + formatNumber(stats.reported) + '</strong> ' + escapeHtml(messages.statReported));
+  if (stats.found != null) parts.push('<strong>' + formatNumber(stats.found) + '</strong> ' + escapeHtml(messages.statFound));
+  if (stats.located != null) parts.push('<strong>' + formatNumber(stats.located) + '</strong> ' + escapeHtml(messages.statLocated));
+  if (!parts.length) return '';
+  const attribution = escapeHtml(messages.statBySite) + (stats.as_of ? ' · ' + escapeHtml(stats.as_of) : '');
+  return '<p class="source-stats">' + parts.join(' · ') + ' <span class="source-stats-note">— ' + attribution + '</span></p>';
 };
 
-const renderCard = (source) => {
+const renderRegistryCard = (source) => {
   const detailsPath = basePath + '/sources/' + source.slug + '/';
   const linkHtml = source.url
     ? '<a class="button" href="' + source.url + '" target="_blank" rel="noreferrer">' + messages.openSource + '</a>'
     : '<span class="small">' + messages.directLinkPending + '</span>';
+  const useWhenHtml = source.use_when_label
+    ? '<p class="source-usewhen">' + escapeHtml(source.use_when_label) + '</p>'
+    : '';
+  const warningHtml = source.warning_label
+    ? '<p class="source-warning">' + escapeHtml(source.warning_label) + '</p>'
+    : '';
+  const capHtml =
+    renderCapability(source.public_search, messages.capSearch) +
+    renderCapability(source.accepts_new_reports, messages.capReport) +
+    renderCapability(source.report_found, messages.capFound);
+  const trustHtml = '<p class="small source-trust">' +
+    escapeHtml(source.owner_label || '') +
+    (source.last_checked_at ? ' · ' + escapeHtml(messages.checkedShort) + ' ' + escapeHtml(source.last_checked_at) : '') +
+    '</p>';
 
   return [
     '<article class="source-card">',
-    '<h3><a href="' + detailsPath + '">' + source.name + '</a></h3>',
-    '<p>' + source.summary + '</p>',
-    '<div class="meta-row">',
-    renderBadge(source.category_label),
-    renderBadge(source.purpose_label),
-    '</div>',
+    '<h3><a href="' + detailsPath + '">' + escapeHtml(source.name) + '</a></h3>',
+    useWhenHtml,
+    warningHtml,
+    '<p>' + escapeHtml(source.summary) + '</p>',
+    renderStats(source.report_stats),
+    '<div class="cap-row">' + capHtml + '</div>',
+    trustHtml,
     '<footer>',
     linkHtml,
     '<a class="button secondary" href="' + detailsPath + '">' + messages.details + '</a>',
@@ -153,60 +110,122 @@ const renderCard = (source) => {
   ].join("");
 };
 
+const buildDeveloperResources = (sources) => {
+  const datasetPath = basePath + "/data/sources.json";
+  const items = [
+    {
+      key: "venehelp-dataset",
+      title: messages.venehelpDatasetTitle,
+      summary: messages.venehelpDatasetSummary,
+      links: [
+        { href: datasetPath, label: messages.openDataset, primary: true }
+      ]
+    }
+  ];
+
+  sources
+    .filter((source) => source.api_url || source.source_code_url || source.section === "developer")
+    .forEach((source) => {
+      const links = [];
+      if (source.api_url) {
+        links.push({ href: source.api_url, label: messages.openApi, primary: true, external: true });
+      }
+      if (source.source_code_url) {
+        links.push({ href: source.source_code_url, label: messages.openSourceCode, secondary: true, external: true });
+      }
+      if (!source.api_url && !source.source_code_url && source.url) {
+        links.push({ href: source.url, label: messages.openSource, primary: true, external: true });
+      }
+      links.push({ href: basePath + '/sources/' + source.slug + '/', label: messages.details, secondary: true, external: false });
+
+      items.push({
+        key: source.slug,
+        title: source.name,
+        summary: source.summary,
+        services: source.service_labels || [],
+        links
+      });
+    });
+
+  return items;
+};
+
+const renderDeveloperCard = (resource) => {
+  const serviceHtml = (resource.services || [])
+    .slice(0, 4)
+    .map((label) => renderBadge(label))
+    .join("");
+  const linksHtml = (resource.links || [])
+    .map((link) => {
+      const className = link.secondary ? "button secondary" : "button";
+      const targetAttrs = link.external ? ' target="_blank" rel="noreferrer"' : '';
+      return '<a class="' + className + '" href="' + escapeHtml(link.href) + '"' + targetAttrs + '>' + escapeHtml(link.label) + '</a>';
+    })
+    .join("");
+
+  return [
+    '<article class="source-card">',
+    '<h3>' + escapeHtml(resource.title) + '</h3>',
+    '<p>' + escapeHtml(resource.summary) + '</p>',
+    serviceHtml ? '<div class="meta-row">' + serviceHtml + '</div>' : '',
+    '<footer>' + linksHtml + '</footer>',
+    '</article>'
+  ].join("");
+};
+
 const render = () => {
-  if (!countEl || !listEl) {
-    return;
+  const humanSources = state.sources.filter((source) => (source.section || "missing") !== "developer");
+  const filteredHuman = humanSources.filter(
+    (source) => matchesQuery(source, state.query) && matchesFilters(source, state.filters)
+  );
+
+  if (registryCountEl) {
+    registryCountEl.textContent = interpolate(messages.resultsShown, {
+      count: filteredHuman.length,
+      total: humanSources.length
+    });
   }
 
-  const filtered = state.sources.filter((source) => {
-    const matchesCategory = state.category === "all" || source.category === state.category;
-    const matchesPurposeFilter = state.purpose === "all" || source.purpose === state.purpose;
-    return matchesCategory && matchesPurposeFilter && matchesQuery(source, state.query);
+  sectionEls.forEach((el) => {
+    const key = el.getAttribute("data-section-list");
+    const inSection = filteredHuman.filter((source) => (source.section || "missing") === key);
+    el.innerHTML = inSection.map(renderRegistryCard).join("") || '<p class="small">' + messages.noResults + '</p>';
   });
 
-  countEl.textContent = interpolate(messages.resultsShown, { count: filtered.length });
-  listEl.innerHTML = filtered.map(renderCard).join("") || '<p class="small">' + messages.noResults + '</p>';
+  if (developerListEl) {
+    const devSources = state.sources.filter((source) => matchesQuery(source, state.query));
+    const developerResources = buildDeveloperResources(devSources);
+    developerListEl.innerHTML = developerResources.map(renderDeveloperCard).join("") || '<p class="small">' + messages.developerEmpty + '</p>';
+  }
 };
 
 const load = async () => {
-  const tasks = [];
-
-  if (registryStatsEl || registryMetaEl || registryBodyEl || registryResultsEl) {
-    tasks.push(
-      fetch(basePath + "/data/registry.json")
-        .then((response) => response.json())
-        .then((data) => {
-          state.registry = data;
-          renderRegistry();
-        })
-        .catch(() => {
-          if (registryMetaEl) {
-            registryMetaEl.textContent = messages.registryLoadFailed;
-          }
-        })
-    );
+  if (!sectionEls.length && !registryCountEl && !developerListEl) {
+    return;
   }
 
-  if (listEl || countEl) {
-    tasks.push(
-      fetch(basePath + "/data/sources.json")
-        .then((response) => response.json())
-        .then((data) => {
-          state.sources = data;
-          render();
-        })
-        .catch(() => {
-          if (countEl) {
-            countEl.textContent = messages.loadFailed;
-          }
-          if (listEl) {
-            listEl.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
-          }
-        })
-    );
+  try {
+    const response = await fetch(basePath + "/data/sources.json");
+    const sources = await response.json();
+    state.sources = sources
+      .slice()
+      .sort((a, b) => {
+        const sectionDiff = sectionOrder.indexOf(a.section || "missing") - sectionOrder.indexOf(b.section || "missing");
+        if (sectionDiff !== 0) return sectionDiff;
+        return (a.crawler_priority || 99) - (b.crawler_priority || 99);
+      });
+    render();
+  } catch (error) {
+    if (registryCountEl) {
+      registryCountEl.textContent = messages.loadFailed;
+    }
+    sectionEls.forEach((el) => {
+      el.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
+    });
+    if (developerListEl) {
+      developerListEl.innerHTML = '<p class="small">' + messages.loadFailedHelp + '</p>';
+    }
   }
-
-  await Promise.all(tasks);
 };
 
 if (searchEl) {
@@ -216,32 +235,14 @@ if (searchEl) {
   });
 }
 
-if (categoryEl) {
-  categoryEl.addEventListener("change", (event) => {
-    state.category = event.target.value;
+Array.from(document.querySelectorAll("[data-filter]")).forEach((button) => {
+  button.addEventListener("click", () => {
+    const key = button.getAttribute("data-filter");
+    state.filters[key] = !state.filters[key];
+    button.setAttribute("aria-pressed", String(state.filters[key]));
+    button.classList.toggle("filter-btn--active", state.filters[key]);
     render();
   });
-}
-
-if (purposeEl) {
-  purposeEl.addEventListener("change", (event) => {
-    state.purpose = event.target.value;
-    render();
-  });
-}
-
-if (registrySearchEl) {
-  registrySearchEl.addEventListener("input", (event) => {
-    state.registryQuery = normalize(event.target.value.trim());
-    renderRegistry();
-  });
-}
-
-if (registryStatusEl) {
-  registryStatusEl.addEventListener("change", (event) => {
-    state.registryStatus = event.target.value;
-    renderRegistry();
-  });
-}
+});
 
 load();

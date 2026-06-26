@@ -1,6 +1,7 @@
 [
   {
     "slug": "desaparecidos-terremoto-venezuela",
+    "section": "missing",
     "name": "Desaparecidos Terremoto Venezuela",
     "url": "https://desaparecidosterremotovenezuela.com/",
     "category": "website",
@@ -10,8 +11,23 @@
     "requires_login": false,
     "last_checked_at": "2026-06-26",
     "owner": "Volunteer initiative",
+    "operator_type": "volunteer",
+    "status": "active",
     "crawler_priority": 1,
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": true,
+    "public_contact": null,
+    "services": [
+      "missing-report",
+      "missing-search",
+      "found-report"
+    ],
     "summary": "Citizen-led registry for reporting and searching missing persons after the earthquake. Reportedly one of the most referenced public platforms.",
+    "use_when": {
+      "es": "Úsalo si buscas o quieres reportar a una persona desaparecida.",
+      "en": "Use this to search for or report a missing person."
+    },
     "notes": [
       "URL loaded successfully during the June 26, 2026 link check.",
       "Intended to support reporting missing people, searching records, and marking someone as found."
@@ -22,16 +38,32 @@
       "public-registry",
       "volunteer-run"
     ],
+    "use_when_label": "Use this to search for or report a missing person.",
+    "warning_label": "",
     "category_label": "Website",
     "purpose_label": "Report and search",
+    "status_label": "Active",
+    "operator_type_label": "Volunteer",
     "coverage_label": "National",
     "language_label": "Spanish",
     "requires_login_label": "No",
+    "accepts_reports_label_value": "Yes",
+    "public_search_label_value": "Yes",
+    "report_found_label_value": "Yes",
     "owner_label": "Volunteer initiative",
-    "last_checked_label": "2026-06-26"
+    "service_labels": [
+      "Report missing people",
+      "Search people",
+      "Mark found / safe"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
   },
   {
     "slug": "venezuela-te-busca",
+    "section": "missing",
     "name": "Venezuela Te Busca",
     "url": "https://venezuelatebusca.com/",
     "category": "website",
@@ -41,8 +73,23 @@
     "requires_login": false,
     "last_checked_at": "2026-06-26",
     "owner": "Volunteer initiative",
+    "operator_type": "volunteer",
+    "status": "active",
     "crawler_priority": 1,
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": true,
+    "public_contact": null,
+    "services": [
+      "missing-report",
+      "missing-search",
+      "found-report"
+    ],
     "summary": "Collaborative registry for disappeared persons with search and reporting flows.",
+    "use_when": {
+      "es": "Úsalo si buscas o quieres reportar a una persona desaparecida.",
+      "en": "Use this to search for or report a missing person."
+    },
     "notes": [
       "URL loaded successfully during the June 26, 2026 link check.",
       "Reportedly allows searching by person name, ID, or location."
@@ -53,16 +100,32 @@
       "search",
       "registry"
     ],
+    "use_when_label": "Use this to search for or report a missing person.",
+    "warning_label": "",
     "category_label": "Website",
     "purpose_label": "Report and search",
+    "status_label": "Active",
+    "operator_type_label": "Volunteer",
     "coverage_label": "National",
     "language_label": "Spanish",
     "requires_login_label": "No",
+    "accepts_reports_label_value": "Yes",
+    "public_search_label_value": "Yes",
+    "report_found_label_value": "Yes",
     "owner_label": "Volunteer initiative",
-    "last_checked_label": "2026-06-26"
+    "service_labels": [
+      "Report missing people",
+      "Search people",
+      "Mark found / safe"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
   },
   {
     "slug": "venezuela-reporta",
+    "section": "missing",
     "name": "Venezuela Reporta",
     "url": "https://venezuelareporta.org/",
     "category": "website",
@@ -72,10 +135,32 @@
     "requires_login": false,
     "last_checked_at": "2026-06-26",
     "owner": "Citizen platform",
+    "operator_type": "citizen",
+    "status": "active",
     "crawler_priority": 2,
-    "summary": "Citizen platform for missing-person and emergency reporting that has been referenced as an alternative registry.",
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": true,
+    "public_contact": null,
+    "services": [
+      "missing-report",
+      "missing-search",
+      "found-report"
+    ],
+    "report_stats": {
+      "reported": 71092,
+      "found": 5972,
+      "as_of": "2026-06-26",
+      "source": "self-reported"
+    },
+    "summary": "Citizen platform for reporting, searching, and marking missing people as found after the earthquake.",
+    "use_when": {
+      "es": "Úsalo si buscas o quieres reportar a una persona desaparecida.",
+      "en": "Use this to search for or report a missing person."
+    },
     "notes": [
-      "URL loaded successfully during the June 26, 2026 link check."
+      "URL loaded successfully during the June 26, 2026 link check.",
+      "Public navigation and metadata show people-search, report intake, and found-status flows."
     ],
     "tags": [
       "earthquake",
@@ -83,16 +168,32 @@
       "emergency",
       "citizen-platform"
     ],
+    "use_when_label": "Use this to search for or report a missing person.",
+    "warning_label": "",
     "category_label": "Website",
     "purpose_label": "Report and search",
+    "status_label": "Active",
+    "operator_type_label": "Citizen-led",
     "coverage_label": "National",
     "language_label": "Spanish",
     "requires_login_label": "No",
+    "accepts_reports_label_value": "Yes",
+    "public_search_label_value": "Yes",
+    "report_found_label_value": "Yes",
     "owner_label": "Citizen platform",
-    "last_checked_label": "2026-06-26"
+    "service_labels": [
+      "Report missing people",
+      "Search people",
+      "Mark found / safe"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
   },
   {
     "slug": "red-ayuda-venezuela",
+    "section": "missing",
     "name": "Red Ayuda Venezuela",
     "url": "https://redayudavenezuela.com/",
     "category": "website",
@@ -102,8 +203,23 @@
     "requires_login": false,
     "last_checked_at": "2026-06-26",
     "owner": "Citizen platform",
+    "operator_type": "citizen",
+    "status": "active",
     "crawler_priority": 1,
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": true,
+    "public_contact": null,
+    "services": [
+      "missing-report",
+      "missing-search",
+      "safe-checkin"
+    ],
     "summary": "Citizen emergency platform for marking people as safe, searching people, and coordinating help after the earthquake.",
+    "use_when": {
+      "es": "Úsalo si quieres avisar que alguien está a salvo o buscar a una persona.",
+      "en": "Use this to mark someone safe or search for a person."
+    },
     "notes": [
       "URL loaded successfully during the June 26, 2026 link check.",
       "The site describes itself as a citizen emergency network for safe-status reports, people search, and aid coordination."
@@ -115,105 +231,404 @@
       "citizen-platform",
       "reporting"
     ],
+    "use_when_label": "Use this to mark someone safe or search for a person.",
+    "warning_label": "",
     "category_label": "Website",
     "purpose_label": "Report and search",
+    "status_label": "Active",
+    "operator_type_label": "Citizen-led",
     "coverage_label": "National",
     "language_label": "Spanish",
     "requires_login_label": "No",
+    "accepts_reports_label_value": "Yes",
+    "public_search_label_value": "Yes",
+    "report_found_label_value": "Yes",
     "owner_label": "Citizen platform",
-    "last_checked_label": "2026-06-26"
+    "service_labels": [
+      "Report missing people",
+      "Search people",
+      "Safe check-in"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
   },
   {
-    "slug": "terremoto-venezuela-mapa",
-    "name": "Terremoto Venezuela",
-    "url": "http://terremotovenezuela.com/",
-    "category": "map",
-    "purpose": "context-and-location",
+    "slug": "localizados-venezuela",
+    "section": "located",
+    "name": "Localizados Venezuela",
+    "url": "https://localizadosvenezuela.com/",
+    "api_url": "https://localizadosvenezuela.com/api",
+    "source_code_url": "https://github.com/ggangix/localizados-venezuela",
+    "category": "website",
+    "purpose": "located-people",
     "coverage": "national",
     "language": "es",
     "requires_login": false,
     "last_checked_at": "2026-06-26",
-    "owner": "Unknown",
-    "crawler_priority": 3,
-    "summary": "Incident and damage mapping site that may help contextualize locations linked to missing-person reports.",
+    "owner": "Volunteer initiative",
+    "operator_type": "volunteer",
+    "status": "active",
+    "crawler_priority": 1,
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "located-search",
+      "located-report"
+    ],
+    "summary": "Open-source public platform for searching and contributing records of people already located after the earthquake, with a public read API for integrations.",
+    "use_when": {
+      "es": "Úsalo si la persona ya fue localizada — no es para reportar desaparecidos.",
+      "en": "Use this if the person has already been located — not for reporting missing people."
+    },
+    "warning": {
+      "es": "Solo para personas ya localizadas. Si buscas a alguien desaparecido, usa la sección Personas desaparecidas.",
+      "en": "Only for people already located. To search for someone missing, use the Missing people section."
+    },
     "notes": [
-      "Useful as supporting context, not as a primary missing-person registry.",
-      "URL redirects to HTTPS and loaded successfully during the June 26, 2026 link check."
+      "Public API documentation is available at /api and the v1 GET endpoints return JSON with CORS enabled for read access.",
+      "The project README explicitly says it is only for people already located and points missing-person cases to desaparecidosterremotovenezuela.com."
     ],
     "tags": [
       "earthquake",
-      "map",
-      "damage",
-      "context"
+      "missing-persons",
+      "open-source",
+      "api",
+      "hospitals"
     ],
-    "category_label": "Map",
-    "purpose_label": "Context and location",
+    "use_when_label": "Use this if the person has already been located — not for reporting missing people.",
+    "warning_label": "Only for people already located. To search for someone missing, use the Missing people section.",
+    "category_label": "Website",
+    "purpose_label": "Located people",
+    "status_label": "Active",
+    "operator_type_label": "Volunteer",
     "coverage_label": "National",
     "language_label": "Spanish",
     "requires_login_label": "No",
-    "owner_label": "Unknown",
-    "last_checked_label": "2026-06-26"
+    "accepts_reports_label_value": "Yes",
+    "public_search_label_value": "Yes",
+    "report_found_label_value": "No",
+    "owner_label": "Volunteer initiative",
+    "service_labels": [
+      "Search located people",
+      "Contribute located people"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "https://localizadosvenezuela.com/api",
+    "source_code_url_label": "https://github.com/ggangix/localizados-venezuela"
   },
   {
-    "slug": "kobotoolbox-terremotove",
-    "name": "KoboToolbox TerremotoVE",
-    "url": "https://ee.kobotoolbox.org/x/eaEmQ9YW",
-    "category": "form",
-    "purpose": "reporting",
+    "slug": "venezuela-resiste-terremotove",
+    "section": "missing",
+    "name": "Venezuela Resiste (TerremotoVE)",
+    "url": "https://terremotove.netlify.app/",
+    "category": "map",
+    "purpose": "report-and-search",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "last_checked_at": "2026-06-26",
+    "owner": "Acceso Libre",
+    "operator_type": "citizen",
+    "status": "active",
+    "crawler_priority": 2,
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "missing-report",
+      "missing-search",
+      "damage-reports"
+    ],
+    "summary": "Collaborative map from Acceso Libre for reporting collapsed buildings and missing people, mainly in Yaracuy, to coordinate search and rescue.",
+    "use_when": {
+      "es": "Úsalo si quieres reportar o ubicar personas desaparecidas y edificios colapsados en el mapa.",
+      "en": "Use this to report or locate missing people and collapsed buildings on the map."
+    },
+    "notes": [
+      "URL loaded successfully during the June 26, 2026 link check.",
+      "Open citizen map; reports are not independently verified and public corrections are invited."
+    ],
+    "tags": [
+      "earthquake",
+      "missing-persons",
+      "map",
+      "damage",
+      "community"
+    ],
+    "use_when_label": "Use this to report or locate missing people and collapsed buildings on the map.",
+    "warning_label": "",
+    "category_label": "Map",
+    "purpose_label": "Report and search",
+    "status_label": "Active",
+    "operator_type_label": "Citizen-led",
+    "coverage_label": "National",
+    "language_label": "Spanish",
+    "requires_login_label": "No",
+    "accepts_reports_label_value": "Yes",
+    "public_search_label_value": "Yes",
+    "report_found_label_value": "No",
+    "owner_label": "Acceso Libre",
+    "service_labels": [
+      "Report missing people",
+      "Search people",
+      "Damage reports"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
+  },
+  {
+    "slug": "enlaza-venezuela",
+    "section": "aid",
+    "name": "Enlaza Venezuela",
+    "url": "https://www.enlazavenezuela.com/",
+    "category": "website",
+    "purpose": "aid-and-updates",
     "coverage": "national",
     "language": "es",
     "requires_login": false,
     "last_checked_at": "2026-06-26",
     "owner": "Community responders",
-    "crawler_priority": 2,
-    "summary": "Community reporting form for missing or trapped people, damage, and relief information.",
+    "operator_type": "community",
+    "status": "active",
+    "crawler_priority": 3,
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "aid-resources",
+      "shelters",
+      "situation-updates"
+    ],
+    "summary": "Community platform that connects people who need rescue, shelter, food, or transport with volunteers through WhatsApp, with on-the-way and rescued status updates.",
+    "use_when": {
+      "es": "Úsalo si necesitas o puedes ofrecer ayuda: rescate, refugio, comida o transporte.",
+      "en": "Use this if you need or can offer help: rescue, shelter, food, or transport."
+    },
     "notes": [
       "URL loaded successfully during the June 26, 2026 link check.",
-      "May connect to public Kobo maps or dashboards."
+      "Coordinates aid requests and offers; it is not a missing-person search or family-tracing tool."
     ],
     "tags": [
       "earthquake",
-      "form",
-      "reporting",
-      "community"
+      "emergency",
+      "aid",
+      "community",
+      "rescue"
     ],
-    "category_label": "Form",
-    "purpose_label": "Reporting",
+    "use_when_label": "Use this if you need or can offer help: rescue, shelter, food, or transport.",
+    "warning_label": "",
+    "category_label": "Website",
+    "purpose_label": "Aid and updates",
+    "status_label": "Active",
+    "operator_type_label": "Community",
     "coverage_label": "National",
     "language_label": "Spanish",
     "requires_login_label": "No",
+    "accepts_reports_label_value": "Yes",
+    "public_search_label_value": "Yes",
+    "report_found_label_value": "No",
     "owner_label": "Community responders",
-    "last_checked_label": "2026-06-26"
+    "service_labels": [
+      "Aid resources",
+      "Shelters",
+      "Situation updates"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
   },
   {
     "slug": "yummy-sos",
-    "name": "Yummy - SOS",
-    "url": "https://sos.yummyrides.com",
+    "section": "aid",
+    "name": "Yummy SOS",
+    "url": "https://sos.yummyrides.com/",
     "category": "website",
-    "purpose": "reporting",
+    "purpose": "aid-and-updates",
     "coverage": "national",
     "language": "es",
     "requires_login": false,
     "last_checked_at": "2026-06-26",
     "owner": "Company platform",
-    "crawler_priority": 2,
-    "summary": "Yummy-operated emergency website for reporting structural damage, viewing public incident reports, and finding shelters after the earthquake.",
+    "operator_type": "company",
+    "status": "active",
+    "crawler_priority": 3,
+    "accepts_new_reports": true,
+    "public_search": true,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "damage-reports",
+      "shelters",
+      "aid-resources"
+    ],
+    "summary": "Emergency site operated by Yummy for reporting structural damage with photos and location, viewing public damage reports, and finding shelters and emergency resources.",
+    "use_when": {
+      "es": "Úsalo para reportar o consultar daños estructurales y encontrar refugios y recursos de emergencia.",
+      "en": "Use this to report or check structural damage and find shelters and emergency resources."
+    },
     "notes": [
       "URL loaded successfully during the June 26, 2026 link check.",
-      "Page metadata and visible navigation show public flows for reporting damage, browsing reports, shelters, and resources."
+      "The site states it complements, not replaces, official agencies; it is for damage and aid, not missing-person tracing."
     ],
     "tags": [
       "earthquake",
+      "emergency",
       "damage",
-      "reporting",
-      "emergency"
+      "shelter",
+      "company"
     ],
+    "use_when_label": "Use this to report or check structural damage and find shelters and emergency resources.",
+    "warning_label": "",
     "category_label": "Website",
-    "purpose_label": "Reporting",
+    "purpose_label": "Aid and updates",
+    "status_label": "Active",
+    "operator_type_label": "Company",
     "coverage_label": "National",
     "language_label": "Spanish",
     "requires_login_label": "No",
+    "accepts_reports_label_value": "Yes",
+    "public_search_label_value": "Yes",
+    "report_found_label_value": "No",
     "owner_label": "Company platform",
-    "last_checked_label": "2026-06-26"
+    "service_labels": [
+      "Damage reports",
+      "Shelters",
+      "Aid resources"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
+  },
+  {
+    "slug": "ayuda-venezuela-2026",
+    "section": "aid",
+    "name": "Ayuda Venezuela 2026",
+    "url": "https://ayudavenezuela2026.com/",
+    "category": "website",
+    "purpose": "aid-and-updates",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": null,
+    "last_checked_at": "2026-06-26",
+    "owner": "Unknown",
+    "operator_type": "unknown",
+    "status": "monitor",
+    "crawler_priority": 3,
+    "accepts_new_reports": null,
+    "public_search": null,
+    "report_found": null,
+    "public_contact": null,
+    "services": [
+      "aid-resources"
+    ],
+    "summary": "Aid platform related to the 2026 Venezuela earthquake. Capabilities are not yet verified.",
+    "use_when": {
+      "es": "Úsalo como vía adicional de ayuda; verifica primero porque aún no está confirmada.",
+      "en": "Use this as an additional aid channel; verify first, as it is not yet confirmed."
+    },
+    "warning": {
+      "es": "Aún no verificado. La revisión automática fue bloqueada (403); confirma el sitio antes de confiar en él.",
+      "en": "Not yet verified. The automated check was blocked (403); confirm the site before relying on it."
+    },
+    "notes": [
+      "Automated link check returned HTTP 403 on June 26, 2026, so availability and capabilities must be verified manually.",
+      "Listed provisionally as an aid resource pending manual review."
+    ],
+    "tags": [
+      "earthquake",
+      "emergency",
+      "aid"
+    ],
+    "use_when_label": "Use this as an additional aid channel; verify first, as it is not yet confirmed.",
+    "warning_label": "Not yet verified. The automated check was blocked (403); confirm the site before relying on it.",
+    "category_label": "Website",
+    "purpose_label": "Aid and updates",
+    "status_label": "Manual verification",
+    "operator_type_label": "Unverified",
+    "coverage_label": "National",
+    "language_label": "Spanish",
+    "requires_login_label": "Not checked",
+    "accepts_reports_label_value": "Not checked",
+    "public_search_label_value": "Not checked",
+    "report_found_label_value": "Not checked",
+    "owner_label": "Unknown",
+    "service_labels": [
+      "Aid resources"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
+  },
+  {
+    "slug": "copernicus-ems-emsr884",
+    "section": "developer",
+    "name": "Copernicus EMS Damage Maps (EMSR884)",
+    "url": "https://mapping.emergency.copernicus.eu/activations/EMSR884/reporting/",
+    "category": "map",
+    "purpose": "context-and-location",
+    "coverage": "national",
+    "language": "en",
+    "requires_login": false,
+    "last_checked_at": "2026-06-26",
+    "owner": "Copernicus EMS",
+    "operator_type": "official",
+    "status": "active",
+    "crawler_priority": 2,
+    "accepts_new_reports": false,
+    "public_search": true,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "damage-reports",
+      "situation-updates"
+    ],
+    "summary": "Official Copernicus satellite rapid-mapping activation for the 2026 Venezuela earthquake: authoritative damage-assessment maps and geospatial data for responders, journalists, and analysts.",
+    "use_when": {
+      "es": "Úsalo para consultar mapas oficiales de daños por satélite y datos geoespaciales del terremoto.",
+      "en": "Use this for official satellite damage maps and geospatial data of the earthquake."
+    },
+    "notes": [
+      "Copernicus EMS Rapid Mapping activation EMSR884, requested for the June 24, 2026 earthquake.",
+      "Provides delineation and grading damage products as PDF maps and GIS data; it has no person-search or family-tracing."
+    ],
+    "tags": [
+      "earthquake",
+      "map",
+      "damage",
+      "official"
+    ],
+    "use_when_label": "Use this for official satellite damage maps and geospatial data of the earthquake.",
+    "warning_label": "",
+    "category_label": "Map",
+    "purpose_label": "Context and location",
+    "status_label": "Active",
+    "operator_type_label": "Official",
+    "coverage_label": "National",
+    "language_label": "English",
+    "requires_login_label": "No",
+    "accepts_reports_label_value": "No",
+    "public_search_label_value": "Yes",
+    "report_found_label_value": "No",
+    "owner_label": "Copernicus EMS",
+    "service_labels": [
+      "Damage reports",
+      "Situation updates"
+    ],
+    "last_checked_label": "2026-06-26",
+    "public_contact_label": "Not checked",
+    "api_url_label": "Not checked",
+    "source_code_url_label": "Not checked"
   }
 ]
