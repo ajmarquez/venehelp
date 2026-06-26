@@ -934,11 +934,11 @@ const localeCopy = {
     alternateLocaleLabel: "English",
     htmlTitle: "VeneHelp",
     siteDescription:
-      "Directorio público de plataformas para buscar, reportar y marcar personas encontradas tras el terremoto en Venezuela.",
-    eyebrow: "Directorio de personas desaparecidas",
-    heroTitle: "Dónde buscar y reportar personas",
+      "Directorio público de plataformas para buscar y reportar personas, ver localizados y encontrar ayuda de emergencia tras el terremoto en Venezuela.",
+    eyebrow: "Directorio del terremoto en Venezuela",
+    heroTitle: "Dónde buscar personas y encontrar ayuda",
     heroLede:
-      "VeneHelp reúne las plataformas públicas donde familias, voluntarios y buscadores están reportando, buscando y marcando personas como encontradas tras el terremoto en Venezuela.",
+      "VeneHelp reúne las plataformas públicas para buscar y reportar personas desaparecidas, ver quién ya fue localizado y encontrar ayuda de emergencia tras el terremoto en Venezuela.",
     heroPromise: "No recibimos reportes aquí; te ayudamos a elegir el sitio correcto.",
     directoryNote:
       "Mostramos en un solo lugar qué sitios aceptan casos nuevos, cuáles tienen búsqueda pública y cuáles permiten marcar a alguien como encontrado o a salvo.",
@@ -982,12 +982,9 @@ const localeCopy = {
       "Tabla beta de trazabilidad con búsqueda y filtros por estado. Los datos siguen siendo parciales y dependen de adaptadores públicos por sitio.",
     findSourceTitle: "Directorio",
     findSourceIntro:
-      "Agrupamos las plataformas por lo que necesitas: personas desaparecidas, personas ya localizadas y la ruta humanitaria oficial. Los recursos técnicos para desarrolladores están al final.",
+      "Agrupamos las plataformas por lo que necesitas: personas desaparecidas, personas ya localizadas y ayuda de emergencia. Los recursos técnicos para desarrolladores están al final.",
     searchLabel: "Buscar",
     searchPlaceholder: "Busca por nombre, servicio o etiqueta",
-    registrySectionTitle: "Registros",
-    registrySectionIntro:
-      "Plataformas públicas para buscar personas, reportar casos, avisar que alguien está a salvo o escalar a una ruta humanitaria.",
     missingSectionTitle: "Personas desaparecidas",
     missingSectionIntro: "Plataformas para buscar y reportar personas desaparecidas tras el terremoto.",
     locatedSectionTitle: "Personas localizadas",
@@ -997,7 +994,7 @@ const localeCopy = {
     developerEyebrow: "Sección técnica",
     developerSectionTitle: "Desarrolladores",
     developerSectionIntro:
-      "APIs, datasets y proyectos open source útiles para integraciones, agentes y análisis técnico.",
+      "APIs, datasets, mapas oficiales de daños y proyectos open source útiles para integraciones, agentes y análisis técnico.",
     developerEmpty: "Todavía no hay recursos técnicos publicados en esta versión.",
     capSearch: "Búsqueda pública",
     capReport: "Acepta reportes",
@@ -1019,7 +1016,7 @@ const localeCopy = {
     details: "Detalles",
     directLinkPending: "Enlace directo pendiente",
     footer:
-      "VeneHelp es un directorio público de plataformas para buscar y reportar personas tras el terremoto en Venezuela. Última generación: {generatedAt}.",
+      "VeneHelp es un directorio público de plataformas para buscar y reportar personas y encontrar ayuda tras el terremoto en Venezuela. Última generación: {generatedAt}.",
     allSourcesEyebrow: "Todos los recursos",
     allSourcesTitle: "Directorio de recursos",
     allSourcesIntro: "Cada recurso tiene una página estable de detalle y una exportación JSON canónica por idioma.",
@@ -1054,11 +1051,11 @@ const localeCopy = {
     alternateLocaleLabel: "Español",
     htmlTitle: "VeneHelp",
     siteDescription:
-      "Public directory of platforms to search for, report, and mark people found after the earthquake in Venezuela.",
-    eyebrow: "Missing-person directory",
-    heroTitle: "Where to search for and report people",
+      "Public directory of platforms to search for and report people, see who's been located, and find emergency aid after the earthquake in Venezuela.",
+    eyebrow: "Venezuela earthquake directory",
+    heroTitle: "Where to find people and get help",
     heroLede:
-      "VeneHelp gathers the public platforms where families, volunteers, and searchers are reporting, searching for, and marking people as found after the earthquake in Venezuela.",
+      "VeneHelp gathers the public platforms to search for and report missing people, see who has already been located, and find emergency aid after the earthquake in Venezuela.",
     heroPromise: "We don't take reports here; we help you choose the right site.",
     directoryNote:
       "We show in one place which sites accept new cases, which offer public search, and which let someone be marked as found or safe.",
@@ -1102,12 +1099,9 @@ const localeCopy = {
       "Beta provenance table with search and status filters. The data is still partial and depends on public per-site adapters.",
     findSourceTitle: "Directory",
     findSourceIntro:
-      "We group platforms by what you need: missing people, people already located, and the official humanitarian path. Technical resources for developers are at the end.",
+      "We group platforms by what you need: missing people, people already located, and emergency aid. Technical resources for developers are at the end.",
     searchLabel: "Search",
     searchPlaceholder: "Search by name, service, or tag",
-    registrySectionTitle: "Registries",
-    registrySectionIntro:
-      "Public platforms for searching for people, filing reports, marking someone safe, or escalating through a humanitarian path.",
     missingSectionTitle: "Missing people",
     missingSectionIntro: "Platforms to search for and report missing people after the earthquake.",
     locatedSectionTitle: "Located people",
@@ -1117,7 +1111,7 @@ const localeCopy = {
     developerEyebrow: "Technical section",
     developerSectionTitle: "Developers",
     developerSectionIntro:
-      "APIs, datasets, and open-source projects that are useful for integrations, agents, and technical analysis.",
+      "APIs, datasets, official damage maps, and open-source projects that are useful for integrations, agents, and technical analysis.",
     developerEmpty: "No technical resources are published in this version yet.",
     capSearch: "Public search",
     capReport: "Accepts reports",
@@ -1139,7 +1133,7 @@ const localeCopy = {
     details: "Details",
     directLinkPending: "Direct link pending",
     footer:
-      "VeneHelp is a public directory of platforms for searching for and reporting people after the earthquake in Venezuela. Last generated: {generatedAt}.",
+      "VeneHelp is a public directory of platforms for finding and reporting people and getting help after the earthquake in Venezuela. Last generated: {generatedAt}.",
     allSourcesEyebrow: "All sources",
     allSourcesTitle: "Resource directory",
     allSourcesIntro: "Each resource has a stable detail page plus a canonical per-language JSON export.",
