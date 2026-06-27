@@ -12,6 +12,9 @@ const outDirs = [
 const generatedAt = new Date().toISOString();
 const userAgent = "VeneHelpLabsBot/1.0 (+https://directorioterremotovenezuela.org/labs/)";
 const timeoutMs = 20_000;
+const hospitalListSourceUrls = new Set([
+  "https://x.com/soydesireelugo/status/2070189789718937983"
+]);
 
 const locationStopwords = new Set([
   "DE", "DEL", "LA", "LAS", "LOS", "EL", "EN", "Y", "A", "AL", "UN", "UNA", "POR",
@@ -185,6 +188,19 @@ const parseGeoPoint = (value) => {
 
 const looksLikeUrl = (value) => /^https?:\/\//i.test(String(value || "").trim());
 
+const canonicalizeUrl = (value) => {
+  const raw = String(value || "").trim();
+  if (!raw || !looksLikeUrl(raw)) return null;
+
+  try {
+    const url = new URL(raw);
+    const pathname = url.pathname.replace(/\/+$/g, "") || "/";
+    return `${url.protocol.toLowerCase()}//${url.host.toLowerCase()}${pathname}`;
+  } catch {
+    return raw;
+  }
+};
+
 const titleCase = (value) =>
   normalizeWhitespace(
     String(value || "")
@@ -287,13 +303,25 @@ const parseKoboMissingRecord = (row) => {
   const age = extractAge([description, additional, linkField].join(" "));
   const contacts = unique([...extractPhones(additional), ...extractPhones(linkField), ...extractEmails(additional), ...extractEmails(linkField)]);
   const point = parseGeoPoint(row.Ubicaci_n);
-  const isMatchable = Boolean(nameParse.name || cedula);
+  const sourceUrl = looksLikeUrl(linkField) ? linkField : null;
+  const canonicalSourceUrl = canonicalizeUrl(sourceUrl);
+  const sourceType = canonicalSourceUrl && hospitalListSourceUrls.has(canonicalSourceUrl)
+    ? "hospital-list"
+    : "missing-report";
+  const isMatchable = Boolean(nameParse.name || cedula) && sourceType === "missing-report";
+  const notMatchableReason = sourceType === "hospital-list"
+    ? "hospital-source"
+    : isMatchable
+      ? null
+      : nameParse.reason;
 
   return {
     id: `kobo-${row._id}`,
     source: "kobotoolbox-terremotove",
     sourceRecordId: String(row._id),
-    sourceUrl: looksLikeUrl(linkField) ? linkField : null,
+    sourceUrl,
+    canonicalSourceUrl,
+    sourceType,
     submittedAt: row._submission_time || null,
     event,
     category: event.includes("familia_desaparecida") ? "missing-family" : "missing-person",
@@ -309,7 +337,7 @@ const parseKoboMissingRecord = (row) => {
     geo: point,
     locationText: freeText,
     isMatchable,
-    notMatchableReason: isMatchable ? null : nameParse.reason
+    notMatchableReason
   };
 };
 
@@ -784,6 +812,7 @@ const buildSummary = ({ koboRows, missingRecords, localizadosRaw, localizadosDed
     missing: {
       totalRecords: missingRecords.length,
       matchableRecords: missingRecords.filter((record) => record.isMatchable).length,
+      hospitalSourceRecords: missingRecords.filter((record) => record.sourceType === "hospital-list").length,
       withCedula: missingRecords.filter((record) => record.cedula).length
     },
     matching: {

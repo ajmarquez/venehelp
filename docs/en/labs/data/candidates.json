@@ -1,299 +1,8 @@
 {
-  "generatedAt": "2026-06-27T19:00:19.626Z",
-  "totalGroups": 33,
-  "totalPairs": 58,
+  "generatedAt": "2026-06-27T19:33:52.860Z",
+  "totalGroups": 29,
+  "totalPairs": 52,
   "results": [
-    {
-      "missing": {
-        "id": "kobo-792576479",
-        "name": "Delgado Edimer",
-        "rawDescription": "Delgado Edimer — 23 años",
-        "cedula": null,
-        "age": 23,
-        "contacts": [],
-        "sourceUrl": "https://x.com/soydesireelugo/status/2070189789718937983?s=20",
-        "submittedAt": "2026-06-25T19:36:07"
-      },
-      "candidates": [
-        {
-          "missingId": "kobo-792576479",
-          "locatedId": "localizados-delgado-edimer-lypiz6",
-          "missingName": "Delgado Edimer",
-          "locatedName": "Delgado Edimer",
-          "locatedHospital": "Hospital Domingo Luciani",
-          "locatedAddress": "Sin información",
-          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/delgado-edimer-lypiz6",
-          "locatedCondition": "desconocido",
-          "locatedSourceFile": "consolidado.csv",
-          "missingCedula": null,
-          "locatedCedula": null,
-          "missingAge": 23,
-          "locatedAge": 23,
-          "score": 0.99,
-          "scorePercent": 99,
-          "confidence": "high",
-          "reasons": [
-            "Exact normalized name",
-            "Exact age match"
-          ],
-          "nameScore": 1,
-          "locationScore": 0,
-          "identitySignal": "none",
-          "ageDiff": 0
-        },
-        {
-          "missingId": "kobo-792576479",
-          "locatedId": "localizados-delgado-edimar-g06nqs",
-          "missingName": "Delgado Edimer",
-          "locatedName": "Delgado Edimar",
-          "locatedHospital": "Hospital Domingo Luciani",
-          "locatedAddress": null,
-          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/delgado-edimar-g06nqs",
-          "locatedCondition": "desconocido",
-          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
-          "missingCedula": null,
-          "locatedCedula": null,
-          "missingAge": 23,
-          "locatedAge": 23,
-          "score": 0.84,
-          "scorePercent": 84,
-          "confidence": "medium",
-          "reasons": [
-            "Strong name similarity",
-            "Exact age match"
-          ],
-          "nameScore": 0.833,
-          "locationScore": 0,
-          "identitySignal": "none",
-          "ageDiff": 0
-        }
-      ],
-      "hospitalesVenezuelaMatches": [
-        {
-          "id": "hospitales-en-venezuela:DELGADO EDIMER:HOSPITAL DOMINGO LUCIANI EL LLANITO:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Delgado Edimer",
-          "name": "Delgado Edimer",
-          "detail": "15 años",
-          "age": 15,
-          "maskedCedula": null,
-          "locationName": "Hospital Domingo Luciani (El Llanito)",
-          "city": null,
-          "phone": null,
-          "supportScore": 0.98,
-          "supportScorePercent": 98,
-          "supportReasons": [
-            "Exact name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        },
-        {
-          "id": "hospitales-en-venezuela:DELGADO EDIMER:HOSPITAL DOMINGO LUCIANI:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Delgado Edimer",
-          "name": "Delgado Edimer",
-          "detail": null,
-          "age": null,
-          "maskedCedula": null,
-          "locationName": "Hospital Domingo Luciani",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.98,
-          "supportScorePercent": 98,
-          "supportReasons": [
-            "Exact name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        },
-        {
-          "id": "hospitales-en-venezuela:EDIMER DELGADO:HOSPITAL DOMINGO LUCIANI CARACAS:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Delgado Edimer",
-          "name": "Edimer Delgado",
-          "detail": "23 años",
-          "age": 23,
-          "maskedCedula": null,
-          "locationName": "Hospital Domingo Luciani Caracas",
-          "city": null,
-          "phone": null,
-          "supportScore": 0.98,
-          "supportScorePercent": 98,
-          "supportReasons": [
-            "Very strong name match in Hospitales en Venezuela",
-            "Exact age match",
-            "Same hospital or facility"
-          ]
-        }
-      ],
-      "supportingSources": [
-        {
-          "key": "kobo",
-          "label": "KoboToolbox · TerremotoVE",
-          "note": "Delgado Edimer — 23 años",
-          "url": "https://x.com/soydesireelugo/status/2070189789718937983?s=20"
-        },
-        {
-          "key": "localizados",
-          "label": "Localizados Venezuela",
-          "note": "Delgado Edimer · Hospital Domingo Luciani",
-          "url": "https://localizadosvenezuela.com/buscar/delgado-edimer-lypiz6"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:DELGADO EDIMER:HOSPITAL DOMINGO LUCIANI EL LLANITO:",
-          "label": "Hospitales en Venezuela",
-          "note": "Delgado Edimer · 15 años · Hospital Domingo Luciani (El Llanito)",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:DELGADO EDIMER:HOSPITAL DOMINGO LUCIANI:",
-          "label": "Hospitales en Venezuela",
-          "note": "Delgado Edimer · Hospital Domingo Luciani",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:EDIMER DELGADO:HOSPITAL DOMINGO LUCIANI CARACAS:",
-          "label": "Hospitales en Venezuela",
-          "note": "Edimer Delgado · 23 años · Hospital Domingo Luciani Caracas",
-          "url": "https://hospitalesenvenezuela.com/"
-        }
-      ]
-    },
-    {
-      "missing": {
-        "id": "kobo-792590235",
-        "name": "Rondón Ángel",
-        "rawDescription": "Rondón Ángel — 12 años",
-        "cedula": null,
-        "age": 12,
-        "contacts": [],
-        "sourceUrl": "https://x.com/soydesireelugo/status/2070189789718937983?s=20",
-        "submittedAt": "2026-06-25T19:54:32"
-      },
-      "candidates": [
-        {
-          "missingId": "kobo-792590235",
-          "locatedId": "localizados-rondon-angel-fg3rva",
-          "missingName": "Rondón Ángel",
-          "locatedName": "Rondon Angel",
-          "locatedHospital": "Hospital Domingo Luciani",
-          "locatedAddress": null,
-          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/rondon-angel-fg3rva",
-          "locatedCondition": "desconocido",
-          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
-          "missingCedula": null,
-          "locatedCedula": null,
-          "missingAge": 12,
-          "locatedAge": 12,
-          "score": 0.99,
-          "scorePercent": 99,
-          "confidence": "high",
-          "reasons": [
-            "Exact normalized name",
-            "Exact age match"
-          ],
-          "nameScore": 1,
-          "locationScore": 0,
-          "identitySignal": "none",
-          "ageDiff": 0
-        }
-      ],
-      "hospitalesVenezuelaMatches": [
-        {
-          "id": "hospitales-en-venezuela:RONDON ANGEL:HOSPITAL DOMINGO LUCIANI EL LLANITO:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Rondón Ángel",
-          "name": "Rondon Angel",
-          "detail": "11 AÑOS",
-          "age": 11,
-          "maskedCedula": null,
-          "locationName": "Hospital Domingo Luciani (El Llanito)",
-          "city": null,
-          "phone": null,
-          "supportScore": 0.99,
-          "supportScorePercent": 99,
-          "supportReasons": [
-            "Exact name match in Hospitales en Venezuela",
-            "Close age",
-            "Same hospital or facility"
-          ]
-        },
-        {
-          "id": "hospitales-en-venezuela:RONDON ANGEL:HOSPITAL GENERAL DR DOMINGO LUCIANI EL LLANITO:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Rondón Ángel",
-          "name": "Rondón Ángel",
-          "detail": "12 años · Baruta",
-          "age": 12,
-          "maskedCedula": null,
-          "locationName": "Hospital General Dr. Domingo Luciani (El Llanito)",
-          "city": "Caracas",
-          "phone": null,
-          "supportScore": 0.99,
-          "supportScorePercent": 99,
-          "supportReasons": [
-            "Exact name match in Hospitales en Venezuela",
-            "Exact age match",
-            "Same hospital or facility"
-          ]
-        },
-        {
-          "id": "hospitales-en-venezuela:RONDON ANGEL:HOSPITAL DOMINGO LUCIANI:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Rondón Ángel",
-          "name": "Rondon Angel",
-          "detail": null,
-          "age": null,
-          "maskedCedula": null,
-          "locationName": "Hospital Domingo Luciani",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.98,
-          "supportScorePercent": 98,
-          "supportReasons": [
-            "Exact name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        }
-      ],
-      "supportingSources": [
-        {
-          "key": "kobo",
-          "label": "KoboToolbox · TerremotoVE",
-          "note": "Rondón Ángel — 12 años",
-          "url": "https://x.com/soydesireelugo/status/2070189789718937983?s=20"
-        },
-        {
-          "key": "localizados",
-          "label": "Localizados Venezuela",
-          "note": "Rondon Angel · Hospital Domingo Luciani",
-          "url": "https://localizadosvenezuela.com/buscar/rondon-angel-fg3rva"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:RONDON ANGEL:HOSPITAL DOMINGO LUCIANI EL LLANITO:",
-          "label": "Hospitales en Venezuela",
-          "note": "Rondon Angel · 11 AÑOS · Hospital Domingo Luciani (El Llanito)",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:RONDON ANGEL:HOSPITAL GENERAL DR DOMINGO LUCIANI EL LLANITO:",
-          "label": "Hospitales en Venezuela",
-          "note": "Rondón Ángel · 12 años · Baruta · Hospital General Dr. Domingo Luciani (El Llanito)",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:RONDON ANGEL:HOSPITAL DOMINGO LUCIANI:",
-          "label": "Hospitales en Venezuela",
-          "note": "Rondon Angel · Hospital Domingo Luciani",
-          "url": "https://hospitalesenvenezuela.com/"
-        }
-      ]
-    },
     {
       "missing": {
         "id": "kobo-792555139",
@@ -378,41 +87,41 @@
           ]
         },
         {
-          "id": "hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DOMINGO LUCIANI:",
+          "id": "hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL RICARDO BAQUERO GONZALEZ:",
           "source": "hospitales-en-venezuela",
           "sourceUrl": "https://hospitalesenvenezuela.com/",
           "sourceSearchTerm": "Carlos Castaño",
-          "name": "Carlos Castaño",
-          "detail": "12",
-          "age": 12,
+          "name": "Carlos Castano",
+          "detail": null,
+          "age": null,
           "maskedCedula": null,
-          "locationName": "Hospital Domingo Luciani",
+          "locationName": "Hospital Ricardo Baquero Gonzalez",
           "city": "Por confirmar",
           "phone": null,
-          "supportScore": 0.98,
-          "supportScorePercent": 98,
+          "supportScore": 0.94,
+          "supportScorePercent": 94,
           "supportReasons": [
             "Exact name match in Hospitales en Venezuela",
-            "Same hospital or facility"
+            "Related hospital wording"
           ]
         },
         {
-          "id": "hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DOMINGO LUCIANI:",
+          "id": "hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DR JOSE GREGORIO HERNANDEZ MAGALLANES DE CATIA:",
           "source": "hospitales-en-venezuela",
           "sourceUrl": "https://hospitalesenvenezuela.com/",
           "sourceSearchTerm": "Carlos Castaño",
           "name": "Carlos Castaño",
-          "detail": "25/6/26",
+          "detail": "· Politrauma",
           "age": null,
           "maskedCedula": null,
-          "locationName": "Hospital Domingo Luciani",
-          "city": "Por confirmar",
+          "locationName": "Hospital Dr. José Gregorio Hernández (Magallanes de Catia)",
+          "city": "Caracas",
           "phone": null,
-          "supportScore": 0.98,
-          "supportScorePercent": 98,
+          "supportScore": 0.94,
+          "supportScorePercent": 94,
           "supportReasons": [
             "Exact name match in Hospitales en Venezuela",
-            "Same hospital or facility"
+            "Related hospital wording"
           ]
         }
       ],
@@ -436,172 +145,15 @@
           "url": "https://hospitalesenvenezuela.com/"
         },
         {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DOMINGO LUCIANI:",
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL RICARDO BAQUERO GONZALEZ:",
           "label": "Hospitales en Venezuela",
-          "note": "Carlos Castaño · 12 · Hospital Domingo Luciani",
+          "note": "Carlos Castano · Hospital Ricardo Baquero Gonzalez",
           "url": "https://hospitalesenvenezuela.com/"
         },
         {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DOMINGO LUCIANI:",
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DR JOSE GREGORIO HERNANDEZ MAGALLANES DE CATIA:",
           "label": "Hospitales en Venezuela",
-          "note": "Carlos Castaño · 25/6/26 · Hospital Domingo Luciani",
-          "url": "https://hospitalesenvenezuela.com/"
-        }
-      ]
-    },
-    {
-      "missing": {
-        "id": "kobo-792586553",
-        "name": "Rengifo Guillermina",
-        "rawDescription": "Rengifo Guillermina — 71 años",
-        "cedula": null,
-        "age": 71,
-        "contacts": [],
-        "sourceUrl": "https://x.com/soydesireelugo/status/2070189789718937983?s=20",
-        "submittedAt": "2026-06-25T19:50:02"
-      },
-      "candidates": [
-        {
-          "missingId": "kobo-792586553",
-          "locatedId": "localizados-guillermina-rengifo-6s2vxp",
-          "missingName": "Rengifo Guillermina",
-          "locatedName": "Guillermina Rengifo",
-          "locatedHospital": "Hospital Domingo Luciani",
-          "locatedAddress": null,
-          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/guillermina-rengifo-6s2vxp",
-          "locatedCondition": "desconocido",
-          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
-          "missingCedula": null,
-          "locatedCedula": null,
-          "missingAge": 71,
-          "locatedAge": null,
-          "score": 0.88,
-          "scorePercent": 88,
-          "confidence": "medium",
-          "reasons": [
-            "Very strong name similarity"
-          ],
-          "nameScore": 1,
-          "locationScore": 0,
-          "identitySignal": "none",
-          "ageDiff": null
-        },
-        {
-          "missingId": "kobo-792586553",
-          "locatedId": "localizados-rengifo-guillermina-8hcyj9",
-          "missingName": "Rengifo Guillermina",
-          "locatedName": "Rengifo Guillermina",
-          "locatedHospital": "Hospital Domingo Luciani",
-          "locatedAddress": null,
-          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/rengifo-guillermina-8hcyj9",
-          "locatedCondition": "desconocido",
-          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
-          "missingCedula": null,
-          "locatedCedula": null,
-          "missingAge": 71,
-          "locatedAge": 46,
-          "score": 0.86,
-          "scorePercent": 86,
-          "confidence": "medium",
-          "reasons": [
-            "Exact normalized name",
-            "Age conflict"
-          ],
-          "nameScore": 1,
-          "locationScore": 0,
-          "identitySignal": "none",
-          "ageDiff": 25
-        }
-      ],
-      "hospitalesVenezuelaMatches": [
-        {
-          "id": "hospitales-en-venezuela:GUILLERMINA RENGIFO:HOSPITAL LUCIANI CARACAS:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Rengifo Guillermina",
-          "name": "Guillermina Rengifo",
-          "detail": "71",
-          "age": 71,
-          "maskedCedula": null,
-          "locationName": "HOSPITAL LUCIANI CARACAS",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.98,
-          "supportScorePercent": 98,
-          "supportReasons": [
-            "Very strong name match in Hospitales en Venezuela",
-            "Exact age match",
-            "Same hospital or facility"
-          ]
-        },
-        {
-          "id": "hospitales-en-venezuela:GUILLERMINA RENGIFO:HOSPITAL DOMINGO LUCIANI:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Rengifo Guillermina",
-          "name": "Guillermina Rengifo",
-          "detail": null,
-          "age": null,
-          "maskedCedula": null,
-          "locationName": "Hospital Domingo Luciani",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.92,
-          "supportScorePercent": 92,
-          "supportReasons": [
-            "Very strong name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        },
-        {
-          "id": "hospitales-en-venezuela:RENGIFO GUILLERMINA NA:HOSPITAL DOMINGO LUCIANI:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Rengifo Guillermina",
-          "name": "Rengifo Guillermina Na",
-          "detail": null,
-          "age": null,
-          "maskedCedula": null,
-          "locationName": "Hospital Domingo Luciani",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.92,
-          "supportScorePercent": 92,
-          "supportReasons": [
-            "Very strong name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        }
-      ],
-      "supportingSources": [
-        {
-          "key": "kobo",
-          "label": "KoboToolbox · TerremotoVE",
-          "note": "Rengifo Guillermina — 71 años",
-          "url": "https://x.com/soydesireelugo/status/2070189789718937983?s=20"
-        },
-        {
-          "key": "localizados",
-          "label": "Localizados Venezuela",
-          "note": "Guillermina Rengifo · Hospital Domingo Luciani",
-          "url": "https://localizadosvenezuela.com/buscar/guillermina-rengifo-6s2vxp"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:GUILLERMINA RENGIFO:HOSPITAL LUCIANI CARACAS:",
-          "label": "Hospitales en Venezuela",
-          "note": "Guillermina Rengifo · 71 · HOSPITAL LUCIANI CARACAS",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:GUILLERMINA RENGIFO:HOSPITAL DOMINGO LUCIANI:",
-          "label": "Hospitales en Venezuela",
-          "note": "Guillermina Rengifo · Hospital Domingo Luciani",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:RENGIFO GUILLERMINA NA:HOSPITAL DOMINGO LUCIANI:",
-          "label": "Hospitales en Venezuela",
-          "note": "Rengifo Guillermina Na · Hospital Domingo Luciani",
+          "note": "Carlos Castaño · · Politrauma · Hospital Dr. José Gregorio Hernández (Magallanes de Catia)",
           "url": "https://hospitalesenvenezuela.com/"
         }
       ]
@@ -667,25 +219,6 @@
           ]
         },
         {
-          "id": "hospitales-en-venezuela:MARCO REINA:HOSPITAL MIGUEL PEREZ CARRENO PEDIATRIA:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Marco Reina",
-          "name": "Marco Reina",
-          "detail": null,
-          "age": null,
-          "maskedCedula": null,
-          "locationName": "Hospital Miguel Pérez Carreño - pediatría",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.98,
-          "supportScorePercent": 98,
-          "supportReasons": [
-            "Exact name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        },
-        {
           "id": "hospitales-en-venezuela:MARCO REINA NA:HOSPITAL PEREZ CARRENO:",
           "source": "hospitales-en-venezuela",
           "sourceUrl": "https://hospitalesenvenezuela.com/",
@@ -722,12 +255,6 @@
           "key": "hospitales-en-venezuela:hospitales-en-venezuela:MARCO REINA:HOSPITAL MIGUEL PEREZ CARRENO PEDIATRIA:",
           "label": "Hospitales en Venezuela",
           "note": "Marco Reina · 49 años · Fallecido · Signos vitales · Guaira · Hospital Miguel Pérez Carreño - pediatría",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:MARCO REINA:HOSPITAL MIGUEL PEREZ CARRENO PEDIATRIA:",
-          "label": "Hospitales en Venezuela",
-          "note": "Marco Reina · Hospital Miguel Pérez Carreño - pediatría",
           "url": "https://hospitalesenvenezuela.com/"
         },
         {
@@ -2666,62 +2193,6 @@
           "label": "Localizados Venezuela",
           "note": "Jorge Delgado · Campo de Golf Caribe — sobrevivientes (Playa Los Cocos)",
           "url": "https://localizadosvenezuela.com/buscar/jorge-delgado-xepc9c"
-        }
-      ]
-    },
-    {
-      "missing": {
-        "id": "kobo-793767732",
-        "name": "Leandro Fernández",
-        "rawDescription": "Leandro Fernández",
-        "cedula": null,
-        "age": null,
-        "contacts": [
-          "04242137233"
-        ],
-        "sourceUrl": "https://x.com/soydesireelugo/status/2070189789718937983",
-        "submittedAt": "2026-06-26T21:56:48"
-      },
-      "candidates": [
-        {
-          "missingId": "kobo-793767732",
-          "locatedId": "localizados-rodrigo-fernandez-erqxpb",
-          "missingName": "Leandro Fernández",
-          "locatedName": "Rodrigo Fernandez",
-          "locatedHospital": "Hospital Pérez Carreño",
-          "locatedAddress": null,
-          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/rodrigo-fernandez-erqxpb",
-          "locatedCondition": "desconocido",
-          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
-          "missingCedula": null,
-          "locatedCedula": null,
-          "missingAge": null,
-          "locatedAge": null,
-          "score": 0.68,
-          "scorePercent": 68,
-          "confidence": "low",
-          "reasons": [
-            "Moderate name similarity"
-          ],
-          "nameScore": 0.733,
-          "locationScore": 0,
-          "identitySignal": "none",
-          "ageDiff": null
-        }
-      ],
-      "hospitalesVenezuelaMatches": [],
-      "supportingSources": [
-        {
-          "key": "kobo",
-          "label": "KoboToolbox · TerremotoVE",
-          "note": "Leandro Fernández",
-          "url": "https://x.com/soydesireelugo/status/2070189789718937983"
-        },
-        {
-          "key": "localizados",
-          "label": "Localizados Venezuela",
-          "note": "Rodrigo Fernandez · Hospital Pérez Carreño",
-          "url": "https://localizadosvenezuela.com/buscar/rodrigo-fernandez-erqxpb"
         }
       ]
     },

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-27T19:00:19.626Z",
+  "generatedAt": "2026-06-27T19:33:52.860Z",
   "sources": {
     "kobo": {
       "assetUid": "a8XWDsdUcpBzXGtgQmiiro",
-      "rows": 1487,
+      "rows": 1557,
       "eventCounts": {
         "edificio_colapsado___da_o_estructural": 144,
         "punto_de_acopio___primeros_auxilios": 50,
@@ -26,8 +26,8 @@
         "persona_desaparecida familia_desaparecida": 4,
         "edificio_colapsado___da_o_estructural persona_desaparecida familia_desaparecida": 1,
         "edificio_colapsado___da_o_estructural persona_desaparecida punto_de_acopio___primeros_auxilios refugio___albergue animales_perdidos solicitud___oferta_de_recursos familia_desaparecida": 1,
-        "persona_herida": 74,
-        "persona_rescatada___atrapada persona_herida": 452,
+        "persona_herida": 85,
+        "persona_rescatada___atrapada persona_herida": 511,
         "solicitud___oferta_de_recursos": 1,
         "persona_desaparecida persona_herida": 1
       }
@@ -37,19 +37,20 @@
       "dedupedRows": 4126
     },
     "hospitalesVenezuela": {
-      "queriedGroups": 33,
-      "matchedGroups": 8,
-      "matchedRecords": 22
+      "queriedGroups": 29,
+      "matchedGroups": 5,
+      "matchedRecords": 12
     }
   },
   "missing": {
     "totalRecords": 443,
-    "matchableRecords": 395,
+    "matchableRecords": 389,
+    "hospitalSourceRecords": 6,
     "withCedula": 27
   },
   "matching": {
-    "candidatePairs": 58,
-    "highConfidence": 2,
-    "mediumConfidence": 5
+    "candidatePairs": 52,
+    "highConfidence": 0,
+    "mediumConfidence": 2
   }
 }
