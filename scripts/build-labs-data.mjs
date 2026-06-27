@@ -45,6 +45,49 @@ const fetchJson = async (url) => {
   }
 };
 
+const fetchText = async (url) => {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const response = await fetch(url, {
+      headers: { "user-agent": userAgent, accept: "text/html, text/plain;q=0.9, */*;q=0.8" },
+      redirect: "follow",
+      signal: controller.signal
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status} for ${url}`);
+    }
+    return response.text();
+  } finally {
+    clearTimeout(timer);
+  }
+};
+
+const postJson = async (url, { headers = {}, body }) => {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "user-agent": userAgent,
+        accept: "application/json",
+        "content-type": "application/json",
+        ...headers
+      },
+      body: JSON.stringify(body),
+      redirect: "follow",
+      signal: controller.signal
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status} for ${url}`);
+    }
+    return response.json();
+  } finally {
+    clearTimeout(timer);
+  }
+};
+
 const ensureDir = async (dir) => {
   await fs.mkdir(dir, { recursive: true });
 };
@@ -113,6 +156,17 @@ const extractAge = (value) => {
   if (!match) return null;
   const age = Number.parseInt(match[1], 10);
   return Number.isFinite(age) ? age : null;
+};
+
+const extractLooseAge = (value) => {
+  const explicitAge = extractAge(value);
+  if (explicitAge !== null) return explicitAge;
+  const text = normalizeWhitespace(String(value || ""));
+  if (!text || /[./-]/.test(text)) return null;
+  const standalone = text.match(/^\d{1,3}$/);
+  if (!standalone) return null;
+  const age = Number.parseInt(standalone[0], 10);
+  return Number.isFinite(age) && age >= 0 && age <= 120 ? age : null;
 };
 
 const parseGeoPoint = (value) => {
@@ -274,6 +328,22 @@ const parseLocalizadosRecord = (row) => ({
   locationSlug: row.lugarSlug || null,
   address: row.direccion || null,
   sourceFile: row.fuente?.nombre || null
+});
+
+const parseHospitalesVenezuelaRecord = (row, searchTerm) => ({
+  id: `hospitales-en-venezuela:${normalizeName(row.nombre || "")}:${normalizeName(row.centro || "")}:${digitsOnly(row.cedula || "")}`,
+  source: "hospitales-en-venezuela",
+  sourceUrl: "https://hospitalesenvenezuela.com/",
+  sourceSearchTerm: searchTerm,
+  name: titleCase(row.nombre || ""),
+  normalizedName: row.nombre ? normalizeName(row.nombre) : null,
+  detail: normalizeWhitespace(row.detalle || "") || null,
+  age: extractLooseAge(row.detalle || ""),
+  maskedCedula: normalizeWhitespace(row.cedula || "") || null,
+  maskedCedulaDigits: digitsOnly(row.cedula || "") || null,
+  locationName: normalizeWhitespace(row.centro || "") || null,
+  city: normalizeWhitespace(row.ciudad || "") || null,
+  phone: normalizeWhitespace(row.telefono || "") || null
 });
 
 const dedupeLocatedRecords = (records) => {
@@ -455,6 +525,213 @@ const buildCandidateMatches = (missingRecords, locatedRecords) => {
   };
 };
 
+const fetchHospitalesVenezuelaConfig = async () => {
+  const html = await fetchText("https://hospitalesenvenezuela.com/");
+  const url = html.match(/const SUPABASE_URL\s*=\s*"([^"]+)"/)?.[1] || null;
+  const anonKey = html.match(/const SUPABASE_ANON_KEY\s*=\s*"([^"]+)"/)?.[1] || null;
+  if (!url || !anonKey) {
+    throw new Error("Unable to extract Hospitales en Venezuela config");
+  }
+  return { url, anonKey };
+};
+
+const searchHospitalesVenezuela = async (config, term) => {
+  const payload = await postJson(`${config.url}/rest/v1/rpc/buscar_paciente`, {
+    headers: {
+      apikey: config.anonKey,
+      authorization: `Bearer ${config.anonKey}`
+    },
+    body: { p_term: term }
+  });
+  return Array.isArray(payload) ? payload.map((row) => parseHospitalesVenezuelaRecord(row, term)) : [];
+};
+
+const scoreHospitalesSupport = (group, topCandidate, record) => {
+  const reasons = [];
+  let score = 0;
+  const missingNormalizedName = group.missing.name ? normalizeName(group.missing.name) : null;
+  const topNormalizedName = topCandidate.locatedName ? normalizeName(topCandidate.locatedName) : null;
+  const hospitalesNormalizedName = record.normalizedName;
+
+  const nameScore = hospitalesNormalizedName
+    ? Math.max(
+        missingNormalizedName ? Math.max(stringSimilarity(missingNormalizedName, hospitalesNormalizedName), tokenOverlap(missingNormalizedName, hospitalesNormalizedName)) : 0,
+        topNormalizedName ? Math.max(stringSimilarity(topNormalizedName, hospitalesNormalizedName), tokenOverlap(topNormalizedName, hospitalesNormalizedName)) : 0
+      )
+    : 0;
+
+  if (missingNormalizedName && hospitalesNormalizedName && missingNormalizedName === hospitalesNormalizedName) {
+    reasons.push("Exact name match in Hospitales en Venezuela");
+    score = Math.max(score, 0.9);
+  } else if (nameScore >= 0.92) {
+    reasons.push("Very strong name match in Hospitales en Venezuela");
+    score = Math.max(score, 0.84);
+  } else if (nameScore >= 0.82) {
+    reasons.push("Strong name match in Hospitales en Venezuela");
+    score = Math.max(score, 0.76);
+  }
+
+  const missingCedulaLast4 = group.missing.cedula ? group.missing.cedula.slice(-4) : null;
+  const maskedCedulaLast4 = record.maskedCedulaDigits ? record.maskedCedulaDigits.slice(-4) : null;
+  if (missingCedulaLast4 && maskedCedulaLast4 && missingCedulaLast4 === maskedCedulaLast4) {
+    reasons.push("Last 4 digits of cedula match");
+    score = Math.max(score, 0.99);
+  }
+
+  const referenceAge = group.missing.age ?? topCandidate.locatedAge ?? null;
+  let ageDiff = null;
+  if (referenceAge !== null && record.age !== null) {
+    ageDiff = Math.abs(referenceAge - record.age);
+    if (ageDiff === 0) {
+      reasons.push("Exact age match");
+      score += 0.06;
+    } else if (ageDiff <= 2) {
+      reasons.push("Close age");
+      score += 0.03;
+    } else if (ageDiff >= 10) {
+      score -= 0.08;
+      reasons.push("Age conflict");
+    }
+  }
+
+  const centerScore = locationOverlap(
+    topCandidate.locatedHospital,
+    [record.locationName, record.city].filter(Boolean).join(" ")
+  );
+  if (centerScore >= 0.5) {
+    reasons.push("Same hospital or facility");
+    score += 0.08;
+  } else if (centerScore >= 0.25) {
+    reasons.push("Related hospital wording");
+    score += 0.04;
+  }
+
+  score = Math.max(0, Math.min(0.99, score));
+
+  const isSupportive = Boolean(
+    (missingCedulaLast4 && maskedCedulaLast4 && missingCedulaLast4 === maskedCedulaLast4)
+    || (nameScore >= 0.82 && centerScore >= 0.25)
+    || (nameScore >= 0.92 && ageDiff !== null && ageDiff <= 2)
+  );
+
+  return {
+    supportive: isSupportive,
+    score: Number(score.toFixed(3)),
+    scorePercent: Math.round(score * 100),
+    reasons,
+    nameScore: Number(nameScore.toFixed(3)),
+    centerScore: Number(centerScore.toFixed(3)),
+    ageDiff
+  };
+};
+
+const buildSupportingSources = (group, topCandidate, hospitalesMatches) => {
+  const sources = [];
+
+  if (group.missing.sourceUrl) {
+    sources.push({
+      key: "kobo",
+      label: "KoboToolbox · TerremotoVE",
+      note: group.missing.rawDescription || group.missing.name || null,
+      url: group.missing.sourceUrl
+    });
+  }
+
+  if (topCandidate.locatedSourceUrl) {
+    sources.push({
+      key: "localizados",
+      label: "Localizados Venezuela",
+      note: [topCandidate.locatedName, topCandidate.locatedHospital].filter(Boolean).join(" · ") || null,
+      url: topCandidate.locatedSourceUrl
+    });
+  }
+
+  for (const match of hospitalesMatches) {
+    sources.push({
+      key: `hospitales-en-venezuela:${match.id}`,
+      label: "Hospitales en Venezuela",
+      note: [match.name, match.detail, match.locationName].filter(Boolean).join(" · ") || null,
+      url: match.sourceUrl
+    });
+  }
+
+  return sources;
+};
+
+const enrichCandidateGroupsWithHospitalesVenezuela = async (groups) => {
+  if (!groups.length) {
+    return { groups, stats: { queriedGroups: 0, matchedGroups: 0, matchedRecords: 0 } };
+  }
+
+  const config = await fetchHospitalesVenezuelaConfig();
+  const searchCache = new Map();
+  let queriedGroups = 0;
+  let matchedGroups = 0;
+  let matchedRecords = 0;
+
+  for (const group of groups) {
+    const topCandidate = (group.candidates || [])[0];
+    if (!topCandidate) {
+      group.supportingSources = buildSupportingSources(group, {}, []);
+      continue;
+    }
+
+    const searchTerm = group.missing.cedula || group.missing.name || topCandidate.locatedName || null;
+    if (!searchTerm) {
+      group.supportingSources = buildSupportingSources(group, topCandidate, []);
+      continue;
+    }
+
+    queriedGroups += 1;
+    if (!searchCache.has(searchTerm)) {
+      searchCache.set(searchTerm, await searchHospitalesVenezuela(config, searchTerm));
+    }
+
+    const supportiveMatches = searchCache
+      .get(searchTerm)
+      .map((record) => ({ ...record, support: scoreHospitalesSupport(group, topCandidate, record) }))
+      .filter((record) => record.support.supportive)
+      .sort((left, right) => right.support.score - left.support.score);
+
+    const dedupedMatches = [];
+    const seen = new Set();
+    for (const match of supportiveMatches) {
+      const key = `${match.normalizedName || match.name}|${normalizeName(match.locationName || "")}|${match.age ?? ""}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      dedupedMatches.push({
+        id: match.id,
+        source: match.source,
+        sourceUrl: match.sourceUrl,
+        sourceSearchTerm: match.sourceSearchTerm,
+        name: match.name,
+        detail: match.detail,
+        age: match.age,
+        maskedCedula: match.maskedCedula,
+        locationName: match.locationName,
+        city: match.city,
+        phone: match.phone,
+        supportScore: match.support.score,
+        supportScorePercent: match.support.scorePercent,
+        supportReasons: match.support.reasons
+      });
+      if (dedupedMatches.length >= 3) break;
+    }
+
+    group.hospitalesVenezuelaMatches = dedupedMatches;
+    group.supportingSources = buildSupportingSources(group, topCandidate, dedupedMatches);
+    if (dedupedMatches.length) {
+      matchedGroups += 1;
+      matchedRecords += dedupedMatches.length;
+    }
+  }
+
+  return {
+    groups,
+    stats: { queriedGroups, matchedGroups, matchedRecords }
+  };
+};
+
 const fetchAllKoboRows = async () => {
   let url = "https://kf.kobotoolbox.org/api/v2/assets/a8XWDsdUcpBzXGtgQmiiro/data.json?limit=100";
   const rows = [];
@@ -497,6 +774,11 @@ const buildSummary = ({ koboRows, missingRecords, localizadosRaw, localizadosDed
       localizados: {
         rawRows: localizadosRaw.length,
         dedupedRows: localizadosDeduped.length
+      },
+      hospitalesVenezuela: {
+        queriedGroups: 0,
+        matchedGroups: 0,
+        matchedRecords: 0
       }
     },
     missing: {
@@ -524,6 +806,20 @@ const main = async () => {
   const localizadosRaw = (await fetchAllLocalizadosRows()).map(parseLocalizadosRecord);
   const localizadosDeduped = dedupeLocatedRecords(localizadosRaw);
   const candidates = buildCandidateMatches(missingRecords, localizadosDeduped);
+  let hospitalesSupport = {
+    groups: candidates.grouped.map((group) => ({
+      ...group,
+      hospitalesVenezuelaMatches: [],
+      supportingSources: buildSupportingSources(group, group.candidates[0] || {}, [])
+    })),
+    stats: { queriedGroups: 0, matchedGroups: 0, matchedRecords: 0 }
+  };
+
+  try {
+    hospitalesSupport = await enrichCandidateGroupsWithHospitalesVenezuela(candidates.grouped);
+  } catch (error) {
+    console.warn(`Unable to enrich candidates with Hospitales en Venezuela: ${error.message}`);
+  }
   const summary = buildSummary({
     koboRows,
     missingRecords,
@@ -531,6 +827,7 @@ const main = async () => {
     localizadosDeduped,
     candidatesFlat: candidates.flat
   });
+  summary.sources.hospitalesVenezuela = hospitalesSupport.stats;
 
   await writeJsonEverywhere("summary.json", summary);
   await writeJsonEverywhere("missing.json", {
@@ -548,15 +845,15 @@ const main = async () => {
   });
   await writeJsonEverywhere("candidates.json", {
     generatedAt,
-    totalGroups: candidates.grouped.length,
+    totalGroups: hospitalesSupport.groups.length,
     totalPairs: candidates.flat.length,
-    results: candidates.grouped
+    results: hospitalesSupport.groups
   });
 
   console.log(`Wrote labs datasets at ${generatedAt}`);
   console.log(`- missing records: ${missingRecords.length}`);
   console.log(`- located records (deduped): ${localizadosDeduped.length}`);
-  console.log(`- candidate groups: ${candidates.grouped.length}`);
+  console.log(`- candidate groups: ${hospitalesSupport.groups.length}`);
 };
 
 await main();

@@ -924,6 +924,10 @@ ul {
   padding-top: 0.75rem;
 }
 
+.labs-source-note {
+  margin: 0.3rem 0 0;
+}
+
 .labs-empty {
   margin-top: 1rem;
   color: var(--muted);

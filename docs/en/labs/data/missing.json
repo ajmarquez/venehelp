@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-27T13:58:06.706Z",
+  "generatedAt": "2026-06-27T18:40:25.126Z",
   "source": "kobotoolbox-terremotove",
-  "total": 407,
+  "total": 439,
   "results": [
     {
       "id": "kobo-791548945",
@@ -10809,6 +10809,866 @@
         "lon": -66.990917
       },
       "locationText": "Ella es María Natalia berroteran Blanco chica morena de 1.58 estatura delgada ojos café cabellos castaño por los hombros | Avisar a Ana blanco 04143177367",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794285002",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794285002",
+      "sourceUrl": "https://drive.google.com/file/d/1QE53R-taodMVYDzTbJK75fXb-PPpgEvJ/view?usp=drive_link",
+      "submittedAt": "2026-06-27T14:54:30",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Persona desaparecida en caraballeda",
+      "rawAdditional": "56963430668",
+      "rawLinkField": "https://drive.google.com/file/d/1QE53R-taodMVYDzTbJK75fXb-PPpgEvJ/view?usp=drive_link",
+      "freeText": "Persona desaparecida en caraballeda | 56963430668",
+      "name": null,
+      "normalizedName": null,
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "56963430668"
+      ],
+      "geo": {
+        "lat": -11.979365,
+        "lon": -77.069869
+      },
+      "locationText": "Persona desaparecida en caraballeda | 56963430668",
+      "isMatchable": false,
+      "notMatchableReason": "no-clear-name"
+    },
+    {
+      "id": "kobo-794289592",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794289592",
+      "sourceUrl": "https://drive.google.com/file/d/1QE53R-taodMVYDzTbJK75fXb-PPpgEvJ/view?usp=drive_link",
+      "submittedAt": "2026-06-27T15:00:26",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Eilyn Luna, Persona Desaparecida en Caraballeda",
+      "rawAdditional": null,
+      "rawLinkField": "https://drive.google.com/file/d/1QE53R-taodMVYDzTbJK75fXb-PPpgEvJ/view?usp=drive_link",
+      "freeText": "Eilyn Luna, Persona Desaparecida en Caraballeda",
+      "name": "Eilyn Luna",
+      "normalizedName": "EILYN LUNA",
+      "cedula": null,
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 10.615783,
+        "lon": -66.851533
+      },
+      "locationText": "Eilyn Luna, Persona Desaparecida en Caraballeda",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794315282",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794315282",
+      "sourceUrl": "https://drive.google.com/file/d/1c16YNsOHKKdgymLtF7RJ_8Z0-PMHTN0d/view?usp=sharing",
+      "submittedAt": "2026-06-27T15:35:37",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Dainer Campos",
+      "rawAdditional": "Estaba en la OPP 26 letra c, la guaira, 04142268869",
+      "rawLinkField": "https://drive.google.com/file/d/1c16YNsOHKKdgymLtF7RJ_8Z0-PMHTN0d/view?usp=sharing",
+      "freeText": "Dainer Campos | Estaba en la OPP 26 letra c, la guaira, 04142268869",
+      "name": "Dainer Campos",
+      "normalizedName": "DAINER CAMPOS",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04142268869"
+      ],
+      "geo": {
+        "lat": 10.553772,
+        "lon": -66.654697
+      },
+      "locationText": "Dainer Campos | Estaba en la OPP 26 letra c, la guaira, 04142268869",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794316318",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794316318",
+      "sourceUrl": "https://drive.google.com/file/d/1c16YNsOHKKdgymLtF7RJ_8Z0-PMHTN0d/view?usp=sharing",
+      "submittedAt": "2026-06-27T15:36:56",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Daiker Campos",
+      "rawAdditional": "Estaba en la OPP 26 letra c, la guaira, 04142268869",
+      "rawLinkField": "https://drive.google.com/file/d/1c16YNsOHKKdgymLtF7RJ_8Z0-PMHTN0d/view?usp=sharing",
+      "freeText": "Daiker Campos | Estaba en la OPP 26 letra c, la guaira, 04142268869",
+      "name": "Daiker Campos",
+      "normalizedName": "DAIKER CAMPOS",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04142268869"
+      ],
+      "geo": {
+        "lat": 10.685299,
+        "lon": -66.390808
+      },
+      "locationText": "Daiker Campos | Estaba en la OPP 26 letra c, la guaira, 04142268869",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794330034",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794330034",
+      "sourceUrl": "https://drive.google.com/file/d/1B9uEtsgBho0iqy0NZk4C7Nlf-nxHmNZ2/view?usp=sharing",
+      "submittedAt": "2026-06-27T15:54:45",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Dra Jacqueline Bernardi",
+      "rawAdditional": "Edif Playate Comunicarse al 0034633971539",
+      "rawLinkField": "https://drive.google.com/file/d/1B9uEtsgBho0iqy0NZk4C7Nlf-nxHmNZ2/view?usp=sharing",
+      "freeText": "Dra Jacqueline Bernardi | Edif Playate Comunicarse al 0034633971539",
+      "name": "Dra Jacqueline Bernardi",
+      "normalizedName": "DRA JACQUELINE BERNARDI",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "0034633971539"
+      ],
+      "geo": {
+        "lat": 10.600173,
+        "lon": -66.929976
+      },
+      "locationText": "Dra Jacqueline Bernardi | Edif Playate Comunicarse al 0034633971539",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794330513",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794330513",
+      "sourceUrl": "https://drive.google.com/file/d/1B9uEtsgBho0iqy0NZk4C7Nlf-nxHmNZ2/view?usp=sharing",
+      "submittedAt": "2026-06-27T15:55:31",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "CN Lino Poleo",
+      "rawAdditional": "Edif Playate Comunicarse al 0034633971539",
+      "rawLinkField": "https://drive.google.com/file/d/1B9uEtsgBho0iqy0NZk4C7Nlf-nxHmNZ2/view?usp=sharing",
+      "freeText": "CN Lino Poleo | Edif Playate Comunicarse al 0034633971539",
+      "name": "Cn Lino Poleo",
+      "normalizedName": "CN LINO POLEO",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "0034633971539"
+      ],
+      "geo": {
+        "lat": 10.601513,
+        "lon": -66.928542
+      },
+      "locationText": "CN Lino Poleo | Edif Playate Comunicarse al 0034633971539",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794360975",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794360975",
+      "sourceUrl": "https://x.com/marcysf4ngs/status/2070153392857452864?s=20",
+      "submittedAt": "2026-06-27T16:47:39",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "Manuel Van Der Dijs",
+      "rawAdditional": "Comunicarse al: 04241503223",
+      "rawLinkField": "https://x.com/marcysf4ngs/status/2070153392857452864?s=20",
+      "freeText": "Manuel Van Der Dijs | Comunicarse al: 04241503223",
+      "name": "Manuel Van Der Dijs",
+      "normalizedName": "MANUEL VAN DER DIJS",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04241503223"
+      ],
+      "geo": {
+        "lat": 10.611963,
+        "lon": -66.826385
+      },
+      "locationText": "Manuel Van Der Dijs | Comunicarse al: 04241503223",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794361442",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794361442",
+      "sourceUrl": "https://x.com/marcysf4ngs/status/2070153392857452864?s=20",
+      "submittedAt": "2026-06-27T16:48:38",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "Gabriel Gómez",
+      "rawAdditional": "Comunicarse al: 04241503223",
+      "rawLinkField": "https://x.com/marcysf4ngs/status/2070153392857452864?s=20",
+      "freeText": "Gabriel Gómez | Comunicarse al: 04241503223",
+      "name": "Gabriel Gómez",
+      "normalizedName": "GABRIEL GOMEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04241503223"
+      ],
+      "geo": {
+        "lat": 10.612005,
+        "lon": -66.826385
+      },
+      "locationText": "Gabriel Gómez | Comunicarse al: 04241503223",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794362157",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794362157",
+      "sourceUrl": "https://x.com/marcysf4ngs/status/2070153392857452864?s=20",
+      "submittedAt": "2026-06-27T16:49:48",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Xander Hernández",
+      "rawAdditional": "Comunicarse al: 04241503223",
+      "rawLinkField": "https://x.com/marcysf4ngs/status/2070153392857452864?s=20",
+      "freeText": "Xander Hernández | Comunicarse al: 04241503223",
+      "name": "Xander Hernández",
+      "normalizedName": "XANDER HERNANDEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04241503223"
+      ],
+      "geo": {
+        "lat": 10.612005,
+        "lon": -66.826428
+      },
+      "locationText": "Xander Hernández | Comunicarse al: 04241503223",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794362747",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794362747",
+      "sourceUrl": "https://x.com/marcysf4ngs/status/2070153392857452864?s=20",
+      "submittedAt": "2026-06-27T16:50:52",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Abraham Foucault",
+      "rawAdditional": "Comunicarse al: 04241503223",
+      "rawLinkField": "https://x.com/marcysf4ngs/status/2070153392857452864?s=20",
+      "freeText": "Abraham Foucault | Comunicarse al: 04241503223",
+      "name": "Abraham Foucault",
+      "normalizedName": "ABRAHAM FOUCAULT",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04241503223"
+      ],
+      "geo": {
+        "lat": 10.612301,
+        "lon": -66.826385
+      },
+      "locationText": "Abraham Foucault | Comunicarse al: 04241503223",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794366288",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794366288",
+      "sourceUrl": "https://x.com/eliasjosueeee/status/2070110940859654575?s=20",
+      "submittedAt": "2026-06-27T16:56:21",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Dayana Patiño y su bebé recién nacido",
+      "rawAdditional": "Edificio Relax Vista Mar",
+      "rawLinkField": "https://x.com/eliasjosueeee/status/2070110940859654575?s=20",
+      "freeText": "Dayana Patiño y su bebé recién nacido | Edificio Relax Vista Mar",
+      "name": "Dayana Patiño",
+      "normalizedName": "DAYANA PATINO",
+      "cedula": null,
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 10.600215,
+        "lon": -66.930797
+      },
+      "locationText": "Dayana Patiño y su bebé recién nacido | Edificio Relax Vista Mar",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794368404",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794368404",
+      "sourceUrl": "https://x.com/franshrav/status/2070128868128633154",
+      "submittedAt": "2026-06-27T16:59:27",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "Familia Boschian Junior y Diana",
+      "rawAdditional": "Residencia Caribe - Contactar: 04142383119 04241300661 04242151364",
+      "rawLinkField": "https://x.com/franshrav/status/2070128868128633154",
+      "freeText": "Familia Boschian Junior y Diana | Residencia Caribe - Contactar: 04142383119 04241300661 04242151364",
+      "name": null,
+      "normalizedName": null,
+      "cedula": null,
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 10.61859,
+        "lon": -66.850451
+      },
+      "locationText": "Familia Boschian Junior y Diana | Residencia Caribe - Contactar: 04142383119 04241300661 04242151364",
+      "isMatchable": false,
+      "notMatchableReason": "family-report"
+    },
+    {
+      "id": "kobo-794369539",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794369539",
+      "sourceUrl": "https://x.com/Angelicamhs_/status/2070192971429921031?s=20",
+      "submittedAt": "2026-06-27T17:01:24",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Marisol Sánchez",
+      "rawAdditional": "Contactar al +12392695391",
+      "rawLinkField": "https://x.com/Angelicamhs_/status/2070192971429921031?s=20",
+      "freeText": "Marisol Sánchez | Contactar al +12392695391",
+      "name": "Marisol Sánchez",
+      "normalizedName": "MARISOL SANCHEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "+12392695391"
+      ],
+      "geo": {
+        "lat": 10.616974347030151,
+        "lon": -66.85804880537108
+      },
+      "locationText": "Marisol Sánchez | Contactar al +12392695391",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794370445",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794370445",
+      "sourceUrl": "https://x.com/Angelicamhs_/status/2070192971429921031?s=20",
+      "submittedAt": "2026-06-27T17:02:51",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "José Alfonso López",
+      "rawAdditional": "Contactar al +12392695391",
+      "rawLinkField": "https://x.com/Angelicamhs_/status/2070192971429921031?s=20",
+      "freeText": "José Alfonso López | Contactar al +12392695391",
+      "name": "José Alfonso López",
+      "normalizedName": "JOSE ALFONSO LOPEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "+12392695391"
+      ],
+      "geo": {
+        "lat": 10.616974347030151,
+        "lon": -66.85804880537108
+      },
+      "locationText": "José Alfonso López | Contactar al +12392695391",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794370787",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794370787",
+      "sourceUrl": "https://x.com/Moon4756428/status/2070086852350984682?s=20",
+      "submittedAt": "2026-06-27T17:03:33",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "María Fernanda Rey Rujano",
+      "rawAdditional": "Contactarse al: 04145068895 o 04265505722 o 04245453503",
+      "rawLinkField": "https://x.com/Moon4756428/status/2070086852350984682?s=20",
+      "freeText": "María Fernanda Rey Rujano | Contactarse al: 04145068895 o 04265505722 o 04245453503",
+      "name": "María Fernanda Rey Rujano",
+      "normalizedName": "MARIA FERNANDA REY RUJANO",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04145068895",
+        "04265505722",
+        "04245453503"
+      ],
+      "geo": {
+        "lat": 10.61587,
+        "lon": -66.85501
+      },
+      "locationText": "María Fernanda Rey Rujano | Contactarse al: 04145068895 o 04265505722 o 04245453503",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794370996",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794370996",
+      "sourceUrl": "https://x.com/Angelicamhs_/status/2070192971429921031?s=20",
+      "submittedAt": "2026-06-27T17:04:02",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Diosa Salazar",
+      "rawAdditional": "Contactar al +12392695391",
+      "rawLinkField": "https://x.com/Angelicamhs_/status/2070192971429921031?s=20",
+      "freeText": "Diosa Salazar | Contactar al +12392695391",
+      "name": "Diosa Salazar",
+      "normalizedName": "DIOSA SALAZAR",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "+12392695391"
+      ],
+      "geo": {
+        "lat": 10.616974347030151,
+        "lon": -66.85804880537108
+      },
+      "locationText": "Diosa Salazar | Contactar al +12392695391",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794371368",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794371368",
+      "sourceUrl": "https://x.com/Moon4756428/status/2070086852350984682?s=20",
+      "submittedAt": "2026-06-27T17:04:45",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "María de los Ángeles Castillos Ostos",
+      "rawAdditional": "Contactarse al: 04145068895 o 04265505722 o 04245453503",
+      "rawLinkField": "https://x.com/Moon4756428/status/2070086852350984682?s=20",
+      "freeText": "María de los Ángeles Castillos Ostos | Contactarse al: 04145068895 o 04265505722 o 04245453503",
+      "name": "Castillos Ostos",
+      "normalizedName": "CASTILLOS OSTOS",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04145068895",
+        "04265505722",
+        "04245453503"
+      ],
+      "geo": {
+        "lat": 10.613819,
+        "lon": -66.855566
+      },
+      "locationText": "María de los Ángeles Castillos Ostos | Contactarse al: 04145068895 o 04265505722 o 04245453503",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794372910",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794372910",
+      "sourceUrl": "https://x.com/Angelicamhs_/status/2070192971429921031?s=20",
+      "submittedAt": "2026-06-27T17:07:14",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "David Cienfuegos",
+      "rawAdditional": "Contactar al +12392695391",
+      "rawLinkField": "https://x.com/Angelicamhs_/status/2070192971429921031?s=20",
+      "freeText": "David Cienfuegos | Contactar al +12392695391",
+      "name": "David Cienfuegos",
+      "normalizedName": "DAVID CIENFUEGOS",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "+12392695391"
+      ],
+      "geo": {
+        "lat": 10.616974347030151,
+        "lon": -66.85804880537108
+      },
+      "locationText": "David Cienfuegos | Contactar al +12392695391",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794373360",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794373360",
+      "sourceUrl": "https://x.com/avacuti3/status/2070717752998769064/photo/1",
+      "submittedAt": "2026-06-27T17:07:54",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Manuel Ivo Fernandes de Andrade E-81599234",
+      "rawAdditional": "04241859022",
+      "rawLinkField": "https://x.com/avacuti3/status/2070717752998769064/photo/1",
+      "freeText": "Manuel Ivo Fernandes de Andrade E-81599234 | 04241859022",
+      "name": "Manuel Ivo Fernandes",
+      "normalizedName": "MANUEL IVO FERNANDES",
+      "cedula": "81599234",
+      "age": null,
+      "contacts": [
+        "04241859022"
+      ],
+      "geo": {
+        "lat": 10.600236,
+        "lon": -66.929466
+      },
+      "locationText": "Manuel Ivo Fernandes de Andrade E-81599234 | 04241859022",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794373774",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794373774",
+      "sourceUrl": "https://x.com/Angelicamhs_/status/2070192971429921031?s=20",
+      "submittedAt": "2026-06-27T17:08:27",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "María Vida Herminia Quiroz",
+      "rawAdditional": "Contactar al +12392695391",
+      "rawLinkField": "https://x.com/Angelicamhs_/status/2070192971429921031?s=20",
+      "freeText": "María Vida Herminia Quiroz | Contactar al +12392695391",
+      "name": "María Vida Herminia Quiroz",
+      "normalizedName": "MARIA VIDA HERMINIA QUIROZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "+12392695391"
+      ],
+      "geo": {
+        "lat": 10.616974347030151,
+        "lon": -66.85804880537108
+      },
+      "locationText": "María Vida Herminia Quiroz | Contactar al +12392695391",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794374311",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794374311",
+      "sourceUrl": "https://x.com/Angelicamhs_/status/2070192971429921031?s=20",
+      "submittedAt": "2026-06-27T17:09:30",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Vida Cienfuegos",
+      "rawAdditional": "Contactar al +12392695391",
+      "rawLinkField": "https://x.com/Angelicamhs_/status/2070192971429921031?s=20",
+      "freeText": "Vida Cienfuegos | Contactar al +12392695391",
+      "name": "Vida Cienfuegos",
+      "normalizedName": "VIDA CIENFUEGOS",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "+12392695391"
+      ],
+      "geo": {
+        "lat": 10.616974347030151,
+        "lon": -66.85804880537108
+      },
+      "locationText": "Vida Cienfuegos | Contactar al +12392695391",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794375050",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794375050",
+      "sourceUrl": "https://x.com/Angelicamhs_/status/2070192971429921031?s=20",
+      "submittedAt": "2026-06-27T17:10:39",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "David Durán",
+      "rawAdditional": "Contactar al +12392695391",
+      "rawLinkField": "https://x.com/Angelicamhs_/status/2070192971429921031?s=20",
+      "freeText": "David Durán | Contactar al +12392695391",
+      "name": "David Durán",
+      "normalizedName": "DAVID DURAN",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "+12392695391"
+      ],
+      "geo": {
+        "lat": 10.616974347030151,
+        "lon": -66.85804880537108
+      },
+      "locationText": "David Durán | Contactar al +12392695391",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794375052",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794375052",
+      "sourceUrl": "https://x.com/Dhartro_art/status/2070905242380607562",
+      "submittedAt": "2026-06-27T17:10:39",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Yolbert Jesus Blanco Ortiz V-29833579",
+      "rawAdditional": null,
+      "rawLinkField": "https://x.com/Dhartro_art/status/2070905242380607562",
+      "freeText": "Yolbert Jesus Blanco Ortiz V-29833579",
+      "name": "Yolbert Jesus Blanco Ortiz V-",
+      "normalizedName": "YOLBERT JESUS BLANCO ORTIZ V",
+      "cedula": "29833579",
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 10.602419,
+        "lon": -66.932141
+      },
+      "locationText": "Yolbert Jesus Blanco Ortiz V-29833579",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794375646",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794375646",
+      "sourceUrl": "https://x.com/Angelicamhs_/status/2070192971429921031?s=20",
+      "submittedAt": "2026-06-27T17:11:36",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "María Elena Piñedo",
+      "rawAdditional": "Contactar al +12392695391",
+      "rawLinkField": "https://x.com/Angelicamhs_/status/2070192971429921031?s=20",
+      "freeText": "María Elena Piñedo | Contactar al +12392695391",
+      "name": "María Elena Piñedo",
+      "normalizedName": "MARIA ELENA PINEDO",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "+12392695391"
+      ],
+      "geo": {
+        "lat": 10.616974347030151,
+        "lon": -66.85804880537108
+      },
+      "locationText": "María Elena Piñedo | Contactar al +12392695391",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794377464",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794377464",
+      "sourceUrl": "https://x.com/BarbaraUSanz/status/2070121937863360574?s=20",
+      "submittedAt": "2026-06-27T17:14:23",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Michelle Sanz",
+      "rawAdditional": "Contactarse al: 04127351915",
+      "rawLinkField": "https://x.com/BarbaraUSanz/status/2070121937863360574?s=20",
+      "freeText": "Michelle Sanz | Contactarse al: 04127351915",
+      "name": "Michelle Sanz",
+      "normalizedName": "MICHELLE SANZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04127351915"
+      ],
+      "geo": {
+        "lat": 10.609407,
+        "lon": -67.01631
+      },
+      "locationText": "Michelle Sanz | Contactarse al: 04127351915",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794378566",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794378566",
+      "sourceUrl": "https://x.com/BarbaraUSanz/status/2070121937863360574?s=20",
+      "submittedAt": "2026-06-27T17:16:06",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Michelle Sanz (28 años)",
+      "rawAdditional": "Contacto: 04127351915 (Suleslie Rojas)",
+      "rawLinkField": "https://x.com/BarbaraUSanz/status/2070121937863360574?s=20",
+      "freeText": "Michelle Sanz (28 años) | Contacto: 04127351915 (Suleslie Rojas)",
+      "name": "Michelle Sanz",
+      "normalizedName": "MICHELLE SANZ",
+      "cedula": null,
+      "age": 28,
+      "contacts": [
+        "04127351915"
+      ],
+      "geo": {
+        "lat": 10.6103,
+        "lon": -67.0146
+      },
+      "locationText": "Michelle Sanz (28 años) | Contacto: 04127351915 (Suleslie Rojas)",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794379018",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794379018",
+      "sourceUrl": "https://x.com/unadesafinada/status/2070633682776228350",
+      "submittedAt": "2026-06-27T17:16:41",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Nombre: Charles Vazquez V-1555496",
+      "rawAdditional": "Telefono contacto: 04241324602, 04142013614",
+      "rawLinkField": "https://x.com/unadesafinada/status/2070633682776228350",
+      "freeText": "Nombre: Charles Vazquez V-1555496 | Telefono contacto: 04241324602, 04142013614",
+      "name": "Nombre Charles Vazquez V-",
+      "normalizedName": "NOMBRE CHARLES VAZQUEZ V",
+      "cedula": "1555496",
+      "age": null,
+      "contacts": [
+        "04241324602",
+        "04142013614"
+      ],
+      "geo": {
+        "lat": 10.61036,
+        "lon": -66.821318
+      },
+      "locationText": "Nombre: Charles Vazquez V-1555496 | Telefono contacto: 04241324602, 04142013614",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794381275",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794381275",
+      "sourceUrl": "https://x.com/medicenandreea/status/2070638075365994933",
+      "submittedAt": "2026-06-27T17:20:33",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Nombre: Vicky Chiquinquira Urdaneta Leal V-30985966",
+      "rawAdditional": "Telefono contacto: +584128337715, +584221759683",
+      "rawLinkField": "https://x.com/medicenandreea/status/2070638075365994933",
+      "freeText": "Nombre: Vicky Chiquinquira Urdaneta Leal V-30985966 | Telefono contacto: +584128337715, +584221759683",
+      "name": "Nombre Vicky Chiquinquira Urdaneta Leal",
+      "normalizedName": "NOMBRE VICKY CHIQUINQUIRA URDANETA LEAL",
+      "cedula": "30985966",
+      "age": null,
+      "contacts": [
+        "+584128337715",
+        "+584221759683"
+      ],
+      "geo": {
+        "lat": 10.601713,
+        "lon": -66.932858
+      },
+      "locationText": "Nombre: Vicky Chiquinquira Urdaneta Leal V-30985966 | Telefono contacto: +584128337715, +584221759683",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794390874",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794390874",
+      "sourceUrl": "https://x.com/KeylinA_7/status/2070088507649822988?s=20",
+      "submittedAt": "2026-06-27T17:37:41",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Ivonne Katiuska Espinoza Sotillo",
+      "rawAdditional": "Contactarse a: 04123851246",
+      "rawLinkField": "https://x.com/KeylinA_7/status/2070088507649822988?s=20",
+      "freeText": "Ivonne Katiuska Espinoza Sotillo | Contactarse a: 04123851246",
+      "name": "Ivonne Katiuska Espinoza Sotillo",
+      "normalizedName": "IVONNE KATIUSKA ESPINOZA SOTILLO",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04123851246"
+      ],
+      "geo": {
+        "lat": 10.618554,
+        "lon": -66.850537
+      },
+      "locationText": "Ivonne Katiuska Espinoza Sotillo | Contactarse a: 04123851246",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794391887",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794391887",
+      "sourceUrl": "https://x.com/KeylinA_7/status/2070088507649822988?s=20",
+      "submittedAt": "2026-06-27T17:39:19",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "Marco Reina, esposa e hijo",
+      "rawAdditional": "Contactar a : Mariam 04123787669",
+      "rawLinkField": "https://x.com/KeylinA_7/status/2070088507649822988?s=20",
+      "freeText": "Marco Reina, esposa e hijo | Contactar a : Mariam 04123787669",
+      "name": "Marco Reina",
+      "normalizedName": "MARCO REINA",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04123787669"
+      ],
+      "geo": {
+        "lat": 10.615549,
+        "lon": -66.837414
+      },
+      "locationText": "Marco Reina, esposa e hijo | Contactar a : Mariam 04123787669",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794407462",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794407462",
+      "sourceUrl": null,
+      "submittedAt": "2026-06-27T18:06:41",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Marco Antonio Gil Triada",
+      "rawAdditional": "Teléfono de contacto: +584142576895 Cédula: 16682546 Res Country Mar Av Granada El caribe frente a hoyo # 3",
+      "rawLinkField": null,
+      "freeText": "Marco Antonio Gil Triada | Teléfono de contacto: +584142576895 Cédula: 16682546 Res Country Mar Av Granada El caribe frente a hoyo # 3",
+      "name": "Marco Antonio Gil Triada",
+      "normalizedName": "MARCO ANTONIO GIL TRIADA",
+      "cedula": "16682546",
+      "age": null,
+      "contacts": [
+        "+584142576895"
+      ],
+      "geo": {
+        "lat": 10.614115,
+        "lon": -66.841172
+      },
+      "locationText": "Marco Antonio Gil Triada | Teléfono de contacto: +584142576895 Cédula: 16682546 Res Country Mar Av Granada El caribe frente a hoyo # 3",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794426567",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794426567",
+      "sourceUrl": null,
+      "submittedAt": "2026-06-27T18:39:54",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Angel Luis Velásquez Amaya - ~40 años -Residencias Gradisca, Macuto",
+      "rawAdditional": null,
+      "rawLinkField": null,
+      "freeText": "Angel Luis Velásquez Amaya - ~40 años -Residencias Gradisca, Macuto",
+      "name": "Angel Luis Velásquez Amaya",
+      "normalizedName": "ANGEL LUIS VELASQUEZ AMAYA",
+      "cedula": null,
+      "age": 40,
+      "contacts": [],
+      "geo": {
+        "lat": 10.610453,
+        "lon": -66.889232
+      },
+      "locationText": "Angel Luis Velásquez Amaya - ~40 años -Residencias Gradisca, Macuto",
       "isMatchable": true,
       "notMatchableReason": null
     }

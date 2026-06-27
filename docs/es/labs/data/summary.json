@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-06-27T13:58:06.706Z",
+  "generatedAt": "2026-06-27T18:40:25.126Z",
   "sources": {
     "kobo": {
       "assetUid": "a8XWDsdUcpBzXGtgQmiiro",
-      "rows": 1294,
+      "rows": 1462,
       "eventCounts": {
-        "edificio_colapsado___da_o_estructural": 140,
+        "edificio_colapsado___da_o_estructural": 143,
         "punto_de_acopio___primeros_auxilios": 50,
-        "persona_rescatada___atrapada": 210,
-        "persona_desaparecida": 362,
+        "persona_rescatada___atrapada": 270,
+        "persona_desaparecida": 390,
         "edificio_colapsado___da_o_estructural incendio___fuga_de_gas": 1,
         "edificio_colapsado___da_o_estructural persona_desaparecida": 7,
         "edificio_colapsado___da_o_estructural persona_rescatada___atrapada persona_desaparecida": 2,
         "edificio_colapsado___da_o_estructural persona_rescatada___atrapada": 5,
-        "animales_perdidos": 25,
+        "animales_perdidos": 26,
         "persona_rescatada___atrapada animales_perdidos": 2,
         "refugio___albergue": 3,
         "persona_desaparecida animales_perdidos": 1,
@@ -22,12 +22,12 @@
         "persona_rescatada___atrapada punto_de_acopio___primeros_auxilios": 1,
         "persona_rescatada___atrapada persona_desaparecida": 1,
         "persona_desaparecida solicitud___oferta_de_recursos": 1,
-        "familia_desaparecida": 25,
+        "familia_desaparecida": 29,
         "persona_desaparecida familia_desaparecida": 4,
         "edificio_colapsado___da_o_estructural persona_desaparecida familia_desaparecida": 1,
         "edificio_colapsado___da_o_estructural persona_desaparecida punto_de_acopio___primeros_auxilios refugio___albergue animales_perdidos solicitud___oferta_de_recursos familia_desaparecida": 1,
-        "persona_herida": 66,
-        "persona_rescatada___atrapada persona_herida": 369,
+        "persona_herida": 71,
+        "persona_rescatada___atrapada persona_herida": 436,
         "solicitud___oferta_de_recursos": 1,
         "persona_desaparecida persona_herida": 1
       }
@@ -35,16 +35,21 @@
     "localizados": {
       "rawRows": 4448,
       "dedupedRows": 4126
+    },
+    "hospitalesVenezuela": {
+      "queriedGroups": 32,
+      "matchedGroups": 7,
+      "matchedRecords": 19
     }
   },
   "missing": {
-    "totalRecords": 407,
-    "matchableRecords": 361,
-    "withCedula": 21
+    "totalRecords": 439,
+    "matchableRecords": 391,
+    "withCedula": 26
   },
   "matching": {
-    "candidatePairs": 54,
+    "candidatePairs": 57,
     "highConfidence": 2,
-    "mediumConfidence": 4
+    "mediumConfidence": 5
   }
 }

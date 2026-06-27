@@ -5,11 +5,13 @@ const rootDir = path.resolve(new URL("..", import.meta.url).pathname);
 const docsDir = path.join(rootDir, "docs");
 const sourceFile = path.join(rootDir, "data", "sources.json");
 const defaultCloudflareAnalyticsToken = "4a80fe27b95e4d6b990cb960bf94699d";
+const defaultGoogleAnalyticsMeasurementId = "G-6SX9JMJTS2";
 
 const customDomain = (process.env.SITE_DOMAIN || "directorioterremotovenezuela.org").replace(/^https?:\/\//, "").replace(/\/+$/, "");
 const siteUrl = (process.env.SITE_URL || `https://${customDomain}`).replace(/\/+$/, "");
 const sitePath = (process.env.SITE_PATH || "").replace(/\/+$/, "");
 const cloudflareAnalyticsToken = (process.env.CLOUDFLARE_ANALYTICS_TOKEN ?? defaultCloudflareAnalyticsToken).trim();
+const googleAnalyticsMeasurementId = (process.env.GOOGLE_ANALYTICS_MEASUREMENT_ID ?? defaultGoogleAnalyticsMeasurementId).trim();
 const showRegistry = false;
 const generatedAt = new Date().toISOString();
 const assetVersion = generatedAt.replace(/[^0-9]/g, "");
@@ -976,6 +978,10 @@ ul {
   padding-top: 0.75rem;
 }
 
+.labs-source-note {
+  margin: 0.3rem 0 0;
+}
+
 .labs-empty {
   margin-top: 1rem;
   color: var(--muted);
@@ -1415,6 +1421,7 @@ const localeCopy = {
     labsSourceFileLabel: "Archivo fuente",
     labsContactsLabel: "Contactos",
     labsSourceLabel: "Fuente",
+    labsSupportingSourcesTitle: "Fuentes donde también aparece",
     labsTopCandidateTitle: "Mejor candidato",
     labsOtherCandidatesTitle: "Otros candidatos",
     labsMissingPanelTitle: "Reporte de desaparecido",
@@ -1586,6 +1593,7 @@ const localeCopy = {
     labsSourceFileLabel: "Source file",
     labsContactsLabel: "Contacts",
     labsSourceLabel: "Source",
+    labsSupportingSourcesTitle: "Matching sources",
     labsTopCandidateTitle: "Top candidate",
     labsOtherCandidatesTitle: "Other candidates",
     labsMissingPanelTitle: "Missing-person report",
@@ -1934,6 +1942,7 @@ const labsRenderMatchCard = (group) => {
   const locationScorePercent = Math.round((Number(top.locationScore) || 0) * 100);
   const locationText = [top.locatedHospital, top.locatedAddress].filter(Boolean).join(" · ");
   const otherCandidates = (group.candidates || []).slice(1);
+  const supportingSources = (group.supportingSources || []);
 
   return [
     '<article class="labs-match-card">',
@@ -1978,6 +1987,17 @@ const labsRenderMatchCard = (group) => {
     '</dl>',
     '</section>',
     '</div>',
+    (supportingSources.length
+      ? '<div class="labs-candidate-list"><h4>' + escapeHtml(messages.labsSupportingSourcesTitle) + '</h4>' +
+          supportingSources.map((source) =>
+            '<div class="labs-candidate-item">' +
+              '<strong>' + escapeHtml(source.label || messages.labsNoValue) + '</strong>' +
+              (source.note ? '<p class="small labs-source-note">' + escapeHtml(source.note) + '</p>' : '') +
+              (source.url ? '<a class="detail-link" href="' + escapeHtml(source.url) + '" target="_blank" rel="noreferrer">' + escapeHtml(messages.labsOpenSourceLink) + '</a>' : '') +
+            '</div>'
+          ).join("") +
+        '</div>'
+      : ''),
     (otherCandidates.length
       ? '<div class="labs-candidate-list"><h4>' + escapeHtml(messages.labsOtherCandidatesTitle) + '</h4>' +
           otherCandidates.map((candidate) => '<div class="labs-candidate-item"><strong>' + escapeHtml(candidate.locatedName || messages.labsNoValue) + '</strong> · ' + escapeHtml(String(candidate.scorePercent != null ? candidate.scorePercent : Math.round((Number(candidate.score) || 0) * 100))) + '% · ' + escapeHtml(candidate.locatedHospital || messages.labsNoValue) + '</div>').join("") +
@@ -2218,6 +2238,25 @@ const renderCloudflareAnalyticsSnippet = () => {
   return `    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='${beaconConfig}'></script>\n`;
 };
 
+const renderGoogleAnalyticsSnippet = () => {
+  if (!googleAnalyticsMeasurementId) {
+    return "";
+  }
+
+  const measurementId = JSON.stringify(googleAnalyticsMeasurementId);
+  const encodedMeasurementId = encodeURIComponent(googleAnalyticsMeasurementId);
+
+  return `    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=${encodedMeasurementId}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', ${measurementId});
+    </script>
+`;
+};
+
 const withAssetVersion = (assetPath) => `${withSitePath(assetPath)}?v=${encodeURIComponent(assetVersion)}`;
 
 const renderHead = ({ lang, title, description, canonical, alternates }) => `  <head>
@@ -2228,7 +2267,7 @@ const renderHead = ({ lang, title, description, canonical, alternates }) => `  <
     <link rel="canonical" href="${escapeHtml(canonical)}">
     ${alternates}
     <link rel="stylesheet" href="${withAssetVersion("/styles.css")}">
-  </head>`;
+${renderGoogleAnalyticsSnippet()}  </head>`;
 
 const renderLanguageSwitcher = (locale, pathname, { rootDefault = false } = {}) => {
   const copy = localeCopy[locale];
@@ -2854,7 +2893,7 @@ const renderRedirectPage = (targetPath, title) => `<!doctype html>
     <title>${escapeHtml(title)}</title>
     <link rel="canonical" href="${escapeHtml(targetPath)}">
     <script>window.location.replace(${JSON.stringify(targetPath)});</script>
-  </head>
+${renderGoogleAnalyticsSnippet()}  </head>
   <body>
     <p>Redirecting to <a href="${escapeHtml(targetPath)}">${escapeHtml(targetPath)}</a>.</p>
 ${renderCloudflareAnalyticsSnippet()}  </body>

@@ -334,6 +334,7 @@ const labsRenderMatchCard = (group) => {
   const locationScorePercent = Math.round((Number(top.locationScore) || 0) * 100);
   const locationText = [top.locatedHospital, top.locatedAddress].filter(Boolean).join(" · ");
   const otherCandidates = (group.candidates || []).slice(1);
+  const supportingSources = (group.supportingSources || []);
 
   return [
     '<article class="labs-match-card">',
@@ -378,6 +379,17 @@ const labsRenderMatchCard = (group) => {
     '</dl>',
     '</section>',
     '</div>',
+    (supportingSources.length
+      ? '<div class="labs-candidate-list"><h4>' + escapeHtml(messages.labsSupportingSourcesTitle) + '</h4>' +
+          supportingSources.map((source) =>
+            '<div class="labs-candidate-item">' +
+              '<strong>' + escapeHtml(source.label || messages.labsNoValue) + '</strong>' +
+              (source.note ? '<p class="small labs-source-note">' + escapeHtml(source.note) + '</p>' : '') +
+              (source.url ? '<a class="detail-link" href="' + escapeHtml(source.url) + '" target="_blank" rel="noreferrer">' + escapeHtml(messages.labsOpenSourceLink) + '</a>' : '') +
+            '</div>'
+          ).join("") +
+        '</div>'
+      : ''),
     (otherCandidates.length
       ? '<div class="labs-candidate-list"><h4>' + escapeHtml(messages.labsOtherCandidatesTitle) + '</h4>' +
           otherCandidates.map((candidate) => '<div class="labs-candidate-item"><strong>' + escapeHtml(candidate.locatedName || messages.labsNoValue) + '</strong> · ' + escapeHtml(String(candidate.scorePercent != null ? candidate.scorePercent : Math.round((Number(candidate.score) || 0) * 100))) + '% · ' + escapeHtml(candidate.locatedHospital || messages.labsNoValue) + '</div>').join("") +

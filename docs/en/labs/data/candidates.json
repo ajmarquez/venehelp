@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-27T13:58:06.706Z",
-  "totalGroups": 29,
-  "totalPairs": 54,
+  "generatedAt": "2026-06-27T18:40:25.126Z",
+  "totalGroups": 32,
+  "totalPairs": 57,
   "results": [
     {
       "missing": {
@@ -67,6 +67,98 @@
           "identitySignal": "none",
           "ageDiff": 0
         }
+      ],
+      "hospitalesVenezuelaMatches": [
+        {
+          "id": "hospitales-en-venezuela:DELGADO EDIMER:HOSPITAL DOMINGO LUCIANI EL LLANITO:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Delgado Edimer",
+          "name": "Delgado Edimer",
+          "detail": "15 años",
+          "age": 15,
+          "maskedCedula": null,
+          "locationName": "Hospital Domingo Luciani (El Llanito)",
+          "city": null,
+          "phone": null,
+          "supportScore": 0.98,
+          "supportScorePercent": 98,
+          "supportReasons": [
+            "Exact name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        },
+        {
+          "id": "hospitales-en-venezuela:DELGADO EDIMER:HOSPITAL DOMINGO LUCIANI:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Delgado Edimer",
+          "name": "Delgado Edimer",
+          "detail": null,
+          "age": null,
+          "maskedCedula": null,
+          "locationName": "Hospital Domingo Luciani",
+          "city": "Por confirmar",
+          "phone": null,
+          "supportScore": 0.98,
+          "supportScorePercent": 98,
+          "supportReasons": [
+            "Exact name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        },
+        {
+          "id": "hospitales-en-venezuela:EDIMER DELGADO:HOSPITAL DOMINGO LUCIANI CARACAS:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Delgado Edimer",
+          "name": "Edimer Delgado",
+          "detail": "23 años",
+          "age": 23,
+          "maskedCedula": null,
+          "locationName": "Hospital Domingo Luciani Caracas",
+          "city": null,
+          "phone": null,
+          "supportScore": 0.98,
+          "supportScorePercent": 98,
+          "supportReasons": [
+            "Very strong name match in Hospitales en Venezuela",
+            "Exact age match",
+            "Same hospital or facility"
+          ]
+        }
+      ],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Delgado Edimer — 23 años",
+          "url": "https://x.com/soydesireelugo/status/2070189789718937983?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Delgado Edimer · Hospital Domingo Luciani",
+          "url": "https://localizadosvenezuela.com/buscar/delgado-edimer-lypiz6"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:DELGADO EDIMER:HOSPITAL DOMINGO LUCIANI EL LLANITO:",
+          "label": "Hospitales en Venezuela",
+          "note": "Delgado Edimer · 15 años · Hospital Domingo Luciani (El Llanito)",
+          "url": "https://hospitalesenvenezuela.com/"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:DELGADO EDIMER:HOSPITAL DOMINGO LUCIANI:",
+          "label": "Hospitales en Venezuela",
+          "note": "Delgado Edimer · Hospital Domingo Luciani",
+          "url": "https://hospitalesenvenezuela.com/"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:EDIMER DELGADO:HOSPITAL DOMINGO LUCIANI CARACAS:",
+          "label": "Hospitales en Venezuela",
+          "note": "Edimer Delgado · 23 años · Hospital Domingo Luciani Caracas",
+          "url": "https://hospitalesenvenezuela.com/"
+        }
       ]
     },
     {
@@ -106,6 +198,99 @@
           "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": 0
+        }
+      ],
+      "hospitalesVenezuelaMatches": [
+        {
+          "id": "hospitales-en-venezuela:RONDON ANGEL:HOSPITAL DOMINGO LUCIANI EL LLANITO:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Rondón Ángel",
+          "name": "Rondon Angel",
+          "detail": "11 AÑOS",
+          "age": 11,
+          "maskedCedula": null,
+          "locationName": "Hospital Domingo Luciani (El Llanito)",
+          "city": null,
+          "phone": null,
+          "supportScore": 0.99,
+          "supportScorePercent": 99,
+          "supportReasons": [
+            "Exact name match in Hospitales en Venezuela",
+            "Close age",
+            "Same hospital or facility"
+          ]
+        },
+        {
+          "id": "hospitales-en-venezuela:RONDON ANGEL:HOSPITAL GENERAL DR DOMINGO LUCIANI EL LLANITO:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Rondón Ángel",
+          "name": "Rondón Ángel",
+          "detail": "12 años · Baruta",
+          "age": 12,
+          "maskedCedula": null,
+          "locationName": "Hospital General Dr. Domingo Luciani (El Llanito)",
+          "city": "Caracas",
+          "phone": null,
+          "supportScore": 0.99,
+          "supportScorePercent": 99,
+          "supportReasons": [
+            "Exact name match in Hospitales en Venezuela",
+            "Exact age match",
+            "Same hospital or facility"
+          ]
+        },
+        {
+          "id": "hospitales-en-venezuela:RONDON ANGEL:HOSPITAL DOMINGO LUCIANI:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Rondón Ángel",
+          "name": "Rondon Angel",
+          "detail": null,
+          "age": null,
+          "maskedCedula": null,
+          "locationName": "Hospital Domingo Luciani",
+          "city": "Por confirmar",
+          "phone": null,
+          "supportScore": 0.98,
+          "supportScorePercent": 98,
+          "supportReasons": [
+            "Exact name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        }
+      ],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Rondón Ángel — 12 años",
+          "url": "https://x.com/soydesireelugo/status/2070189789718937983?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Rondon Angel · Hospital Domingo Luciani",
+          "url": "https://localizadosvenezuela.com/buscar/rondon-angel-fg3rva"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:RONDON ANGEL:HOSPITAL DOMINGO LUCIANI EL LLANITO:",
+          "label": "Hospitales en Venezuela",
+          "note": "Rondon Angel · 11 AÑOS · Hospital Domingo Luciani (El Llanito)",
+          "url": "https://hospitalesenvenezuela.com/"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:RONDON ANGEL:HOSPITAL GENERAL DR DOMINGO LUCIANI EL LLANITO:",
+          "label": "Hospitales en Venezuela",
+          "note": "Rondón Ángel · 12 años · Baruta · Hospital General Dr. Domingo Luciani (El Llanito)",
+          "url": "https://hospitalesenvenezuela.com/"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:RONDON ANGEL:HOSPITAL DOMINGO LUCIANI:",
+          "label": "Hospitales en Venezuela",
+          "note": "Rondon Angel · Hospital Domingo Luciani",
+          "url": "https://hospitalesenvenezuela.com/"
         }
       ]
     },
@@ -171,6 +356,97 @@
           "identitySignal": "none",
           "ageDiff": null
         }
+      ],
+      "hospitalesVenezuelaMatches": [
+        {
+          "id": "hospitales-en-venezuela:CARLOS CASTANO:DOMINGO LUCIANO:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Carlos Castaño",
+          "name": "Carlos Castaño",
+          "detail": null,
+          "age": null,
+          "maskedCedula": null,
+          "locationName": "Domingo Luciano",
+          "city": null,
+          "phone": null,
+          "supportScore": 0.98,
+          "supportScorePercent": 98,
+          "supportReasons": [
+            "Exact name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        },
+        {
+          "id": "hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DOMINGO LUCIANI:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Carlos Castaño",
+          "name": "Carlos Castaño",
+          "detail": "12",
+          "age": 12,
+          "maskedCedula": null,
+          "locationName": "Hospital Domingo Luciani",
+          "city": "Por confirmar",
+          "phone": null,
+          "supportScore": 0.98,
+          "supportScorePercent": 98,
+          "supportReasons": [
+            "Exact name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        },
+        {
+          "id": "hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DOMINGO LUCIANI:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Carlos Castaño",
+          "name": "Carlos Castaño",
+          "detail": "25/6/26",
+          "age": null,
+          "maskedCedula": null,
+          "locationName": "Hospital Domingo Luciani",
+          "city": "Por confirmar",
+          "phone": null,
+          "supportScore": 0.98,
+          "supportScorePercent": 98,
+          "supportReasons": [
+            "Exact name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        }
+      ],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Carlos Castaño - Rx",
+          "url": "https://x.com/Fobi__/status/2070166208045879536?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Castaño Carlos · Hospital Domingo Luciani",
+          "url": "https://localizadosvenezuela.com/buscar/castano-carlos-05yqth"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARLOS CASTANO:DOMINGO LUCIANO:",
+          "label": "Hospitales en Venezuela",
+          "note": "Carlos Castaño · Domingo Luciano",
+          "url": "https://hospitalesenvenezuela.com/"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DOMINGO LUCIANI:",
+          "label": "Hospitales en Venezuela",
+          "note": "Carlos Castaño · 12 · Hospital Domingo Luciani",
+          "url": "https://hospitalesenvenezuela.com/"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DOMINGO LUCIANI:",
+          "label": "Hospitales en Venezuela",
+          "note": "Carlos Castaño · 25/6/26 · Hospital Domingo Luciani",
+          "url": "https://hospitalesenvenezuela.com/"
+        }
       ]
     },
     {
@@ -235,6 +511,230 @@
           "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": 25
+        }
+      ],
+      "hospitalesVenezuelaMatches": [
+        {
+          "id": "hospitales-en-venezuela:GUILLERMINA RENGIFO:HOSPITAL LUCIANI CARACAS:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Rengifo Guillermina",
+          "name": "Guillermina Rengifo",
+          "detail": "71",
+          "age": 71,
+          "maskedCedula": null,
+          "locationName": "HOSPITAL LUCIANI CARACAS",
+          "city": "Por confirmar",
+          "phone": null,
+          "supportScore": 0.98,
+          "supportScorePercent": 98,
+          "supportReasons": [
+            "Very strong name match in Hospitales en Venezuela",
+            "Exact age match",
+            "Same hospital or facility"
+          ]
+        },
+        {
+          "id": "hospitales-en-venezuela:GUILLERMINA RENGIFO:HOSPITAL DOMINGO LUCIANI:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Rengifo Guillermina",
+          "name": "Guillermina Rengifo",
+          "detail": null,
+          "age": null,
+          "maskedCedula": null,
+          "locationName": "Hospital Domingo Luciani",
+          "city": "Por confirmar",
+          "phone": null,
+          "supportScore": 0.92,
+          "supportScorePercent": 92,
+          "supportReasons": [
+            "Very strong name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        },
+        {
+          "id": "hospitales-en-venezuela:RENGIFO GUILLERMINA NA:HOSPITAL DOMINGO LUCIANI:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Rengifo Guillermina",
+          "name": "Rengifo Guillermina Na",
+          "detail": null,
+          "age": null,
+          "maskedCedula": null,
+          "locationName": "Hospital Domingo Luciani",
+          "city": "Por confirmar",
+          "phone": null,
+          "supportScore": 0.92,
+          "supportScorePercent": 92,
+          "supportReasons": [
+            "Very strong name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        }
+      ],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Rengifo Guillermina — 71 años",
+          "url": "https://x.com/soydesireelugo/status/2070189789718937983?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Guillermina Rengifo · Hospital Domingo Luciani",
+          "url": "https://localizadosvenezuela.com/buscar/guillermina-rengifo-6s2vxp"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:GUILLERMINA RENGIFO:HOSPITAL LUCIANI CARACAS:",
+          "label": "Hospitales en Venezuela",
+          "note": "Guillermina Rengifo · 71 · HOSPITAL LUCIANI CARACAS",
+          "url": "https://hospitalesenvenezuela.com/"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:GUILLERMINA RENGIFO:HOSPITAL DOMINGO LUCIANI:",
+          "label": "Hospitales en Venezuela",
+          "note": "Guillermina Rengifo · Hospital Domingo Luciani",
+          "url": "https://hospitalesenvenezuela.com/"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:RENGIFO GUILLERMINA NA:HOSPITAL DOMINGO LUCIANI:",
+          "label": "Hospitales en Venezuela",
+          "note": "Rengifo Guillermina Na · Hospital Domingo Luciani",
+          "url": "https://hospitalesenvenezuela.com/"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-794391887",
+        "name": "Marco Reina",
+        "rawDescription": "Marco Reina, esposa e hijo",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "04123787669"
+        ],
+        "sourceUrl": "https://x.com/KeylinA_7/status/2070088507649822988?s=20",
+        "submittedAt": "2026-06-27T17:39:19"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-794391887",
+          "locatedId": "localizados-reina-marco-jegl1h",
+          "missingName": "Marco Reina",
+          "locatedName": "Reina Marco",
+          "locatedHospital": "Hospital Pérez Carreño",
+          "locatedAddress": "La Guaira - Caraballeda",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/reina-marco-jegl1h",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "consolidado.csv",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.88,
+          "scorePercent": 88,
+          "confidence": "medium",
+          "reasons": [
+            "Very strong name similarity"
+          ],
+          "nameScore": 1,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [
+        {
+          "id": "hospitales-en-venezuela:MARCO REINA:HOSPITAL MIGUEL PEREZ CARRENO PEDIATRIA:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Marco Reina",
+          "name": "Marco Reina",
+          "detail": "49 años · Fallecido · Signos vitales · Guaira",
+          "age": 49,
+          "maskedCedula": null,
+          "locationName": "Hospital Miguel Pérez Carreño - pediatría",
+          "city": "Por confirmar",
+          "phone": null,
+          "supportScore": 0.98,
+          "supportScorePercent": 98,
+          "supportReasons": [
+            "Exact name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        },
+        {
+          "id": "hospitales-en-venezuela:MARCO REINA:HOSPITAL MIGUEL PEREZ CARRENO PEDIATRIA:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Marco Reina",
+          "name": "Marco Reina",
+          "detail": null,
+          "age": null,
+          "maskedCedula": null,
+          "locationName": "Hospital Miguel Pérez Carreño - pediatría",
+          "city": "Por confirmar",
+          "phone": null,
+          "supportScore": 0.98,
+          "supportScorePercent": 98,
+          "supportReasons": [
+            "Exact name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        },
+        {
+          "id": "hospitales-en-venezuela:MARCO REINA NA:HOSPITAL PEREZ CARRENO:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Marco Reina",
+          "name": "Marco Reina Na",
+          "detail": "Piso 3 – FALLECIDO; La Guaira",
+          "age": null,
+          "maskedCedula": null,
+          "locationName": "Hospital Perez Carreño",
+          "city": "Por confirmar",
+          "phone": null,
+          "supportScore": 0.92,
+          "supportScorePercent": 92,
+          "supportReasons": [
+            "Very strong name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        }
+      ],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Marco Reina, esposa e hijo",
+          "url": "https://x.com/KeylinA_7/status/2070088507649822988?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Reina Marco · Hospital Pérez Carreño",
+          "url": "https://localizadosvenezuela.com/buscar/reina-marco-jegl1h"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:MARCO REINA:HOSPITAL MIGUEL PEREZ CARRENO PEDIATRIA:",
+          "label": "Hospitales en Venezuela",
+          "note": "Marco Reina · 49 años · Fallecido · Signos vitales · Guaira · Hospital Miguel Pérez Carreño - pediatría",
+          "url": "https://hospitalesenvenezuela.com/"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:MARCO REINA:HOSPITAL MIGUEL PEREZ CARRENO PEDIATRIA:",
+          "label": "Hospitales en Venezuela",
+          "note": "Marco Reina · Hospital Miguel Pérez Carreño - pediatría",
+          "url": "https://hospitalesenvenezuela.com/"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:MARCO REINA NA:HOSPITAL PEREZ CARRENO:",
+          "label": "Hospitales en Venezuela",
+          "note": "Marco Reina Na · Piso 3 – FALLECIDO; La Guaira · Hospital Perez Carreño",
+          "url": "https://hospitalesenvenezuela.com/"
         }
       ]
     },
@@ -349,6 +849,21 @@
           "locationScore": 0.167,
           "identitySignal": "none",
           "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Williany Lopez - PLAYA GRANDE en Residencial Pelicanos, C.C. Sol Center.",
+          "url": "https://www.instagram.com/p/DaB51rhKe1Q"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Lopez Williana · Hospital José María Vargas - La Guaira",
+          "url": "https://localizadosvenezuela.com/buscar/lopez-williana-26648434-kth86m"
         }
       ]
     },
@@ -466,6 +981,21 @@
           "identitySignal": "none",
           "ageDiff": null
         }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Lucina González",
+          "url": "https://x.com/vxlvvl/status/2070264639087124620?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Gonzalez Luci · Hospital Domingo Luciani",
+          "url": "https://localizadosvenezuela.com/buscar/gonzalez-luci-pzm5rb"
+        }
       ]
     },
     {
@@ -582,6 +1112,21 @@
           "identitySignal": "none",
           "ageDiff": null
         }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Enderson Rodríguez",
+          "url": "https://x.com/Katauroraaa/status/2070304288853656021"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Ender Rodríguez · Campo de Golf Caribe — sobrevivientes (Playa Los Cocos)",
+          "url": "https://localizadosvenezuela.com/buscar/ender-rodriguez-5ns2rp"
+        }
       ]
     },
     {
@@ -622,6 +1167,97 @@
           "locationScore": 0.333,
           "identitySignal": "none",
           "ageDiff": 0
+        }
+      ],
+      "hospitalesVenezuelaMatches": [
+        {
+          "id": "hospitales-en-venezuela:DELIA DE GUERRERO PENA:HOSPITAL MILITAR DR CARLOS ARVELO:2518",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Guerrero Peña",
+          "name": "Delia De Guerrero Peña",
+          "detail": "50 Catia",
+          "age": null,
+          "maskedCedula": "••••2518",
+          "locationName": "Hospital Militar Dr. Carlos Arvelo",
+          "city": "Caracas",
+          "phone": null,
+          "supportScore": 0.92,
+          "supportScorePercent": 92,
+          "supportReasons": [
+            "Very strong name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        },
+        {
+          "id": "hospitales-en-venezuela:DELIA DE GUERRERO PENA:HOSPITAL MILITAR DR CARLOS ARVELEDO:5180",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Guerrero Peña",
+          "name": "Delia De Guerrero Peña",
+          "detail": "50.0",
+          "age": null,
+          "maskedCedula": "••••5180",
+          "locationName": "Hospital Militar Dr. Carlos Arveledo",
+          "city": null,
+          "phone": null,
+          "supportScore": 0.92,
+          "supportScorePercent": 92,
+          "supportReasons": [
+            "Very strong name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        },
+        {
+          "id": "hospitales-en-venezuela:DELIA DE GUERRERO PENA DE GUERRERO PENA DELIA:HOSPITAL MILITAR DR CARLOS ARVELO:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Guerrero Peña",
+          "name": "Delia De Guerrero Pena / De Guerrero Peña Delia",
+          "detail": null,
+          "age": null,
+          "maskedCedula": null,
+          "locationName": "Hospital Militar Dr. Carlos Arvelo",
+          "city": "Caracas",
+          "phone": null,
+          "supportScore": 0.92,
+          "supportScorePercent": 92,
+          "supportReasons": [
+            "Very strong name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        }
+      ],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Delia de Guerrero Peña, 50 años, 11.642.518",
+          "url": "https://x.com/reyestheis/status/2070292469598617796"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Delia De Guerrero Peña · Hospital Militar Universitario Dr. Carlos Arvelo",
+          "url": "https://localizadosvenezuela.com/buscar/delia-de-guerrero-pena-11642518-0x6hv3"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:DELIA DE GUERRERO PENA:HOSPITAL MILITAR DR CARLOS ARVELO:2518",
+          "label": "Hospitales en Venezuela",
+          "note": "Delia De Guerrero Peña · 50 Catia · Hospital Militar Dr. Carlos Arvelo",
+          "url": "https://hospitalesenvenezuela.com/"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:DELIA DE GUERRERO PENA:HOSPITAL MILITAR DR CARLOS ARVELEDO:5180",
+          "label": "Hospitales en Venezuela",
+          "note": "Delia De Guerrero Peña · 50.0 · Hospital Militar Dr. Carlos Arveledo",
+          "url": "https://hospitalesenvenezuela.com/"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:DELIA DE GUERRERO PENA DE GUERRERO PENA DELIA:HOSPITAL MILITAR DR CARLOS ARVELO:",
+          "label": "Hospitales en Venezuela",
+          "note": "Delia De Guerrero Pena / De Guerrero Peña Delia · Hospital Militar Dr. Carlos Arvelo",
+          "url": "https://hospitalesenvenezuela.com/"
         }
       ]
     },
@@ -664,6 +1300,15 @@
           "identitySignal": "none",
           "ageDiff": null
         }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Diana (?) · Campo de Golf Caribe — sobrevivientes (Playa Los Cocos)",
+          "url": "https://localizadosvenezuela.com/buscar/diana-rpet92"
+        }
       ]
     },
     {
@@ -705,6 +1350,21 @@
           "identitySignal": "none",
           "ageDiff": null
         }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Persona desaparecida, Jhoander Garcia, Catia La Mar, Urb guaracarumbo",
+          "url": "https://x.com/estepharium/status/2070159172117671977"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Jhoan Garcia Genderson · Centro de Acopio Caraballeda",
+          "url": "https://localizadosvenezuela.com/buscar/jhoan-garcia-genderson-lm6d6m"
+        }
       ]
     },
     {
@@ -743,6 +1403,21 @@
           "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Francisco Pińero",
+          "url": "https://x.com/lovexbands/status/2070131465971548545/photo/1"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Oropeza Francisco · Hospital Pérez Carreño",
+          "url": "https://localizadosvenezuela.com/buscar/oropeza-francisco-26647295-u5y472"
         }
       ]
     },
@@ -834,6 +1509,21 @@
           "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Oscar Gutiérrez",
+          "url": "https://x.com/NolanRada/status/2070171673370800504"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Gutierrez Jose · Hospital Pérez Carreño",
+          "url": "https://localizadosvenezuela.com/buscar/gutierrez-jose-28447519-wicwtq"
         }
       ]
     },
@@ -951,6 +1641,21 @@
           "identitySignal": "none",
           "ageDiff": null
         }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Thania González",
+          "url": "https://x.com/NolanRada/status/2070171673370800504"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Ana Gonzalez · Periférico de Catia",
+          "url": "https://localizadosvenezuela.com/buscar/ana-gonzalez-njifyb"
+        }
       ]
     },
     {
@@ -1014,6 +1719,21 @@
           "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Desaparecida: Zuly Sanchez de Seijas - 48 años - Última ubicación conocida Rest. Tanamar en Tanaguanera Caraballeda, La Guaira - Información al 0424-3162654",
+          "url": "https://x.com/LuisAlejandro/status/2070206553852899571?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Emely Sanchez · Materno Infantil del Valle Hugo Chavez Frias",
+          "url": "https://localizadosvenezuela.com/buscar/emely-sanchez-yllte7"
         }
       ]
     },
@@ -1083,6 +1803,21 @@
           "identitySignal": "none",
           "ageDiff": null
         }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Fernanda Oliveros, desaparecida en el derrumbe de La Mar Suites, Tucacas",
+          "url": "https://x.com/islasreal/status/2070215427620216956"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Ana Olivero · Hospital Pérez Carreño",
+          "url": "https://localizadosvenezuela.com/buscar/ana-olivero-42812170-s7szs2"
+        }
       ]
     },
     {
@@ -1125,6 +1860,21 @@
           "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Yelibeth Pérez",
+          "url": "https://x.com/DeniDaLo/status/2070146875152290067"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Yelibeth Peña · Campo de Golf Caribe — sobrevivientes (Playa Los Cocos)",
+          "url": "https://localizadosvenezuela.com/buscar/yelibeth-pena-ckzk3p"
         }
       ]
     },
@@ -1190,6 +1940,21 @@
           "identitySignal": "none",
           "ageDiff": null
         }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Fabian Martínez, Urbanismo Hugo Chavez, La Guaira",
+          "url": "https://x.com/f2rkbzz/status/2070221139704512602/photo/4"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Johan Martinez · Hospital Domingo Luciani",
+          "url": "https://localizadosvenezuela.com/buscar/johan-martinez-cky8t8"
+        }
       ]
     },
     {
@@ -1231,6 +1996,21 @@
           "identitySignal": "none",
           "ageDiff": null
         }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Camila Gutierrez, Luis Guerrero y Sofia Guerrero. desaparecidos en la zona Tanaguarena, edificio Costamar II",
+          "url": "https://x.com/CamilleCvrrbs/status/2070201962188976367?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Blamir Gutiérrez · Hospital Vargas de Caracas",
+          "url": "https://localizadosvenezuela.com/buscar/blamir-gutierrez-8at4qe"
+        }
       ]
     },
     {
@@ -1269,6 +2049,21 @@
           "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Saul Martin, Miguel Paredes, Glevelyn Rios, Audys Rios",
+          "url": "https://x.com/melichula/status/2070208078763446756?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Raul Martinez · Periférico de Catia",
+          "url": "https://localizadosvenezuela.com/buscar/raul-martinez-ddknvd"
         }
       ]
     },
@@ -1362,6 +2157,21 @@
           "identitySignal": "none",
           "ageDiff": null
         }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "José Gregorio Carmona (20), CI: 31369114",
+          "url": "https://x.com/Esnobgourmet/status/2070333791973814637?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Cadenas Jose Gregorio · Centro de Acopio Caraballeda",
+          "url": "https://localizadosvenezuela.com/buscar/cadenas-jose-gregorio-k80mqp"
+        }
       ]
     },
     {
@@ -1400,6 +2210,21 @@
           "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "José M. Rodríguez, Manuel A. Rodríguez, Raquel Rodríguez y Marzia Chávez",
+          "url": "https://x.com/JRibas17/status/2070181923788337216?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Miguel Rodriguez · Periférico de Catia",
+          "url": "https://localizadosvenezuela.com/buscar/miguel-rodriguez-nnatjg"
         }
       ]
     },
@@ -1468,6 +2293,15 @@
           "identitySignal": "none",
           "ageDiff": null
         }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Perez Eliamar · Hospital Domingo Luciani",
+          "url": "https://localizadosvenezuela.com/buscar/perez-eliamar-zoxldh"
+        }
       ]
     },
     {
@@ -1534,6 +2368,15 @@
           "identitySignal": "none",
           "ageDiff": null
         }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Dylan Moreno · Campo de Golf Caribe — sobrevivientes (Playa Los Cocos)",
+          "url": "https://localizadosvenezuela.com/buscar/dylan-moreno-p789q6"
+        }
       ]
     },
     {
@@ -1572,6 +2415,21 @@
           "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Daniela Romero",
+          "url": "https://x.com/Maybell_N/status/2070252575094452526?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Mero Mariela · Periférico de Catia",
+          "url": "https://localizadosvenezuela.com/buscar/mero-mariela-b7resn"
         }
       ]
     },
@@ -1614,6 +2472,15 @@
           "identitySignal": "none",
           "ageDiff": null
         }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Herrera Valentina · Hospital Vargas de Caracas",
+          "url": "https://localizadosvenezuela.com/buscar/herrera-valentina-kmfppn"
+        }
       ]
     },
     {
@@ -1654,6 +2521,21 @@
           "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Rosa Hernandez",
+          "url": "https://x.com/EfectoCocuyo/status/2070297347620303079?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Maria Hernandez · Seguro Social La Guaira",
+          "url": "https://localizadosvenezuela.com/buscar/maria-hernandez-ef1pdj"
         }
       ]
     },
@@ -1722,6 +2604,15 @@
           "identitySignal": "none",
           "ageDiff": null
         }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Dario Ramirez · Seguro Social La Guaira",
+          "url": "https://localizadosvenezuela.com/buscar/dario-ramirez-308249770-iyh8b3"
+        }
       ]
     },
     {
@@ -1760,6 +2651,21 @@
           "locationScore": 0.167,
           "identitySignal": "none",
           "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Desaparecidas - Jorgelina Delgado, Yorgelis Delgado (elenco del Club de Los Tigritos), Miranda Milares, Gladys Escalona - Caribe",
+          "url": "https://x.com/Ulul4r/status/2070308499301523649"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Jorge Delgado · Campo de Golf Caribe — sobrevivientes (Playa Los Cocos)",
+          "url": "https://localizadosvenezuela.com/buscar/jorge-delgado-xepc9c"
         }
       ]
     },
@@ -1801,6 +2707,158 @@
           "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Leandro Fernández",
+          "url": "https://x.com/soydesireelugo/status/2070189789718937983"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Rodrigo Fernandez · Hospital Pérez Carreño",
+          "url": "https://localizadosvenezuela.com/buscar/rodrigo-fernandez-erqxpb"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-794369539",
+        "name": "Marisol Sánchez",
+        "rawDescription": "Marisol Sánchez",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "+12392695391"
+        ],
+        "sourceUrl": "https://x.com/Angelicamhs_/status/2070192971429921031?s=20",
+        "submittedAt": "2026-06-27T17:01:24"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-794369539",
+          "locatedId": "localizados-sanchez-maria-v5eccd",
+          "missingName": "Marisol Sánchez",
+          "locatedName": "Sanchez Maria",
+          "locatedHospital": "Periférico de Catia",
+          "locatedAddress": "Sin información",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/sanchez-maria-v5eccd",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": 30,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.75,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Marisol Sánchez",
+          "url": "https://x.com/Angelicamhs_/status/2070192971429921031?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Sanchez Maria · Periférico de Catia",
+          "url": "https://localizadosvenezuela.com/buscar/sanchez-maria-v5eccd"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-794373360",
+        "name": "Manuel Ivo Fernandes",
+        "rawDescription": "Manuel Ivo Fernandes de Andrade E-81599234",
+        "cedula": "81599234",
+        "age": null,
+        "contacts": [
+          "04241859022"
+        ],
+        "sourceUrl": "https://x.com/avacuti3/status/2070717752998769064/photo/1",
+        "submittedAt": "2026-06-27T17:07:54"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-794373360",
+          "locatedId": "localizados-fernandez-manuel-2lzdpg",
+          "missingName": "Manuel Ivo Fernandes",
+          "locatedName": "Fernández Manuel",
+          "locatedHospital": "Hospital Pérez Carreño",
+          "locatedAddress": "La Guaira - Playa Grande",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/fernandez-manuel-2lzdpg",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "consolidado.csv",
+          "missingCedula": "81599234",
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.774,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [
+        {
+          "id": "hospitales-en-venezuela:MANUEL IVO FERNANDA DE ANDRADE:DESAPARECIDO:9234",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "81599234",
+          "name": "Manuel Ivo Fernanda De Andrade",
+          "detail": "59 años, La Guaira, Caribe",
+          "age": 59,
+          "maskedCedula": "••••9234",
+          "locationName": "Desaparecido",
+          "city": "Por confirmar",
+          "phone": null,
+          "supportScore": 0.99,
+          "supportScorePercent": 99,
+          "supportReasons": [
+            "Last 4 digits of cedula match"
+          ]
+        }
+      ],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Manuel Ivo Fernandes de Andrade E-81599234",
+          "url": "https://x.com/avacuti3/status/2070717752998769064/photo/1"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Fernández Manuel · Hospital Pérez Carreño",
+          "url": "https://localizadosvenezuela.com/buscar/fernandez-manuel-2lzdpg"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:MANUEL IVO FERNANDA DE ANDRADE:DESAPARECIDO:9234",
+          "label": "Hospitales en Venezuela",
+          "note": "Manuel Ivo Fernanda De Andrade · 59 años, La Guaira, Caribe · Desaparecido",
+          "url": "https://hospitalesenvenezuela.com/"
         }
       ]
     }
