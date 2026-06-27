@@ -5,6 +5,7 @@
   "description": "Crawler-friendly directory of search, reporting, and aid resources for Venezuela.",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "refresh:stats": "node scripts/refresh-report-stats.mjs"
+    "refresh:stats": "node scripts/refresh-report-stats.mjs",
+    "build:labs-data": "node scripts/build-labs-data.mjs"
   }
 }

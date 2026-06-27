@@ -46,6 +46,8 @@ const localePath = (locale, pathname = "/") =>
 const absoluteLocaleUrl = (locale, pathname = "/") => `${siteUrl}${localePath(locale, pathname)}`;
 const registryPath = (locale) => localePath(locale, "/registro/");
 const absoluteRegistryUrl = (locale) => `${siteUrl}${registryPath(locale)}`;
+const labsPath = (locale) => localePath(locale, "/labs/");
+const absoluteLabsUrl = (locale) => `${siteUrl}${labsPath(locale)}`;
 
 const styles = `
 :root {
@@ -704,6 +706,281 @@ ul {
   padding-bottom: 1.25rem;
 }
 
+.labs-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 1rem;
+}
+
+.labs-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem;
+  background: var(--surface-muted);
+}
+
+.labs-card h3 {
+  margin: 0;
+}
+
+.labs-card p,
+.labs-card li {
+  color: var(--muted);
+}
+
+.labs-card ul,
+.labs-card ol {
+  margin: 0.75rem 0 0;
+}
+
+.labs-kicker {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.labs-note {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-left: 4px solid var(--yellow);
+  background: var(--surface-muted);
+  color: var(--muted);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.labs-review-toolbar {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 1rem;
+}
+
+.labs-summary-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin-top: 1rem;
+}
+
+.labs-method-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 1rem;
+}
+
+.labs-method-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem;
+  background: var(--surface-muted);
+}
+
+.labs-method-card h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.labs-method-card p {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+}
+
+.labs-method-ranges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.labs-method-range {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.8rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.labs-method-range[data-confidence="high"] {
+  border-color: #bfe2cd;
+  background: #e5f3eb;
+  color: var(--success);
+}
+
+.labs-method-range[data-confidence="medium"] {
+  border-color: #f0d9a6;
+  background: #fff1d8;
+  color: var(--warn);
+}
+
+.labs-method-range[data-confidence="low"] {
+  border-color: #ebd6db;
+  background: #fbf0f2;
+  color: #9b3347;
+}
+
+.labs-summary-stat {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem;
+  background: var(--surface-muted);
+}
+
+.labs-summary-stat strong {
+  display: block;
+  font-size: 1.65rem;
+  line-height: 1;
+  color: var(--blue);
+}
+
+.labs-summary-stat span {
+  display: block;
+  margin-top: 0.45rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.labs-match-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.labs-match-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem;
+  background: var(--surface);
+}
+
+.labs-match-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+}
+
+.labs-score {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface-muted);
+  font-weight: 700;
+}
+
+.labs-score[data-confidence="high"] {
+  border-color: #bfe2cd;
+  background: #e5f3eb;
+  color: var(--success);
+}
+
+.labs-score[data-confidence="medium"] {
+  border-color: #f0d9a6;
+  background: #fff1d8;
+  color: var(--warn);
+}
+
+.labs-score[data-confidence="low"] {
+  border-color: #ebd6db;
+  background: #fbf0f2;
+  color: #9b3347;
+}
+
+.labs-score-value {
+  font-size: 1.15rem;
+}
+
+.labs-score-label {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.labs-review-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 1rem;
+}
+
+.labs-review-panel {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem;
+  background: var(--surface-muted);
+}
+
+.labs-review-panel h3 {
+  margin: 0;
+}
+
+.labs-review-panel p {
+  margin: 0.55rem 0 0;
+}
+
+.labs-review-panel dl {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0.85rem 0 0;
+}
+
+.labs-review-panel dt {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.labs-review-panel dd {
+  margin: 0.15rem 0 0;
+}
+
+.labs-evidence-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+}
+
+.labs-evidence-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.7rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: #eef2fb;
+  color: var(--blue);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.labs-candidate-list {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.labs-candidate-item {
+  border-top: 1px solid var(--line);
+  padding-top: 0.75rem;
+}
+
+.labs-empty {
+  margin-top: 1rem;
+  color: var(--muted);
+}
+
 .page-card + .page-card {
   margin-top: 0;
 }
@@ -993,6 +1270,8 @@ const localeCopy = {
     triageLocatedA: "Revisa Personas localizadas",
     triageAidQ: "¿Necesitas rescate, refugio o ayuda?",
     triageAidA: "Revisa Ayuda y emergencia",
+    labsHomePrompt: "¿Quieres revisar posibles coincidencias entre reportes y listados de hospitales?",
+    labsHomeCta: "Abrir Labs de matching",
     registryTitle: "Registro consolidado (beta)",
     registryIntro:
       "Mostramos un contador principal y una tabla de trazabilidad a partir de un registro público consolidado. Esta vista es beta y hoy usa una recolección parcial de páginas públicas mientras se agregan más adaptadores.",
@@ -1092,7 +1371,58 @@ const localeCopy = {
     techDetailsTitle: "Detalles técnicos",
     viewJson: "Ver JSON",
     languageNavLabel: "Idioma",
-    sourceListTitle: "Todos los recursos | VeneHelp"
+    sourceListTitle: "Todos los recursos | VeneHelp",
+    labsReviewTitle: "Revisión visual de posibles coincidencias",
+    labsReviewIntro: "Aquí mostramos posibles matches para revisión humana. El porcentaje es heurístico: una coincidencia exacta por cédula pesa mucho más que una similitud por nombre.",
+    labsMethodTitle: "Cómo calculamos el puntaje",
+    labsMethodIntro: "La fórmula actual no usa aprendizaje automático. Es una heurística de revisión: combina señales fuertes y señales débiles para sugerir prioridad humana.",
+    labsMethodIdentityTitle: "1. Cédula primero",
+    labsMethodIdentityText: "Si la cédula coincide exactamente, el caso sube casi al máximo. Si la cédula entra en conflicto, el puntaje baja aunque el nombre se parezca.",
+    labsMethodNameTitle: "2. Luego el nombre",
+    labsMethodNameText: "Sin cédula, el peso principal viene de la similitud del nombre normalizado: exacto, muy parecido, parecido o moderado.",
+    labsMethodContextTitle: "3. Edad y ubicación ajustan",
+    labsMethodContextText: "La edad y la ubicación solo corrigen el resultado. Una edad igual o cercana suma un poco; una diferencia grande resta. La ubicación suma poco y nunca reemplaza la identidad.",
+    labsMethodRangesTitle: "Cómo leer los porcentajes",
+    labsMethodRangeHigh: "93–99%: prioridad alta de revisión",
+    labsMethodRangeMedium: "80–92%: posible coincidencia",
+    labsMethodRangeLow: "0–79%: señal débil o ambigua",
+    labsMethodReviewNote: "El porcentaje no confirma identidad por sí solo. Siempre hay que revisar la evidencia mostrada en la tarjeta y, si existe, validar la cédula, edad, hospital y fuente original.",
+    labsSummaryLoading: "Cargando resumen del laboratorio",
+    labsMatchesLoading: "Cargando coincidencias candidatas",
+    labsMatchesFailed: "No se pudieron cargar los datasets del laboratorio.",
+    labsMinScoreLabel: "Puntaje mínimo",
+    labsAllScores: "Todos",
+    labsHighOnly: "Solo altas",
+    labsMediumUp: "Medias o altas",
+    labsResultsLabel: "Coincidencias visibles",
+    labsResultsShown: "{count} coincidencias visibles",
+    labsNoMatches: "No hay coincidencias candidatas con los filtros actuales.",
+    labsSummaryMissing: "Desaparecidos parseados",
+    labsSummaryMatchable: "Desaparecidos comparables",
+    labsSummaryLocated: "Localizados deduplicados",
+    labsSummaryCandidates: "Coincidencias candidatas",
+    labsSummaryHigh: "Coincidencias altas",
+    labsSummaryMedium: "Coincidencias medias",
+    labsScoreLabel: "Probabilidad sugerida",
+    labsIdentityExact: "Cédula exacta",
+    labsIdentityConflict: "Cédula en conflicto",
+    labsIdentityMissing: "Sin cédula comparable",
+    labsNameScore: "Similitud de nombre",
+    labsAgeLabel: "Edad",
+    labsLocationLabel: "Ubicación",
+    labsHospitalLabel: "Hospital / recinto",
+    labsConditionLabel: "Condición",
+    labsSourceFileLabel: "Archivo fuente",
+    labsContactsLabel: "Contactos",
+    labsSourceLabel: "Fuente",
+    labsTopCandidateTitle: "Mejor candidato",
+    labsOtherCandidatesTitle: "Otros candidatos",
+    labsMissingPanelTitle: "Reporte de desaparecido",
+    labsLocatedPanelTitle: "Registro de localizado",
+    labsLocatedSourceLabel: "Ficha en Localizados",
+    labsReasonsTitle: "Señales del score",
+    labsOpenSourceLink: "Abrir fuente",
+    labsNoValue: "No disponible"
   },
   en: {
     lang: "en",
@@ -1111,6 +1441,8 @@ const localeCopy = {
     triageLocatedA: "Check Located people",
     triageAidQ: "Need rescue, shelter, or aid?",
     triageAidA: "Check Aid & emergency",
+    labsHomePrompt: "Want to review possible matches between missing-person reports and hospital lists?",
+    labsHomeCta: "Open matching Labs",
     registryTitle: "Unified registry (beta)",
     registryIntro:
       "We show a primary counter and a provenance table from a consolidated public registry. This view is beta and currently uses a partial crawl of public pages while more adapters are added.",
@@ -1210,7 +1542,58 @@ const localeCopy = {
     techDetailsTitle: "Technical details",
     viewJson: "View JSON",
     languageNavLabel: "Language",
-    sourceListTitle: "All Sources | VeneHelp"
+    sourceListTitle: "All Sources | VeneHelp",
+    labsReviewTitle: "Visual review of possible matches",
+    labsReviewIntro: "This page shows possible matches for human review. The percentage is heuristic: an exact ID match carries much more weight than name similarity.",
+    labsMethodTitle: "How the score is calculated",
+    labsMethodIntro: "The current formula does not use machine learning. It is a review heuristic: it combines strong and weak signals to suggest human priority.",
+    labsMethodIdentityTitle: "1. ID comes first",
+    labsMethodIdentityText: "If the ID matches exactly, the case moves close to the maximum. If the IDs conflict, the score drops even when the name looks similar.",
+    labsMethodNameTitle: "2. Then the name",
+    labsMethodNameText: "Without an ID, the main weight comes from normalized name similarity: exact, very close, strong, or moderate.",
+    labsMethodContextTitle: "3. Age and location adjust",
+    labsMethodContextText: "Age and location only adjust the result. An exact or nearby age adds a little; a large difference subtracts. Location adds a small boost and never replaces identity.",
+    labsMethodRangesTitle: "How to read the percentages",
+    labsMethodRangeHigh: "93–99%: high review priority",
+    labsMethodRangeMedium: "80–92%: possible match",
+    labsMethodRangeLow: "0–79%: weak or ambiguous signal",
+    labsMethodReviewNote: "The percentage does not confirm identity on its own. Review the evidence shown on the card and, when available, verify the ID, age, hospital, and original source.",
+    labsSummaryLoading: "Loading labs summary",
+    labsMatchesLoading: "Loading candidate matches",
+    labsMatchesFailed: "Unable to load labs datasets.",
+    labsMinScoreLabel: "Minimum score",
+    labsAllScores: "All",
+    labsHighOnly: "High only",
+    labsMediumUp: "Medium or high",
+    labsResultsLabel: "Visible matches",
+    labsResultsShown: "{count} visible matches",
+    labsNoMatches: "No candidate matches for the current filters.",
+    labsSummaryMissing: "Parsed missing records",
+    labsSummaryMatchable: "Matchable missing records",
+    labsSummaryLocated: "Deduped located records",
+    labsSummaryCandidates: "Candidate matches",
+    labsSummaryHigh: "High-confidence matches",
+    labsSummaryMedium: "Medium-confidence matches",
+    labsScoreLabel: "Suggested probability",
+    labsIdentityExact: "Exact ID match",
+    labsIdentityConflict: "Conflicting ID",
+    labsIdentityMissing: "No comparable ID",
+    labsNameScore: "Name similarity",
+    labsAgeLabel: "Age",
+    labsLocationLabel: "Location",
+    labsHospitalLabel: "Hospital / facility",
+    labsConditionLabel: "Condition",
+    labsSourceFileLabel: "Source file",
+    labsContactsLabel: "Contacts",
+    labsSourceLabel: "Source",
+    labsTopCandidateTitle: "Top candidate",
+    labsOtherCandidatesTitle: "Other candidates",
+    labsMissingPanelTitle: "Missing-person report",
+    labsLocatedPanelTitle: "Located-person record",
+    labsLocatedSourceLabel: "Localizados record",
+    labsReasonsTitle: "Score signals",
+    labsOpenSourceLink: "Open source",
+    labsNoValue: "Not available"
   }
 };
 
@@ -1486,6 +1869,171 @@ Array.from(document.querySelectorAll("[data-filter]")).forEach((button) => {
 });
 
 load();
+
+const labsSummaryEl = document.querySelector("[data-labs-summary]");
+const labsListEl = document.querySelector("[data-labs-list]");
+const labsResultsEl = document.querySelector("[data-labs-results]");
+const labsScoreFilterEl = document.querySelector("[data-labs-score-filter]");
+const labsDataBasePath = config.labsDataBasePath || (basePath + "/labs/data");
+
+const labsState = {
+  summary: null,
+  groups: [],
+  filter: "all"
+};
+
+const labsConfidenceThreshold = (filter) => {
+  if (filter === "high") return 0.93;
+  if (filter === "medium") return 0.8;
+  return 0;
+};
+
+const labsConfidenceLabel = (candidate) => {
+  const score = Number(candidate && candidate.score);
+  if (score >= 0.93) return "high";
+  if (score >= 0.8) return "medium";
+  return "low";
+};
+
+const labsValue = (value) =>
+  value === null || value === undefined || value === "" ? escapeHtml(messages.labsNoValue) : escapeHtml(String(value));
+
+const labsRenderSummary = (summary) => {
+  if (!labsSummaryEl) return;
+  if (!summary) {
+    labsSummaryEl.innerHTML = '<div class="labs-summary-stat"><strong>…</strong><span>' + escapeHtml(messages.labsSummaryLoading) + '</span></div>';
+    return;
+  }
+
+  const stats = [
+    { value: summary.missing.totalRecords, label: messages.labsSummaryMissing },
+    { value: summary.missing.matchableRecords, label: messages.labsSummaryMatchable },
+    { value: summary.sources.localizados.dedupedRows, label: messages.labsSummaryLocated },
+    { value: summary.matching.candidatePairs, label: messages.labsSummaryCandidates },
+    { value: summary.matching.highConfidence, label: messages.labsSummaryHigh },
+    { value: summary.matching.mediumConfidence, label: messages.labsSummaryMedium }
+  ];
+
+  labsSummaryEl.innerHTML = stats
+    .map((item) => '<div class="labs-summary-stat"><strong>' + formatNumber(item.value) + '</strong><span>' + escapeHtml(item.label) + '</span></div>')
+    .join("");
+};
+
+const labsRenderMatchCard = (group) => {
+  const top = (group.candidates || [])[0];
+  if (!top) return "";
+
+  const confidence = labsConfidenceLabel(top);
+  const scorePercent = top.scorePercent != null ? top.scorePercent : Math.round((Number(top.score) || 0) * 100);
+  const identityLabel = top.identitySignal === "exact"
+    ? messages.labsIdentityExact
+    : top.identitySignal === "conflict"
+      ? messages.labsIdentityConflict
+      : messages.labsIdentityMissing;
+  const nameScorePercent = Math.round((Number(top.nameScore) || 0) * 100);
+  const locationScorePercent = Math.round((Number(top.locationScore) || 0) * 100);
+  const locationText = [top.locatedHospital, top.locatedAddress].filter(Boolean).join(" · ");
+  const otherCandidates = (group.candidates || []).slice(1);
+
+  return [
+    '<article class="labs-match-card">',
+    '<div class="labs-match-head">',
+    '<div>',
+    '<h3>' + escapeHtml(group.missing.name || group.missing.rawDescription || messages.labsNoValue) + '</h3>',
+    '<p class="small">' + escapeHtml(messages.labsTopCandidateTitle) + ': ' + escapeHtml(top.locatedName || messages.labsNoValue) + '</p>',
+    '</div>',
+    '<div class="labs-score" data-confidence="' + confidence + '">',
+    '<span class="labs-score-value">' + escapeHtml(String(scorePercent)) + '%</span>',
+    '<span class="labs-score-label">' + escapeHtml(messages.labsScoreLabel) + '</span>',
+    '</div>',
+    '</div>',
+    '<div class="labs-evidence-list">',
+    '<span class="labs-evidence-pill">' + escapeHtml(identityLabel) + '</span>',
+    '<span class="labs-evidence-pill">' + escapeHtml(messages.labsNameScore) + ': ' + escapeHtml(String(nameScorePercent)) + '%</span>',
+    (top.ageDiff !== null && top.ageDiff !== undefined ? '<span class="labs-evidence-pill">' + escapeHtml(messages.labsAgeLabel) + ': ' + labsValue(group.missing.age) + ' / ' + labsValue(top.locatedAge) + '</span>' : ''),
+    (locationScorePercent > 0 ? '<span class="labs-evidence-pill">' + escapeHtml(messages.labsLocationLabel) + ': ' + escapeHtml(String(locationScorePercent)) + '%</span>' : ''),
+    '</div>',
+    '<div class="labs-review-grid">',
+    '<section class="labs-review-panel">',
+    '<h3>' + escapeHtml(messages.labsMissingPanelTitle) + '</h3>',
+    '<p>' + escapeHtml(group.missing.rawDescription || group.missing.name || messages.labsNoValue) + '</p>',
+    '<dl>',
+    '<div><dt>' + escapeHtml(messages.labsAgeLabel) + '</dt><dd>' + labsValue(group.missing.age) + '</dd></div>',
+    '<div><dt>Cédula</dt><dd>' + labsValue(group.missing.cedula) + '</dd></div>',
+    '<div><dt>' + escapeHtml(messages.labsContactsLabel) + '</dt><dd>' + ((group.missing.contacts || []).length ? escapeHtml(group.missing.contacts.join(" · ")) : escapeHtml(messages.labsNoValue)) + '</dd></div>',
+    '<div><dt>' + escapeHtml(messages.labsSourceLabel) + '</dt><dd>' + (group.missing.sourceUrl ? '<a class="detail-link" href="' + escapeHtml(group.missing.sourceUrl) + '" target="_blank" rel="noreferrer">' + escapeHtml(messages.labsOpenSourceLink) + '</a>' : escapeHtml(messages.labsNoValue)) + '</dd></div>',
+    '</dl>',
+    '</section>',
+    '<section class="labs-review-panel">',
+    '<h3>' + escapeHtml(messages.labsLocatedPanelTitle) + '</h3>',
+    '<p>' + escapeHtml(top.locatedName || messages.labsNoValue) + '</p>',
+    '<dl>',
+    '<div><dt>' + escapeHtml(messages.labsAgeLabel) + '</dt><dd>' + labsValue(top.locatedAge) + '</dd></div>',
+    '<div><dt>Cédula</dt><dd>' + labsValue(top.locatedCedula) + '</dd></div>',
+    '<div><dt>' + escapeHtml(messages.labsHospitalLabel) + '</dt><dd>' + escapeHtml(locationText || messages.labsNoValue) + '</dd></div>',
+    '<div><dt>' + escapeHtml(messages.labsConditionLabel) + '</dt><dd>' + labsValue(top.locatedCondition) + '</dd></div>',
+    '<div><dt>' + escapeHtml(messages.labsSourceFileLabel) + '</dt><dd>' + labsValue(top.locatedSourceFile) + '</dd></div>',
+    '<div><dt>' + escapeHtml(messages.labsLocatedSourceLabel) + '</dt><dd>' + (top.locatedSourceUrl ? '<a class="detail-link" href="' + escapeHtml(top.locatedSourceUrl) + '" target="_blank" rel="noreferrer">' + escapeHtml(messages.labsOpenSourceLink) + '</a>' : escapeHtml(messages.labsNoValue)) + '</dd></div>',
+    '<div><dt>' + escapeHtml(messages.labsReasonsTitle) + '</dt><dd>' + escapeHtml((top.reasons || []).join(" · ") || messages.labsNoValue) + '</dd></div>',
+    '</dl>',
+    '</section>',
+    '</div>',
+    (otherCandidates.length
+      ? '<div class="labs-candidate-list"><h4>' + escapeHtml(messages.labsOtherCandidatesTitle) + '</h4>' +
+          otherCandidates.map((candidate) => '<div class="labs-candidate-item"><strong>' + escapeHtml(candidate.locatedName || messages.labsNoValue) + '</strong> · ' + escapeHtml(String(candidate.scorePercent != null ? candidate.scorePercent : Math.round((Number(candidate.score) || 0) * 100))) + '% · ' + escapeHtml(candidate.locatedHospital || messages.labsNoValue) + '</div>').join("") +
+        '</div>'
+      : ''),
+    '</article>'
+  ].join("");
+};
+
+const labsRenderMatches = () => {
+  if (!labsListEl || !labsResultsEl) return;
+  const threshold = labsConfidenceThreshold(labsState.filter);
+  const visible = (labsState.groups || []).filter((group) => {
+    const top = (group.candidates || [])[0];
+    return top && (Number(top.score) || 0) >= threshold;
+  });
+  labsResultsEl.textContent = interpolate(messages.labsResultsShown, { count: visible.length });
+  labsListEl.innerHTML = visible.length
+    ? visible.map(labsRenderMatchCard).join("")
+    : '<p class="labs-empty">' + escapeHtml(messages.labsNoMatches) + '</p>';
+};
+
+const loadLabs = async () => {
+  if (!labsSummaryEl && !labsListEl) return;
+  try {
+    const [summaryResponse, candidatesResponse] = await Promise.all([
+      fetch(labsDataBasePath + '/summary.json' + assetVersion),
+      fetch(labsDataBasePath + '/candidates.json' + assetVersion)
+    ]);
+    const summary = await summaryResponse.json();
+    const candidates = await candidatesResponse.json();
+    labsState.summary = summary;
+    labsState.groups = candidates.results || [];
+    labsRenderSummary(summary);
+    labsRenderMatches();
+  } catch (error) {
+    if (labsSummaryEl) {
+      labsSummaryEl.innerHTML = '<div class="labs-summary-stat"><strong>!</strong><span>' + escapeHtml(messages.labsMatchesFailed) + '</span></div>';
+    }
+    if (labsResultsEl) {
+      labsResultsEl.textContent = messages.labsMatchesFailed;
+    }
+    if (labsListEl) {
+      labsListEl.innerHTML = '<p class="labs-empty">' + escapeHtml(messages.labsMatchesFailed) + '</p>';
+    }
+  }
+};
+
+if (labsScoreFilterEl) {
+  labsScoreFilterEl.addEventListener('change', (event) => {
+    labsState.filter = event.target.value || 'all';
+    labsRenderMatches();
+  });
+}
+
+loadLabs();
 `.trimStart();
 
 const ensureDir = async (target) => {
@@ -1654,6 +2202,13 @@ const renderRootAlternateLinks = () =>
     `<link rel="alternate" hreflang="x-default" href="${absoluteUrl("/")}">`
   ].join("\n    ");
 
+const renderRootPathAlternateLinks = (pathname) =>
+  [
+    `<link rel="alternate" hreflang="es" href="${absoluteUrl(pathname)}">`,
+    `<link rel="alternate" hreflang="en" href="${absoluteLocaleUrl("en", pathname)}">`,
+    `<link rel="alternate" hreflang="x-default" href="${absoluteUrl(pathname)}">`
+  ].join("\n    ");
+
 const renderCloudflareAnalyticsSnippet = () => {
   if (!cloudflareAnalyticsToken) {
     return "";
@@ -1720,6 +2275,10 @@ ${renderHead({
             <p class="eyebrow">${escapeHtml(copy.eyebrow)}</p>
             <h1>${escapeHtml(copy.heroTitle)}</h1>
             <p class="hero-promise">${escapeHtml(copy.heroPromise)}</p>
+            <div class="page-links">
+              <a class="button secondary" href="${locale === "es" && options.rootDefault ? withSitePath("/labs/") : localePath(locale, "/labs/")}">${escapeHtml(copy.labsHomeCta)}</a>
+              <span class="small">${escapeHtml(copy.labsHomePrompt)}</span>
+            </div>
           </div>
           <div class="triage">
             <h2 class="triage-title">${escapeHtml(copy.triageTitle)}</h2>
@@ -1784,6 +2343,9 @@ ${renderHead({
             <p class="eyebrow developer-eyebrow">${escapeHtml(copy.developerEyebrow)}</p>
             <h2>${escapeHtml(copy.developerSectionTitle)}</h2>
             <p class="page-intro">${escapeHtml(copy.developerSectionIntro)}</p>
+            <div class="page-links" style="margin-top:1rem">
+              <a class="button secondary" href="${locale === "es" && options.rootDefault ? withSitePath("/labs/") : localePath(locale, "/labs/")}">Labs</a>
+            </div>
             <div class="source-list" data-developer-list></div>
           </div>
         </div>
@@ -1808,6 +2370,258 @@ const renderRootIndexHtml = () =>
     appBasePath: localeBasePath("es"),
     rootDefault: true
   });
+
+const renderLabsPageHtml = (locale, options = {}) => {
+  const copy = localeCopy[locale];
+  const canonical = options.canonical || absoluteLabsUrl(locale);
+  const alternates = options.alternates || renderAlternateLinks("/labs/");
+
+  const labsSources = [
+    {
+      title: "KoboToolbox · TerremotoVE",
+      url: "https://kf.kobotoolbox.org/api/v2/assets/a8XWDsdUcpBzXGtgQmiiro/data.json",
+      text:
+        locale === "es"
+          ? "Feed público JSON con reportes de personas desaparecidas, familias desaparecidas, personas rescatadas y eventos relacionados."
+          : "Public JSON feed with reports of missing people, missing families, rescued people, and related events."
+    },
+    {
+      title: "Localizados Venezuela API",
+      url: "https://localizadosvenezuela.com/api",
+      text:
+        locale === "es"
+          ? "API pública de solo lectura con personas localizadas en hospitales y otros recintos."
+          : "Public read-only API with people located in hospitals and other facilities."
+    }
+  ];
+
+  const sections =
+    locale === "es"
+      ? {
+          eyebrow: "Labs",
+          title: "Laboratorio de matching",
+          intro:
+            "Este espacio separa el trabajo experimental del directorio principal. Aquí vamos a probar el pipeline de costo cero para cruzar reportes públicos de personas desaparecidas con listados públicos de personas localizadas.",
+          statusTitle: "Versión inicial",
+          statusText:
+            "Empezamos sin backend pagado: GitHub Actions para sincronizar fuentes, archivos JSON estáticos para publicar resultados y revisión manual antes de confirmar cualquier coincidencia.",
+          infraTitle: "Infraestructura 0$",
+          infraItems: [
+            "GitHub Actions programadas para descargar Kobo y Localizados.",
+            "Scripts del repositorio para parsing, normalización y scoring.",
+            "Datasets generados en docs/ para servirlos por GitHub Pages.",
+            "Revisión manual de coincidencias sugeridas antes de publicarlas."
+          ],
+          pipelineTitle: "Pipeline que vamos a montar",
+          pipelineItems: [
+            "Ingesta: descargar Kobo y Localizados en cada corrida.",
+            "Parsing: extraer nombre, cédula, edad, contacto y ubicación desde texto libre.",
+            "Normalización: limpiar acentos, mayúsculas, espacios y variantes de nombres.",
+            "Matching: generar candidatos por cédula, nombre, edad y ubicación.",
+            "Revisión: publicar coincidencias sugeridas por separado para verificación humana."
+          ],
+          outputsTitle: "Salidas esperadas",
+          outputsItems: [
+            "Dataset de personas desaparecidas normalizadas.",
+            "Dataset de personas localizadas normalizadas.",
+            "Dataset de coincidencias candidatas con puntaje y explicación."
+          ],
+          dataLinksTitle: "Datasets actuales",
+          dataLinkLabels: {
+            summary: "Resumen JSON",
+            missing: "Desaparecidos JSON",
+            located: "Localizados JSON",
+            candidates: "Coincidencias JSON"
+          },
+          sourcesTitle: "Fuentes públicas confirmadas",
+          note:
+            "Más adelante esto puede moverse a un subdominio como labs.directorioterremotovenezuela.org, pero empezar con /labs/ es la opción más simple y más barata.",
+          ctaPrimary: "Volver al directorio",
+          ctaSecondary: "Ver recursos técnicos"
+        }
+      : {
+          eyebrow: "Labs",
+          title: "Matching lab",
+          intro:
+            "This space separates experimental work from the main directory. We will test the zero-cost pipeline here for cross-matching public missing-person reports with public located-person lists.",
+          statusTitle: "Initial version",
+          statusText:
+            "We start without a paid backend: GitHub Actions for source syncs, static JSON files for publishing results, and manual review before confirming any match.",
+          infraTitle: "Zero-dollar infrastructure",
+          infraItems: [
+            "Scheduled GitHub Actions to fetch Kobo and Localizados.",
+            "Repository scripts for parsing, normalization, and scoring.",
+            "Generated datasets under docs/ to serve them through GitHub Pages.",
+            "Manual review of suggested matches before anything is published."
+          ],
+          pipelineTitle: "Pipeline we will build",
+          pipelineItems: [
+            "Ingest: fetch Kobo and Localizados on each run.",
+            "Parsing: extract name, ID, age, contact, and location from free text.",
+            "Normalization: clean accents, casing, whitespace, and name variants.",
+            "Matching: generate candidates by ID, name, age, and location.",
+            "Review: publish suggested matches separately for human verification."
+          ],
+          outputsTitle: "Expected outputs",
+          outputsItems: [
+            "Normalized missing-people dataset.",
+            "Normalized located-people dataset.",
+            "Candidate-match dataset with score and explanation."
+          ],
+          dataLinksTitle: "Current datasets",
+          dataLinkLabels: {
+            summary: "Summary JSON",
+            missing: "Missing JSON",
+            located: "Located JSON",
+            candidates: "Candidates JSON"
+          },
+          sourcesTitle: "Confirmed public sources",
+          note:
+            "Later this can move to a subdomain like labs.directorioterremotovenezuela.org, but starting with /labs/ is the simplest and cheapest option.",
+          ctaPrimary: "Back to directory",
+          ctaSecondary: "See technical resources"
+        };
+
+  const labsDataBasePath = options.rootDefault ? withSitePath("/labs/data") : localePath(locale, "/labs/data");
+
+  return `<!doctype html>
+<html lang="${escapeHtml(copy.lang)}">
+${renderHead({
+  lang: copy.lang,
+  title: `${sections.title} | VeneHelp`,
+  description: sections.intro,
+  canonical,
+  alternates
+})}
+  <body>
+    <div class="flag-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+    <main class="page">
+      <div class="shell">
+        ${renderPageTopbar(locale, "/labs/", options)}
+        <p class="eyebrow">${escapeHtml(sections.eyebrow)}</p>
+        <h1>${escapeHtml(sections.title)}</h1>
+        <p class="page-intro">${escapeHtml(sections.intro)}</p>
+
+        <section class="page-card">
+          <h2>${escapeHtml(copy.labsReviewTitle)}</h2>
+          <p class="page-intro">${escapeHtml(copy.labsReviewIntro)}</p>
+          <h3>${escapeHtml(copy.labsMethodTitle)}</h3>
+          <p class="small">${escapeHtml(copy.labsMethodIntro)}</p>
+          <div class="labs-method-grid">
+            <article class="labs-method-card">
+              <h3>${escapeHtml(copy.labsMethodIdentityTitle)}</h3>
+              <p>${escapeHtml(copy.labsMethodIdentityText)}</p>
+            </article>
+            <article class="labs-method-card">
+              <h3>${escapeHtml(copy.labsMethodNameTitle)}</h3>
+              <p>${escapeHtml(copy.labsMethodNameText)}</p>
+            </article>
+            <article class="labs-method-card">
+              <h3>${escapeHtml(copy.labsMethodContextTitle)}</h3>
+              <p>${escapeHtml(copy.labsMethodContextText)}</p>
+            </article>
+          </div>
+          <p class="labs-kicker" style="margin-top:1rem">${escapeHtml(copy.labsMethodRangesTitle)}</p>
+          <div class="labs-method-ranges">
+            <span class="labs-method-range" data-confidence="high">${escapeHtml(copy.labsMethodRangeHigh)}</span>
+            <span class="labs-method-range" data-confidence="medium">${escapeHtml(copy.labsMethodRangeMedium)}</span>
+            <span class="labs-method-range" data-confidence="low">${escapeHtml(copy.labsMethodRangeLow)}</span>
+          </div>
+          <p class="labs-note">${escapeHtml(copy.labsMethodReviewNote)}</p>
+          <div class="labs-review-toolbar">
+            <div class="field">
+              <label for="labs-score-filter">${escapeHtml(copy.labsMinScoreLabel)}</label>
+              <select id="labs-score-filter" data-labs-score-filter>
+                <option value="all">${escapeHtml(copy.labsAllScores)}</option>
+                <option value="medium">${escapeHtml(copy.labsMediumUp)}</option>
+                <option value="high">${escapeHtml(copy.labsHighOnly)}</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>${escapeHtml(copy.labsResultsLabel)}</label>
+              <p class="small" data-labs-results>${escapeHtml(copy.labsMatchesLoading)}</p>
+            </div>
+          </div>
+          <div class="labs-summary-grid" data-labs-summary>
+            <div class="labs-summary-stat"><strong>…</strong><span>${escapeHtml(copy.labsSummaryLoading)}</span></div>
+          </div>
+          <div class="labs-match-list" data-labs-list>
+            <p class="labs-empty">${escapeHtml(copy.labsMatchesLoading)}</p>
+          </div>
+        </section>
+
+        <section class="page-card">
+          <div class="labs-grid">
+            <article class="labs-card">
+              <p class="labs-kicker">${escapeHtml(sections.statusTitle)}</p>
+              <p>${escapeHtml(sections.statusText)}</p>
+            </article>
+            <article class="labs-card">
+              <p class="labs-kicker">${escapeHtml(sections.outputsTitle)}</p>
+              <ul>
+                ${sections.outputsItems.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+              </ul>
+              <div class="page-links" style="margin-top:1rem">
+                <a class="button secondary" href="${labsDataBasePath}/summary.json">${escapeHtml(sections.dataLinkLabels.summary)}</a>
+                <a class="button secondary" href="${labsDataBasePath}/missing.json">${escapeHtml(sections.dataLinkLabels.missing)}</a>
+                <a class="button secondary" href="${labsDataBasePath}/located.json">${escapeHtml(sections.dataLinkLabels.located)}</a>
+                <a class="button secondary" href="${labsDataBasePath}/candidates.json">${escapeHtml(sections.dataLinkLabels.candidates)}</a>
+              </div>
+            </article>
+          </div>
+          <div class="page-links" style="margin-top:1rem">
+            <a class="button" href="${options.rootDefault ? withSitePath("/") : localePath(locale, "/")}">${escapeHtml(sections.ctaPrimary)}</a>
+            <a class="button secondary" href="${localePath(locale, "/#directorio")}">${escapeHtml(sections.ctaSecondary)}</a>
+          </div>
+        </section>
+
+        <section class="page-card">
+          <h2>${escapeHtml(sections.infraTitle)}</h2>
+          <div class="labs-grid">
+            <article class="labs-card">
+              <ol>
+                ${sections.infraItems.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+              </ol>
+            </article>
+            <article class="labs-card">
+              <h3>${escapeHtml(sections.pipelineTitle)}</h3>
+              <ol>
+                ${sections.pipelineItems.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+              </ol>
+            </article>
+          </div>
+        </section>
+
+        <section class="page-card">
+          <h2>${escapeHtml(sections.sourcesTitle)}</h2>
+          <div class="labs-grid">
+            ${labsSources
+              .map(
+                (source) => `
+                <article class="labs-card">
+                  <h3>${escapeHtml(source.title)}</h3>
+                  <p>${escapeHtml(source.text)}</p>
+                  <div class="page-links" style="margin-top:1rem">
+                    <a class="button secondary" href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">${escapeHtml(copy.openSource)}</a>
+                  </div>
+                </article>`
+              )
+              .join("")}
+          </div>
+          <p class="labs-note">${escapeHtml(sections.note)}</p>
+        </section>
+      </div>
+    </main>
+${renderCloudflareAnalyticsSnippet()}    <script>window.VENEHELP_CONFIG = ${JSON.stringify({
+  basePath: options.rootDefault ? "" : localeBasePath(locale),
+  labsDataBasePath,
+  assetVersion,
+  messages: copy
+})};</script>
+    <script src="${withAssetVersion("/app.js")}" defer></script>
+  </body>
+</html>`;
+};
 
 const renderRegistryPageHtml = (locale) => {
   const copy = localeCopy[locale];
@@ -2067,6 +2881,8 @@ VeneHelp is a public directory of search, reporting, and aid sources related to 
 - Spanish default homepage: ${absoluteUrl("/")}
 - Spanish homepage: ${absoluteLocaleUrl("es", "/")}
 - English homepage: ${absoluteLocaleUrl("en", "/")}
+- Spanish Labs page: ${absoluteUrl("/labs/")}
+- English Labs page: ${absoluteLocaleUrl("en", "/labs/")}
 - Canonical raw dataset: ${absoluteUrl("/data/sources.json")}
 ${showRegistry ? `- Spanish beta registry page: ${absoluteRegistryUrl("es")}
 - English beta registry page: ${absoluteRegistryUrl("en")}
@@ -2082,10 +2898,12 @@ ${showRegistry ? `- Spanish beta registry page: ${absoluteRegistryUrl("es")}
 const renderSitemap = () => {
   const entries = [
     absoluteUrl("/"),
+    absoluteUrl("/labs/"),
     absoluteUrl("/data/sources.json"),
     ...(showRegistry ? [absoluteUrl("/data/registry.json")] : []),
     ...supportedLocales.flatMap((locale) => [
       absoluteLocaleUrl(locale, "/"),
+      absoluteLocaleUrl(locale, "/labs/"),
       absoluteLocaleUrl(locale, "/sources/"),
       absoluteLocaleUrl(locale, "/data/sources.json"),
       ...(showRegistry ? [absoluteRegistryUrl(locale), absoluteLocaleUrl(locale, "/data/registry.json")] : []),
@@ -2112,6 +2930,15 @@ await ensureDir(docsDir);
 await fs.writeFile(path.join(docsDir, "styles.css"), styles);
 await fs.writeFile(path.join(docsDir, "app.js"), appJs);
 await fs.writeFile(path.join(docsDir, "index.html"), renderRootIndexHtml());
+await ensureDir(path.join(docsDir, "labs"));
+await fs.writeFile(
+  path.join(docsDir, "labs", "index.html"),
+  renderLabsPageHtml("es", {
+    canonical: absoluteUrl("/labs/"),
+    alternates: renderRootPathAlternateLinks("/labs/"),
+    rootDefault: true
+  })
+);
 await fs.writeFile(path.join(docsDir, "robots.txt"), renderRobots());
 await fs.writeFile(path.join(docsDir, "llms.txt"), renderLlms());
 await fs.writeFile(path.join(docsDir, "sitemap.xml"), renderSitemap());
@@ -2128,15 +2955,18 @@ for (const locale of supportedLocales) {
   const localeDir = path.join(docsDir, locale);
   const localeDataDir = path.join(localeDir, "data");
   const localeSourcesDir = path.join(localeDir, "sources");
+  const localeLabsDir = path.join(localeDir, "labs");
 
   await ensureDir(localeDir);
   await ensureDir(localeDataDir);
   await ensureDir(localeSourcesDir);
+  await ensureDir(localeLabsDir);
   if (showRegistry) {
     await ensureDir(path.join(localeDir, "registro"));
   }
 
   await fs.writeFile(path.join(localeDir, "index.html"), renderLocaleIndexHtml(locale));
+  await fs.writeFile(path.join(localeLabsDir, "index.html"), renderLabsPageHtml(locale));
   if (showRegistry) {
     await fs.writeFile(path.join(localeDir, "registro", "index.html"), renderRegistryPageHtml(locale));
   }

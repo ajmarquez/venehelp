@@ -1,0 +1,41 @@
+name: Refresh labs data
+
+on:
+  schedule:
+    - cron: "20 */6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-labs-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build static site
+        run: npm run build
+
+      - name: Build labs datasets
+        run: npm run build:labs-data
+
+      - name: Commit and push if changed
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "venehelp-bot"
+          git config user.email "bot@directorioterremotovenezuela.org"
+          git add -A
+          git commit -m "Auto: refresh labs datasets"
+          git push

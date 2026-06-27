@@ -269,3 +269,168 @@ Array.from(document.querySelectorAll("[data-filter]")).forEach((button) => {
 });
 
 load();
+
+const labsSummaryEl = document.querySelector("[data-labs-summary]");
+const labsListEl = document.querySelector("[data-labs-list]");
+const labsResultsEl = document.querySelector("[data-labs-results]");
+const labsScoreFilterEl = document.querySelector("[data-labs-score-filter]");
+const labsDataBasePath = config.labsDataBasePath || (basePath + "/labs/data");
+
+const labsState = {
+  summary: null,
+  groups: [],
+  filter: "all"
+};
+
+const labsConfidenceThreshold = (filter) => {
+  if (filter === "high") return 0.93;
+  if (filter === "medium") return 0.8;
+  return 0;
+};
+
+const labsConfidenceLabel = (candidate) => {
+  const score = Number(candidate && candidate.score);
+  if (score >= 0.93) return "high";
+  if (score >= 0.8) return "medium";
+  return "low";
+};
+
+const labsValue = (value) =>
+  value === null || value === undefined || value === "" ? escapeHtml(messages.labsNoValue) : escapeHtml(String(value));
+
+const labsRenderSummary = (summary) => {
+  if (!labsSummaryEl) return;
+  if (!summary) {
+    labsSummaryEl.innerHTML = '<div class="labs-summary-stat"><strong>…</strong><span>' + escapeHtml(messages.labsSummaryLoading) + '</span></div>';
+    return;
+  }
+
+  const stats = [
+    { value: summary.missing.totalRecords, label: messages.labsSummaryMissing },
+    { value: summary.missing.matchableRecords, label: messages.labsSummaryMatchable },
+    { value: summary.sources.localizados.dedupedRows, label: messages.labsSummaryLocated },
+    { value: summary.matching.candidatePairs, label: messages.labsSummaryCandidates },
+    { value: summary.matching.highConfidence, label: messages.labsSummaryHigh },
+    { value: summary.matching.mediumConfidence, label: messages.labsSummaryMedium }
+  ];
+
+  labsSummaryEl.innerHTML = stats
+    .map((item) => '<div class="labs-summary-stat"><strong>' + formatNumber(item.value) + '</strong><span>' + escapeHtml(item.label) + '</span></div>')
+    .join("");
+};
+
+const labsRenderMatchCard = (group) => {
+  const top = (group.candidates || [])[0];
+  if (!top) return "";
+
+  const confidence = labsConfidenceLabel(top);
+  const scorePercent = top.scorePercent != null ? top.scorePercent : Math.round((Number(top.score) || 0) * 100);
+  const identityLabel = top.identitySignal === "exact"
+    ? messages.labsIdentityExact
+    : top.identitySignal === "conflict"
+      ? messages.labsIdentityConflict
+      : messages.labsIdentityMissing;
+  const nameScorePercent = Math.round((Number(top.nameScore) || 0) * 100);
+  const locationScorePercent = Math.round((Number(top.locationScore) || 0) * 100);
+  const locationText = [top.locatedHospital, top.locatedAddress].filter(Boolean).join(" · ");
+  const otherCandidates = (group.candidates || []).slice(1);
+
+  return [
+    '<article class="labs-match-card">',
+    '<div class="labs-match-head">',
+    '<div>',
+    '<h3>' + escapeHtml(group.missing.name || group.missing.rawDescription || messages.labsNoValue) + '</h3>',
+    '<p class="small">' + escapeHtml(messages.labsTopCandidateTitle) + ': ' + escapeHtml(top.locatedName || messages.labsNoValue) + '</p>',
+    '</div>',
+    '<div class="labs-score" data-confidence="' + confidence + '">',
+    '<span class="labs-score-value">' + escapeHtml(String(scorePercent)) + '%</span>',
+    '<span class="labs-score-label">' + escapeHtml(messages.labsScoreLabel) + '</span>',
+    '</div>',
+    '</div>',
+    '<div class="labs-evidence-list">',
+    '<span class="labs-evidence-pill">' + escapeHtml(identityLabel) + '</span>',
+    '<span class="labs-evidence-pill">' + escapeHtml(messages.labsNameScore) + ': ' + escapeHtml(String(nameScorePercent)) + '%</span>',
+    (top.ageDiff !== null && top.ageDiff !== undefined ? '<span class="labs-evidence-pill">' + escapeHtml(messages.labsAgeLabel) + ': ' + labsValue(group.missing.age) + ' / ' + labsValue(top.locatedAge) + '</span>' : ''),
+    (locationScorePercent > 0 ? '<span class="labs-evidence-pill">' + escapeHtml(messages.labsLocationLabel) + ': ' + escapeHtml(String(locationScorePercent)) + '%</span>' : ''),
+    '</div>',
+    '<div class="labs-review-grid">',
+    '<section class="labs-review-panel">',
+    '<h3>' + escapeHtml(messages.labsMissingPanelTitle) + '</h3>',
+    '<p>' + escapeHtml(group.missing.rawDescription || group.missing.name || messages.labsNoValue) + '</p>',
+    '<dl>',
+    '<div><dt>' + escapeHtml(messages.labsAgeLabel) + '</dt><dd>' + labsValue(group.missing.age) + '</dd></div>',
+    '<div><dt>Cédula</dt><dd>' + labsValue(group.missing.cedula) + '</dd></div>',
+    '<div><dt>' + escapeHtml(messages.labsContactsLabel) + '</dt><dd>' + ((group.missing.contacts || []).length ? escapeHtml(group.missing.contacts.join(" · ")) : escapeHtml(messages.labsNoValue)) + '</dd></div>',
+    '<div><dt>' + escapeHtml(messages.labsSourceLabel) + '</dt><dd>' + (group.missing.sourceUrl ? '<a class="detail-link" href="' + escapeHtml(group.missing.sourceUrl) + '" target="_blank" rel="noreferrer">' + escapeHtml(messages.labsOpenSourceLink) + '</a>' : escapeHtml(messages.labsNoValue)) + '</dd></div>',
+    '</dl>',
+    '</section>',
+    '<section class="labs-review-panel">',
+    '<h3>' + escapeHtml(messages.labsLocatedPanelTitle) + '</h3>',
+    '<p>' + escapeHtml(top.locatedName || messages.labsNoValue) + '</p>',
+    '<dl>',
+    '<div><dt>' + escapeHtml(messages.labsAgeLabel) + '</dt><dd>' + labsValue(top.locatedAge) + '</dd></div>',
+    '<div><dt>Cédula</dt><dd>' + labsValue(top.locatedCedula) + '</dd></div>',
+    '<div><dt>' + escapeHtml(messages.labsHospitalLabel) + '</dt><dd>' + escapeHtml(locationText || messages.labsNoValue) + '</dd></div>',
+    '<div><dt>' + escapeHtml(messages.labsConditionLabel) + '</dt><dd>' + labsValue(top.locatedCondition) + '</dd></div>',
+    '<div><dt>' + escapeHtml(messages.labsSourceFileLabel) + '</dt><dd>' + labsValue(top.locatedSourceFile) + '</dd></div>',
+    '<div><dt>' + escapeHtml(messages.labsLocatedSourceLabel) + '</dt><dd>' + (top.locatedSourceUrl ? '<a class="detail-link" href="' + escapeHtml(top.locatedSourceUrl) + '" target="_blank" rel="noreferrer">' + escapeHtml(messages.labsOpenSourceLink) + '</a>' : escapeHtml(messages.labsNoValue)) + '</dd></div>',
+    '<div><dt>' + escapeHtml(messages.labsReasonsTitle) + '</dt><dd>' + escapeHtml((top.reasons || []).join(" · ") || messages.labsNoValue) + '</dd></div>',
+    '</dl>',
+    '</section>',
+    '</div>',
+    (otherCandidates.length
+      ? '<div class="labs-candidate-list"><h4>' + escapeHtml(messages.labsOtherCandidatesTitle) + '</h4>' +
+          otherCandidates.map((candidate) => '<div class="labs-candidate-item"><strong>' + escapeHtml(candidate.locatedName || messages.labsNoValue) + '</strong> · ' + escapeHtml(String(candidate.scorePercent != null ? candidate.scorePercent : Math.round((Number(candidate.score) || 0) * 100))) + '% · ' + escapeHtml(candidate.locatedHospital || messages.labsNoValue) + '</div>').join("") +
+        '</div>'
+      : ''),
+    '</article>'
+  ].join("");
+};
+
+const labsRenderMatches = () => {
+  if (!labsListEl || !labsResultsEl) return;
+  const threshold = labsConfidenceThreshold(labsState.filter);
+  const visible = (labsState.groups || []).filter((group) => {
+    const top = (group.candidates || [])[0];
+    return top && (Number(top.score) || 0) >= threshold;
+  });
+  labsResultsEl.textContent = interpolate(messages.labsResultsShown, { count: visible.length });
+  labsListEl.innerHTML = visible.length
+    ? visible.map(labsRenderMatchCard).join("")
+    : '<p class="labs-empty">' + escapeHtml(messages.labsNoMatches) + '</p>';
+};
+
+const loadLabs = async () => {
+  if (!labsSummaryEl && !labsListEl) return;
+  try {
+    const [summaryResponse, candidatesResponse] = await Promise.all([
+      fetch(labsDataBasePath + '/summary.json' + assetVersion),
+      fetch(labsDataBasePath + '/candidates.json' + assetVersion)
+    ]);
+    const summary = await summaryResponse.json();
+    const candidates = await candidatesResponse.json();
+    labsState.summary = summary;
+    labsState.groups = candidates.results || [];
+    labsRenderSummary(summary);
+    labsRenderMatches();
+  } catch (error) {
+    if (labsSummaryEl) {
+      labsSummaryEl.innerHTML = '<div class="labs-summary-stat"><strong>!</strong><span>' + escapeHtml(messages.labsMatchesFailed) + '</span></div>';
+    }
+    if (labsResultsEl) {
+      labsResultsEl.textContent = messages.labsMatchesFailed;
+    }
+    if (labsListEl) {
+      labsListEl.innerHTML = '<p class="labs-empty">' + escapeHtml(messages.labsMatchesFailed) + '</p>';
+    }
+  }
+};
+
+if (labsScoreFilterEl) {
+  labsScoreFilterEl.addEventListener('change', (event) => {
+    labsState.filter = event.target.value || 'all';
+    labsRenderMatches();
+  });
+}
+
+loadLabs();

@@ -29,6 +29,9 @@ jobs:
       - name: Rebuild static site
         run: npm run build
 
+      - name: Rebuild labs datasets
+        run: npm run build:labs-data
+
       - name: Commit and push if changed
         run: |
           if [ -z "$(git status --porcelain)" ]; then
