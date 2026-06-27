@@ -606,6 +606,46 @@
     ]
   },
   {
+    "slug": "ocr-data-terremoto-venezuela-24062026",
+    "section": "developer",
+    "name": "OCR Data — Terremoto Venezuela (24/06/2026)",
+    "url": "https://github.com/ecrespo/OCR-data_Terremoto_Venezuela_24062026/blob/main/consolidado.csv",
+    "source_code_url": "https://github.com/ecrespo/OCR-data_Terremoto_Venezuela_24062026",
+    "category": "website",
+    "purpose": "located-people",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "last_checked_at": "2026-06-27",
+    "owner": "Volunteer initiative",
+    "operator_type": "volunteer",
+    "status": "active",
+    "crawler_priority": 1,
+    "accepts_new_reports": false,
+    "public_search": false,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "located-search",
+      "hospitals"
+    ],
+    "summary": "Open-source OCR/transcription repository of hospital patient lists from the June 24, 2026 Venezuela earthquake, with consolidated CSV, XLSX, SQLite exports, and a local semantic-search app.",
+    "use_when": {
+      "es": "Úsalo si necesitas listas hospitalarias estructuradas, exportarlas o analizarlas localmente para integrar o verificar personas localizadas.",
+      "en": "Use this when you need structured hospital lists for local export, analysis, or integrations around located people."
+    },
+    "notes": [
+      "The repository README says it transcribes handwritten hospital patient lists and warns that some ID numbers or fields may contain OCR or handwriting reading errors.",
+      "It publishes consolidated Markdown, CSV, XLSX, and SQLite outputs plus a sqlite-vec semantic-search app for local technical analysis."
+    ],
+    "tags": [
+      "earthquake",
+      "open-source",
+      "hospitals",
+      "search"
+    ]
+  },
+  {
     "slug": "copernicus-ems-emsr884",
     "section": "developer",
     "name": "Copernicus EMS Damage Maps (EMSR884)",

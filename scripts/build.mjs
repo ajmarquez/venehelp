@@ -964,6 +964,14 @@ const spanishSourceCopy = {
       "Activación EMSR884 del servicio de cartografía rápida de Copernicus EMS, solicitada para el terremoto del 24 de junio de 2026.",
       "Ofrece productos de delineación y gradación de daños como mapas PDF y datos SIG; no tiene búsqueda de personas ni restablecimiento de contacto."
     ]
+  },
+  "ocr-data-terremoto-venezuela-24062026": {
+    summary:
+      "Repositorio open source de OCR y transcripción de listas hospitalarias de pacientes del terremoto de Venezuela del 24 de junio de 2026, con exportaciones consolidadas en CSV, XLSX y SQLite, además de una app local de búsqueda semántica.",
+    notes: [
+      "El README del repositorio indica que transcribe listas manuscritas de pacientes y advierte que algunas cédulas o campos pueden contener errores de lectura por caligrafía u OCR.",
+      "Publica salidas consolidadas en Markdown, CSV, XLSX y SQLite, además de una app con sqlite-vec para análisis técnico y búsqueda local."
+    ]
   }
 };
 
@@ -1358,6 +1366,9 @@ const buildDeveloperResources = (sources) => {
       const links = [];
       if (source.api_url) {
         links.push({ href: source.api_url, label: messages.openApi, primary: true, external: true });
+      }
+      if (source.url && source.url !== source.api_url && source.url !== source.source_code_url) {
+        links.push({ href: source.url, label: messages.openSource, primary: !source.api_url, external: true });
       }
       if (source.source_code_url) {
         links.push({ href: source.source_code_url, label: messages.openSourceCode, secondary: true, external: true });

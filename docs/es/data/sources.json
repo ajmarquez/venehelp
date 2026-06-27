@@ -905,6 +905,67 @@
     "source_code_url_label": "No revisado"
   },
   {
+    "slug": "ocr-data-terremoto-venezuela-24062026",
+    "section": "developer",
+    "name": "OCR Data — Terremoto Venezuela (24/06/2026)",
+    "url": "https://github.com/ecrespo/OCR-data_Terremoto_Venezuela_24062026/blob/main/consolidado.csv",
+    "source_code_url": "https://github.com/ecrespo/OCR-data_Terremoto_Venezuela_24062026",
+    "category": "website",
+    "purpose": "located-people",
+    "coverage": "national",
+    "language": "es",
+    "requires_login": false,
+    "last_checked_at": "2026-06-27",
+    "owner": "Volunteer initiative",
+    "operator_type": "volunteer",
+    "status": "active",
+    "crawler_priority": 1,
+    "accepts_new_reports": false,
+    "public_search": false,
+    "report_found": false,
+    "public_contact": null,
+    "services": [
+      "located-search",
+      "hospitals"
+    ],
+    "summary": "Repositorio open source de OCR y transcripción de listas hospitalarias de pacientes del terremoto de Venezuela del 24 de junio de 2026, con exportaciones consolidadas en CSV, XLSX y SQLite, además de una app local de búsqueda semántica.",
+    "use_when": {
+      "es": "Úsalo si necesitas listas hospitalarias estructuradas, exportarlas o analizarlas localmente para integrar o verificar personas localizadas.",
+      "en": "Use this when you need structured hospital lists for local export, analysis, or integrations around located people."
+    },
+    "notes": [
+      "El README del repositorio indica que transcribe listas manuscritas de pacientes y advierte que algunas cédulas o campos pueden contener errores de lectura por caligrafía u OCR.",
+      "Publica salidas consolidadas en Markdown, CSV, XLSX y SQLite, además de una app con sqlite-vec para análisis técnico y búsqueda local."
+    ],
+    "tags": [
+      "terremoto",
+      "codigo-abierto",
+      "hospitales",
+      "busqueda"
+    ],
+    "use_when_label": "Úsalo si necesitas listas hospitalarias estructuradas, exportarlas o analizarlas localmente para integrar o verificar personas localizadas.",
+    "warning_label": "",
+    "category_label": "Sitio web",
+    "purpose_label": "Personas localizadas",
+    "status_label": "Activa",
+    "operator_type_label": "Voluntario",
+    "coverage_label": "Nacional",
+    "language_label": "Español",
+    "requires_login_label": "No",
+    "accepts_reports_label_value": "No",
+    "public_search_label_value": "No",
+    "report_found_label_value": "No",
+    "owner_label": "Iniciativa voluntaria",
+    "service_labels": [
+      "Buscar personas localizadas",
+      "Hospitales"
+    ],
+    "last_checked_label": "2026-06-27",
+    "public_contact_label": "No revisado",
+    "api_url_label": "No revisado",
+    "source_code_url_label": "https://github.com/ecrespo/OCR-data_Terremoto_Venezuela_24062026"
+  },
+  {
     "slug": "copernicus-ems-emsr884",
     "section": "developer",
     "name": "Copernicus EMS Damage Maps (EMSR884)",

@@ -150,6 +150,9 @@ const buildDeveloperResources = (sources) => {
       if (source.api_url) {
         links.push({ href: source.api_url, label: messages.openApi, primary: true, external: true });
       }
+      if (source.url && source.url !== source.api_url && source.url !== source.source_code_url) {
+        links.push({ href: source.url, label: messages.openSource, primary: !source.api_url, external: true });
+      }
       if (source.source_code_url) {
         links.push({ href: source.source_code_url, label: messages.openSourceCode, secondary: true, external: true });
       }
