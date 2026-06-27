@@ -271,6 +271,7 @@ Array.from(document.querySelectorAll("[data-filter]")).forEach((button) => {
 load();
 
 const labsSummaryEl = document.querySelector("[data-labs-summary]");
+const labsTableEl = document.querySelector("[data-labs-table]");
 const labsListEl = document.querySelector("[data-labs-list]");
 const labsResultsEl = document.querySelector("[data-labs-results]");
 const labsScoreFilterEl = document.querySelector("[data-labs-score-filter]");
@@ -297,6 +298,19 @@ const labsConfidenceLabel = (candidate) => {
 
 const labsValue = (value) =>
   value === null || value === undefined || value === "" ? escapeHtml(messages.labsNoValue) : escapeHtml(String(value));
+
+const labsAnchorId = (group) => {
+  const raw = group && group.missing && group.missing.id ? group.missing.id : "match";
+  return "match-" + String(raw).replace(/[^a-z0-9_-]/gi, "-");
+};
+
+const labsMatchedSourceLabels = (group) => {
+  const labels = ["Localizados Venezuela"];
+  if ((group.hospitalesVenezuelaMatches || []).length) {
+    labels.push("Hospitales en Venezuela");
+  }
+  return labels;
+};
 
 const labsRenderSummary = (summary) => {
   if (!labsSummaryEl) return;
@@ -337,7 +351,7 @@ const labsRenderMatchCard = (group) => {
   const supportingSources = (group.supportingSources || []);
 
   return [
-    '<article class="labs-match-card">',
+    '<article class="labs-match-card" id="' + escapeHtml(labsAnchorId(group)) + '">',
     '<div class="labs-match-head">',
     '<div>',
     '<h3>' + escapeHtml(group.missing.name || group.missing.rawDescription || messages.labsNoValue) + '</h3>',
@@ -399,6 +413,43 @@ const labsRenderMatchCard = (group) => {
   ].join("");
 };
 
+const labsRenderTable = (groups) => {
+  if (!labsTableEl) return;
+  if (!groups.length) {
+    labsTableEl.innerHTML = '<p class="labs-empty">' + escapeHtml(messages.labsNoMatches) + '</p>';
+    return;
+  }
+
+  labsTableEl.innerHTML = [
+    '<h3>' + escapeHtml(messages.labsTableTitle) + '</h3>',
+    '<div class="labs-table-wrap">',
+    '<table class="labs-match-table">',
+    '<thead><tr>',
+    '<th>' + escapeHtml(messages.labsTableNameHeader) + '</th>',
+    '<th>' + escapeHtml(messages.labsTableSourcesHeader) + '</th>',
+    '<th>' + escapeHtml(messages.labsTableScoreHeader) + '</th>',
+    '<th>' + escapeHtml(messages.labsTableReviewHeader) + '</th>',
+    '</tr></thead>',
+    '<tbody>',
+    groups.map((group) => {
+      const top = (group.candidates || [])[0];
+      const scorePercent = top && top.scorePercent != null ? top.scorePercent : Math.round((Number(top && top.score) || 0) * 100);
+      const sources = labsMatchedSourceLabels(group);
+      return [
+        '<tr>',
+        '<td><strong>' + escapeHtml(group.missing.name || group.missing.rawDescription || messages.labsNoValue) + '</strong></td>',
+        '<td><div class="labs-table-sources">' + sources.map((label) => '<span class="labs-evidence-pill">' + escapeHtml(label) + '</span>').join("") + '</div></td>',
+        '<td><strong>' + escapeHtml(String(scorePercent)) + '%</strong></td>',
+        '<td><a class="detail-link labs-table-link" href="#' + escapeHtml(labsAnchorId(group)) + '">' + escapeHtml(messages.labsTableOpenDetail) + '</a></td>',
+        '</tr>'
+      ].join("");
+    }).join(""),
+    '</tbody>',
+    '</table>',
+    '</div>'
+  ].join("");
+};
+
 const labsRenderMatches = () => {
   if (!labsListEl || !labsResultsEl) return;
   const threshold = labsConfidenceThreshold(labsState.filter);
@@ -407,6 +458,7 @@ const labsRenderMatches = () => {
     return top && (Number(top.score) || 0) >= threshold;
   });
   labsResultsEl.textContent = interpolate(messages.labsResultsShown, { count: visible.length });
+  labsRenderTable(visible);
   labsListEl.innerHTML = visible.length
     ? visible.map(labsRenderMatchCard).join("")
     : '<p class="labs-empty">' + escapeHtml(messages.labsNoMatches) + '</p>';

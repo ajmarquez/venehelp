@@ -802,6 +802,55 @@ ul {
   margin-top: 1rem;
 }
 
+.labs-table-wrap {
+  margin-top: 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.labs-match-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.labs-match-table th,
+.labs-match-table td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+
+.labs-match-table th {
+  background: var(--surface-muted);
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.labs-match-table tr:last-child td {
+  border-bottom: none;
+}
+
+.labs-match-table td strong {
+  display: block;
+}
+
+.labs-table-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.labs-table-link {
+  white-space: nowrap;
+}
+
 .labs-match-card {
   border: 1px solid var(--line);
   border-radius: 14px;

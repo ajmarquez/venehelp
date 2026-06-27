@@ -856,6 +856,55 @@ ul {
   margin-top: 1rem;
 }
 
+.labs-table-wrap {
+  margin-top: 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.labs-match-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.labs-match-table th,
+.labs-match-table td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+
+.labs-match-table th {
+  background: var(--surface-muted);
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.labs-match-table tr:last-child td {
+  border-bottom: none;
+}
+
+.labs-match-table td strong {
+  display: block;
+}
+
+.labs-table-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.labs-table-link {
+  white-space: nowrap;
+}
+
 .labs-match-card {
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -1396,6 +1445,12 @@ const localeCopy = {
     labsSummaryLoading: "Cargando resumen del laboratorio",
     labsMatchesLoading: "Cargando coincidencias candidatas",
     labsMatchesFailed: "No se pudieron cargar los datasets del laboratorio.",
+    labsTableTitle: "Tabla rápida de revisión",
+    labsTableNameHeader: "Persona desaparecida",
+    labsTableSourcesHeader: "Fuentes con match",
+    labsTableScoreHeader: "Match sugerido",
+    labsTableReviewHeader: "Revisar",
+    labsTableOpenDetail: "Ver detalle",
     labsMinScoreLabel: "Puntaje mínimo",
     labsAllScores: "Todos",
     labsHighOnly: "Solo altas",
@@ -1568,6 +1623,12 @@ const localeCopy = {
     labsSummaryLoading: "Loading labs summary",
     labsMatchesLoading: "Loading candidate matches",
     labsMatchesFailed: "Unable to load labs datasets.",
+    labsTableTitle: "Quick review table",
+    labsTableNameHeader: "Missing person",
+    labsTableSourcesHeader: "Matching sources",
+    labsTableScoreHeader: "Suggested match",
+    labsTableReviewHeader: "Review",
+    labsTableOpenDetail: "Open details",
     labsMinScoreLabel: "Minimum score",
     labsAllScores: "All",
     labsHighOnly: "High only",
@@ -1879,6 +1940,7 @@ Array.from(document.querySelectorAll("[data-filter]")).forEach((button) => {
 load();
 
 const labsSummaryEl = document.querySelector("[data-labs-summary]");
+const labsTableEl = document.querySelector("[data-labs-table]");
 const labsListEl = document.querySelector("[data-labs-list]");
 const labsResultsEl = document.querySelector("[data-labs-results]");
 const labsScoreFilterEl = document.querySelector("[data-labs-score-filter]");
@@ -1905,6 +1967,19 @@ const labsConfidenceLabel = (candidate) => {
 
 const labsValue = (value) =>
   value === null || value === undefined || value === "" ? escapeHtml(messages.labsNoValue) : escapeHtml(String(value));
+
+const labsAnchorId = (group) => {
+  const raw = group && group.missing && group.missing.id ? group.missing.id : "match";
+  return "match-" + String(raw).replace(/[^a-z0-9_-]/gi, "-");
+};
+
+const labsMatchedSourceLabels = (group) => {
+  const labels = ["Localizados Venezuela"];
+  if ((group.hospitalesVenezuelaMatches || []).length) {
+    labels.push("Hospitales en Venezuela");
+  }
+  return labels;
+};
 
 const labsRenderSummary = (summary) => {
   if (!labsSummaryEl) return;
@@ -1945,7 +2020,7 @@ const labsRenderMatchCard = (group) => {
   const supportingSources = (group.supportingSources || []);
 
   return [
-    '<article class="labs-match-card">',
+    '<article class="labs-match-card" id="' + escapeHtml(labsAnchorId(group)) + '">',
     '<div class="labs-match-head">',
     '<div>',
     '<h3>' + escapeHtml(group.missing.name || group.missing.rawDescription || messages.labsNoValue) + '</h3>',
@@ -2007,6 +2082,43 @@ const labsRenderMatchCard = (group) => {
   ].join("");
 };
 
+const labsRenderTable = (groups) => {
+  if (!labsTableEl) return;
+  if (!groups.length) {
+    labsTableEl.innerHTML = '<p class="labs-empty">' + escapeHtml(messages.labsNoMatches) + '</p>';
+    return;
+  }
+
+  labsTableEl.innerHTML = [
+    '<h3>' + escapeHtml(messages.labsTableTitle) + '</h3>',
+    '<div class="labs-table-wrap">',
+    '<table class="labs-match-table">',
+    '<thead><tr>',
+    '<th>' + escapeHtml(messages.labsTableNameHeader) + '</th>',
+    '<th>' + escapeHtml(messages.labsTableSourcesHeader) + '</th>',
+    '<th>' + escapeHtml(messages.labsTableScoreHeader) + '</th>',
+    '<th>' + escapeHtml(messages.labsTableReviewHeader) + '</th>',
+    '</tr></thead>',
+    '<tbody>',
+    groups.map((group) => {
+      const top = (group.candidates || [])[0];
+      const scorePercent = top && top.scorePercent != null ? top.scorePercent : Math.round((Number(top && top.score) || 0) * 100);
+      const sources = labsMatchedSourceLabels(group);
+      return [
+        '<tr>',
+        '<td><strong>' + escapeHtml(group.missing.name || group.missing.rawDescription || messages.labsNoValue) + '</strong></td>',
+        '<td><div class="labs-table-sources">' + sources.map((label) => '<span class="labs-evidence-pill">' + escapeHtml(label) + '</span>').join("") + '</div></td>',
+        '<td><strong>' + escapeHtml(String(scorePercent)) + '%</strong></td>',
+        '<td><a class="detail-link labs-table-link" href="#' + escapeHtml(labsAnchorId(group)) + '">' + escapeHtml(messages.labsTableOpenDetail) + '</a></td>',
+        '</tr>'
+      ].join("");
+    }).join(""),
+    '</tbody>',
+    '</table>',
+    '</div>'
+  ].join("");
+};
+
 const labsRenderMatches = () => {
   if (!labsListEl || !labsResultsEl) return;
   const threshold = labsConfidenceThreshold(labsState.filter);
@@ -2015,6 +2127,7 @@ const labsRenderMatches = () => {
     return top && (Number(top.score) || 0) >= threshold;
   });
   labsResultsEl.textContent = interpolate(messages.labsResultsShown, { count: visible.length });
+  labsRenderTable(visible);
   labsListEl.innerHTML = visible.length
     ? visible.map(labsRenderMatchCard).join("")
     : '<p class="labs-empty">' + escapeHtml(messages.labsNoMatches) + '</p>';
@@ -2583,6 +2696,9 @@ ${renderHead({
           </div>
           <div class="labs-summary-grid" data-labs-summary>
             <div class="labs-summary-stat"><strong>…</strong><span>${escapeHtml(copy.labsSummaryLoading)}</span></div>
+          </div>
+          <div data-labs-table>
+            <p class="labs-empty">${escapeHtml(copy.labsMatchesLoading)}</p>
           </div>
           <div class="labs-match-list" data-labs-list>
             <p class="labs-empty">${escapeHtml(copy.labsMatchesLoading)}</p>

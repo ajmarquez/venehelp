@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-27T18:40:25.126Z",
+  "generatedAt": "2026-06-27T18:54:50.999Z",
   "source": "kobotoolbox-terremotove",
-  "total": 439,
+  "total": 443,
   "results": [
     {
       "id": "kobo-791548945",
@@ -11669,6 +11669,110 @@
         "lon": -66.889232
       },
       "locationText": "Angel Luis Velásquez Amaya - ~40 años -Residencias Gradisca, Macuto",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794427777",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794427777",
+      "sourceUrl": null,
+      "submittedAt": "2026-06-27T18:42:54",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Ángel Abraham Velásquez Gavidia, 22 años",
+      "rawAdditional": "Persona en el espectro autista. Residencias Gradisca, Macuto.",
+      "rawLinkField": null,
+      "freeText": "Ángel Abraham Velásquez Gavidia, 22 años | Persona en el espectro autista. Residencias Gradisca, Macuto.",
+      "name": "Abraham Velásquez Gavidia",
+      "normalizedName": "ABRAHAM VELASQUEZ GAVIDIA",
+      "cedula": null,
+      "age": 22,
+      "contacts": [],
+      "geo": {
+        "lat": 10.610499,
+        "lon": -66.889187
+      },
+      "locationText": "Ángel Abraham Velásquez Gavidia, 22 años | Persona en el espectro autista. Residencias Gradisca, Macuto.",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794428083",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794428083",
+      "sourceUrl": null,
+      "submittedAt": "2026-06-27T18:43:40",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Ángel Alí Velásquez Gavidia, 15 años, C.I. 34007805",
+      "rawAdditional": "Residencias Gradisca, Macuto.",
+      "rawLinkField": null,
+      "freeText": "Ángel Alí Velásquez Gavidia, 15 años, C.I. 34007805 | Residencias Gradisca, Macuto.",
+      "name": "Alí Velásquez Gavidia",
+      "normalizedName": "ALI VELASQUEZ GAVIDIA",
+      "cedula": "34007805",
+      "age": 15,
+      "contacts": [],
+      "geo": {
+        "lat": 10.610457,
+        "lon": -66.889187
+      },
+      "locationText": "Ángel Alí Velásquez Gavidia, 15 años, C.I. 34007805 | Residencias Gradisca, Macuto.",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794431329",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794431329",
+      "sourceUrl": "https://x.com/vibexval444/status/2070026081894080626?s=20",
+      "submittedAt": "2026-06-27T18:51:15",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Luci Ramírez",
+      "rawAdditional": "Edificio Petunia / +58-424-8704233",
+      "rawLinkField": "https://x.com/vibexval444/status/2070026081894080626?s=20",
+      "freeText": "Luci Ramírez | Edificio Petunia / +58-424-8704233",
+      "name": "Luci Ramírez",
+      "normalizedName": "LUCI RAMIREZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "+584248704233"
+      ],
+      "geo": {
+        "lat": 10.498388,
+        "lon": -66.847487
+      },
+      "locationText": "Luci Ramírez | Edificio Petunia / +58-424-8704233",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794431820",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794431820",
+      "sourceUrl": "https://x.com/vibexval444/status/2070026081894080626?s=20",
+      "submittedAt": "2026-06-27T18:52:30",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "José Ramos",
+      "rawAdditional": "Edificio Petunia / +58-424-8704233",
+      "rawLinkField": "https://x.com/vibexval444/status/2070026081894080626?s=20",
+      "freeText": "José Ramos | Edificio Petunia / +58-424-8704233",
+      "name": "José Ramos",
+      "normalizedName": "JOSE RAMOS",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "+584248704233"
+      ],
+      "geo": {
+        "lat": 10.498388,
+        "lon": -66.847487
+      },
+      "locationText": "José Ramos | Edificio Petunia / +58-424-8704233",
       "isMatchable": true,
       "notMatchableReason": null
     }

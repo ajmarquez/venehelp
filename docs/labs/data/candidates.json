@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-27T18:40:25.126Z",
-  "totalGroups": 32,
-  "totalPairs": 57,
+  "generatedAt": "2026-06-27T18:54:50.999Z",
+  "totalGroups": 33,
+  "totalPairs": 58,
   "results": [
     {
       "missing": {
@@ -2858,6 +2858,138 @@
           "key": "hospitales-en-venezuela:hospitales-en-venezuela:MANUEL IVO FERNANDA DE ANDRADE:DESAPARECIDO:9234",
           "label": "Hospitales en Venezuela",
           "note": "Manuel Ivo Fernanda De Andrade · 59 años, La Guaira, Caribe · Desaparecido",
+          "url": "https://hospitalesenvenezuela.com/"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-794431329",
+        "name": "Luci Ramírez",
+        "rawDescription": "Luci Ramírez",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "+584248704233"
+        ],
+        "sourceUrl": "https://x.com/vibexval444/status/2070026081894080626?s=20",
+        "submittedAt": "2026-06-27T18:51:15"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-794431329",
+          "locatedId": "localizados-ramirez-lucian-r4bw39",
+          "missingName": "Luci Ramírez",
+          "locatedName": "Ramirez Lucian",
+          "locatedHospital": "Hospital José María Vargas - La Guaira",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/ramirez-lucian-r4bw39",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.818,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [
+        {
+          "id": "hospitales-en-venezuela:LUCIAN RAMIREZ:H JOSE MARIA VARGAS LG:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Luci Ramírez",
+          "name": "Lucian Ramirez",
+          "detail": null,
+          "age": null,
+          "maskedCedula": null,
+          "locationName": "H Jose Maria Vargas LG",
+          "city": null,
+          "phone": null,
+          "supportScore": 0.92,
+          "supportScorePercent": 92,
+          "supportReasons": [
+            "Very strong name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        },
+        {
+          "id": "hospitales-en-venezuela:LUCIAN RAMIREZ:H JOSE MARIA VARGAS LA GUAIRA:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Luci Ramírez",
+          "name": "Lucian Ramirez",
+          "detail": null,
+          "age": null,
+          "maskedCedula": null,
+          "locationName": "H. Jose Maria Vargas La Guaira",
+          "city": null,
+          "phone": null,
+          "supportScore": 0.92,
+          "supportScorePercent": 92,
+          "supportReasons": [
+            "Very strong name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        },
+        {
+          "id": "hospitales-en-venezuela:LUCIAN RAMIREZ:HOSPITAL GENERAL REGIONAL DR JOSE MARIA VARGAS SEGURO SOCIAL ESTADO LA GUAIRA:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Luci Ramírez",
+          "name": "Lucian Ramirez",
+          "detail": null,
+          "age": null,
+          "maskedCedula": null,
+          "locationName": "Hospital General Regional Dr. Jose Maria Vargas Seguro Social - Estado La Guaira",
+          "city": null,
+          "phone": null,
+          "supportScore": 0.92,
+          "supportScorePercent": 92,
+          "supportReasons": [
+            "Very strong name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        }
+      ],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Luci Ramírez",
+          "url": "https://x.com/vibexval444/status/2070026081894080626?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Ramirez Lucian · Hospital José María Vargas - La Guaira",
+          "url": "https://localizadosvenezuela.com/buscar/ramirez-lucian-r4bw39"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:LUCIAN RAMIREZ:H JOSE MARIA VARGAS LG:",
+          "label": "Hospitales en Venezuela",
+          "note": "Lucian Ramirez · H Jose Maria Vargas LG",
+          "url": "https://hospitalesenvenezuela.com/"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:LUCIAN RAMIREZ:H JOSE MARIA VARGAS LA GUAIRA:",
+          "label": "Hospitales en Venezuela",
+          "note": "Lucian Ramirez · H. Jose Maria Vargas La Guaira",
+          "url": "https://hospitalesenvenezuela.com/"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:LUCIAN RAMIREZ:HOSPITAL GENERAL REGIONAL DR JOSE MARIA VARGAS SEGURO SOCIAL ESTADO LA GUAIRA:",
+          "label": "Hospitales en Venezuela",
+          "note": "Lucian Ramirez · Hospital General Regional Dr. Jose Maria Vargas Seguro Social - Estado La Guaira",
           "url": "https://hospitalesenvenezuela.com/"
         }
       ]
