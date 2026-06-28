@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-27T19:48:03.416Z",
-  "totalGroups": 29,
-  "totalPairs": 52,
+  "generatedAt": "2026-06-28T04:55:45.191Z",
+  "totalGroups": 34,
+  "totalPairs": 59,
   "results": [
     {
       "missing": {
@@ -717,25 +717,6 @@
           ]
         },
         {
-          "id": "hospitales-en-venezuela:DELIA DE GUERRERO PENA:HOSPITAL MILITAR DR CARLOS ARVELEDO:5180",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Guerrero Peña",
-          "name": "Delia De Guerrero Peña",
-          "detail": "50.0",
-          "age": null,
-          "maskedCedula": "••••5180",
-          "locationName": "Hospital Militar Dr. Carlos Arveledo",
-          "city": null,
-          "phone": null,
-          "supportScore": 0.92,
-          "supportScorePercent": 92,
-          "supportReasons": [
-            "Very strong name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        },
-        {
           "id": "hospitales-en-venezuela:DELIA DE GUERRERO PENA DE GUERRERO PENA DELIA:HOSPITAL MILITAR DR CARLOS ARVELO:",
           "source": "hospitales-en-venezuela",
           "sourceUrl": "https://hospitalesenvenezuela.com/",
@@ -746,6 +727,25 @@
           "maskedCedula": null,
           "locationName": "Hospital Militar Dr. Carlos Arvelo",
           "city": "Caracas",
+          "phone": null,
+          "supportScore": 0.92,
+          "supportScorePercent": 92,
+          "supportReasons": [
+            "Very strong name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        },
+        {
+          "id": "hospitales-en-venezuela:DELIA DE GUERRERO PENA DE GUERRERO PENA DELIA NA:HOSPITAL MILITAR UNIVERSITARIO DR CARLOS ARVELO:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Guerrero Peña",
+          "name": "Delia De Guerrero Pena / De Guerrero Peña Delia Na",
+          "detail": "PNA",
+          "age": null,
+          "maskedCedula": null,
+          "locationName": "Hospital Militar Universitario Dr. Carlos Arvelo",
+          "city": "Por confirmar",
           "phone": null,
           "supportScore": 0.92,
           "supportScorePercent": 92,
@@ -775,15 +775,15 @@
           "url": "https://hospitalesenvenezuela.com/"
         },
         {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:DELIA DE GUERRERO PENA:HOSPITAL MILITAR DR CARLOS ARVELEDO:5180",
-          "label": "Hospitales en Venezuela",
-          "note": "Delia De Guerrero Peña · 50.0 · Hospital Militar Dr. Carlos Arveledo",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
           "key": "hospitales-en-venezuela:hospitales-en-venezuela:DELIA DE GUERRERO PENA DE GUERRERO PENA DELIA:HOSPITAL MILITAR DR CARLOS ARVELO:",
           "label": "Hospitales en Venezuela",
           "note": "Delia De Guerrero Pena / De Guerrero Peña Delia · Hospital Militar Dr. Carlos Arvelo",
+          "url": "https://hospitalesenvenezuela.com/"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:DELIA DE GUERRERO PENA DE GUERRERO PENA DELIA NA:HOSPITAL MILITAR UNIVERSITARIO DR CARLOS ARVELO:",
+          "label": "Hospitales en Venezuela",
+          "note": "Delia De Guerrero Pena / De Guerrero Peña Delia Na · PNA · Hospital Militar Universitario Dr. Carlos Arvelo",
           "url": "https://hospitalesenvenezuela.com/"
         }
       ]
@@ -2375,15 +2375,15 @@
       ],
       "hospitalesVenezuelaMatches": [
         {
-          "id": "hospitales-en-venezuela:LUCIAN RAMIREZ:H JOSE MARIA VARGAS LG:",
+          "id": "hospitales-en-venezuela:LUCIAN RAMIREZ:HOSPITAL HOSPITAL JOSE MARIA VARGAS LA GUAIRA:",
           "source": "hospitales-en-venezuela",
           "sourceUrl": "https://hospitalesenvenezuela.com/",
           "sourceSearchTerm": "Luci Ramírez",
           "name": "Lucian Ramirez",
-          "detail": null,
+          "detail": "Fecha captura: :00 vzla",
           "age": null,
           "maskedCedula": null,
-          "locationName": "H Jose Maria Vargas LG",
+          "locationName": "Hospital: Hospital José María Vargas - La Guaira",
           "city": null,
           "phone": null,
           "supportScore": 0.92,
@@ -2394,11 +2394,11 @@
           ]
         },
         {
-          "id": "hospitales-en-venezuela:LUCIAN RAMIREZ:H JOSE MARIA VARGAS LA GUAIRA:",
+          "id": "hospitales-en-venezuela:RAMIREZ LUCIAN NA:H JOSE MARIA VARGAS LA GUAIRA:",
           "source": "hospitales-en-venezuela",
           "sourceUrl": "https://hospitalesenvenezuela.com/",
           "sourceSearchTerm": "Luci Ramírez",
-          "name": "Lucian Ramirez",
+          "name": "Ramirez Lucian Na",
           "detail": null,
           "age": null,
           "maskedCedula": null,
@@ -2413,22 +2413,22 @@
           ]
         },
         {
-          "id": "hospitales-en-venezuela:LUCIAN RAMIREZ:HOSPITAL GENERAL REGIONAL DR JOSE MARIA VARGAS SEGURO SOCIAL ESTADO LA GUAIRA:",
+          "id": "hospitales-en-venezuela:RAMIREZ LUCIAN:HOSPITAL UNIVERSITARIO DE CARACAS:",
           "source": "hospitales-en-venezuela",
           "sourceUrl": "https://hospitalesenvenezuela.com/",
           "sourceSearchTerm": "Luci Ramírez",
-          "name": "Lucian Ramirez",
+          "name": "Ramirez Lucian",
           "detail": null,
           "age": null,
           "maskedCedula": null,
-          "locationName": "Hospital General Regional Dr. Jose Maria Vargas Seguro Social - Estado La Guaira",
-          "city": null,
+          "locationName": "Hospital Universitario de Caracas",
+          "city": "Caracas",
           "phone": null,
-          "supportScore": 0.92,
-          "supportScorePercent": 92,
+          "supportScore": 0.88,
+          "supportScorePercent": 88,
           "supportReasons": [
             "Very strong name match in Hospitales en Venezuela",
-            "Same hospital or facility"
+            "Related hospital wording"
           ]
         }
       ],
@@ -2446,22 +2446,324 @@
           "url": "https://localizadosvenezuela.com/buscar/ramirez-lucian-r4bw39"
         },
         {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:LUCIAN RAMIREZ:H JOSE MARIA VARGAS LG:",
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:LUCIAN RAMIREZ:HOSPITAL HOSPITAL JOSE MARIA VARGAS LA GUAIRA:",
           "label": "Hospitales en Venezuela",
-          "note": "Lucian Ramirez · H Jose Maria Vargas LG",
+          "note": "Lucian Ramirez · Fecha captura: :00 vzla · Hospital: Hospital José María Vargas - La Guaira",
           "url": "https://hospitalesenvenezuela.com/"
         },
         {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:LUCIAN RAMIREZ:H JOSE MARIA VARGAS LA GUAIRA:",
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:RAMIREZ LUCIAN NA:H JOSE MARIA VARGAS LA GUAIRA:",
           "label": "Hospitales en Venezuela",
-          "note": "Lucian Ramirez · H. Jose Maria Vargas La Guaira",
+          "note": "Ramirez Lucian Na · H. Jose Maria Vargas La Guaira",
           "url": "https://hospitalesenvenezuela.com/"
         },
         {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:LUCIAN RAMIREZ:HOSPITAL GENERAL REGIONAL DR JOSE MARIA VARGAS SEGURO SOCIAL ESTADO LA GUAIRA:",
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:RAMIREZ LUCIAN:HOSPITAL UNIVERSITARIO DE CARACAS:",
           "label": "Hospitales en Venezuela",
-          "note": "Lucian Ramirez · Hospital General Regional Dr. Jose Maria Vargas Seguro Social - Estado La Guaira",
+          "note": "Ramirez Lucian · Hospital Universitario de Caracas",
           "url": "https://hospitalesenvenezuela.com/"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-794504037",
+        "name": "Manuel Ivo Fernandes",
+        "rawDescription": "Manuel Ivo Fernandes de Andrade E-81.599.234",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "81599234",
+          "04241859022"
+        ],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-27T22:19:49"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-794504037",
+          "locatedId": "localizados-fernandez-manuel-2lzdpg",
+          "missingName": "Manuel Ivo Fernandes",
+          "locatedName": "Fernández Manuel",
+          "locatedHospital": "Hospital Pérez Carreño",
+          "locatedAddress": "La Guaira - Playa Grande",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/fernandez-manuel-2lzdpg",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "consolidado.csv",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.774,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Fernández Manuel · Hospital Pérez Carreño",
+          "url": "https://localizadosvenezuela.com/buscar/fernandez-manuel-2lzdpg"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-794509902",
+        "name": "Dayerlin Diaz",
+        "rawDescription": "Dayerlin Diaz",
+        "cedula": null,
+        "age": null,
+        "contacts": [],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-27T22:51:47"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-794509902",
+          "locatedId": "localizados-diaz-mayerlin-8lhdxo",
+          "missingName": "Dayerlin Diaz",
+          "locatedName": "Diaz Mayerlin",
+          "locatedHospital": "Hospital Vargas de Caracas",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/diaz-mayerlin-8lhdxo",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "consolidado.csv",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.818,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Diaz Mayerlin · Hospital Vargas de Caracas",
+          "url": "https://localizadosvenezuela.com/buscar/diaz-mayerlin-8lhdxo"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-794511359",
+        "name": "Xiomara Hernández",
+        "rawDescription": "Xiomara Hernández",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "04141486728",
+          "04144217165"
+        ],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-27T23:01:41"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-794511359",
+          "locatedId": "localizados-maria-hernandez-ef1pdj",
+          "missingName": "Xiomara Hernández",
+          "locatedName": "Maria Hernandez",
+          "locatedHospital": "Seguro Social La Guaira",
+          "locatedAddress": "Camuri Chico",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/maria-hernandez-ef1pdj",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.786,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-794511359",
+          "locatedId": "localizados-maritza-hernandez-pv777m",
+          "missingName": "Xiomara Hernández",
+          "locatedName": "Maritza Hernandez",
+          "locatedHospital": "Seguro Social La Guaira",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/maritza-hernandez-pv777m",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.733,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-794511359",
+          "locatedId": "localizados-marixa-hernandez-rf30yu",
+          "missingName": "Xiomara Hernández",
+          "locatedName": "Marixa Hernandez",
+          "locatedHospital": "Seguro Social La Guaira",
+          "locatedAddress": "Caribe",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/marixa-hernandez-rf30yu",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": 70,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.759,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Maria Hernandez · Seguro Social La Guaira",
+          "url": "https://localizadosvenezuela.com/buscar/maria-hernandez-ef1pdj"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-794524698",
+        "name": "Alberto Rosales",
+        "rawDescription": "Alberto Rosales",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "04127050282",
+          "04148984707",
+          "04143703426"
+        ],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-28T00:52:25"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-794524698",
+          "locatedId": "localizados-rosales-yoalber-22250708-o6dnr7",
+          "missingName": "Alberto Rosales",
+          "locatedName": "Rosales Yoalber",
+          "locatedHospital": "Hospital José María Vargas - La Guaira",
+          "locatedAddress": "Caribe",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/rosales-yoalber-22250708-o6dnr7",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
+          "missingCedula": null,
+          "locatedCedula": "22250708",
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.769,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Rosales Yoalber · Hospital José María Vargas - La Guaira",
+          "url": "https://localizadosvenezuela.com/buscar/rosales-yoalber-22250708-o6dnr7"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-794525078",
+        "name": "Rosa Hernandez",
+        "rawDescription": "Rosa Hernandez 51 años",
+        "cedula": null,
+        "age": 51,
+        "contacts": [
+          "04144509947"
+        ],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-28T00:55:48"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-794525078",
+          "locatedId": "localizados-maria-hernandez-ef1pdj",
+          "missingName": "Rosa Hernandez",
+          "locatedName": "Maria Hernandez",
+          "locatedHospital": "Seguro Social La Guaira",
+          "locatedAddress": "Camuri Chico",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/maria-hernandez-ef1pdj",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": 51,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.72,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Maria Hernandez · Seguro Social La Guaira",
+          "url": "https://localizadosvenezuela.com/buscar/maria-hernandez-ef1pdj"
         }
       ]
     }
