@@ -1,16 +1,17 @@
 {
-  "generatedAt": "2026-06-28T09:36:31.618Z",
+  "generatedAt": "2026-06-28T13:09:25.061Z",
   "sources": {
     "kobo": {
       "assetUid": "a8XWDsdUcpBzXGtgQmiiro",
-      "rows": 1869,
+      "rows": 1893,
       "eventCounts": {
         "edificio_colapsado___da_o_estructural": 156,
         "punto_de_acopio___primeros_auxilios": 50,
         "persona_rescatada___atrapada": 305,
-        "persona_desaparecida": 447,
+        "persona_desaparecida": 451,
         "edificio_colapsado___da_o_estructural incendio___fuga_de_gas": 1,
         "edificio_colapsado___da_o_estructural persona_desaparecida": 6,
+        "persona_herida": 286,
         "edificio_colapsado___da_o_estructural persona_rescatada___atrapada persona_desaparecida": 2,
         "edificio_colapsado___da_o_estructural persona_rescatada___atrapada": 6,
         "animales_perdidos": 25,
@@ -26,13 +27,13 @@
         "persona_desaparecida familia_desaparecida": 6,
         "edificio_colapsado___da_o_estructural persona_desaparecida familia_desaparecida": 1,
         "edificio_colapsado___da_o_estructural persona_desaparecida punto_de_acopio___primeros_auxilios refugio___albergue animales_perdidos solicitud___oferta_de_recursos familia_desaparecida": 1,
-        "persona_herida": 265,
-        "persona_rescatada___atrapada persona_herida": 536,
+        "persona_rescatada___atrapada persona_herida": 534,
         "solicitud___oferta_de_recursos": 3,
         "persona_desaparecida persona_herida": 1,
         "persona_rescatada___atrapada persona_herida familia_desaparecida": 1,
         "edificio_colapsado___da_o_estructural persona_rescatada___atrapada persona_herida": 1,
-        "persona_desaparecida refugio___albergue": 1
+        "persona_desaparecida refugio___albergue": 1,
+        "incendio___fuga_de_gas": 1
       }
     },
     "localizados": {
@@ -46,8 +47,8 @@
     }
   },
   "missing": {
-    "totalRecords": 501,
-    "matchableRecords": 443,
+    "totalRecords": 505,
+    "matchableRecords": 447,
     "hospitalSourceRecords": 6,
     "withCedula": 31
   },

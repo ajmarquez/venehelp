@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-28T09:36:31.618Z",
+  "generatedAt": "2026-06-28T13:09:25.061Z",
   "source": "kobotoolbox-terremotove",
-  "total": 501,
+  "total": 505,
   "results": [
     {
       "id": "kobo-791548945",
@@ -14316,6 +14316,121 @@
       "locationText": "Familia fallecida en el conjunto residencial bosque lindo, en la avenida intercomunal Turmero Maracay, fallecieron la esposa del Preso Politico Adrian De Gouveia de Sousa, Yexika Gimon de De Gouveia, su suegra, María del Rosario Perez y su sobrina: María José Salas Prato. Una de las hijas de Adrian que estaba en la zona fue rescatada con vida y està en el Hospital.",
       "isMatchable": false,
       "notMatchableReason": "family-report"
+    },
+    {
+      "id": "kobo-794770149",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794770149",
+      "sourceUrl": "https://x.com/AlejandroSauceN/status/2071186908722389461",
+      "canonicalSourceUrl": "https://x.com/AlejandroSauceN/status/2071186908722389461",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T11:18:08",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Elda Maria Salazar Contreras, Desaparecida desde el dia del terremoto, Edificio Punta Piedra, La Guaira.",
+      "rawAdditional": null,
+      "rawLinkField": "https://x.com/AlejandroSauceN/status/2071186908722389461",
+      "freeText": "Elda Maria Salazar Contreras, Desaparecida desde el dia del terremoto, Edificio Punta Piedra, La Guaira.",
+      "name": "Elda Maria Salazar Contreras",
+      "normalizedName": "ELDA MARIA SALAZAR CONTRERAS",
+      "cedula": null,
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 10.6113826,
+        "lon": -66.8858295
+      },
+      "locationText": "Elda Maria Salazar Contreras, Desaparecida desde el dia del terremoto, Edificio Punta Piedra, La Guaira.",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794775857",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794775857",
+      "sourceUrl": "https://x.com/AnaOtg/status/2071091400146321516",
+      "canonicalSourceUrl": "https://x.com/AnaOtg/status/2071091400146321516",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T11:26:56",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "La Guaira, Residencias Caribe (se indica que se necesita ayuda y que están vivos).",
+      "rawAdditional": "0412-2124488",
+      "rawLinkField": "https://x.com/AnaOtg/status/2071091400146321516",
+      "freeText": "La Guaira, Residencias Caribe (se indica que se necesita ayuda y que están vivos). | 0412-2124488",
+      "name": "La Guaira",
+      "normalizedName": "LA GUAIRA",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04122124488"
+      ],
+      "geo": {
+        "lat": 10.6188433,
+        "lon": -66.8498838
+      },
+      "locationText": "La Guaira, Residencias Caribe (se indica que se necesita ayuda y que están vivos). | 0412-2124488",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794814118",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794814118",
+      "sourceUrl": "https://x.com/quejestovalee/status/2071028470176506038",
+      "canonicalSourceUrl": "https://x.com/quejestovalee/status/2071028470176506038",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T12:38:17",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "MOISES SEGOVIA",
+      "rawAdditional": "04261275936",
+      "rawLinkField": "https://x.com/quejestovalee/status/2071028470176506038",
+      "freeText": "MOISES SEGOVIA | 04261275936",
+      "name": "Moises Segovia",
+      "normalizedName": "MOISES SEGOVIA",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04261275936"
+      ],
+      "geo": {
+        "lat": 10.610072,
+        "lon": -67.004311
+      },
+      "locationText": "MOISES SEGOVIA | 04261275936",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794829585",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794829585",
+      "sourceUrl": "https://x.com/iamnotkimm/status/2070964563546161236",
+      "canonicalSourceUrl": "https://x.com/iamnotkimm/status/2070964563546161236",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T13:01:26",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Andreina Estefania Torrealba Celis. Desaparecida",
+      "rawAdditional": "0424-4424594/0424-4256162",
+      "rawLinkField": "https://x.com/iamnotkimm/status/2070964563546161236",
+      "freeText": "Andreina Estefania Torrealba Celis. Desaparecida | 0424-4424594/0424-4256162",
+      "name": "Andreina Estefania Torrealba Celis",
+      "normalizedName": "ANDREINA ESTEFANIA TORREALBA CELIS",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04244424594",
+        "04244256162"
+      ],
+      "geo": {
+        "lat": 10.6141507,
+        "lon": -66.8393163
+      },
+      "locationText": "Andreina Estefania Torrealba Celis. Desaparecida | 0424-4424594/0424-4256162",
+      "isMatchable": true,
+      "notMatchableReason": null
     }
   ]
 }
