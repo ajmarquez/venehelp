@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-28T18:59:03.651Z",
-  "totalGroups": 38,
-  "totalPairs": 65,
+  "generatedAt": "2026-06-28T19:49:34.270Z",
+  "totalGroups": 41,
+  "totalPairs": 69,
   "results": [
     {
       "missing": {
@@ -2292,26 +2292,7 @@
           "ageDiff": null
         }
       ],
-      "hospitalesVenezuelaMatches": [
-        {
-          "id": "hospitales-en-venezuela:MANUEL IVO FERNANDA DE ANDRADE:DESAPARECIDO:9234",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "81599234",
-          "name": "Manuel Ivo Fernanda De Andrade",
-          "detail": "59 años, La Guaira, Caribe",
-          "age": 59,
-          "maskedCedula": "••••9234",
-          "locationName": "Desaparecido",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.99,
-          "supportScorePercent": 99,
-          "supportReasons": [
-            "Last 4 digits of cedula match"
-          ]
-        }
-      ],
+      "hospitalesVenezuelaMatches": [],
       "supportingSources": [
         {
           "key": "kobo",
@@ -2324,12 +2305,6 @@
           "label": "Localizados Venezuela",
           "note": "Fernández Manuel · Hospital Pérez Carreño",
           "url": "https://localizadosvenezuela.com/buscar/fernandez-manuel-2lzdpg"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:MANUEL IVO FERNANDA DE ANDRADE:DESAPARECIDO:9234",
-          "label": "Hospitales en Venezuela",
-          "note": "Manuel Ivo Fernanda De Andrade · 59 años, La Guaira, Caribe · Desaparecido",
-          "url": "https://hospitalesenvenezuela.com/"
         }
       ]
     },
@@ -2990,6 +2965,181 @@
           "label": "Localizados Venezuela",
           "note": "Cabrera Carina · Hospital Domingo Luciani",
           "url": "https://localizadosvenezuela.com/buscar/cabrera-carina-manpk6"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-795026440",
+        "name": "Gladys Delgado",
+        "rawDescription": "Gladys Delgado - OPPPE 26, la guaira",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "04248439869"
+        ],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-28T19:34:34"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-795026440",
+          "locatedId": "localizados-delgado-mady-7zxzsv",
+          "missingName": "Gladys Delgado",
+          "locatedName": "Delgado Mady",
+          "locatedHospital": "Hospital Pérez Carreño",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/delgado-mady-7zxzsv",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "consolidado.csv",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.727,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Delgado Mady · Hospital Pérez Carreño",
+          "url": "https://localizadosvenezuela.com/buscar/delgado-mady-7zxzsv"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-795027382",
+        "name": "Antoni Gonzalez",
+        "rawDescription": "Antoni Gonzalez - OPPPE 26, La Guaira",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "04246799950"
+        ],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-28T19:36:53"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-795027382",
+          "locatedId": "localizados-gonzalez-yoani-akfzzz",
+          "missingName": "Antoni Gonzalez",
+          "locatedName": "Gonzalez Yoani",
+          "locatedHospital": "Clínica El Ávila",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/gonzalez-yoani-akfzzz",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.72,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Gonzalez Yoani · Clínica El Ávila",
+          "url": "https://localizadosvenezuela.com/buscar/gonzalez-yoani-akfzzz"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-795027712",
+        "name": "Antonela Gonzalez",
+        "rawDescription": "Antonela Gonzalez - OPPPE 26, La Guaira",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "04246799950"
+        ],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-28T19:37:55"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-795027712",
+          "locatedId": "localizados-ana-gonzalez-njifyb",
+          "missingName": "Antonela Gonzalez",
+          "locatedName": "Ana Gonzalez",
+          "locatedHospital": "Periférico de Catia",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/ana-gonzalez-njifyb",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.72,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-795027712",
+          "locatedId": "localizados-ana-gonzalez-7za4u1",
+          "missingName": "Antonela Gonzalez",
+          "locatedName": "Ana Gonzalez",
+          "locatedHospital": "Hospital de Pariata",
+          "locatedAddress": "Av. Sucre",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/ana-gonzalez-7za4u1",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "consolidado.csv",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": 30,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.72,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Ana Gonzalez · Periférico de Catia",
+          "url": "https://localizadosvenezuela.com/buscar/ana-gonzalez-njifyb"
         }
       ]
     }

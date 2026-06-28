@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-06-28T18:59:03.651Z",
+  "generatedAt": "2026-06-28T19:49:34.270Z",
   "sources": {
     "kobo": {
       "assetUid": "a8XWDsdUcpBzXGtgQmiiro",
-      "rows": 1995,
+      "rows": 2005,
       "eventCounts": {
         "edificio_colapsado___da_o_estructural": 156,
         "punto_de_acopio___primeros_auxilios": 50,
-        "persona_rescatada___atrapada": 335,
-        "persona_desaparecida": 487,
+        "persona_rescatada___atrapada": 316,
+        "persona_desaparecida": 494,
         "edificio_colapsado___da_o_estructural incendio___fuga_de_gas": 1,
         "edificio_colapsado___da_o_estructural persona_desaparecida": 6,
-        "persona_herida": 288,
+        "persona_herida": 312,
         "edificio_colapsado___da_o_estructural persona_rescatada___atrapada persona_desaparecida": 2,
         "edificio_colapsado___da_o_estructural persona_rescatada___atrapada": 6,
         "animales_perdidos": 26,
@@ -23,11 +23,11 @@
         "persona_rescatada___atrapada punto_de_acopio___primeros_auxilios": 1,
         "persona_rescatada___atrapada persona_desaparecida": 1,
         "persona_desaparecida solicitud___oferta_de_recursos": 1,
-        "familia_desaparecida": 31,
+        "familia_desaparecida": 32,
         "persona_desaparecida familia_desaparecida": 6,
         "edificio_colapsado___da_o_estructural persona_desaparecida familia_desaparecida": 1,
         "edificio_colapsado___da_o_estructural persona_desaparecida punto_de_acopio___primeros_auxilios refugio___albergue animales_perdidos solicitud___oferta_de_recursos familia_desaparecida": 1,
-        "persona_rescatada___atrapada persona_herida": 567,
+        "persona_rescatada___atrapada persona_herida": 564,
         "solicitud___oferta_de_recursos": 3,
         "persona_desaparecida persona_herida": 1,
         "persona_rescatada___atrapada persona_herida familia_desaparecida": 1,
@@ -41,19 +41,19 @@
       "dedupedRows": 4126
     },
     "hospitalesVenezuela": {
-      "queriedGroups": 38,
-      "matchedGroups": 5,
-      "matchedRecords": 11
+      "queriedGroups": 41,
+      "matchedGroups": 4,
+      "matchedRecords": 10
     }
   },
   "missing": {
-    "totalRecords": 541,
-    "matchableRecords": 483,
+    "totalRecords": 549,
+    "matchableRecords": 491,
     "hospitalSourceRecords": 6,
     "withCedula": 36
   },
   "matching": {
-    "candidatePairs": 65,
+    "candidatePairs": 69,
     "highConfidence": 0,
     "mediumConfidence": 2
   }

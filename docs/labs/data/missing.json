@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-28T18:59:03.651Z",
+  "generatedAt": "2026-06-28T19:49:34.270Z",
   "source": "kobotoolbox-terremotove",
-  "total": 541,
+  "total": 549,
   "results": [
     {
       "id": "kobo-791548945",
@@ -15472,6 +15472,238 @@
         "lon": -66.891538
       },
       "locationText": "Joel Jesus Blanco Cova | Comunicarse al: 04127079684 o 04122203312 o 02126331919",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-795026440",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "795026440",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T19:34:34",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Gladys Delgado - OPPPE 26, la guaira",
+      "rawAdditional": "04248439869",
+      "rawLinkField": null,
+      "freeText": "Gladys Delgado - OPPPE 26, la guaira | 04248439869",
+      "name": "Gladys Delgado",
+      "normalizedName": "GLADYS DELGADO",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04248439869"
+      ],
+      "geo": {
+        "lat": 10.615910903253535,
+        "lon": -66.83990273242208
+      },
+      "locationText": "Gladys Delgado - OPPPE 26, la guaira | 04248439869",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-795026803",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "795026803",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T19:35:37",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Gabriel Perez Delgado - OPPPE 26, La Guaira",
+      "rawAdditional": "04248701923",
+      "rawLinkField": null,
+      "freeText": "Gabriel Perez Delgado - OPPPE 26, La Guaira | 04248701923",
+      "name": "Gabriel Perez Delgado",
+      "normalizedName": "GABRIEL PEREZ DELGADO",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04248701923"
+      ],
+      "geo": {
+        "lat": 10.615910903253535,
+        "lon": -66.83990273242208
+      },
+      "locationText": "Gabriel Perez Delgado - OPPPE 26, La Guaira | 04248701923",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-795027340",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "795027340",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T19:36:48",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "Pedro Rodríguez, Barbara Rodríguez, Emma Rodriguez, Katherine Vásquez",
+      "rawAdditional": "Contacto: 04242702396",
+      "rawLinkField": null,
+      "freeText": "Pedro Rodríguez, Barbara Rodríguez, Emma Rodriguez, Katherine Vásquez | Contacto: 04242702396",
+      "name": "Pedro Rodríguez",
+      "normalizedName": "PEDRO RODRIGUEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04242702396"
+      ],
+      "geo": {
+        "lat": 10.614419240248903,
+        "lon": -66.84008579485105
+      },
+      "locationText": "Pedro Rodríguez, Barbara Rodríguez, Emma Rodriguez, Katherine Vásquez | Contacto: 04242702396",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-795027382",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "795027382",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T19:36:53",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Antoni Gonzalez - OPPPE 26, La Guaira",
+      "rawAdditional": "04246799950",
+      "rawLinkField": null,
+      "freeText": "Antoni Gonzalez - OPPPE 26, La Guaira | 04246799950",
+      "name": "Antoni Gonzalez",
+      "normalizedName": "ANTONI GONZALEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04246799950"
+      ],
+      "geo": {
+        "lat": 10.615910903253535,
+        "lon": -66.83990273242208
+      },
+      "locationText": "Antoni Gonzalez - OPPPE 26, La Guaira | 04246799950",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-795027712",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "795027712",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T19:37:55",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Antonela Gonzalez - OPPPE 26, La Guaira",
+      "rawAdditional": "04246799950",
+      "rawLinkField": null,
+      "freeText": "Antonela Gonzalez - OPPPE 26, La Guaira | 04246799950",
+      "name": "Antonela Gonzalez",
+      "normalizedName": "ANTONELA GONZALEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04246799950"
+      ],
+      "geo": {
+        "lat": 10.615910903253535,
+        "lon": -66.83990273242208
+      },
+      "locationText": "Antonela Gonzalez - OPPPE 26, La Guaira | 04246799950",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-795028184",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "795028184",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T19:38:53",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Antonieta Gonzalez - OPPPE 26, La Guaira",
+      "rawAdditional": "04246799950",
+      "rawLinkField": null,
+      "freeText": "Antonieta Gonzalez - OPPPE 26, La Guaira | 04246799950",
+      "name": "Antonieta Gonzalez",
+      "normalizedName": "ANTONIETA GONZALEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04246799950"
+      ],
+      "geo": {
+        "lat": 10.615910903253535,
+        "lon": -66.83990273242208
+      },
+      "locationText": "Antonieta Gonzalez - OPPPE 26, La Guaira | 04246799950",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-795029423",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "795029423",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T19:40:58",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Diego Tovar - OPPPE 27 C, La Guaira",
+      "rawAdditional": "04128485475",
+      "rawLinkField": null,
+      "freeText": "Diego Tovar - OPPPE 27 C, La Guaira | 04128485475",
+      "name": "Diego Tovar",
+      "normalizedName": "DIEGO TOVAR",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04128485475"
+      ],
+      "geo": {
+        "lat": 10.614346394755293,
+        "lon": -66.83988787475029
+      },
+      "locationText": "Diego Tovar - OPPPE 27 C, La Guaira | 04128485475",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-795032569",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "795032569",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T19:49:32",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Gabriela Altuve Salazar - Residencia El Dorado Playa Grande, La Guaira",
+      "rawAdditional": "04143192661",
+      "rawLinkField": null,
+      "freeText": "Gabriela Altuve Salazar - Residencia El Dorado Playa Grande, La Guaira | 04143192661",
+      "name": "Gabriela Altuve Salazar",
+      "normalizedName": "GABRIELA ALTUVE SALAZAR",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04143192661"
+      ],
+      "geo": {
+        "lat": 10.609404,
+        "lon": -67.016344
+      },
+      "locationText": "Gabriela Altuve Salazar - Residencia El Dorado Playa Grande, La Guaira | 04143192661",
       "isMatchable": true,
       "notMatchableReason": null
     }
