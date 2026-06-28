@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-28T13:09:25.061Z",
-  "totalGroups": 34,
-  "totalPairs": 59,
+  "generatedAt": "2026-06-28T14:18:46.721Z",
+  "totalGroups": 37,
+  "totalPairs": 62,
   "results": [
     {
       "missing": {
@@ -2739,6 +2739,153 @@
           "label": "Localizados Venezuela",
           "note": "Maria Hernandez · Seguro Social La Guaira",
           "url": "https://localizadosvenezuela.com/buscar/maria-hernandez-ef1pdj"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-794844793",
+        "name": "Karla Castillo",
+        "rawDescription": "Karla Castillo - Frente a la playa Los Cocos, La Guaira",
+        "cedula": null,
+        "age": null,
+        "contacts": [],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-28T13:29:32"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-794844793",
+          "locatedId": "localizados-iaskara-castillo-a2zzrv",
+          "missingName": "Karla Castillo",
+          "locatedName": "Iaskara Castillo",
+          "locatedHospital": "Hospital Domingo Luciani",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/iaskara-castillo-a2zzrv",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": 28,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.769,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Iaskara Castillo · Hospital Domingo Luciani",
+          "url": "https://localizadosvenezuela.com/buscar/iaskara-castillo-a2zzrv"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-794847511",
+        "name": "Marco Sanchez",
+        "rawDescription": "Marco Sanchez - Residencias Caribe, Caribe-Caraballeda. La Guaira",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "04149182506",
+          "04143122105"
+        ],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-28T13:34:19"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-794847511",
+          "locatedId": "localizados-sanchez-maria-v5eccd",
+          "missingName": "Marco Sanchez",
+          "locatedName": "Sanchez Maria",
+          "locatedHospital": "Periférico de Catia",
+          "locatedAddress": "Sin información",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/sanchez-maria-v5eccd",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": 30,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.727,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Sanchez Maria · Periférico de Catia",
+          "url": "https://localizadosvenezuela.com/buscar/sanchez-maria-v5eccd"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-794866123",
+        "name": "Valentina Veracierta",
+        "rawDescription": "Valentina Veracierta CI-27027712",
+        "cedula": "27027712",
+        "age": null,
+        "contacts": [],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-28T14:02:53"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-794866123",
+          "locatedId": "localizados-herrera-valentina-kmfppn",
+          "missingName": "Valentina Veracierta",
+          "locatedName": "Herrera Valentina",
+          "locatedHospital": "Hospital Vargas de Caracas",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/herrera-valentina-kmfppn",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "consolidado.csv",
+          "missingCedula": "27027712",
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.727,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Herrera Valentina · Hospital Vargas de Caracas",
+          "url": "https://localizadosvenezuela.com/buscar/herrera-valentina-kmfppn"
         }
       ]
     }

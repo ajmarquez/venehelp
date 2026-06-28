@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-28T13:09:25.061Z",
+  "generatedAt": "2026-06-28T14:18:46.721Z",
   "source": "kobotoolbox-terremotove",
-  "total": 505,
+  "total": 527,
   "results": [
     {
       "id": "kobo-791548945",
@@ -1306,19 +1306,21 @@
       "event": "persona_desaparecida",
       "category": "missing-person",
       "rawDescription": "Desaparecida Ibe Aponte De Marcano, La Guaira, Los Corales, Resd. Ritasol",
-      "rawAdditional": "Contactar por Instagram @camilamendez.l",
+      "rawAdditional": "Contactar por Instagram @camilamendez - 04127015514",
       "rawLinkField": null,
-      "freeText": "Desaparecida Ibe Aponte De Marcano, La Guaira, Los Corales, Resd. Ritasol | Contactar por Instagram @camilamendez.l",
+      "freeText": "Desaparecida Ibe Aponte De Marcano, La Guaira, Los Corales, Resd. Ritasol | Contactar por Instagram @camilamendez - 04127015514",
       "name": "Ibe Aponte De Marcano",
       "normalizedName": "IBE APONTE DE MARCANO",
       "cedula": null,
       "age": null,
-      "contacts": [],
+      "contacts": [
+        "04127015514"
+      ],
       "geo": {
         "lat": 10.6146302,
         "lon": -66.8442914
       },
-      "locationText": "Desaparecida Ibe Aponte De Marcano, La Guaira, Los Corales, Resd. Ritasol | Contactar por Instagram @camilamendez.l",
+      "locationText": "Desaparecida Ibe Aponte De Marcano, La Guaira, Los Corales, Resd. Ritasol | Contactar por Instagram @camilamendez - 04127015514",
       "isMatchable": true,
       "notMatchableReason": null
     },
@@ -7938,19 +7940,21 @@
       "event": "familia_desaparecida",
       "category": "missing-family",
       "rawDescription": "Andreina Belmonte y sus hijos, tapeada con sus hijos",
-      "rawAdditional": null,
+      "rawAdditional": "549116202078",
       "rawLinkField": null,
-      "freeText": "Andreina Belmonte y sus hijos, tapeada con sus hijos",
+      "freeText": "Andreina Belmonte y sus hijos, tapeada con sus hijos | 549116202078",
       "name": "Andreina Belmonte",
       "normalizedName": "ANDREINA BELMONTE",
       "cedula": null,
       "age": null,
-      "contacts": [],
+      "contacts": [
+        "549116202078"
+      ],
       "geo": {
         "lat": 10.6101157685538,
         "lon": -67.01411451571781
       },
-      "locationText": "Andreina Belmonte y sus hijos, tapeada con sus hijos",
+      "locationText": "Andreina Belmonte y sus hijos, tapeada con sus hijos | 549116202078",
       "isMatchable": true,
       "notMatchableReason": null
     },
@@ -8081,20 +8085,22 @@
       "submittedAt": "2026-06-26T14:53:44",
       "event": "persona_desaparecida",
       "category": "missing-person",
-      "rawDescription": "Carlos Burgos",
-      "rawAdditional": null,
+      "rawDescription": "Carlos Burgos - Edificio Cumanagoto. La Guaira",
+      "rawAdditional": "0414-2889586",
       "rawLinkField": null,
-      "freeText": "Carlos Burgos",
+      "freeText": "Carlos Burgos - Edificio Cumanagoto. La Guaira | 0414-2889586",
       "name": "Carlos Burgos",
       "normalizedName": "CARLOS BURGOS",
       "cedula": null,
       "age": null,
-      "contacts": [],
+      "contacts": [
+        "04142889586"
+      ],
       "geo": {
         "lat": 10.611167943225638,
         "lon": -67.00971168915342
       },
-      "locationText": "Carlos Burgos",
+      "locationText": "Carlos Burgos - Edificio Cumanagoto. La Guaira | 0414-2889586",
       "isMatchable": true,
       "notMatchableReason": null
     },
@@ -14429,6 +14435,639 @@
         "lon": -66.8393163
       },
       "locationText": "Andreina Estefania Torrealba Celis. Desaparecida | 0424-4424594/0424-4256162",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794836488",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794836488",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T13:13:37",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Laura Karina Rodríguez",
+      "rawAdditional": "0424-1233687",
+      "rawLinkField": null,
+      "freeText": "Laura Karina Rodríguez | 0424-1233687",
+      "name": "Laura Karina Rodríguez",
+      "normalizedName": "LAURA KARINA RODRIGUEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04241233687"
+      ],
+      "geo": {
+        "lat": 10.615899137951933,
+        "lon": -66.83988199618193
+      },
+      "locationText": "Laura Karina Rodríguez | 0424-1233687",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794837038",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794837038",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T13:14:42",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Rossner Elvis López",
+      "rawAdditional": "0424-1233687",
+      "rawLinkField": null,
+      "freeText": "Rossner Elvis López | 0424-1233687",
+      "name": "Rossner Elvis López",
+      "normalizedName": "ROSSNER ELVIS LOPEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04241233687"
+      ],
+      "geo": {
+        "lat": 10.615899137951933,
+        "lon": -66.83988199618193
+      },
+      "locationText": "Rossner Elvis López | 0424-1233687",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794838236",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794838236",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T13:16:54",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Elsi Del Carmen Torre",
+      "rawAdditional": "0412-5449724",
+      "rawLinkField": null,
+      "freeText": "Elsi Del Carmen Torre | 0412-5449724",
+      "name": "Elsi Del Carmen Torre",
+      "normalizedName": "ELSI DEL CARMEN TORRE",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04125449724"
+      ],
+      "geo": {
+        "lat": 10.6132,
+        "lon": -66.838845
+      },
+      "locationText": "Elsi Del Carmen Torre | 0412-5449724",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794840053",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794840053",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T13:20:09",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "SHANTAL QUINTERO",
+      "rawAdditional": null,
+      "rawLinkField": null,
+      "freeText": "SHANTAL QUINTERO",
+      "name": "Shantal Quintero",
+      "normalizedName": "SHANTAL QUINTERO",
+      "cedula": null,
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 10.505577,
+        "lon": -66.842966
+      },
+      "locationText": "SHANTAL QUINTERO",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794842341",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794842341",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T13:24:45",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Andrés Alejandro Vargas Belmonte - Edificio Playate. Playa Grande, La Guaira",
+      "rawAdditional": "549116202078",
+      "rawLinkField": null,
+      "freeText": "Andrés Alejandro Vargas Belmonte - Edificio Playate. Playa Grande, La Guaira | 549116202078",
+      "name": "Andrés Alejandro Vargas Belmonte",
+      "normalizedName": "ANDRES ALEJANDRO VARGAS BELMONTE",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "549116202078"
+      ],
+      "geo": {
+        "lat": 10.60998244363446,
+        "lon": -67.01409343242203
+      },
+      "locationText": "Andrés Alejandro Vargas Belmonte - Edificio Playate. Playa Grande, La Guaira | 549116202078",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794844793",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794844793",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T13:29:32",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Karla Castillo - Frente a la playa Los Cocos, La Guaira",
+      "rawAdditional": null,
+      "rawLinkField": null,
+      "freeText": "Karla Castillo - Frente a la playa Los Cocos, La Guaira",
+      "name": "Karla Castillo",
+      "normalizedName": "KARLA CASTILLO",
+      "cedula": null,
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 10.616344049155865,
+        "lon": -66.83671036245016
+      },
+      "locationText": "Karla Castillo - Frente a la playa Los Cocos, La Guaira",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794847511",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794847511",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T13:34:19",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Marco Sanchez - Residencias Caribe, Caribe-Caraballeda. La Guaira",
+      "rawAdditional": "0414-9182506, 0414-3122105",
+      "rawLinkField": null,
+      "freeText": "Marco Sanchez - Residencias Caribe, Caribe-Caraballeda. La Guaira | 0414-9182506, 0414-3122105",
+      "name": "Marco Sanchez",
+      "normalizedName": "MARCO SANCHEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04149182506",
+        "04143122105"
+      ],
+      "geo": {
+        "lat": 10.611044740024093,
+        "lon": -66.83755378780444
+      },
+      "locationText": "Marco Sanchez - Residencias Caribe, Caribe-Caraballeda. La Guaira | 0414-9182506, 0414-3122105",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794848236",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794848236",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T13:35:47",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "YOEGDRING HERNÁNDEZ YANES - LOS CORALES- LA GUAIRA",
+      "rawAdditional": "0424-8808560",
+      "rawLinkField": null,
+      "freeText": "YOEGDRING HERNÁNDEZ YANES - LOS CORALES- LA GUAIRA | 0424-8808560",
+      "name": "Yoegdring Hernández Yanes",
+      "normalizedName": "YOEGDRING HERNANDEZ YANES",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04248808560"
+      ],
+      "geo": {
+        "lat": 10.610495893642751,
+        "lon": -66.85576759547628
+      },
+      "locationText": "YOEGDRING HERNÁNDEZ YANES - LOS CORALES- LA GUAIRA | 0424-8808560",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794855087",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794855087",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T13:45:15",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "SALVADOR GARCIA - Urbanizacion Tanaguarenas La Guaira",
+      "rawAdditional": "0424-2927598",
+      "rawLinkField": null,
+      "freeText": "SALVADOR GARCIA - Urbanizacion Tanaguarenas La Guaira | 0424-2927598",
+      "name": "Salvador Garcia",
+      "normalizedName": "SALVADOR GARCIA",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04242927598"
+      ],
+      "geo": {
+        "lat": 10.609463734428434,
+        "lon": -66.8251301728992
+      },
+      "locationText": "SALVADOR GARCIA - Urbanizacion Tanaguarenas La Guaira | 0424-2927598",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794855793",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794855793",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T13:46:34",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Karin Ledezma - Urbanizacion Tanaguarenas La Guaira",
+      "rawAdditional": "0424-2927598",
+      "rawLinkField": null,
+      "freeText": "Karin Ledezma - Urbanizacion Tanaguarenas La Guaira | 0424-2927598",
+      "name": "Karin Ledezma",
+      "normalizedName": "KARIN LEDEZMA",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04242927598"
+      ],
+      "geo": {
+        "lat": 10.609463734428434,
+        "lon": -66.8251301728992
+      },
+      "locationText": "Karin Ledezma - Urbanizacion Tanaguarenas La Guaira | 0424-2927598",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794858383",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794858383",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T13:51:08",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Juan Pablo Peñaloza Balza - La Gabarra, Los Corales, La Guaira",
+      "rawAdditional": "0414-3123175, +5491123883802,",
+      "rawLinkField": null,
+      "freeText": "Juan Pablo Peñaloza Balza - La Gabarra, Los Corales, La Guaira | 0414-3123175, +5491123883802,",
+      "name": "Juan Pablo Peñaloza Balza",
+      "normalizedName": "JUAN PABLO PENALOZA BALZA",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04143123175",
+        "+5491123883802"
+      ],
+      "geo": {
+        "lat": 10.597968080609412,
+        "lon": -66.96489013669053
+      },
+      "locationText": "Juan Pablo Peñaloza Balza - La Gabarra, Los Corales, La Guaira | 0414-3123175, +5491123883802,",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794862665",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794862665",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T13:57:42",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "ANA AVILA - Residencia Palma del Este, Avenida Costanera, Caraballera, La Guaira",
+      "rawAdditional": "0424-3101529",
+      "rawLinkField": null,
+      "freeText": "ANA AVILA - Residencia Palma del Este, Avenida Costanera, Caraballera, La Guaira | 0424-3101529",
+      "name": "Ana Avila",
+      "normalizedName": "ANA AVILA",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04243101529"
+      ],
+      "geo": {
+        "lat": 10.61313054673189,
+        "lon": -66.8614927665308
+      },
+      "locationText": "ANA AVILA - Residencia Palma del Este, Avenida Costanera, Caraballera, La Guaira | 0424-3101529",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794863565",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794863565",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T13:59:04",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Migdualy Alejandra González Martínez CI-19494873",
+      "rawAdditional": null,
+      "rawLinkField": "Edificio Portofino Beach, Caraballeda, La Guaira",
+      "freeText": "Migdualy Alejandra González Martínez CI-19494873 | Edificio Portofino Beach, Caraballeda, La Guaira",
+      "name": "Migdualy Alejandra González Martínez",
+      "normalizedName": "MIGDUALY ALEJANDRA GONZALEZ MARTINEZ",
+      "cedula": "19494873",
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 1,
+        "lon": 1
+      },
+      "locationText": "Migdualy Alejandra González Martínez CI-19494873 | Edificio Portofino Beach, Caraballeda, La Guaira",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794864871",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794864871",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T14:01:17",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Félix Ramón Tovar Hernández - Playa Grande, La Guaira",
+      "rawAdditional": "04122578535, +56957949669",
+      "rawLinkField": null,
+      "freeText": "Félix Ramón Tovar Hernández - Playa Grande, La Guaira | 04122578535, +56957949669",
+      "name": "Félix Ramón Tovar Hernández",
+      "normalizedName": "FELIX RAMON TOVAR HERNANDEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04122578535",
+        "+56957949669"
+      ],
+      "geo": {
+        "lat": 10.60994707343815,
+        "lon": -67.01387846892965
+      },
+      "locationText": "Félix Ramón Tovar Hernández - Playa Grande, La Guaira | 04122578535, +56957949669",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794865258",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794865258",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T14:01:47",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Yvis del Mar Mejias Caldera CI-11198905",
+      "rawAdditional": "Edificio Portofino Beach, Caraballeda, La Guaira",
+      "rawLinkField": null,
+      "freeText": "Yvis del Mar Mejias Caldera CI-11198905 | Edificio Portofino Beach, Caraballeda, La Guaira",
+      "name": "Mar Mejias Caldera",
+      "normalizedName": "MAR MEJIAS CALDERA",
+      "cedula": "11198905",
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 1,
+        "lon": 1
+      },
+      "locationText": "Yvis del Mar Mejias Caldera CI-11198905 | Edificio Portofino Beach, Caraballeda, La Guaira",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794865667",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794865667",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T14:02:21",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Victor David Meza - La Guaira",
+      "rawAdditional": "04242964268",
+      "rawLinkField": null,
+      "freeText": "Victor David Meza - La Guaira | 04242964268",
+      "name": "Victor David Meza",
+      "normalizedName": "VICTOR DAVID MEZA",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04242964268"
+      ],
+      "geo": {
+        "lat": 10.600068,
+        "lon": -66.929273
+      },
+      "locationText": "Victor David Meza - La Guaira | 04242964268",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794866123",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794866123",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T14:02:53",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Valentina Veracierta CI-27027712",
+      "rawAdditional": null,
+      "rawLinkField": "Edificio Portofino Beach, Caraballeda, La Guaira",
+      "freeText": "Valentina Veracierta CI-27027712 | Edificio Portofino Beach, Caraballeda, La Guaira",
+      "name": "Valentina Veracierta",
+      "normalizedName": "VALENTINA VERACIERTA",
+      "cedula": "27027712",
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 1,
+        "lon": 1
+      },
+      "locationText": "Valentina Veracierta CI-27027712 | Edificio Portofino Beach, Caraballeda, La Guaira",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794866691",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794866691",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T14:03:37",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Juana Cecilia Ponce Gil - Edificio Tamiami, Caraballeda, La Guaira",
+      "rawAdditional": "04241595358, +56955253202",
+      "rawLinkField": null,
+      "freeText": "Juana Cecilia Ponce Gil - Edificio Tamiami, Caraballeda, La Guaira | 04241595358, +56955253202",
+      "name": "Juana Cecilia Ponce Gil",
+      "normalizedName": "JUANA CECILIA PONCE GIL",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04241595358",
+        "+56955253202"
+      ],
+      "geo": {
+        "lat": 10.61716873797307,
+        "lon": -66.85273003242196
+      },
+      "locationText": "Juana Cecilia Ponce Gil - Edificio Tamiami, Caraballeda, La Guaira | 04241595358, +56955253202",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794867648",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794867648",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T14:04:48",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Sandra Millan Alcala - Edificio Tamiami, Caraballeda, La Guaira",
+      "rawAdditional": "04249139565",
+      "rawLinkField": null,
+      "freeText": "Sandra Millan Alcala - Edificio Tamiami, Caraballeda, La Guaira | 04249139565",
+      "name": "Sandra Millan Alcala",
+      "normalizedName": "SANDRA MILLAN ALCALA",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04249139565"
+      ],
+      "geo": {
+        "lat": 10.61716873797307,
+        "lon": -66.85273003242196
+      },
+      "locationText": "Sandra Millan Alcala - Edificio Tamiami, Caraballeda, La Guaira | 04249139565",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794868335",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794868335",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T14:05:57",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Alexander Lopez - Edificio Tamiami, Caraballeda, La Guaira",
+      "rawAdditional": "04125952536",
+      "rawLinkField": null,
+      "freeText": "Alexander Lopez - Edificio Tamiami, Caraballeda, La Guaira | 04125952536",
+      "name": "Alexander Lopez",
+      "normalizedName": "ALEXANDER LOPEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04125952536"
+      ],
+      "geo": {
+        "lat": 10.61716873797307,
+        "lon": -66.85273003242196
+      },
+      "locationText": "Alexander Lopez - Edificio Tamiami, Caraballeda, La Guaira | 04125952536",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794868914",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794868914",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T14:06:59",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Concepcion Socas Tejeras - Edificio Tamiami, Caraballeda, La Guaira",
+      "rawAdditional": "0034671456797, +34623376621",
+      "rawLinkField": null,
+      "freeText": "Concepcion Socas Tejeras - Edificio Tamiami, Caraballeda, La Guaira | 0034671456797, +34623376621",
+      "name": "Concepcion Socas Tejeras",
+      "normalizedName": "CONCEPCION SOCAS TEJERAS",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "0034671456797",
+        "+34623376621"
+      ],
+      "geo": {
+        "lat": 10.61716873797307,
+        "lon": -66.85273003242196
+      },
+      "locationText": "Concepcion Socas Tejeras - Edificio Tamiami, Caraballeda, La Guaira | 0034671456797, +34623376621",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794870543",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794870543",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T14:09:28",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Jean Poll Jersu Glod Marquez (C.I. 29665772) - Caraballeda, Caribe",
+      "rawAdditional": "04126807844",
+      "rawLinkField": null,
+      "freeText": "Jean Poll Jersu Glod Marquez (C.I. 29665772) - Caraballeda, Caribe | 04126807844",
+      "name": "Jean Poll Jersu Glod Marquez",
+      "normalizedName": "JEAN POLL JERSU GLOD MARQUEZ",
+      "cedula": "29665772",
+      "age": null,
+      "contacts": [
+        "04126807844"
+      ],
+      "geo": {
+        "lat": 10.613242,
+        "lon": -66.838803
+      },
+      "locationText": "Jean Poll Jersu Glod Marquez (C.I. 29665772) - Caraballeda, Caribe | 04126807844",
       "isMatchable": true,
       "notMatchableReason": null
     }
