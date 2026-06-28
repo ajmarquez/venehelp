@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-28T04:55:45.191Z",
+  "generatedAt": "2026-06-28T09:36:31.618Z",
   "totalGroups": 34,
   "totalPairs": 59,
   "results": [
@@ -2394,25 +2394,6 @@
           ]
         },
         {
-          "id": "hospitales-en-venezuela:RAMIREZ LUCIAN NA:H JOSE MARIA VARGAS LA GUAIRA:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Luci Ramírez",
-          "name": "Ramirez Lucian Na",
-          "detail": null,
-          "age": null,
-          "maskedCedula": null,
-          "locationName": "H. Jose Maria Vargas La Guaira",
-          "city": null,
-          "phone": null,
-          "supportScore": 0.92,
-          "supportScorePercent": 92,
-          "supportReasons": [
-            "Very strong name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        },
-        {
           "id": "hospitales-en-venezuela:RAMIREZ LUCIAN:HOSPITAL UNIVERSITARIO DE CARACAS:",
           "source": "hospitales-en-venezuela",
           "sourceUrl": "https://hospitalesenvenezuela.com/",
@@ -2449,12 +2430,6 @@
           "key": "hospitales-en-venezuela:hospitales-en-venezuela:LUCIAN RAMIREZ:HOSPITAL HOSPITAL JOSE MARIA VARGAS LA GUAIRA:",
           "label": "Hospitales en Venezuela",
           "note": "Lucian Ramirez · Fecha captura: :00 vzla · Hospital: Hospital José María Vargas - La Guaira",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:RAMIREZ LUCIAN NA:H JOSE MARIA VARGAS LA GUAIRA:",
-          "label": "Hospitales en Venezuela",
-          "note": "Ramirez Lucian Na · H. Jose Maria Vargas La Guaira",
           "url": "https://hospitalesenvenezuela.com/"
         },
         {

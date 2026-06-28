@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-28T04:55:45.191Z",
+  "generatedAt": "2026-06-28T09:36:31.618Z",
   "source": "kobotoolbox-terremotove",
-  "total": 493,
+  "total": 501,
   "results": [
     {
       "id": "kobo-791548945",
@@ -4569,6 +4569,35 @@
         "lon": -66.739545
       },
       "locationText": "2 personas desaparecidas: Ana Mercedes Granados de Farias y Glenis Martinez, Naiguatá | Cualquier información al 0414-4088736",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-792660258",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "792660258",
+      "sourceUrl": "https://x.com/AdruMolina/status/2070206647226572888?s=20",
+      "canonicalSourceUrl": "https://x.com/AdruMolina/status/2070206647226572888",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-25T21:45:50",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Alba Roa",
+      "rawAdditional": "Sector La Paez 3, Catia la mar, La Guaira - Llamar al +56 932968159",
+      "rawLinkField": "https://x.com/AdruMolina/status/2070206647226572888?s=20",
+      "freeText": "Alba Roa | Sector La Paez 3, Catia la mar, La Guaira - Llamar al +56 932968159",
+      "name": "Alba Roa",
+      "normalizedName": "ALBA ROA",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "+56932968159"
+      ],
+      "geo": {
+        "lat": 10.600992918264424,
+        "lon": -67.02498093843248
+      },
+      "locationText": "Alba Roa | Sector La Paez 3, Catia la mar, La Guaira - Llamar al +56 932968159",
       "isMatchable": true,
       "notMatchableReason": null
     },
@@ -14083,6 +14112,210 @@
       "locationText": "Simon Alberto Corro Castro | 04143357690, +34622226217",
       "isMatchable": true,
       "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794567708",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794567708",
+      "sourceUrl": "https://x.com/i/status/2070999141845794832",
+      "canonicalSourceUrl": "https://x.com/i/status/2070999141845794832",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T05:10:11",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Deisy Jimenez",
+      "rawAdditional": "Llamar al 584242353664, Cerca del supermercado La Riviera, Avenida Principal de Caribe, La Guaira, Vargas, aunque tambien se menciona el Edificio Botánico Tanaguarenas",
+      "rawLinkField": "https://x.com/i/status/2070999141845794832",
+      "freeText": "Deisy Jimenez | Llamar al 584242353664, Cerca del supermercado La Riviera, Avenida Principal de Caribe, La Guaira, Vargas, aunque tambien se menciona el Edificio Botánico Tanaguarenas",
+      "name": "Deisy Jimenez",
+      "normalizedName": "DEISY JIMENEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "584242353664"
+      ],
+      "geo": {
+        "lat": 10.617457,
+        "lon": -66.845506
+      },
+      "locationText": "Deisy Jimenez | Llamar al 584242353664, Cerca del supermercado La Riviera, Avenida Principal de Caribe, La Guaira, Vargas, aunque tambien se menciona el Edificio Botánico Tanaguarenas",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794570081",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794570081",
+      "sourceUrl": "https://x.com/i/status/2070999141845794832",
+      "canonicalSourceUrl": "https://x.com/i/status/2070999141845794832",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T05:17:04",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Zara Dairi Villanueva",
+      "rawAdditional": "c.i. 10270897, llamar al 58 4126481776, solo se sabe que desapareció en Caraballeda, La Guaira",
+      "rawLinkField": "https://x.com/i/status/2070999141845794832",
+      "freeText": "Zara Dairi Villanueva | c.i. 10270897, llamar al 58 4126481776, solo se sabe que desapareció en Caraballeda, La Guaira",
+      "name": "Zara Dairi Villanueva",
+      "normalizedName": "ZARA DAIRI VILLANUEVA",
+      "cedula": "10270897",
+      "age": null,
+      "contacts": [
+        "584126481776"
+      ],
+      "geo": {
+        "lat": 10.614157,
+        "lon": -66.847356
+      },
+      "locationText": "Zara Dairi Villanueva | c.i. 10270897, llamar al 58 4126481776, solo se sabe que desapareció en Caraballeda, La Guaira",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794574982",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794574982",
+      "sourceUrl": "https://x.com/factorzerouno/status/2070964726989766720",
+      "canonicalSourceUrl": "https://x.com/factorzerouno/status/2070964726989766720",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T05:34:09",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Damelis Piñango",
+      "rawAdditional": "61 años, en Caraballeda, entre Av Principal Caribe y Av Granada. Residencias “Le Club”, llamar al 0424-2598073 o 0414-2356380",
+      "rawLinkField": "https://x.com/factorzerouno/status/2070964726989766720",
+      "freeText": "Damelis Piñango | 61 años, en Caraballeda, entre Av Principal Caribe y Av Granada. Residencias “Le Club”, llamar al 0424-2598073 o 0414-2356380",
+      "name": "Damelis Piñango",
+      "normalizedName": "DAMELIS PINANGO",
+      "cedula": null,
+      "age": 61,
+      "contacts": [
+        "04242598073",
+        "04142356380"
+      ],
+      "geo": {
+        "lat": 10.611865,
+        "lon": -66.840634
+      },
+      "locationText": "Damelis Piñango | 61 años, en Caraballeda, entre Av Principal Caribe y Av Granada. Residencias “Le Club”, llamar al 0424-2598073 o 0414-2356380",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794576182",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794576182",
+      "sourceUrl": "https://x.com/factorzerouno/status/2070964726989766720",
+      "canonicalSourceUrl": "https://x.com/factorzerouno/status/2070964726989766720",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T05:36:51",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Victor Corro",
+      "rawAdditional": "66 años, en Caraballeda, entre Av Principal Caribe y Av Granada. Residencias “Le Club”, llamar al 0424-2598073 o 0414-2356380",
+      "rawLinkField": "https://x.com/factorzerouno/status/2070964726989766720",
+      "freeText": "Victor Corro | 66 años, en Caraballeda, entre Av Principal Caribe y Av Granada. Residencias “Le Club”, llamar al 0424-2598073 o 0414-2356380",
+      "name": "Victor Corro",
+      "normalizedName": "VICTOR CORRO",
+      "cedula": null,
+      "age": 66,
+      "contacts": [
+        "04242598073",
+        "04142356380"
+      ],
+      "geo": {
+        "lat": 10.612046,
+        "lon": -66.840825
+      },
+      "locationText": "Victor Corro | 66 años, en Caraballeda, entre Av Principal Caribe y Av Granada. Residencias “Le Club”, llamar al 0424-2598073 o 0414-2356380",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794595803",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794595803",
+      "sourceUrl": "https://x.com/TreesLetras/status/2070198360846336170?s=20",
+      "canonicalSourceUrl": "https://x.com/TreesLetras/status/2070198360846336170",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T06:24:34",
+      "event": "persona_desaparecida refugio___albergue",
+      "category": "missing-person",
+      "rawDescription": "Ultima vez vista en el Edificio Costa Brava frente a la playa los corales.",
+      "rawAdditional": "04261508201/ 04120518093",
+      "rawLinkField": "https://x.com/TreesLetras/status/2070198360846336170?s=20",
+      "freeText": "Ultima vez vista en el Edificio Costa Brava frente a la playa los corales. | 04261508201/ 04120518093",
+      "name": null,
+      "normalizedName": null,
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04261508201",
+        "04120518093"
+      ],
+      "geo": {
+        "lat": 10.6170101,
+        "lon": -66.8570772
+      },
+      "locationText": "Ultima vez vista en el Edificio Costa Brava frente a la playa los corales. | 04261508201/ 04120518093",
+      "isMatchable": false,
+      "notMatchableReason": "no-clear-name"
+    },
+    {
+      "id": "kobo-794602394",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794602394",
+      "sourceUrl": "https://x.com/CaraotaDigital/status/2070236166209868141",
+      "canonicalSourceUrl": "https://x.com/CaraotaDigital/status/2070236166209868141",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T06:39:28",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Rina Sebrian de Ascanio, desaparecida en el Edificio El Dorado, Playa Grande La Guaira",
+      "rawAdditional": "04121001539",
+      "rawLinkField": "https://x.com/CaraotaDigital/status/2070236166209868141",
+      "freeText": "Rina Sebrian de Ascanio, desaparecida en el Edificio El Dorado, Playa Grande La Guaira | 04121001539",
+      "name": "Rina Sebrian",
+      "normalizedName": "RINA SEBRIAN",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04121001539"
+      ],
+      "geo": {
+        "lat": 10.6143889,
+        "lon": -66.8593889
+      },
+      "locationText": "Rina Sebrian de Ascanio, desaparecida en el Edificio El Dorado, Playa Grande La Guaira | 04121001539",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-794609846",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "794609846",
+      "sourceUrl": "https://x.com/TAMARA_SUJU/status/2070156135584182373?s=20",
+      "canonicalSourceUrl": "https://x.com/TAMARA_SUJU/status/2070156135584182373",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-28T06:54:31",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "Familia fallecida en el conjunto residencial bosque lindo, en la avenida intercomunal Turmero Maracay, fallecieron la esposa del Preso Politico Adrian De Gouveia de Sousa, Yexika Gimon de De Gouveia, su suegra, María del Rosario Perez y su sobrina: María José Salas Prato. Una de las hijas de Adrian que estaba en la zona fue rescatada con vida y està en el Hospital.",
+      "rawAdditional": null,
+      "rawLinkField": "https://x.com/TAMARA_SUJU/status/2070156135584182373?s=20",
+      "freeText": "Familia fallecida en el conjunto residencial bosque lindo, en la avenida intercomunal Turmero Maracay, fallecieron la esposa del Preso Politico Adrian De Gouveia de Sousa, Yexika Gimon de De Gouveia, su suegra, María del Rosario Perez y su sobrina: María José Salas Prato. Una de las hijas de Adrian que estaba en la zona fue rescatada con vida y està en el Hospital.",
+      "name": null,
+      "normalizedName": null,
+      "cedula": null,
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 10.2375807,
+        "lon": -67.2762216
+      },
+      "locationText": "Familia fallecida en el conjunto residencial bosque lindo, en la avenida intercomunal Turmero Maracay, fallecieron la esposa del Preso Politico Adrian De Gouveia de Sousa, Yexika Gimon de De Gouveia, su suegra, María del Rosario Perez y su sobrina: María José Salas Prato. Una de las hijas de Adrian que estaba en la zona fue rescatada con vida y està en el Hospital.",
+      "isMatchable": false,
+      "notMatchableReason": "family-report"
     }
   ]
 }
