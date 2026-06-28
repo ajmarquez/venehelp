@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-06-28T14:18:46.721Z",
+  "generatedAt": "2026-06-28T18:59:03.651Z",
   "sources": {
     "kobo": {
       "assetUid": "a8XWDsdUcpBzXGtgQmiiro",
-      "rows": 1915,
+      "rows": 1995,
       "eventCounts": {
         "edificio_colapsado___da_o_estructural": 156,
         "punto_de_acopio___primeros_auxilios": 50,
-        "persona_rescatada___atrapada": 305,
-        "persona_desaparecida": 473,
+        "persona_rescatada___atrapada": 335,
+        "persona_desaparecida": 487,
         "edificio_colapsado___da_o_estructural incendio___fuga_de_gas": 1,
         "edificio_colapsado___da_o_estructural persona_desaparecida": 6,
-        "persona_herida": 286,
+        "persona_herida": 288,
         "edificio_colapsado___da_o_estructural persona_rescatada___atrapada persona_desaparecida": 2,
         "edificio_colapsado___da_o_estructural persona_rescatada___atrapada": 6,
-        "animales_perdidos": 25,
+        "animales_perdidos": 26,
         "persona_rescatada___atrapada animales_perdidos": 2,
         "refugio___albergue": 3,
         "persona_desaparecida animales_perdidos": 1,
@@ -27,7 +27,7 @@
         "persona_desaparecida familia_desaparecida": 6,
         "edificio_colapsado___da_o_estructural persona_desaparecida familia_desaparecida": 1,
         "edificio_colapsado___da_o_estructural persona_desaparecida punto_de_acopio___primeros_auxilios refugio___albergue animales_perdidos solicitud___oferta_de_recursos familia_desaparecida": 1,
-        "persona_rescatada___atrapada persona_herida": 534,
+        "persona_rescatada___atrapada persona_herida": 567,
         "solicitud___oferta_de_recursos": 3,
         "persona_desaparecida persona_herida": 1,
         "persona_rescatada___atrapada persona_herida familia_desaparecida": 1,
@@ -41,19 +41,19 @@
       "dedupedRows": 4126
     },
     "hospitalesVenezuela": {
-      "queriedGroups": 37,
+      "queriedGroups": 38,
       "matchedGroups": 5,
       "matchedRecords": 11
     }
   },
   "missing": {
-    "totalRecords": 527,
-    "matchableRecords": 469,
+    "totalRecords": 541,
+    "matchableRecords": 483,
     "hospitalSourceRecords": 6,
-    "withCedula": 35
+    "withCedula": 36
   },
   "matching": {
-    "candidatePairs": 62,
+    "candidatePairs": 65,
     "highConfidence": 0,
     "mediumConfidence": 2
   }

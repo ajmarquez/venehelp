@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-28T14:18:46.721Z",
-  "totalGroups": 37,
-  "totalPairs": 62,
+  "generatedAt": "2026-06-28T18:59:03.651Z",
+  "totalGroups": 38,
+  "totalPairs": 65,
   "results": [
     {
       "missing": {
@@ -2886,6 +2886,110 @@
           "label": "Localizados Venezuela",
           "note": "Herrera Valentina · Hospital Vargas de Caracas",
           "url": "https://localizadosvenezuela.com/buscar/herrera-valentina-kmfppn"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-794952887",
+        "name": "María Cabrera",
+        "rawDescription": "María Cabrera",
+        "cedula": null,
+        "age": null,
+        "contacts": [],
+        "sourceUrl": "https://www.instagram.com/p/DaB7fCjDaI6/?igsh=MTdkN2h1eW91eWwzcQ%3D%3D",
+        "submittedAt": "2026-06-28T16:47:37"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-794952887",
+          "locatedId": "localizados-cabrera-carina-manpk6",
+          "missingName": "María Cabrera",
+          "locatedName": "Cabrera Carina",
+          "locatedHospital": "Hospital Domingo Luciani",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/cabrera-carina-manpk6",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.783,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-794952887",
+          "locatedId": "localizados-cabreras-omar-2087329-z4ule3",
+          "missingName": "María Cabrera",
+          "locatedName": "Cabreras Omar",
+          "locatedHospital": "Hospital Vargas de Caracas",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/cabreras-omar-2087329-z4ule3",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "consolidado.csv",
+          "missingCedula": null,
+          "locatedCedula": "2087329",
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.727,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-794952887",
+          "locatedId": "localizados-karina-cabrera-lxu4fj",
+          "missingName": "María Cabrera",
+          "locatedName": "Karina Cabrera",
+          "locatedHospital": "Hospital Domingo Luciani",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/karina-cabrera-lxu4fj",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.783,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "María Cabrera",
+          "url": "https://www.instagram.com/p/DaB7fCjDaI6/?igsh=MTdkN2h1eW91eWwzcQ%3D%3D"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Cabrera Carina · Hospital Domingo Luciani",
+          "url": "https://localizadosvenezuela.com/buscar/cabrera-carina-manpk6"
         }
       ]
     }

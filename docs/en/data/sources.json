@@ -107,9 +107,9 @@
       "registry"
     ],
     "report_stats": {
-      "reported": 71567,
-      "found": 17895,
-      "as_of": "2026-06-28T13:09:23.128Z",
+      "reported": 73902,
+      "found": 20366,
+      "as_of": "2026-06-28T18:59:01.531Z",
       "source": "self-reported"
     },
     "use_when_label": "Use this to search for or report a missing person.",
@@ -160,9 +160,9 @@
       "found-report"
     ],
     "report_stats": {
-      "reported": 47055,
-      "found": 5632,
-      "as_of": "2026-06-28T13:09:23.128Z",
+      "reported": 46044,
+      "found": 5653,
+      "as_of": "2026-06-28T18:59:01.531Z",
       "source": "self-reported"
     },
     "summary": "Citizen platform for reporting, searching, and marking missing people as found after the earthquake.",
@@ -244,9 +244,9 @@
       "reporting"
     ],
     "report_stats": {
-      "reported": 137689,
-      "found": 8667,
-      "as_of": "2026-06-28T13:09:23.128Z",
+      "reported": 139037,
+      "found": 8648,
+      "as_of": "2026-06-28T18:59:01.531Z",
       "source": "self-reported"
     },
     "use_when_label": "Use this to mark someone safe or search for a person.",
