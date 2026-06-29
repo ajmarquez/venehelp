@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-29T11:26:38.884Z",
+  "generatedAt": "2026-06-29T16:13:50.010Z",
   "source": "kobotoolbox-terremotove",
-  "total": 595,
+  "total": 600,
   "results": [
     {
       "id": "kobo-791548945",
@@ -17009,6 +17009,145 @@
         "lon": -66.860075
       },
       "locationText": "Anyoeli Rodríguez | Contactar al: 04127084040",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-795916323",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "795916323",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-29T14:34:48",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Yosliana Guevara ultima vez vista en Caribe, OPP27, telefono de contacto 04120203860",
+      "rawAdditional": null,
+      "rawLinkField": "X",
+      "freeText": "Yosliana Guevara ultima vez vista en Caribe, OPP27, telefono de contacto 04120203860 | X",
+      "name": "Yosliana Guevara",
+      "normalizedName": "YOSLIANA GUEVARA",
+      "cedula": null,
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 10.600363,
+        "lon": -66.929981
+      },
+      "locationText": "Yosliana Guevara ultima vez vista en Caribe, OPP27, telefono de contacto 04120203860 | X",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-795918376",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "795918376",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-29T14:36:32",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Joao Francisco De Silva, Vistamar Caraballeda",
+      "rawAdditional": null,
+      "rawLinkField": "X",
+      "freeText": "Joao Francisco De Silva, Vistamar Caraballeda | X",
+      "name": "Joao Francisco De Silva",
+      "normalizedName": "JOAO FRANCISCO DE SILVA",
+      "cedula": null,
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 10.619134,
+        "lon": -66.845952
+      },
+      "locationText": "Joao Francisco De Silva, Vistamar Caraballeda | X",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-795929806",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "795929806",
+      "sourceUrl": "https://desaparecidosterremotovenezuela.com/p/p35e3efa99729",
+      "canonicalSourceUrl": "https://desaparecidosterremotovenezuela.com/p/p35e3efa99729",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-29T14:48:06",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Nombre: Asiria Elizabeth Urbina Arellano, C. I. 10.167.92",
+      "rawAdditional": "Adriana Urbina (su hermana) +58 4149745497",
+      "rawLinkField": "https://desaparecidosterremotovenezuela.com/p/p35e3efa99729",
+      "freeText": "Nombre: Asiria Elizabeth Urbina Arellano, C. I. 10.167.92 | Adriana Urbina (su hermana) +58 4149745497",
+      "name": "Nombre Asiria Elizabeth Urbina Arellano",
+      "normalizedName": "NOMBRE ASIRIA ELIZABETH URBINA ARELLANO",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "+584149745497"
+      ],
+      "geo": {
+        "lat": 10.61665,
+        "lon": -66.84463
+      },
+      "locationText": "Nombre: Asiria Elizabeth Urbina Arellano, C. I. 10.167.92 | Adriana Urbina (su hermana) +58 4149745497",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796000149",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796000149",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-29T15:47:46",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Edgar Armanza- Refugiado en Caraballeda Golf & Yacht Club - La Casona",
+      "rawAdditional": null,
+      "rawLinkField": null,
+      "freeText": "Edgar Armanza- Refugiado en Caraballeda Golf & Yacht Club - La Casona",
+      "name": "Edgar Armanza- Refugiado",
+      "normalizedName": "EDGAR ARMANZA REFUGIADO",
+      "cedula": null,
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 10.609876018366645,
+        "lon": -66.83364197005034
+      },
+      "locationText": "Edgar Armanza- Refugiado en Caraballeda Golf & Yacht Club - La Casona",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796001346",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796001346",
+      "sourceUrl": "https://x.com/Claudellartt/status/2070680735741075698",
+      "canonicalSourceUrl": "https://x.com/Claudellartt/status/2070680735741075698",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-29T15:48:51",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Rochelle Daavelar. Cédula 30824097.",
+      "rawAdditional": "Sus familiares, Ronat Davelaar (hermano), Jessica Benitez (madre) y Ronall Davelaar (padre) fueron encontrados fallecidos. Cualquier información por favor contactar a Daniela al 04245190388",
+      "rawLinkField": "https://x.com/Claudellartt/status/2070680735741075698",
+      "freeText": "Rochelle Daavelar. Cédula 30824097. | Sus familiares, Ronat Davelaar (hermano), Jessica Benitez (madre) y Ronall Davelaar (padre) fueron encontrados fallecidos. Cualquier información por favor contactar a Daniela al 04245190388",
+      "name": "Rochelle Daavelar",
+      "normalizedName": "ROCHELLE DAAVELAR",
+      "cedula": "30824097",
+      "age": null,
+      "contacts": [
+        "04245190388"
+      ],
+      "geo": {
+        "lat": 10.609820497122607,
+        "lon": -67.015337606516
+      },
+      "locationText": "Rochelle Daavelar. Cédula 30824097. | Sus familiares, Ronat Davelaar (hermano), Jessica Benitez (madre) y Ronall Davelaar (padre) fueron encontrados fallecidos. Cualquier información por favor contactar a Daniela al 04245190388",
       "isMatchable": true,
       "notMatchableReason": null
     }
