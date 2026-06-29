@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-28T19:49:34.270Z",
-  "totalGroups": 41,
-  "totalPairs": 69,
+  "generatedAt": "2026-06-29T02:08:10.516Z",
+  "totalGroups": 43,
+  "totalPairs": 72,
   "results": [
     {
       "missing": {
@@ -68,45 +68,7 @@
       ],
       "hospitalesVenezuelaMatches": [
         {
-          "id": "hospitales-en-venezuela:CARLOS CASTANO:DOMINGO LUCIANO:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Carlos Castaño",
-          "name": "Carlos Castaño",
-          "detail": null,
-          "age": null,
-          "maskedCedula": null,
-          "locationName": "Domingo Luciano",
-          "city": null,
-          "phone": null,
-          "supportScore": 0.98,
-          "supportScorePercent": 98,
-          "supportReasons": [
-            "Exact name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        },
-        {
-          "id": "hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL RICARDO BAQUERO GONZALEZ:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Carlos Castaño",
-          "name": "Carlos Castano",
-          "detail": null,
-          "age": null,
-          "maskedCedula": null,
-          "locationName": "Hospital Ricardo Baquero Gonzalez",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.94,
-          "supportScorePercent": 94,
-          "supportReasons": [
-            "Exact name match in Hospitales en Venezuela",
-            "Related hospital wording"
-          ]
-        },
-        {
-          "id": "hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DR JOSE GREGORIO HERNANDEZ MAGALLANES DE CATIA:",
+          "id": "hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DR JOSE GREGORIO HERNANDEZ LOS MAGALLANES DE CATIA:",
           "source": "hospitales-en-venezuela",
           "sourceUrl": "https://hospitalesenvenezuela.com/",
           "sourceSearchTerm": "Carlos Castaño",
@@ -114,7 +76,7 @@
           "detail": "· Politrauma",
           "age": null,
           "maskedCedula": null,
-          "locationName": "Hospital Dr. José Gregorio Hernández (Magallanes de Catia)",
+          "locationName": "Hospital Dr. José Gregorio Hernández (Los Magallanes de Catia)",
           "city": "Caracas",
           "phone": null,
           "supportScore": 0.94,
@@ -122,6 +84,44 @@
           "supportReasons": [
             "Exact name match in Hospitales en Venezuela",
             "Related hospital wording"
+          ]
+        },
+        {
+          "id": "hospitales-en-venezuela:CARLOS CASTANO RX:HOSPITAL DR DOMINGO LUCIANI EL LLANITO:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Carlos Castaño",
+          "name": "Carlos Castaño - Rx",
+          "detail": null,
+          "age": null,
+          "maskedCedula": null,
+          "locationName": "Hospital Dr. Domingo Luciani (El Llanito)",
+          "city": "Por confirmar",
+          "phone": null,
+          "supportScore": 0.92,
+          "supportScorePercent": 92,
+          "supportReasons": [
+            "Very strong name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        },
+        {
+          "id": "hospitales-en-venezuela:CASTANO CARLOS:HOSPITAL DR DOMINGO LUCIANI EL LLANITO:1612",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Carlos Castaño",
+          "name": "Castaño Carlos",
+          "detail": "47 años · La Guaira",
+          "age": 47,
+          "maskedCedula": "••••1612",
+          "locationName": "Hospital Dr. Domingo Luciani (El Llanito)",
+          "city": "Por confirmar",
+          "phone": null,
+          "supportScore": 0.92,
+          "supportScorePercent": 92,
+          "supportReasons": [
+            "Very strong name match in Hospitales en Venezuela",
+            "Same hospital or facility"
           ]
         }
       ],
@@ -139,21 +139,21 @@
           "url": "https://localizadosvenezuela.com/buscar/castano-carlos-05yqth"
         },
         {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARLOS CASTANO:DOMINGO LUCIANO:",
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DR JOSE GREGORIO HERNANDEZ LOS MAGALLANES DE CATIA:",
           "label": "Hospitales en Venezuela",
-          "note": "Carlos Castaño · Domingo Luciano",
+          "note": "Carlos Castaño · · Politrauma · Hospital Dr. José Gregorio Hernández (Los Magallanes de Catia)",
           "url": "https://hospitalesenvenezuela.com/"
         },
         {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL RICARDO BAQUERO GONZALEZ:",
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARLOS CASTANO RX:HOSPITAL DR DOMINGO LUCIANI EL LLANITO:",
           "label": "Hospitales en Venezuela",
-          "note": "Carlos Castano · Hospital Ricardo Baquero Gonzalez",
+          "note": "Carlos Castaño - Rx · Hospital Dr. Domingo Luciani (El Llanito)",
           "url": "https://hospitalesenvenezuela.com/"
         },
         {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DR JOSE GREGORIO HERNANDEZ MAGALLANES DE CATIA:",
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CASTANO CARLOS:HOSPITAL DR DOMINGO LUCIANI EL LLANITO:1612",
           "label": "Hospitales en Venezuela",
-          "note": "Carlos Castaño · · Politrauma · Hospital Dr. José Gregorio Hernández (Magallanes de Catia)",
+          "note": "Castaño Carlos · 47 años · La Guaira · Hospital Dr. Domingo Luciani (El Llanito)",
           "url": "https://hospitalesenvenezuela.com/"
         }
       ]
@@ -200,7 +200,7 @@
       ],
       "hospitalesVenezuelaMatches": [
         {
-          "id": "hospitales-en-venezuela:MARCO REINA:HOSPITAL MIGUEL PEREZ CARRENO PEDIATRIA:",
+          "id": "hospitales-en-venezuela:MARCO REINA:HOSPITAL MIGUEL PEREZ CARRENO:",
           "source": "hospitales-en-venezuela",
           "sourceUrl": "https://hospitalesenvenezuela.com/",
           "sourceSearchTerm": "Marco Reina",
@@ -208,7 +208,7 @@
           "detail": "49 años · Fallecido · Signos vitales · Guaira",
           "age": 49,
           "maskedCedula": null,
-          "locationName": "Hospital Miguel Pérez Carreño - pediatría",
+          "locationName": "Hospital Miguel Pérez Carreño",
           "city": "Por confirmar",
           "phone": null,
           "supportScore": 0.98,
@@ -219,7 +219,7 @@
           ]
         },
         {
-          "id": "hospitales-en-venezuela:MARCO REINA NA:HOSPITAL PEREZ CARRENO:",
+          "id": "hospitales-en-venezuela:MARCO REINA NA:HOSPITAL MIGUEL PEREZ CARRENO:",
           "source": "hospitales-en-venezuela",
           "sourceUrl": "https://hospitalesenvenezuela.com/",
           "sourceSearchTerm": "Marco Reina",
@@ -227,7 +227,7 @@
           "detail": "Piso 3 – FALLECIDO; La Guaira",
           "age": null,
           "maskedCedula": null,
-          "locationName": "Hospital Perez Carreño",
+          "locationName": "Hospital Miguel Pérez Carreño",
           "city": "Por confirmar",
           "phone": null,
           "supportScore": 0.92,
@@ -252,15 +252,15 @@
           "url": "https://localizadosvenezuela.com/buscar/reina-marco-jegl1h"
         },
         {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:MARCO REINA:HOSPITAL MIGUEL PEREZ CARRENO PEDIATRIA:",
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:MARCO REINA:HOSPITAL MIGUEL PEREZ CARRENO:",
           "label": "Hospitales en Venezuela",
-          "note": "Marco Reina · 49 años · Fallecido · Signos vitales · Guaira · Hospital Miguel Pérez Carreño - pediatría",
+          "note": "Marco Reina · 49 años · Fallecido · Signos vitales · Guaira · Hospital Miguel Pérez Carreño",
           "url": "https://hospitalesenvenezuela.com/"
         },
         {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:MARCO REINA NA:HOSPITAL PEREZ CARRENO:",
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:MARCO REINA NA:HOSPITAL MIGUEL PEREZ CARRENO:",
           "label": "Hospitales en Venezuela",
-          "note": "Marco Reina Na · Piso 3 – FALLECIDO; La Guaira · Hospital Perez Carreño",
+          "note": "Marco Reina Na · Piso 3 – FALLECIDO; La Guaira · Hospital Miguel Pérez Carreño",
           "url": "https://hospitalesenvenezuela.com/"
         }
       ]
@@ -717,26 +717,7 @@
           ]
         },
         {
-          "id": "hospitales-en-venezuela:DELIA DE GUERRERO PENA DE GUERRERO PENA DELIA:HOSPITAL MILITAR DR CARLOS ARVELO:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Guerrero Peña",
-          "name": "Delia De Guerrero Pena / De Guerrero Peña Delia",
-          "detail": null,
-          "age": null,
-          "maskedCedula": null,
-          "locationName": "Hospital Militar Dr. Carlos Arvelo",
-          "city": "Caracas",
-          "phone": null,
-          "supportScore": 0.92,
-          "supportScorePercent": 92,
-          "supportReasons": [
-            "Very strong name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        },
-        {
-          "id": "hospitales-en-venezuela:DELIA DE GUERRERO PENA DE GUERRERO PENA DELIA NA:HOSPITAL MILITAR UNIVERSITARIO DR CARLOS ARVELO:",
+          "id": "hospitales-en-venezuela:DELIA DE GUERRERO PENA DE GUERRERO PENA DELIA NA:HOSPITAL MILITAR DR CARLOS ARVELO:",
           "source": "hospitales-en-venezuela",
           "sourceUrl": "https://hospitalesenvenezuela.com/",
           "sourceSearchTerm": "Guerrero Peña",
@@ -744,7 +725,7 @@
           "detail": "PNA",
           "age": null,
           "maskedCedula": null,
-          "locationName": "Hospital Militar Universitario Dr. Carlos Arvelo",
+          "locationName": "Hospital Militar Dr. Carlos Arvelo",
           "city": "Por confirmar",
           "phone": null,
           "supportScore": 0.92,
@@ -775,16 +756,65 @@
           "url": "https://hospitalesenvenezuela.com/"
         },
         {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:DELIA DE GUERRERO PENA DE GUERRERO PENA DELIA:HOSPITAL MILITAR DR CARLOS ARVELO:",
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:DELIA DE GUERRERO PENA DE GUERRERO PENA DELIA NA:HOSPITAL MILITAR DR CARLOS ARVELO:",
           "label": "Hospitales en Venezuela",
-          "note": "Delia De Guerrero Pena / De Guerrero Peña Delia · Hospital Militar Dr. Carlos Arvelo",
+          "note": "Delia De Guerrero Pena / De Guerrero Peña Delia Na · PNA · Hospital Militar Dr. Carlos Arvelo",
           "url": "https://hospitalesenvenezuela.com/"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-795054202",
+        "name": "José Andrés Ruiz",
+        "rawDescription": "José Andrés Ruiz",
+        "cedula": null,
+        "age": null,
+        "contacts": [],
+        "sourceUrl": "https://www.instagram.com/p/DaB7fCjDaI6/?igsh=MTdkN2h1eW91eWwzcQ%3D%3D",
+        "submittedAt": "2026-06-28T20:54:26"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-795054202",
+          "locatedId": "localizados-andrea-jose-646450-9niul3",
+          "missingName": "José Andrés Ruiz",
+          "locatedName": "Andrea Jose",
+          "locatedHospital": "Hospital Vargas de Caracas",
+          "locatedAddress": "Guaira",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/andrea-jose-646450-9niul3",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
+          "missingCedula": null,
+          "locatedCedula": "646450",
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.7,
+          "scorePercent": 70,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity",
+            "Weak location overlap"
+          ],
+          "nameScore": 0.727,
+          "locationScore": 0.25,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "José Andrés Ruiz",
+          "url": "https://www.instagram.com/p/DaB7fCjDaI6/?igsh=MTdkN2h1eW91eWwzcQ%3D%3D"
         },
         {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:DELIA DE GUERRERO PENA DE GUERRERO PENA DELIA NA:HOSPITAL MILITAR UNIVERSITARIO DR CARLOS ARVELO:",
-          "label": "Hospitales en Venezuela",
-          "note": "Delia De Guerrero Pena / De Guerrero Peña Delia Na · PNA · Hospital Militar Universitario Dr. Carlos Arvelo",
-          "url": "https://hospitalesenvenezuela.com/"
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Andrea Jose · Hospital Vargas de Caracas",
+          "url": "https://localizadosvenezuela.com/buscar/andrea-jose-646450-9niul3"
         }
       ]
     },
@@ -2350,7 +2380,7 @@
       ],
       "hospitalesVenezuelaMatches": [
         {
-          "id": "hospitales-en-venezuela:LUCIAN RAMIREZ:HOSPITAL HOSPITAL JOSE MARIA VARGAS LA GUAIRA:",
+          "id": "hospitales-en-venezuela:LUCIAN RAMIREZ:HOSPITAL GENERAL REGIONAL DR JOSE MARIA VARGAS IVSS LA GUAIRA:",
           "source": "hospitales-en-venezuela",
           "sourceUrl": "https://hospitalesenvenezuela.com/",
           "sourceSearchTerm": "Luci Ramírez",
@@ -2358,7 +2388,7 @@
           "detail": "Fecha captura: :00 vzla",
           "age": null,
           "maskedCedula": null,
-          "locationName": "Hospital: Hospital José María Vargas - La Guaira",
+          "locationName": "Hospital General Regional Dr. José María Vargas (IVSS La Guaira)",
           "city": null,
           "phone": null,
           "supportScore": 0.92,
@@ -2366,25 +2396,6 @@
           "supportReasons": [
             "Very strong name match in Hospitales en Venezuela",
             "Same hospital or facility"
-          ]
-        },
-        {
-          "id": "hospitales-en-venezuela:RAMIREZ LUCIAN:HOSPITAL UNIVERSITARIO DE CARACAS:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Luci Ramírez",
-          "name": "Ramirez Lucian",
-          "detail": null,
-          "age": null,
-          "maskedCedula": null,
-          "locationName": "Hospital Universitario de Caracas",
-          "city": "Caracas",
-          "phone": null,
-          "supportScore": 0.88,
-          "supportScorePercent": 88,
-          "supportReasons": [
-            "Very strong name match in Hospitales en Venezuela",
-            "Related hospital wording"
           ]
         }
       ],
@@ -2402,15 +2413,9 @@
           "url": "https://localizadosvenezuela.com/buscar/ramirez-lucian-r4bw39"
         },
         {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:LUCIAN RAMIREZ:HOSPITAL HOSPITAL JOSE MARIA VARGAS LA GUAIRA:",
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:LUCIAN RAMIREZ:HOSPITAL GENERAL REGIONAL DR JOSE MARIA VARGAS IVSS LA GUAIRA:",
           "label": "Hospitales en Venezuela",
-          "note": "Lucian Ramirez · Fecha captura: :00 vzla · Hospital: Hospital José María Vargas - La Guaira",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:RAMIREZ LUCIAN:HOSPITAL UNIVERSITARIO DE CARACAS:",
-          "label": "Hospitales en Venezuela",
-          "note": "Ramirez Lucian · Hospital Universitario de Caracas",
+          "note": "Lucian Ramirez · Fecha captura: :00 vzla · Hospital General Regional Dr. José María Vargas (IVSS La Guaira)",
           "url": "https://hospitalesenvenezuela.com/"
         }
       ]
@@ -3140,6 +3145,81 @@
           "label": "Localizados Venezuela",
           "note": "Ana Gonzalez · Periférico de Catia",
           "url": "https://localizadosvenezuela.com/buscar/ana-gonzalez-njifyb"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-795103743",
+        "name": "Anyoeli Rodríguez",
+        "rawDescription": "Anyoeli Rodríguez",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "04127084040"
+        ],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-29T00:10:12"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-795103743",
+          "locatedId": "localizados-jelani-rodriguez-5a5vj5",
+          "missingName": "Anyoeli Rodríguez",
+          "locatedName": "Jelani Rodriguez",
+          "locatedHospital": "Hospital Domingo Luciani",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/jelani-rodriguez-5a5vj5",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "consolidado.csv",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": 32,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.759,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-795103743",
+          "locatedId": "localizados-rodriguez-yoelbinyer-1y1uew",
+          "missingName": "Anyoeli Rodríguez",
+          "locatedName": "Rodriguez Yoelbinyer",
+          "locatedHospital": "Hospital Pérez Carreño",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/rodriguez-yoelbinyer-1y1uew",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "consolidado.csv",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": 9,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.727,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Jelani Rodriguez · Hospital Domingo Luciani",
+          "url": "https://localizadosvenezuela.com/buscar/jelani-rodriguez-5a5vj5"
         }
       ]
     }

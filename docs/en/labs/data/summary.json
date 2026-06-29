@@ -1,33 +1,33 @@
 {
-  "generatedAt": "2026-06-28T19:49:34.270Z",
+  "generatedAt": "2026-06-29T02:08:10.516Z",
   "sources": {
     "kobo": {
       "assetUid": "a8XWDsdUcpBzXGtgQmiiro",
-      "rows": 2005,
+      "rows": 2115,
       "eventCounts": {
-        "edificio_colapsado___da_o_estructural": 156,
+        "edificio_colapsado___da_o_estructural": 157,
         "punto_de_acopio___primeros_auxilios": 50,
-        "persona_rescatada___atrapada": 316,
-        "persona_desaparecida": 494,
+        "persona_rescatada___atrapada": 332,
+        "persona_desaparecida": 534,
         "edificio_colapsado___da_o_estructural incendio___fuga_de_gas": 1,
         "edificio_colapsado___da_o_estructural persona_desaparecida": 6,
-        "persona_herida": 312,
+        "persona_herida": 364,
         "edificio_colapsado___da_o_estructural persona_rescatada___atrapada persona_desaparecida": 2,
         "edificio_colapsado___da_o_estructural persona_rescatada___atrapada": 6,
         "animales_perdidos": 26,
         "persona_rescatada___atrapada animales_perdidos": 2,
         "refugio___albergue": 3,
         "persona_desaparecida animales_perdidos": 1,
+        "persona_rescatada___atrapada persona_herida": 559,
         "persona_rescatada___atrapada refugio___albergue": 14,
         "persona_desaparecida punto_de_acopio___primeros_auxilios": 1,
         "persona_rescatada___atrapada punto_de_acopio___primeros_auxilios": 1,
         "persona_rescatada___atrapada persona_desaparecida": 1,
         "persona_desaparecida solicitud___oferta_de_recursos": 1,
-        "familia_desaparecida": 32,
-        "persona_desaparecida familia_desaparecida": 6,
+        "familia_desaparecida": 36,
+        "persona_desaparecida familia_desaparecida": 8,
         "edificio_colapsado___da_o_estructural persona_desaparecida familia_desaparecida": 1,
         "edificio_colapsado___da_o_estructural persona_desaparecida punto_de_acopio___primeros_auxilios refugio___albergue animales_perdidos solicitud___oferta_de_recursos familia_desaparecida": 1,
-        "persona_rescatada___atrapada persona_herida": 564,
         "solicitud___oferta_de_recursos": 3,
         "persona_desaparecida persona_herida": 1,
         "persona_rescatada___atrapada persona_herida familia_desaparecida": 1,
@@ -41,19 +41,19 @@
       "dedupedRows": 4126
     },
     "hospitalesVenezuela": {
-      "queriedGroups": 41,
+      "queriedGroups": 43,
       "matchedGroups": 4,
-      "matchedRecords": 10
+      "matchedRecords": 8
     }
   },
   "missing": {
-    "totalRecords": 549,
-    "matchableRecords": 491,
+    "totalRecords": 595,
+    "matchableRecords": 538,
     "hospitalSourceRecords": 6,
-    "withCedula": 36
+    "withCedula": 41
   },
   "matching": {
-    "candidatePairs": 69,
+    "candidatePairs": 72,
     "highConfidence": 0,
     "mediumConfidence": 2
   }
