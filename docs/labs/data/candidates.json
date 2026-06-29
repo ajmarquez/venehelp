@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T02:08:10.516Z",
+  "generatedAt": "2026-06-29T05:03:17.170Z",
   "totalGroups": 43,
   "totalPairs": 72,
   "results": [
@@ -106,14 +106,14 @@
           ]
         },
         {
-          "id": "hospitales-en-venezuela:CASTANO CARLOS:HOSPITAL DR DOMINGO LUCIANI EL LLANITO:1612",
+          "id": "hospitales-en-venezuela:CASTANO CARLOS:HOSPITAL DR DOMINGO LUCIANI EL LLANITO:1632",
           "source": "hospitales-en-venezuela",
           "sourceUrl": "https://hospitalesenvenezuela.com/",
           "sourceSearchTerm": "Carlos Castaño",
           "name": "Castaño Carlos",
-          "detail": "47 años · La Guaira",
-          "age": 47,
-          "maskedCedula": "••••1612",
+          "detail": null,
+          "age": null,
+          "maskedCedula": "••••1632",
           "locationName": "Hospital Dr. Domingo Luciani (El Llanito)",
           "city": "Por confirmar",
           "phone": null,
@@ -151,9 +151,9 @@
           "url": "https://hospitalesenvenezuela.com/"
         },
         {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CASTANO CARLOS:HOSPITAL DR DOMINGO LUCIANI EL LLANITO:1612",
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CASTANO CARLOS:HOSPITAL DR DOMINGO LUCIANI EL LLANITO:1632",
           "label": "Hospitales en Venezuela",
-          "note": "Castaño Carlos · 47 años · La Guaira · Hospital Dr. Domingo Luciani (El Llanito)",
+          "note": "Castaño Carlos · Hospital Dr. Domingo Luciani (El Llanito)",
           "url": "https://hospitalesenvenezuela.com/"
         }
       ]
