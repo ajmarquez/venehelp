@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T16:13:50.010Z",
+  "generatedAt": "2026-06-29T19:30:02.776Z",
   "totalGroups": 43,
   "totalPairs": 72,
   "results": [
@@ -68,16 +68,16 @@
       ],
       "hospitalesVenezuelaMatches": [
         {
-          "id": "hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DR JOSE GREGORIO HERNANDEZ LOS MAGALLANES DE CATIA:",
+          "id": "hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DR JOSE GREGORIO HERNANDEZ LOS MAGALLANES DE CATIA:1612",
           "source": "hospitales-en-venezuela",
           "sourceUrl": "https://hospitalesenvenezuela.com/",
           "sourceSearchTerm": "Carlos Castaño",
           "name": "Carlos Castaño",
-          "detail": "· Politrauma",
-          "age": null,
-          "maskedCedula": null,
+          "detail": "47",
+          "age": 47,
+          "maskedCedula": "••••1612",
           "locationName": "Hospital Dr. José Gregorio Hernández (Los Magallanes de Catia)",
-          "city": "Caracas",
+          "city": null,
           "phone": null,
           "supportScore": 0.94,
           "supportScorePercent": 94,
@@ -139,9 +139,9 @@
           "url": "https://localizadosvenezuela.com/buscar/castano-carlos-05yqth"
         },
         {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DR JOSE GREGORIO HERNANDEZ LOS MAGALLANES DE CATIA:",
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DR JOSE GREGORIO HERNANDEZ LOS MAGALLANES DE CATIA:1612",
           "label": "Hospitales en Venezuela",
-          "note": "Carlos Castaño · · Politrauma · Hospital Dr. José Gregorio Hernández (Los Magallanes de Catia)",
+          "note": "Carlos Castaño · 47 · Hospital Dr. José Gregorio Hernández (Los Magallanes de Catia)",
           "url": "https://hospitalesenvenezuela.com/"
         },
         {

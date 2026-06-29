@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-06-29T16:13:50.010Z",
+  "generatedAt": "2026-06-29T19:30:02.776Z",
   "sources": {
     "kobo": {
       "assetUid": "a8XWDsdUcpBzXGtgQmiiro",
-      "rows": 2166,
+      "rows": 2168,
       "eventCounts": {
         "edificio_colapsado___da_o_estructural": 158,
         "punto_de_acopio___primeros_auxilios": 51,
-        "persona_rescatada___atrapada": 341,
+        "persona_rescatada___atrapada": 342,
         "persona_desaparecida": 539,
         "edificio_colapsado___da_o_estructural incendio___fuga_de_gas": 1,
         "edificio_colapsado___da_o_estructural persona_desaparecida": 6,
@@ -28,7 +28,7 @@
         "persona_desaparecida familia_desaparecida": 8,
         "edificio_colapsado___da_o_estructural persona_desaparecida familia_desaparecida": 1,
         "edificio_colapsado___da_o_estructural persona_desaparecida punto_de_acopio___primeros_auxilios refugio___albergue animales_perdidos solicitud___oferta_de_recursos familia_desaparecida": 1,
-        "solicitud___oferta_de_recursos": 9,
+        "solicitud___oferta_de_recursos": 10,
         "persona_desaparecida persona_herida": 1,
         "persona_rescatada___atrapada persona_herida familia_desaparecida": 1,
         "edificio_colapsado___da_o_estructural persona_rescatada___atrapada persona_herida": 1,
