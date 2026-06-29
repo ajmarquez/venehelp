@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T05:03:17.170Z",
+  "generatedAt": "2026-06-29T10:17:13.688Z",
   "totalGroups": 43,
   "totalPairs": 72,
   "results": [
@@ -1298,7 +1298,7 @@
       "missing": {
         "id": "kobo-792634545",
         "name": "Fernanda Oliveros",
-        "rawDescription": "Fernanda Oliveros, desaparecida en el derrumbe de La Mar Suites, Tucacas",
+        "rawDescription": "Fernanda Oliveros",
         "cedula": null,
         "age": null,
         "contacts": [
@@ -1366,7 +1366,7 @@
         {
           "key": "kobo",
           "label": "KoboToolbox · TerremotoVE",
-          "note": "Fernanda Oliveros, desaparecida en el derrumbe de La Mar Suites, Tucacas",
+          "note": "Fernanda Oliveros",
           "url": "https://x.com/islasreal/status/2070215427620216956"
         },
         {

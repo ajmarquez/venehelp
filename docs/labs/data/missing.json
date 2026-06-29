@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T05:03:17.170Z",
+  "generatedAt": "2026-06-29T10:17:13.688Z",
   "source": "kobotoolbox-terremotove",
   "total": 595,
   "results": [
@@ -992,22 +992,22 @@
       "submittedAt": "2026-06-25T18:15:54",
       "event": "persona_desaparecida",
       "category": "missing-person",
-      "rawDescription": "Gimar Olavarrieta - 5.524.694",
-      "rawAdditional": "04142371804",
+      "rawDescription": "Gimar Olavarrieta",
+      "rawAdditional": "04142371804 - CI: 5.524.694 - Aproximadamente 60 años",
       "rawLinkField": "https://x.com/quinterooskar/status/2070105192209551863?s=46",
-      "freeText": "Gimar Olavarrieta - 5.524.694 | 04142371804",
+      "freeText": "Gimar Olavarrieta | 04142371804 - CI: 5.524.694 - Aproximadamente 60 años",
       "name": "Gimar Olavarrieta",
       "normalizedName": "GIMAR OLAVARRIETA",
       "cedula": null,
-      "age": null,
+      "age": 60,
       "contacts": [
         "04142371804"
       ],
       "geo": {
-        "lat": 10.6169119,
-        "lon": -66.89253336679
+        "lat": 10.61165,
+        "lon": -66.838914
       },
-      "locationText": "Gimar Olavarrieta - 5.524.694 | 04142371804",
+      "locationText": "Gimar Olavarrieta | 04142371804 - CI: 5.524.694 - Aproximadamente 60 años",
       "isMatchable": true,
       "notMatchableReason": null
     },
@@ -3536,10 +3536,10 @@
       "submittedAt": "2026-06-25T20:56:05",
       "event": "persona_desaparecida",
       "category": "missing-person",
-      "rawDescription": "Fernanda Oliveros, desaparecida en el derrumbe de La Mar Suites, Tucacas",
-      "rawAdditional": "04124560400/04124423505/04244532355",
+      "rawDescription": "Fernanda Oliveros",
+      "rawAdditional": "04124560400/04124423505/04244532355 - Desaparecida en el derrumbe de La Mar Suites, Tucacas - Reportada como fallecida en fuente",
       "rawLinkField": "https://x.com/islasreal/status/2070215427620216956",
-      "freeText": "Fernanda Oliveros, desaparecida en el derrumbe de La Mar Suites, Tucacas | 04124560400/04124423505/04244532355",
+      "freeText": "Fernanda Oliveros | 04124560400/04124423505/04244532355 - Desaparecida en el derrumbe de La Mar Suites, Tucacas - Reportada como fallecida en fuente",
       "name": "Fernanda Oliveros",
       "normalizedName": "FERNANDA OLIVEROS",
       "cedula": null,
@@ -3553,7 +3553,7 @@
         "lat": 10.76648904957983,
         "lon": -68.32452994039559
       },
-      "locationText": "Fernanda Oliveros, desaparecida en el derrumbe de La Mar Suites, Tucacas | 04124560400/04124423505/04244532355",
+      "locationText": "Fernanda Oliveros | 04124560400/04124423505/04244532355 - Desaparecida en el derrumbe de La Mar Suites, Tucacas - Reportada como fallecida en fuente",
       "isMatchable": true,
       "notMatchableReason": null
     },
