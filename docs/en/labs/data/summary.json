@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30T14:45:42.382Z",
+  "generatedAt": "2026-06-30T19:28:35.523Z",
   "sources": {
     "kobo": {
       "assetUid": "a8XWDsdUcpBzXGtgQmiiro",
@@ -8,7 +8,7 @@
         "edificio_colapsado___da_o_estructural": 158,
         "punto_de_acopio___primeros_auxilios": 51,
         "persona_rescatada___atrapada": 423,
-        "persona_desaparecida": 567,
+        "persona_desaparecida": 566,
         "edificio_colapsado___da_o_estructural incendio___fuga_de_gas": 1,
         "edificio_colapsado___da_o_estructural persona_desaparecida": 7,
         "persona_herida": 396,
@@ -35,6 +35,7 @@
         "persona_desaparecida refugio___albergue": 1,
         "incendio___fuga_de_gas": 1,
         "persona_presuntamente_fallecida": 1,
+        "persona_desaparecida persona_presuntamente_fallecida": 1,
         "persona_en_hospital": 38
       }
     },
@@ -52,7 +53,7 @@
     "totalRecords": 643,
     "matchableRecords": 583,
     "hospitalSourceRecords": 6,
-    "withCedula": 46
+    "withCedula": 47
   },
   "matching": {
     "candidatePairs": 130,

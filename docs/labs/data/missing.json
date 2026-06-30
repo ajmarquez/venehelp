@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30T14:45:42.382Z",
+  "generatedAt": "2026-06-30T19:28:35.523Z",
   "source": "kobotoolbox-terremotove",
   "total": 643,
   "results": [
@@ -15832,9 +15832,9 @@
       "event": "persona_desaparecida",
       "category": "missing-person",
       "rawDescription": "Victoria Sivira Urriola",
-      "rawAdditional": "edificio Vistamar en la Urbanización Caribe, parroquia Caraballeda, La Guaira.",
+      "rawAdditional": "Edificio Vistamar en la Urbanización Caribe, parroquia Caraballeda, La Guaira.",
       "rawLinkField": "https://www.instagram.com/p/DaB7fCjDaI6/?igsh=MTdkN2h1eW91eWwzcQ%3D%3D",
-      "freeText": "Victoria Sivira Urriola | edificio Vistamar en la Urbanización Caribe, parroquia Caraballeda, La Guaira.",
+      "freeText": "Victoria Sivira Urriola | Edificio Vistamar en la Urbanización Caribe, parroquia Caraballeda, La Guaira.",
       "name": "Victoria Sivira Urriola",
       "normalizedName": "VICTORIA SIVIRA URRIOLA",
       "cedula": null,
@@ -15844,7 +15844,7 @@
         "lat": 10.612472,
         "lon": -66.840805
       },
-      "locationText": "Victoria Sivira Urriola | edificio Vistamar en la Urbanización Caribe, parroquia Caraballeda, La Guaira.",
+      "locationText": "Victoria Sivira Urriola | Edificio Vistamar en la Urbanización Caribe, parroquia Caraballeda, La Guaira.",
       "isMatchable": true,
       "notMatchableReason": null
     },
@@ -17687,13 +17687,13 @@
       "submittedAt": "2026-06-30T02:00:38",
       "event": "persona_desaparecida",
       "category": "missing-person",
-      "rawDescription": "Ivelice Correa (69 años) C.I. 5.523.472",
-      "rawAdditional": "Contactar: 0412-7296059, +506-71304094, +34-613123971",
+      "rawDescription": "EMILIA IVELISA CORREA LANDAETA",
+      "rawAdditional": "69 años - C.I. 5523472 - Contactar: 0412-7296059, +506-71304094, +34-613123971, Persona desaparecida de Resd. Belo Horizonte",
       "rawLinkField": null,
-      "freeText": "Ivelice Correa (69 años) C.I. 5.523.472 | Contactar: 0412-7296059, +506-71304094, +34-613123971",
-      "name": "Ivelice Correa",
-      "normalizedName": "IVELICE CORREA",
-      "cedula": null,
+      "freeText": "EMILIA IVELISA CORREA LANDAETA | 69 años - C.I. 5523472 - Contactar: 0412-7296059, +506-71304094, +34-613123971, Persona desaparecida de Resd. Belo Horizonte",
+      "name": "Emilia Ivelisa Correa Landaeta",
+      "normalizedName": "EMILIA IVELISA CORREA LANDAETA",
+      "cedula": "5523472",
       "age": 69,
       "contacts": [
         "04127296059",
@@ -17704,7 +17704,7 @@
         "lat": 10.609597703267,
         "lon": -67.02697942034605
       },
-      "locationText": "Ivelice Correa (69 años) C.I. 5.523.472 | Contactar: 0412-7296059, +506-71304094, +34-613123971",
+      "locationText": "EMILIA IVELISA CORREA LANDAETA | 69 años - C.I. 5523472 - Contactar: 0412-7296059, +506-71304094, +34-613123971, Persona desaparecida de Resd. Belo Horizonte",
       "isMatchable": true,
       "notMatchableReason": null
     },
@@ -18284,12 +18284,12 @@
       "canonicalSourceUrl": null,
       "sourceType": "missing-report",
       "submittedAt": "2026-06-30T03:19:01",
-      "event": "persona_desaparecida",
+      "event": "persona_desaparecida persona_presuntamente_fallecida",
       "category": "missing-person",
-      "rawDescription": "Beatriz Liendo (71 años) C.I. V-5.090.417",
-      "rawAdditional": "Contactar: 0414-9193948, 0424-2384364",
+      "rawDescription": "Beatriz Liendo",
+      "rawAdditional": "71 años - C.I. V-5.090.417 - Contactar: 0414-9193948, 0424-2384364",
       "rawLinkField": null,
-      "freeText": "Beatriz Liendo (71 años) C.I. V-5.090.417 | Contactar: 0414-9193948, 0424-2384364",
+      "freeText": "Beatriz Liendo | 71 años - C.I. V-5.090.417 - Contactar: 0414-9193948, 0424-2384364",
       "name": "Beatriz Liendo",
       "normalizedName": "BEATRIZ LIENDO",
       "cedula": null,
@@ -18302,7 +18302,7 @@
         "lat": 10.609597703267,
         "lon": -67.02697942034605
       },
-      "locationText": "Beatriz Liendo (71 años) C.I. V-5.090.417 | Contactar: 0414-9193948, 0424-2384364",
+      "locationText": "Beatriz Liendo | 71 años - C.I. V-5.090.417 - Contactar: 0414-9193948, 0424-2384364",
       "isMatchable": true,
       "notMatchableReason": null
     },
