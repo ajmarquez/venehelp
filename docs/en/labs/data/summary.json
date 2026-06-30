@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-30T10:04:09.153Z",
+  "generatedAt": "2026-06-30T13:50:44.177Z",
   "sources": {
     "kobo": {
       "assetUid": "a8XWDsdUcpBzXGtgQmiiro",
-      "rows": 2333,
+      "rows": 2335,
       "eventCounts": {
         "edificio_colapsado___da_o_estructural": 158,
         "punto_de_acopio___primeros_auxilios": 51,
@@ -35,7 +35,7 @@
         "persona_desaparecida refugio___albergue": 1,
         "incendio___fuga_de_gas": 1,
         "persona_presuntamente_fallecida": 1,
-        "persona_en_hospital": 36
+        "persona_en_hospital": 38
       }
     },
     "localizados": {
