@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-29T20:17:42.240Z",
+  "generatedAt": "2026-06-30T08:52:16.459Z",
   "source": "kobotoolbox-terremotove",
-  "total": 600,
+  "total": 643,
   "results": [
     {
       "id": "kobo-791548945",
@@ -17148,6 +17148,1280 @@
         "lon": -67.015337606516
       },
       "locationText": "Rochelle Daavelar. Cédula 30824097. | Sus familiares, Ronat Davelaar (hermano), Jessica Benitez (madre) y Ronall Davelaar (padre) fueron encontrados fallecidos. Cualquier información por favor contactar a Daniela al 04245190388",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796254682",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796254682",
+      "sourceUrl": "https://x.com/quejestovalee/status/2071018580045443434?s=20",
+      "canonicalSourceUrl": "https://x.com/quejestovalee/status/2071018580045443434",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-29T21:19:11",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Andreina Khawam",
+      "rawAdditional": "Contacto: 04127951021",
+      "rawLinkField": "https://x.com/quejestovalee/status/2071018580045443434?s=20",
+      "freeText": "Andreina Khawam | Contacto: 04127951021",
+      "name": "Andreina Khawam",
+      "normalizedName": "ANDREINA KHAWAM",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04127951021"
+      ],
+      "geo": {
+        "lat": 10.61762365703848,
+        "lon": -66.83953879523166
+      },
+      "locationText": "Andreina Khawam | Contacto: 04127951021",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796254976",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796254976",
+      "sourceUrl": "https://x.com/quejestovalee/status/2071018580045443434?s=20",
+      "canonicalSourceUrl": "https://x.com/quejestovalee/status/2071018580045443434",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-29T21:20:05",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Bachir Khawam",
+      "rawAdditional": "04127951021",
+      "rawLinkField": "https://x.com/quejestovalee/status/2071018580045443434?s=20",
+      "freeText": "Bachir Khawam | 04127951021",
+      "name": "Bachir Khawam",
+      "normalizedName": "BACHIR KHAWAM",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04127951021"
+      ],
+      "geo": {
+        "lat": 10.61762365703848,
+        "lon": -66.83953879523166
+      },
+      "locationText": "Bachir Khawam | 04127951021",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796256148",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796256148",
+      "sourceUrl": "https://x.com/iamnotkimm/status/2071026651362628053",
+      "canonicalSourceUrl": "https://x.com/iamnotkimm/status/2071026651362628053",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-29T21:23:42",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "Lonardys Bencomo, Paola Bencomo y Marysville Villafranca",
+      "rawAdditional": "Contacto: 04242234667, 04129548710",
+      "rawLinkField": "https://x.com/iamnotkimm/status/2071026651362628053",
+      "freeText": "Lonardys Bencomo, Paola Bencomo y Marysville Villafranca | Contacto: 04242234667, 04129548710",
+      "name": "Lonardys Bencomo",
+      "normalizedName": "LONARDYS BENCOMO",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04242234667",
+        "04129548710"
+      ],
+      "geo": {
+        "lat": 10.61083921488756,
+        "lon": -67.01663383518739
+      },
+      "locationText": "Lonardys Bencomo, Paola Bencomo y Marysville Villafranca | Contacto: 04242234667, 04129548710",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796257369",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796257369",
+      "sourceUrl": "https://x.com/andriuna1/status/2070965173452767537?s=20",
+      "canonicalSourceUrl": "https://x.com/andriuna1/status/2070965173452767537",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-29T21:26:57",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Simón Alberto Corro Castro",
+      "rawAdditional": "Contacto: 04143357690, +34622226217",
+      "rawLinkField": "https://x.com/andriuna1/status/2070965173452767537?s=20",
+      "freeText": "Simón Alberto Corro Castro | Contacto: 04143357690, +34622226217",
+      "name": "Simón Alberto Corro Castro",
+      "normalizedName": "SIMON ALBERTO CORRO CASTRO",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04143357690",
+        "+34622226217"
+      ],
+      "geo": {
+        "lat": 10.617199902452871,
+        "lon": -66.856157
+      },
+      "locationText": "Simón Alberto Corro Castro | Contacto: 04143357690, +34622226217",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796258987",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796258987",
+      "sourceUrl": "https://x.com/Cheskacsk/status/2071333144775520551?s=20",
+      "canonicalSourceUrl": "https://x.com/Cheskacsk/status/2071333144775520551",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-29T21:30:37",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Sebastián Rapetti González (20), CI: 31748145",
+      "rawAdditional": "Contacto: 4127015902",
+      "rawLinkField": "https://x.com/Cheskacsk/status/2071333144775520551?s=20",
+      "freeText": "Sebastián Rapetti González (20), CI: 31748145 | Contacto: 4127015902",
+      "name": "Sebastián Rapetti González",
+      "normalizedName": "SEBASTIAN RAPETTI GONZALEZ",
+      "cedula": "31748145",
+      "age": null,
+      "contacts": [
+        "4127015902"
+      ],
+      "geo": {
+        "lat": 10.605277815105941,
+        "lon": -66.89164650224592
+      },
+      "locationText": "Sebastián Rapetti González (20), CI: 31748145 | Contacto: 4127015902",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796260084",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796260084",
+      "sourceUrl": "https://desaparecidosterremotovenezuela.com/?persona=p3f1098bbd6b5",
+      "canonicalSourceUrl": "https://desaparecidosterremotovenezuela.com/",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-29T21:33:13",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Leyrubi A. Gonzáles Marchan (50), CI: 12165653",
+      "rawAdditional": "Contacto: 04127015902",
+      "rawLinkField": "https://desaparecidosterremotovenezuela.com/?persona=p3f1098bbd6b5",
+      "freeText": "Leyrubi A. Gonzáles Marchan (50), CI: 12165653 | Contacto: 04127015902",
+      "name": "Gonzáles Marchan",
+      "normalizedName": "GONZALES MARCHAN",
+      "cedula": "12165653",
+      "age": null,
+      "contacts": [
+        "04127015902"
+      ],
+      "geo": {
+        "lat": 10.605277815105941,
+        "lon": -66.89164650224592
+      },
+      "locationText": "Leyrubi A. Gonzáles Marchan (50), CI: 12165653 | Contacto: 04127015902",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796263735",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796263735",
+      "sourceUrl": "https://x.com/sibienbello/status/2071036472782680484?s=20",
+      "canonicalSourceUrl": "https://x.com/sibienbello/status/2071036472782680484",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-29T21:42:23",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Stephanie del Valle Zambrano Mantilla, CI: 29557851",
+      "rawAdditional": "Contacto: 04127486068",
+      "rawLinkField": "https://x.com/sibienbello/status/2071036472782680484?s=20",
+      "freeText": "Stephanie del Valle Zambrano Mantilla, CI: 29557851 | Contacto: 04127486068",
+      "name": "Valle Zambrano Mantilla",
+      "normalizedName": "VALLE ZAMBRANO MANTILLA",
+      "cedula": "29557851",
+      "age": null,
+      "contacts": [
+        "04127486068"
+      ],
+      "geo": {
+        "lat": 10.600733884024182,
+        "lon": 67.0243209989384
+      },
+      "locationText": "Stephanie del Valle Zambrano Mantilla, CI: 29557851 | Contacto: 04127486068",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796264159",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796264159",
+      "sourceUrl": "https://x.com/sibienbello/status/2071036472782680484?s=20",
+      "canonicalSourceUrl": "https://x.com/sibienbello/status/2071036472782680484",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-29T21:43:39",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Jesús Alejandro Sánchez Santana, CI: 26822395",
+      "rawAdditional": "Contacto: 04127486068",
+      "rawLinkField": "https://x.com/sibienbello/status/2071036472782680484?s=20",
+      "freeText": "Jesús Alejandro Sánchez Santana, CI: 26822395 | Contacto: 04127486068",
+      "name": "Jesús Alejandro Sánchez Santana",
+      "normalizedName": "JESUS ALEJANDRO SANCHEZ SANTANA",
+      "cedula": "26822395",
+      "age": null,
+      "contacts": [
+        "04127486068"
+      ],
+      "geo": {
+        "lat": 10.600733,
+        "lon": -67.0243209989384
+      },
+      "locationText": "Jesús Alejandro Sánchez Santana, CI: 26822395 | Contacto: 04127486068",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796268013",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796268013",
+      "sourceUrl": "https://www.instagram.com/p/DaJPkTcgVSx/?utm_source=ig_web_button_share_sheet",
+      "canonicalSourceUrl": "https://www.instagram.com/p/DaJPkTcgVSx",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-29T21:52:11",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Gregory Josée Freitas Martínez (10). Una vecina lo sacó con vida de la Torre D de la OPPE 22, pero se lo entregaron a presuntos rescatistas que dijeron que se lo llevaban \"hacia la montaña\"",
+      "rawAdditional": "Su madre permanece hospitalizada en el Pérez Carreño (Clariángela Martínez)",
+      "rawLinkField": "https://www.instagram.com/p/DaJPkTcgVSx/?utm_source=ig_web_button_share_sheet",
+      "freeText": "Gregory Josée Freitas Martínez (10). Una vecina lo sacó con vida de la Torre D de la OPPE 22, pero se lo entregaron a presuntos rescatistas que dijeron que se lo llevaban \"hacia la montaña\" | Su madre permanece hospitalizada en el Pérez Carreño (Clariángela Martínez)",
+      "name": "Gregory Josée Freitas Martínez",
+      "normalizedName": "GREGORY JOSEE FREITAS MARTINEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 10.610292946962218,
+        "lon": -66.824498
+      },
+      "locationText": "Gregory Josée Freitas Martínez (10). Una vecina lo sacó con vida de la Torre D de la OPPE 22, pero se lo entregaron a presuntos rescatistas que dijeron que se lo llevaban \"hacia la montaña\" | Su madre permanece hospitalizada en el Pérez Carreño (Clariángela Martínez)",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796274611",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796274611",
+      "sourceUrl": "https://x.com/karinapower/status/2071048643684000103?s=20",
+      "canonicalSourceUrl": "https://x.com/karinapower/status/2071048643684000103",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-29T22:09:14",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Jesús Miguel Gonzales",
+      "rawAdditional": "Contacto: +17863933512, +17868659269",
+      "rawLinkField": "https://x.com/karinapower/status/2071048643684000103?s=20",
+      "freeText": "Jesús Miguel Gonzales | Contacto: +17863933512, +17868659269",
+      "name": "Jesús Miguel Gonzales",
+      "normalizedName": "JESUS MIGUEL GONZALES",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "+17863933512",
+        "+17868659269"
+      ],
+      "geo": {
+        "lat": 10.610903542517768,
+        "lon": -66.84160448544685
+      },
+      "locationText": "Jesús Miguel Gonzales | Contacto: +17863933512, +17868659269",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796277342",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796277342",
+      "sourceUrl": "https://x.com/LenysCarolina/status/2070617526925500541?s=20",
+      "canonicalSourceUrl": "https://x.com/LenysCarolina/status/2070617526925500541",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-29T22:16:51",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Alicia Margarita Falcón (63)",
+      "rawAdditional": "Contacto: 0412 0142804",
+      "rawLinkField": "https://x.com/LenysCarolina/status/2070617526925500541?s=20",
+      "freeText": "Alicia Margarita Falcón (63) | Contacto: 0412 0142804",
+      "name": "Alicia Margarita Falcón",
+      "normalizedName": "ALICIA MARGARITA FALCON",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04120142804"
+      ],
+      "geo": {
+        "lat": 10.617997538232096,
+        "lon": -66.85305491613609
+      },
+      "locationText": "Alicia Margarita Falcón (63) | Contacto: 0412 0142804",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796279770",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796279770",
+      "sourceUrl": "https://x.com/lorearraiz/status/2071394624371822967?s=20",
+      "canonicalSourceUrl": "https://x.com/lorearraiz/status/2071394624371822967",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-29T22:23:02",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Matías Brazon (9). Familiares reportan que fue sacado con vida pero no lo logran ubicar. Solo hay información que fue llevado a un Hosp. en CCS",
+      "rawAdditional": "Contacto: 4242469063",
+      "rawLinkField": "https://x.com/lorearraiz/status/2071394624371822967?s=20",
+      "freeText": "Matías Brazon (9). Familiares reportan que fue sacado con vida pero no lo logran ubicar. Solo hay información que fue llevado a un Hosp. en CCS | Contacto: 4242469063",
+      "name": "Matías Brazon",
+      "normalizedName": "MATIAS BRAZON",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "4242469063"
+      ],
+      "geo": {
+        "lat": 10.619167867591937,
+        "lon": -66.84681079366254
+      },
+      "locationText": "Matías Brazon (9). Familiares reportan que fue sacado con vida pero no lo logran ubicar. Solo hay información que fue llevado a un Hosp. en CCS | Contacto: 4242469063",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796343802",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796343802",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T01:40:52",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Jose Fernandez, C.I.: V-23597234 (32 años)",
+      "rawAdditional": "Contactar: 0424-1281267, 0424-2608221",
+      "rawLinkField": null,
+      "freeText": "Jose Fernandez, C.I.: V-23597234 (32 años) | Contactar: 0424-1281267, 0424-2608221",
+      "name": "Jose Fernandez",
+      "normalizedName": "JOSE FERNANDEZ",
+      "cedula": null,
+      "age": 32,
+      "contacts": [
+        "04241281267",
+        "04242608221"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Jose Fernandez, C.I.: V-23597234 (32 años) | Contactar: 0424-1281267, 0424-2608221",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796346793",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796346793",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T01:47:07",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "Omar Barrios, Beatriz Postterlla, hija: Stephanie Barrios",
+      "rawAdditional": "Contactar: 0414-1407519, 0414-1217354, +14698440960",
+      "rawLinkField": null,
+      "freeText": "Omar Barrios, Beatriz Postterlla, hija: Stephanie Barrios | Contactar: 0414-1407519, 0414-1217354, +14698440960",
+      "name": "Omar Barrios",
+      "normalizedName": "OMAR BARRIOS",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04141407519",
+        "04141217354",
+        "+14698440960"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Omar Barrios, Beatriz Postterlla, hija: Stephanie Barrios | Contactar: 0414-1407519, 0414-1217354, +14698440960",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796347739",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796347739",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T01:49:39",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "Wilmer Duarte, Esposa: Omaira Hernandez, hijo: Jeremy Duarte",
+      "rawAdditional": "Contactar: @belohorizonte2026sos",
+      "rawLinkField": null,
+      "freeText": "Wilmer Duarte, Esposa: Omaira Hernandez, hijo: Jeremy Duarte | Contactar: @belohorizonte2026sos",
+      "name": "Wilmer Duarte",
+      "normalizedName": "WILMER DUARTE",
+      "cedula": null,
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Wilmer Duarte, Esposa: Omaira Hernandez, hijo: Jeremy Duarte | Contactar: @belohorizonte2026sos",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796349240",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796349240",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T01:53:39",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "Jose Manuel Rodriguez, C.I. 12.072.859, Marzia Margarita Chavez Hernandez, C.I. 12.112.072, Manuel Alejandro Rodriguez Chavez, C.I. 31.794.294 y Raquel Alessandra Rodriguez, C.I. 30.112.395",
+      "rawAdditional": "Contactar: +34665451208",
+      "rawLinkField": null,
+      "freeText": "Jose Manuel Rodriguez, C.I. 12.072.859, Marzia Margarita Chavez Hernandez, C.I. 12.112.072, Manuel Alejandro Rodriguez Chavez, C.I. 31.794.294 y Raquel Alessandra Rodriguez, C.I. 30.112.395 | Contactar: +34665451208",
+      "name": "Jose Manuel Rodriguez",
+      "normalizedName": "JOSE MANUEL RODRIGUEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "+34665451208"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Jose Manuel Rodriguez, C.I. 12.072.859, Marzia Margarita Chavez Hernandez, C.I. 12.112.072, Manuel Alejandro Rodriguez Chavez, C.I. 31.794.294 y Raquel Alessandra Rodriguez, C.I. 30.112.395 | Contactar: +34665451208",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796350226",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796350226",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T01:55:42",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Jean Tuarez (35 años) C.I. 20.604.274",
+      "rawAdditional": "Contactar: 0414-4667071, 0414-4858217",
+      "rawLinkField": null,
+      "freeText": "Jean Tuarez (35 años) C.I. 20.604.274 | Contactar: 0414-4667071, 0414-4858217",
+      "name": "Jean Tuarez",
+      "normalizedName": "JEAN TUAREZ",
+      "cedula": null,
+      "age": 35,
+      "contacts": [
+        "04144667071",
+        "04144858217"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Jean Tuarez (35 años) C.I. 20.604.274 | Contactar: 0414-4667071, 0414-4858217",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796351260",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796351260",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T01:57:51",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "Anderson Torres, Chasarry Huizi, Jonas Maya, Elias Torres (1 año aprox)",
+      "rawAdditional": "Contactar: 0424-2079859, 0412-3760230",
+      "rawLinkField": null,
+      "freeText": "Anderson Torres, Chasarry Huizi, Jonas Maya, Elias Torres (1 año aprox) | Contactar: 0424-2079859, 0412-3760230",
+      "name": "Anderson Torres",
+      "normalizedName": "ANDERSON TORRES",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04242079859",
+        "04123760230"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Anderson Torres, Chasarry Huizi, Jonas Maya, Elias Torres (1 año aprox) | Contactar: 0424-2079859, 0412-3760230",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796352579",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796352579",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T02:00:38",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Ivelice Correa (69 años) C.I. 5.523.472",
+      "rawAdditional": "Contactar: 0412-7296059, +506-71304094, +34-613123971",
+      "rawLinkField": null,
+      "freeText": "Ivelice Correa (69 años) C.I. 5.523.472 | Contactar: 0412-7296059, +506-71304094, +34-613123971",
+      "name": "Ivelice Correa",
+      "normalizedName": "IVELICE CORREA",
+      "cedula": null,
+      "age": 69,
+      "contacts": [
+        "04127296059",
+        "+50671304094",
+        "+34613123971"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Ivelice Correa (69 años) C.I. 5.523.472 | Contactar: 0412-7296059, +506-71304094, +34-613123971",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796353403",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796353403",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T02:03:00",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "Imirse Aguilar Hernandez, Hija: Andrea Molero Aguilar",
+      "rawAdditional": "Contactar: 0414-0280869",
+      "rawLinkField": null,
+      "freeText": "Imirse Aguilar Hernandez, Hija: Andrea Molero Aguilar | Contactar: 0414-0280869",
+      "name": "Imirse Aguilar Hernandez",
+      "normalizedName": "IMIRSE AGUILAR HERNANDEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04140280869"
+      ],
+      "geo": {
+        "lat": 10.61001951982683,
+        "lon": -67.02677557248005
+      },
+      "locationText": "Imirse Aguilar Hernandez, Hija: Andrea Molero Aguilar | Contactar: 0414-0280869",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796354524",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796354524",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T02:06:20",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "María Teresa Hernandez, hijo: Carlos Mattar",
+      "rawAdditional": "Contactar: 0412-9128719, 0412-1250042",
+      "rawLinkField": null,
+      "freeText": "María Teresa Hernandez, hijo: Carlos Mattar | Contactar: 0412-9128719, 0412-1250042",
+      "name": "María Teresa Hernandez",
+      "normalizedName": "MARIA TERESA HERNANDEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04129128719",
+        "04121250042"
+      ],
+      "geo": {
+        "lat": 10.61001951982683,
+        "lon": -67.02677557248005
+      },
+      "locationText": "María Teresa Hernandez, hijo: Carlos Mattar | Contactar: 0412-9128719, 0412-1250042",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796355227",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796355227",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T02:07:58",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Wilmer Orlando Duarte, C.I. 10.167.145",
+      "rawAdditional": "Contactar: 10.167.145",
+      "rawLinkField": null,
+      "freeText": "Wilmer Orlando Duarte, C.I. 10.167.145 | Contactar: 10.167.145",
+      "name": "Wilmer Orlando Duarte",
+      "normalizedName": "WILMER ORLANDO DUARTE",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "10167145"
+      ],
+      "geo": {
+        "lat": 10.61001951982683,
+        "lon": -67.02677557248005
+      },
+      "locationText": "Wilmer Orlando Duarte, C.I. 10.167.145 | Contactar: 10.167.145",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796355977",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796355977",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T02:10:05",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Ifigenia Rivas",
+      "rawAdditional": "Contactar: 0412-3925875, 0412-8296037, +34-603629394",
+      "rawLinkField": null,
+      "freeText": "Ifigenia Rivas | Contactar: 0412-3925875, 0412-8296037, +34-603629394",
+      "name": "Ifigenia Rivas",
+      "normalizedName": "IFIGENIA RIVAS",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04123925875",
+        "04128296037",
+        "+34603629394"
+      ],
+      "geo": {
+        "lat": 10.61001951982683,
+        "lon": -67.02677557248005
+      },
+      "locationText": "Ifigenia Rivas | Contactar: 0412-3925875, 0412-8296037, +34-603629394",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796356374",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796356374",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T02:12:00",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Jean Rosmer Tuaarez Flores (35 años), C.I. V-20.604.274",
+      "rawAdditional": "Contactar: 0414-4667071, 0414-4858217, 0424-2382632",
+      "rawLinkField": null,
+      "freeText": "Jean Rosmer Tuaarez Flores (35 años), C.I. V-20.604.274 | Contactar: 0414-4667071, 0414-4858217, 0424-2382632",
+      "name": "Jean Rosmer Tuaarez Flores",
+      "normalizedName": "JEAN ROSMER TUAAREZ FLORES",
+      "cedula": null,
+      "age": 35,
+      "contacts": [
+        "04144667071",
+        "04144858217",
+        "04242382632"
+      ],
+      "geo": {
+        "lat": 10.61001951982683,
+        "lon": -67.02677557248005
+      },
+      "locationText": "Jean Rosmer Tuaarez Flores (35 años), C.I. V-20.604.274 | Contactar: 0414-4667071, 0414-4858217, 0424-2382632",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796357619",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796357619",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T02:15:04",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "Luis Paul Herde Sosa, C.I. 11.059.561, Glenda María Herde Sosa, C.I. V-12.163.895, Gabriela Valentina Rodriguez, C.I. 33.473.765",
+      "rawAdditional": "Contactar: 0412-9813450, +56-946492958, +56-946838939",
+      "rawLinkField": null,
+      "freeText": "Luis Paul Herde Sosa, C.I. 11.059.561, Glenda María Herde Sosa, C.I. V-12.163.895, Gabriela Valentina Rodriguez, C.I. 33.473.765 | Contactar: 0412-9813450, +56-946492958, +56-946838939",
+      "name": "Luis Paul Herde Sosa",
+      "normalizedName": "LUIS PAUL HERDE SOSA",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04129813450",
+        "+56946492958",
+        "+56946838939"
+      ],
+      "geo": {
+        "lat": 10.61001951982683,
+        "lon": -67.02677557248005
+      },
+      "locationText": "Luis Paul Herde Sosa, C.I. 11.059.561, Glenda María Herde Sosa, C.I. V-12.163.895, Gabriela Valentina Rodriguez, C.I. 33.473.765 | Contactar: 0412-9813450, +56-946492958, +56-946838939",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796358241",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796358241",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T02:17:02",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "María Magdalena Lozada",
+      "rawAdditional": "Contactar: 0416-0125781",
+      "rawLinkField": null,
+      "freeText": "María Magdalena Lozada | Contactar: 0416-0125781",
+      "name": "María Magdalena Lozada",
+      "normalizedName": "MARIA MAGDALENA LOZADA",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04160125781"
+      ],
+      "geo": {
+        "lat": 10.61001951982683,
+        "lon": -67.02677557248005
+      },
+      "locationText": "María Magdalena Lozada | Contactar: 0416-0125781",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796358583",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796358583",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T02:18:12",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Willian Jose Narvaez Rodriguez",
+      "rawAdditional": "Contactar: 0414-9010629, 0414-2635014",
+      "rawLinkField": null,
+      "freeText": "Willian Jose Narvaez Rodriguez | Contactar: 0414-9010629, 0414-2635014",
+      "name": "Willian Jose Narvaez Rodriguez",
+      "normalizedName": "WILLIAN JOSE NARVAEZ RODRIGUEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04149010629",
+        "04142635014"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Willian Jose Narvaez Rodriguez | Contactar: 0414-9010629, 0414-2635014",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796365423",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796365423",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T02:35:39",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Glenda Herde, Hija: Gabriela Rodriguez (17 años)",
+      "rawAdditional": "Contactar: 0414-2547645, 0412-2888981 (Ramon Moreno, primo)",
+      "rawLinkField": null,
+      "freeText": "Glenda Herde, Hija: Gabriela Rodriguez (17 años) | Contactar: 0414-2547645, 0412-2888981 (Ramon Moreno, primo)",
+      "name": "Glenda Herde",
+      "normalizedName": "GLENDA HERDE",
+      "cedula": null,
+      "age": 17,
+      "contacts": [
+        "04142547645",
+        "04122888981"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Glenda Herde, Hija: Gabriela Rodriguez (17 años) | Contactar: 0414-2547645, 0412-2888981 (Ramon Moreno, primo)",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796367227",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796367227",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T02:40:01",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "Douglas Daniel Urea, Franyeli Vanesa Morillo",
+      "rawAdditional": "Contactar: 0424-2022331, 0412-2440625, 0414-2819687, 0424-1681932",
+      "rawLinkField": null,
+      "freeText": "Douglas Daniel Urea, Franyeli Vanesa Morillo | Contactar: 0424-2022331, 0412-2440625, 0414-2819687, 0424-1681932",
+      "name": "Douglas Daniel Urea",
+      "normalizedName": "DOUGLAS DANIEL UREA",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04242022331",
+        "04122440625",
+        "04142819687",
+        "04241681932"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Douglas Daniel Urea, Franyeli Vanesa Morillo | Contactar: 0424-2022331, 0412-2440625, 0414-2819687, 0424-1681932",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796368335",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796368335",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T02:42:22",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Willie Jesus Rojas Espejo, C.I. V-14.314.612",
+      "rawAdditional": "Contactar: 0412-9203710, 0424-1454276",
+      "rawLinkField": null,
+      "freeText": "Willie Jesus Rojas Espejo, C.I. V-14.314.612 | Contactar: 0412-9203710, 0424-1454276",
+      "name": "Willie Jesus Rojas Espejo",
+      "normalizedName": "WILLIE JESUS ROJAS ESPEJO",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04129203710",
+        "04241454276"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Willie Jesus Rojas Espejo, C.I. V-14.314.612 | Contactar: 0412-9203710, 0424-1454276",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796368879",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796368879",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T02:43:41",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Will Antony Rojas Espejo, C.I. 24.803.825",
+      "rawAdditional": "Contactar: 0412-9203710, 0424-1454276",
+      "rawLinkField": null,
+      "freeText": "Will Antony Rojas Espejo, C.I. 24.803.825 | Contactar: 0412-9203710, 0424-1454276",
+      "name": "Will Antony Rojas Espejo",
+      "normalizedName": "WILL ANTONY ROJAS ESPEJO",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04129203710",
+        "04241454276"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Will Antony Rojas Espejo, C.I. 24.803.825 | Contactar: 0412-9203710, 0424-1454276",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796370467",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796370467",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T02:46:53",
+      "event": "edificio_colapsado___da_o_estructural persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Persona desaparecida. Su edificio colapso pero no aparece en la lista de fallecidos encontrados en su edificio y aparece en una lista de desaparecidos",
+      "rawAdditional": "Deyanira Coromoto Rodriguez Gonzalez V6920263",
+      "rawLinkField": null,
+      "freeText": "Persona desaparecida. Su edificio colapso pero no aparece en la lista de fallecidos encontrados en su edificio y aparece en una lista de desaparecidos | Deyanira Coromoto Rodriguez Gonzalez V6920263",
+      "name": null,
+      "normalizedName": null,
+      "cedula": null,
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 10.609811,
+        "lon": -67.025647
+      },
+      "locationText": "Persona desaparecida. Su edificio colapso pero no aparece en la lista de fallecidos encontrados en su edificio y aparece en una lista de desaparecidos | Deyanira Coromoto Rodriguez Gonzalez V6920263",
+      "isMatchable": false,
+      "notMatchableReason": "no-clear-name"
+    },
+    {
+      "id": "kobo-796370782",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796370782",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T02:47:52",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "Heidy Alejandra Marquez, hijo: Marcos Moises Sousa Marquez",
+      "rawAdditional": "Contactar: 0412-9001309, 0412-9339033",
+      "rawLinkField": null,
+      "freeText": "Heidy Alejandra Marquez, hijo: Marcos Moises Sousa Marquez | Contactar: 0412-9001309, 0412-9339033",
+      "name": "Heidy Alejandra Marquez",
+      "normalizedName": "HEIDY ALEJANDRA MARQUEZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04129001309",
+        "04129339033"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Heidy Alejandra Marquez, hijo: Marcos Moises Sousa Marquez | Contactar: 0412-9001309, 0412-9339033",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796372725",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796372725",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T02:51:01",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Jose Gregory Caballero Ortega",
+      "rawAdditional": "Contactar: 0424-8029761",
+      "rawLinkField": null,
+      "freeText": "Jose Gregory Caballero Ortega | Contactar: 0424-8029761",
+      "name": "Jose Gregory Caballero Ortega",
+      "normalizedName": "JOSE GREGORY CABALLERO ORTEGA",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04248029761"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Jose Gregory Caballero Ortega | Contactar: 0424-8029761",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796373842",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796373842",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T02:53:08",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Yuly M Ortega",
+      "rawAdditional": "Contactar: 0424-7427520, 0412-0313496, 0426-2420542",
+      "rawLinkField": null,
+      "freeText": "Yuly M Ortega | Contactar: 0424-7427520, 0412-0313496, 0426-2420542",
+      "name": null,
+      "normalizedName": null,
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04247427520",
+        "04120313496",
+        "04262420542"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Yuly M Ortega | Contactar: 0424-7427520, 0412-0313496, 0426-2420542",
+      "isMatchable": false,
+      "notMatchableReason": "no-clear-name"
+    },
+    {
+      "id": "kobo-796374792",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796374792",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T02:55:38",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "Luz Cabrera, hija: Samantha Vasquez (16 años)",
+      "rawAdditional": "Contactar: 0414-8837782, +1-201-8143818",
+      "rawLinkField": null,
+      "freeText": "Luz Cabrera, hija: Samantha Vasquez (16 años) | Contactar: 0414-8837782, +1-201-8143818",
+      "name": "Luz Cabrera",
+      "normalizedName": "LUZ CABRERA",
+      "cedula": null,
+      "age": 16,
+      "contacts": [
+        "04148837782",
+        "+12018143818"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Luz Cabrera, hija: Samantha Vasquez (16 años) | Contactar: 0414-8837782, +1-201-8143818",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796380810",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796380810",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T03:08:59",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Norma Zoraida Tortosa (63 años), C.I. 6.127.597",
+      "rawAdditional": "Contactar: 0424-4951997, 0424-4369985",
+      "rawLinkField": null,
+      "freeText": "Norma Zoraida Tortosa (63 años), C.I. 6.127.597 | Contactar: 0424-4951997, 0424-4369985",
+      "name": "Norma Zoraida Tortosa",
+      "normalizedName": "NORMA ZORAIDA TORTOSA",
+      "cedula": null,
+      "age": 63,
+      "contacts": [
+        "04244951997",
+        "04244369985"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Norma Zoraida Tortosa (63 años), C.I. 6.127.597 | Contactar: 0424-4951997, 0424-4369985",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796382814",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796382814",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T03:13:52",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "Familia Pacheco: Alejandro (51 años), C.I. 11.043.431, Marian, Antuan Rafael",
+      "rawAdditional": "Contactar: 0414-2709457",
+      "rawLinkField": null,
+      "freeText": "Familia Pacheco: Alejandro (51 años), C.I. 11.043.431, Marian, Antuan Rafael | Contactar: 0414-2709457",
+      "name": null,
+      "normalizedName": null,
+      "cedula": null,
+      "age": 51,
+      "contacts": [
+        "04142709457"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Familia Pacheco: Alejandro (51 años), C.I. 11.043.431, Marian, Antuan Rafael | Contactar: 0414-2709457",
+      "isMatchable": false,
+      "notMatchableReason": "family-report"
+    },
+    {
+      "id": "kobo-796385177",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796385177",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T03:19:01",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Beatriz Liendo (71 años) C.I. V-5.090.417",
+      "rawAdditional": "Contactar: 0414-9193948, 0424-2384364",
+      "rawLinkField": null,
+      "freeText": "Beatriz Liendo (71 años) C.I. V-5.090.417 | Contactar: 0414-9193948, 0424-2384364",
+      "name": "Beatriz Liendo",
+      "normalizedName": "BEATRIZ LIENDO",
+      "cedula": null,
+      "age": 71,
+      "contacts": [
+        "04149193948",
+        "04242384364"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Beatriz Liendo (71 años) C.I. V-5.090.417 | Contactar: 0414-9193948, 0424-2384364",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796386815",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796386815",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T03:22:51",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "Carmen Silva (60 años), Brainel Linares (27 años)",
+      "rawAdditional": "Contactar: 0412-9068159, 0414-9106529",
+      "rawLinkField": null,
+      "freeText": "Carmen Silva (60 años), Brainel Linares (27 años) | Contactar: 0412-9068159, 0414-9106529",
+      "name": "Carmen Silva",
+      "normalizedName": "CARMEN SILVA",
+      "cedula": null,
+      "age": 60,
+      "contacts": [
+        "04129068159",
+        "04149106529"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Carmen Silva (60 años), Brainel Linares (27 años) | Contactar: 0412-9068159, 0414-9106529",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796387411",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796387411",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T03:24:23",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Gustavo Gabriel Vallenilla, C.I. 19.199662",
+      "rawAdditional": "Contactar: +1-469-8440960, 0414-2685055",
+      "rawLinkField": null,
+      "freeText": "Gustavo Gabriel Vallenilla, C.I. 19.199662 | Contactar: +1-469-8440960, 0414-2685055",
+      "name": "Gustavo Gabriel Vallenilla",
+      "normalizedName": "GUSTAVO GABRIEL VALLENILLA",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "+14698440960",
+        "04142685055"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Gustavo Gabriel Vallenilla, C.I. 19.199662 | Contactar: +1-469-8440960, 0414-2685055",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796392186",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796392186",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T03:35:59",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "YULI MARQUIRE ORTEGA MUÑOZ",
+      "rawAdditional": "Contactar: 0416-2311987, 0426-3528061",
+      "rawLinkField": null,
+      "freeText": "YULI MARQUIRE ORTEGA MUÑOZ | Contactar: 0416-2311987, 0426-3528061",
+      "name": "Yuli Marquire Ortega Muñoz",
+      "normalizedName": "YULI MARQUIRE ORTEGA MUNOZ",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04162311987",
+        "04263528061"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "YULI MARQUIRE ORTEGA MUÑOZ | Contactar: 0416-2311987, 0426-3528061",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-796392895",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "796392895",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T03:38:00",
+      "event": "familia_desaparecida",
+      "category": "missing-family",
+      "rawDescription": "Luis Alfonso Bustamante (70 años), hijo: Luis Alfonso Bustamante (31 años)",
+      "rawAdditional": "Contactar: 0426-7719211",
+      "rawLinkField": null,
+      "freeText": "Luis Alfonso Bustamante (70 años), hijo: Luis Alfonso Bustamante (31 años) | Contactar: 0426-7719211",
+      "name": "Luis Alfonso Bustamante",
+      "normalizedName": "LUIS ALFONSO BUSTAMANTE",
+      "cedula": null,
+      "age": 70,
+      "contacts": [
+        "04267719211"
+      ],
+      "geo": {
+        "lat": 10.609597703267,
+        "lon": -67.02697942034605
+      },
+      "locationText": "Luis Alfonso Bustamante (70 años), hijo: Luis Alfonso Bustamante (31 años) | Contactar: 0426-7719211",
       "isMatchable": true,
       "notMatchableReason": null
     }

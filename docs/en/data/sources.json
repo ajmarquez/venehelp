@@ -107,9 +107,9 @@
       "registry"
     ],
     "report_stats": {
-      "reported": 73597,
-      "found": 23431,
-      "as_of": "2026-06-29T19:30:00.759Z",
+      "reported": 69255,
+      "found": 23078,
+      "as_of": "2026-06-30T08:52:14.780Z",
       "source": "self-reported"
     },
     "use_when_label": "Use this to search for or report a missing person.",
@@ -160,9 +160,9 @@
       "found-report"
     ],
     "report_stats": {
-      "reported": 46008,
-      "found": 5729,
-      "as_of": "2026-06-29T19:30:00.759Z",
+      "reported": 40514,
+      "found": 5310,
+      "as_of": "2026-06-30T08:52:14.780Z",
       "source": "self-reported"
     },
     "summary": "Citizen platform for reporting, searching, and marking missing people as found after the earthquake.",
@@ -298,8 +298,8 @@
       "located-report"
     ],
     "report_stats": {
-      "located": 4448,
-      "as_of": "2026-06-27T13:03:43.378Z",
+      "located": 9085,
+      "as_of": "2026-06-30T08:52:14.780Z",
       "source": "self-reported"
     },
     "summary": "Open-source public platform that consolidates hospital patient listings to help locate people already found after the earthquake. Includes a public read-only API.",

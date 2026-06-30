@@ -107,9 +107,9 @@
       "registro"
     ],
     "report_stats": {
-      "reported": 73597,
-      "found": 23431,
-      "as_of": "2026-06-29T19:30:00.759Z",
+      "reported": 69255,
+      "found": 23078,
+      "as_of": "2026-06-30T08:52:14.780Z",
       "source": "self-reported"
     },
     "use_when_label": "Úsalo si buscas o quieres reportar a una persona desaparecida.",
@@ -160,9 +160,9 @@
       "found-report"
     ],
     "report_stats": {
-      "reported": 46008,
-      "found": 5729,
-      "as_of": "2026-06-29T19:30:00.759Z",
+      "reported": 40514,
+      "found": 5310,
+      "as_of": "2026-06-30T08:52:14.780Z",
       "source": "self-reported"
     },
     "summary": "Plataforma ciudadana para reportar, buscar y marcar personas desaparecidas como encontradas tras el terremoto.",
@@ -298,8 +298,8 @@
       "located-report"
     ],
     "report_stats": {
-      "located": 4448,
-      "as_of": "2026-06-27T13:03:43.378Z",
+      "located": 9085,
+      "as_of": "2026-06-30T08:52:14.780Z",
       "source": "self-reported"
     },
     "summary": "Plataforma pública y de código abierto que consolida listados de pacientes en hospitales para ayudar a ubicar a personas ya localizadas tras el terremoto. Incluye API pública de solo lectura.",
