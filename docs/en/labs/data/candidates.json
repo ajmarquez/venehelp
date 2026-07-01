@@ -1,8 +1,182 @@
 {
-  "generatedAt": "2026-07-01T09:25:40.000Z",
-  "totalGroups": 74,
-  "totalPairs": 130,
+  "generatedAt": "2026-07-01T15:15:03.348Z",
+  "totalGroups": 85,
+  "totalPairs": 158,
   "results": [
+    {
+      "missing": {
+        "id": "kobo-793583573",
+        "name": "Carmen Rodríguez",
+        "rawDescription": "Carmen Rodríguez",
+        "cedula": null,
+        "age": null,
+        "contacts": [],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-26T17:03:22"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-793583573",
+          "locatedId": "localizados-carmen-rodriguez-2z368m",
+          "missingName": "Carmen Rodríguez",
+          "locatedName": "Carmen Rodriguez",
+          "locatedHospital": "Hospital de Pariata",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/carmen-rodriguez-2z368m",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.94,
+          "scorePercent": 94,
+          "confidence": "high",
+          "reasons": [
+            "Exact normalized name"
+          ],
+          "nameScore": 1,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-793583573",
+          "locatedId": "localizados-rodriguez-carmen-s5zuh6",
+          "missingName": "Carmen Rodríguez",
+          "locatedName": "Rodriguez Carmen",
+          "locatedHospital": "Hospital Victorino Santaella",
+          "locatedAddress": "LA GUAIRA",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/rodriguez-carmen-s5zuh6",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "consolidado.csv",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": 73,
+          "score": 0.88,
+          "scorePercent": 88,
+          "confidence": "medium",
+          "reasons": [
+            "Very strong name similarity"
+          ],
+          "nameScore": 1,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-793583573",
+          "locatedId": "localizados-carmela-rodriguez-emzn7o",
+          "missingName": "Carmen Rodríguez",
+          "locatedName": "Carmela Rodríguez",
+          "locatedHospital": "Centro de Acopio Caraballeda",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/carmela-rodriguez-emzn7o",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.78,
+          "scorePercent": 78,
+          "confidence": "low",
+          "reasons": [
+            "Strong name similarity"
+          ],
+          "nameScore": 0.828,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [
+        {
+          "id": "hospitales-en-venezuela:CARMEN RODRIGUEZ:HOSPITAL DR RAFAEL MEDINA JIMENEZ PERIFERICO DE PARIATA MAIQUETIA:6783",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Carmen Rodríguez",
+          "name": "Carmen Rodriguez",
+          "detail": "72 años / Barrio Aeropuerto",
+          "age": 72,
+          "maskedCedula": "••••6783",
+          "locationName": "Hospital Dr. Rafael Medina Jiménez (Periférico de Pariata / Maiquetía)",
+          "city": "La Guaira",
+          "phone": null,
+          "supportScore": 0.98,
+          "supportScorePercent": 98,
+          "supportReasons": [
+            "Exact name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        },
+        {
+          "id": "hospitales-en-venezuela:CARMEN RODRIGUEZ:HOSPITAL VICTORIO SANTAELLA LOS TEQUES:5501",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Carmen Rodríguez",
+          "name": "Carmen Rodríguez",
+          "detail": "73",
+          "age": 73,
+          "maskedCedula": "••••5501",
+          "locationName": "Hospital Victorio Santaella (Los Teques)",
+          "city": "Por confirmar",
+          "phone": null,
+          "supportScore": 0.98,
+          "supportScorePercent": 98,
+          "supportReasons": [
+            "Exact name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        },
+        {
+          "id": "hospitales-en-venezuela:CARMEN RODRIGUEZ:HOSPITAL DR RAFAEL MEDINA JIMENEZ PERIFERICO DE PARIATA MAIQUETIA:0123",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "Carmen Rodríguez",
+          "name": "Carmen Rodríguez",
+          "detail": "33 años · Antímano",
+          "age": 33,
+          "maskedCedula": "••••0123",
+          "locationName": "Hospital Dr. Rafael Medina Jiménez (Periférico de Pariata / Maiquetía)",
+          "city": "La Guaira",
+          "phone": null,
+          "supportScore": 0.98,
+          "supportScorePercent": 98,
+          "supportReasons": [
+            "Exact name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        }
+      ],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Carmen Rodriguez · Hospital de Pariata",
+          "url": "https://localizadosvenezuela.com/buscar/carmen-rodriguez-2z368m"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARMEN RODRIGUEZ:HOSPITAL DR RAFAEL MEDINA JIMENEZ PERIFERICO DE PARIATA MAIQUETIA:6783",
+          "label": "Hospitales en Venezuela",
+          "note": "Carmen Rodriguez · 72 años / Barrio Aeropuerto · Hospital Dr. Rafael Medina Jiménez (Periférico de Pariata / Maiquetía)",
+          "url": "https://hospitalesenvenezuela.com/"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARMEN RODRIGUEZ:HOSPITAL VICTORIO SANTAELLA LOS TEQUES:5501",
+          "label": "Hospitales en Venezuela",
+          "note": "Carmen Rodríguez · 73 · Hospital Victorio Santaella (Los Teques)",
+          "url": "https://hospitalesenvenezuela.com/"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARMEN RODRIGUEZ:HOSPITAL DR RAFAEL MEDINA JIMENEZ PERIFERICO DE PARIATA MAIQUETIA:0123",
+          "label": "Hospitales en Venezuela",
+          "note": "Carmen Rodríguez · 33 años · Antímano · Hospital Dr. Rafael Medina Jiménez (Periférico de Pariata / Maiquetía)",
+          "url": "https://hospitalesenvenezuela.com/"
+        }
+      ]
+    },
     {
       "missing": {
         "id": "kobo-794391887",
@@ -112,6 +286,62 @@
     },
     {
       "missing": {
+        "id": "kobo-794431820",
+        "name": "José Ramos",
+        "rawDescription": "José Ramos",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "+584248704233"
+        ],
+        "sourceUrl": "https://x.com/vibexval444/status/2070026081894080626?s=20",
+        "submittedAt": "2026-06-27T18:52:30"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-794431820",
+          "locatedId": "localizados-jose-ramos-60spr4",
+          "missingName": "José Ramos",
+          "locatedName": "José Ramos",
+          "locatedHospital": "Estadio Béisbol Playa Grande",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/jose-ramos-60spr4",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.94,
+          "scorePercent": 94,
+          "confidence": "high",
+          "reasons": [
+            "Exact normalized name"
+          ],
+          "nameScore": 1,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "José Ramos",
+          "url": "https://x.com/vibexval444/status/2070026081894080626?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "José Ramos · Estadio Béisbol Playa Grande",
+          "url": "https://localizadosvenezuela.com/buscar/jose-ramos-60spr4"
+        }
+      ]
+    },
+    {
+      "missing": {
         "id": "kobo-792555139",
         "name": "Carlos Castaño",
         "rawDescription": "Carlos Castaño - Rx",
@@ -171,6 +401,31 @@
           "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": null
+        },
+        {
+          "missingId": "kobo-792555139",
+          "locatedId": "localizados-carlos-liscano-xe9jhs",
+          "missingName": "Carlos Castaño",
+          "locatedName": "Carlos Liscano",
+          "locatedHospital": "Centro de Acopio Caraballeda",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/carlos-liscano-xe9jhs",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.75,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
         }
       ],
       "hospitalesVenezuelaMatches": [
@@ -211,132 +466,6 @@
           "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DR JOSE GREGORIO HERNANDEZ LOS MAGALLANES DE CATIA:1612",
           "label": "Hospitales en Venezuela",
           "note": "Carlos Castaño · 47 · Hospital Dr. José Gregorio Hernández (Los Magallanes de Catia)",
-          "url": "https://hospitalesenvenezuela.com/"
-        }
-      ]
-    },
-    {
-      "missing": {
-        "id": "kobo-793583573",
-        "name": "Carmen Rodríguez",
-        "rawDescription": "Carmen Rodríguez",
-        "cedula": null,
-        "age": null,
-        "contacts": [],
-        "sourceUrl": null,
-        "submittedAt": "2026-06-26T17:03:22"
-      },
-      "candidates": [
-        {
-          "missingId": "kobo-793583573",
-          "locatedId": "localizados-rodriguez-carmen-s5zuh6",
-          "missingName": "Carmen Rodríguez",
-          "locatedName": "Rodriguez Carmen",
-          "locatedHospital": "Hospital Victorino Santaella",
-          "locatedAddress": "LA GUAIRA",
-          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/rodriguez-carmen-s5zuh6",
-          "locatedCondition": "desconocido",
-          "locatedSourceFile": "consolidado.csv",
-          "missingCedula": null,
-          "locatedCedula": null,
-          "missingAge": null,
-          "locatedAge": 73,
-          "score": 0.88,
-          "scorePercent": 88,
-          "confidence": "medium",
-          "reasons": [
-            "Very strong name similarity"
-          ],
-          "nameScore": 1,
-          "locationScore": 0,
-          "identitySignal": "none",
-          "ageDiff": null
-        }
-      ],
-      "hospitalesVenezuelaMatches": [
-        {
-          "id": "hospitales-en-venezuela:CARMEN RODRIGUEZ:HOSPITAL VICTORIO SANTAELLA LOS TEQUES:5501",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Carmen Rodríguez",
-          "name": "Carmen Rodríguez",
-          "detail": "73",
-          "age": 73,
-          "maskedCedula": "••••5501",
-          "locationName": "Hospital Victorio Santaella (Los Teques)",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.99,
-          "supportScorePercent": 99,
-          "supportReasons": [
-            "Exact name match in Hospitales en Venezuela",
-            "Exact age match",
-            "Same hospital or facility"
-          ]
-        },
-        {
-          "id": "hospitales-en-venezuela:CARMEN RODRIGUEZ:HOSPITAL DR RAFAEL MEDINA JIMENEZ PERIFERICO DE PARIATA MAIQUETIA:6783",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Carmen Rodríguez",
-          "name": "Carmen Rodriguez",
-          "detail": "72 años / Barrio Aeropuerto",
-          "age": 72,
-          "maskedCedula": "••••6783",
-          "locationName": "Hospital Dr. Rafael Medina Jiménez (Periférico de Pariata / Maiquetía)",
-          "city": "La Guaira",
-          "phone": null,
-          "supportScore": 0.97,
-          "supportScorePercent": 97,
-          "supportReasons": [
-            "Exact name match in Hospitales en Venezuela",
-            "Close age",
-            "Related hospital wording"
-          ]
-        },
-        {
-          "id": "hospitales-en-venezuela:CARMEN RODRIGUEZ:HVSR:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Carmen Rodríguez",
-          "name": "Carmen Rodriguez",
-          "detail": "73años",
-          "age": 73,
-          "maskedCedula": null,
-          "locationName": "HVSR",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.96,
-          "supportScorePercent": 96,
-          "supportReasons": [
-            "Exact name match in Hospitales en Venezuela",
-            "Exact age match"
-          ]
-        }
-      ],
-      "supportingSources": [
-        {
-          "key": "localizados",
-          "label": "Localizados Venezuela",
-          "note": "Rodriguez Carmen · Hospital Victorino Santaella",
-          "url": "https://localizadosvenezuela.com/buscar/rodriguez-carmen-s5zuh6"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARMEN RODRIGUEZ:HOSPITAL VICTORIO SANTAELLA LOS TEQUES:5501",
-          "label": "Hospitales en Venezuela",
-          "note": "Carmen Rodríguez · 73 · Hospital Victorio Santaella (Los Teques)",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARMEN RODRIGUEZ:HOSPITAL DR RAFAEL MEDINA JIMENEZ PERIFERICO DE PARIATA MAIQUETIA:6783",
-          "label": "Hospitales en Venezuela",
-          "note": "Carmen Rodriguez · 72 años / Barrio Aeropuerto · Hospital Dr. Rafael Medina Jiménez (Periférico de Pariata / Maiquetía)",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARMEN RODRIGUEZ:HVSR:",
-          "label": "Hospitales en Venezuela",
-          "note": "Carmen Rodriguez · 73años · HVSR",
           "url": "https://hospitalesenvenezuela.com/"
         }
       ]
@@ -447,85 +576,6 @@
           "label": "Localizados Venezuela",
           "note": "Jose Luis Pacheco · Campo de Golf Caribe — sobrevivientes (Playa Los Cocos)",
           "url": "https://localizadosvenezuela.com/buscar/jose-luis-pacheco-fll9wo"
-        }
-      ]
-    },
-    {
-      "missing": {
-        "id": "kobo-793083134",
-        "name": "Aisha Garcia",
-        "rawDescription": "Aisha Garcia, Oriana Guedes, Jhon García y Olivia García (bebé con problemas de salud)",
-        "cedula": null,
-        "age": null,
-        "contacts": [],
-        "sourceUrl": "https://x.com/thecherrybonbon/status/2070305325995950585?s=20",
-        "submittedAt": "2026-06-26T10:14:46"
-      },
-      "candidates": [
-        {
-          "missingId": "kobo-793083134",
-          "locatedId": "localizados-aisa-garcia-kofrhx",
-          "missingName": "Aisha Garcia",
-          "locatedName": "Aisa Garcia",
-          "locatedHospital": "Campo de Golf Caribe — sobrevivientes (Playa Los Cocos)",
-          "locatedAddress": null,
-          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/aisa-garcia-kofrhx",
-          "locatedCondition": "desconocido",
-          "locatedSourceFile": "consolidado.csv",
-          "missingCedula": null,
-          "locatedCedula": null,
-          "missingAge": null,
-          "locatedAge": null,
-          "score": 0.78,
-          "scorePercent": 78,
-          "confidence": "low",
-          "reasons": [
-            "Strong name similarity"
-          ],
-          "nameScore": 0.842,
-          "locationScore": 0,
-          "identitySignal": "none",
-          "ageDiff": null
-        },
-        {
-          "missingId": "kobo-793083134",
-          "locatedId": "localizados-aira-garcia-4ldlf2",
-          "missingName": "Aisha Garcia",
-          "locatedName": "Aira García",
-          "locatedHospital": "Campo de Golf Caribe — sobrevivientes (Playa Los Cocos)",
-          "locatedAddress": "La Guaira",
-          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/aira-garcia-4ldlf2",
-          "locatedCondition": "desconocido",
-          "locatedSourceFile": "consolidado.csv",
-          "missingCedula": null,
-          "locatedCedula": null,
-          "missingAge": null,
-          "locatedAge": null,
-          "score": 0.68,
-          "scorePercent": 68,
-          "confidence": "low",
-          "reasons": [
-            "Moderate name similarity"
-          ],
-          "nameScore": 0.737,
-          "locationScore": 0,
-          "identitySignal": "none",
-          "ageDiff": null
-        }
-      ],
-      "hospitalesVenezuelaMatches": [],
-      "supportingSources": [
-        {
-          "key": "kobo",
-          "label": "KoboToolbox · TerremotoVE",
-          "note": "Aisha Garcia, Oriana Guedes, Jhon García y Olivia García (bebé con problemas de salud)",
-          "url": "https://x.com/thecherrybonbon/status/2070305325995950585?s=20"
-        },
-        {
-          "key": "localizados",
-          "label": "Localizados Venezuela",
-          "note": "Aisa Garcia · Campo de Golf Caribe — sobrevivientes (Playa Los Cocos)",
-          "url": "https://localizadosvenezuela.com/buscar/aisa-garcia-kofrhx"
         }
       ]
     },
@@ -1210,6 +1260,157 @@
     },
     {
       "missing": {
+        "id": "kobo-795027382",
+        "name": "Antoni Gonzalez",
+        "rawDescription": "Antoni Gonzalez - OPPPE 26, La Guaira",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "04246799950"
+        ],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-28T19:36:53"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-795027382",
+          "locatedId": "localizados-anni-gonzalez-uqij03",
+          "missingName": "Antoni Gonzalez",
+          "locatedName": "Anni González",
+          "locatedHospital": "Estadio Béisbol Playa Grande",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/anni-gonzalez-uqij03",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.78,
+          "scorePercent": 78,
+          "confidence": "low",
+          "reasons": [
+            "Strong name similarity"
+          ],
+          "nameScore": 0.833,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-795027382",
+          "locatedId": "localizados-gonzalez-yoani-akfzzz",
+          "missingName": "Antoni Gonzalez",
+          "locatedName": "Gonzalez Yoani",
+          "locatedHospital": "Clínica El Ávila",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/gonzalez-yoani-akfzzz",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.72,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Anni González · Estadio Béisbol Playa Grande",
+          "url": "https://localizadosvenezuela.com/buscar/anni-gonzalez-uqij03"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-796343802",
+        "name": "Jose Fernandez",
+        "rawDescription": "Jose Fernandez, C.I.: V-23597234 (32 años)",
+        "cedula": null,
+        "age": 32,
+        "contacts": [
+          "04241281267",
+          "04242608221"
+        ],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-30T01:40:52"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-796343802",
+          "locatedId": "localizados-jose-hernandez-84p9hg",
+          "missingName": "Jose Fernandez",
+          "locatedName": "José Hernández",
+          "locatedHospital": "Estadio Béisbol Playa Grande",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/jose-hernandez-84p9hg",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": 32,
+          "locatedAge": null,
+          "score": 0.78,
+          "scorePercent": 78,
+          "confidence": "low",
+          "reasons": [
+            "Strong name similarity"
+          ],
+          "nameScore": 0.833,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-796343802",
+          "locatedId": "localizados-joaho-fernandez-6h18kg",
+          "missingName": "Jose Fernandez",
+          "locatedName": "Joaho Fernandez",
+          "locatedHospital": "Campo de Golf Caribe — sobrevivientes (Playa Los Cocos)",
+          "locatedAddress": "La Guaira",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/joaho-fernandez-6h18kg",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "consolidado.csv",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": 32,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.72,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "José Hernández · Estadio Béisbol Playa Grande",
+          "url": "https://localizadosvenezuela.com/buscar/jose-hernandez-84p9hg"
+        }
+      ]
+    },
+    {
+      "missing": {
         "id": "kobo-793791851",
         "name": "Guerrero Peña",
         "rawDescription": "Delia de Guerrero Peña, 50 años, 11.642.518",
@@ -1350,6 +1551,31 @@
           ],
           "nameScore": 0.72,
           "locationScore": 0.25,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-792668286",
+          "locatedId": "localizados-bryan-martinez-mq0nbb",
+          "missingName": "Fabian Martínez",
+          "locatedName": "Bryan Martínez",
+          "locatedHospital": "Centro de Acopio Caraballeda",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/bryan-martinez-mq0nbb",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.72,
+          "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": null
         },
@@ -1532,6 +1758,31 @@
           ],
           "nameScore": 0.769,
           "locationScore": 0.25,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-794844793",
+          "locatedId": "localizados-ana-castillo-er22ir",
+          "missingName": "Karla Castillo",
+          "locatedName": "Ana Castillo",
+          "locatedHospital": "Hospital de Pariata",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/ana-castillo-er22ir",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.727,
+          "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": null
         }
@@ -1801,14 +2052,14 @@
       "candidates": [
         {
           "missingId": "kobo-792536085",
-          "locatedId": "localizados-genderson-jhoan-garcia-m-09kv6j",
+          "locatedId": "localizados-anderson-jhoan-garcia-m-8kpgj5",
           "missingName": "Jhoander Garcia",
-          "locatedName": "Genderson Jhoan Garcia M",
-          "locatedHospital": "Campo de Golf Caribe — sobrevivientes (Playa Los Cocos)",
+          "locatedName": "Anderson Jhoan García M.",
+          "locatedHospital": "Centro de Acopio Caraballeda",
           "locatedAddress": null,
-          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/genderson-jhoan-garcia-m-09kv6j",
-          "locatedCondition": "desconocido",
-          "locatedSourceFile": "consolidado.csv",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/anderson-jhoan-garcia-m-8kpgj5",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
           "missingCedula": null,
           "locatedCedula": null,
           "missingAge": null,
@@ -1819,7 +2070,7 @@
           "reasons": [
             "Moderate name similarity"
           ],
-          "nameScore": 0.727,
+          "nameScore": 0.75,
           "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": null
@@ -1886,8 +2137,62 @@
         {
           "key": "localizados",
           "label": "Localizados Venezuela",
-          "note": "Genderson Jhoan Garcia M · Campo de Golf Caribe — sobrevivientes (Playa Los Cocos)",
-          "url": "https://localizadosvenezuela.com/buscar/genderson-jhoan-garcia-m-09kv6j"
+          "note": "Anderson Jhoan García M. · Centro de Acopio Caraballeda",
+          "url": "https://localizadosvenezuela.com/buscar/anderson-jhoan-garcia-m-8kpgj5"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-792548067",
+        "name": "Johan Castillo",
+        "rawDescription": "Johan Castillo",
+        "cedula": null,
+        "age": null,
+        "contacts": [],
+        "sourceUrl": "https://x.com/MaryomBriceno/status/2070151472386380014?s=20",
+        "submittedAt": "2026-06-25T18:59:21"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-792548067",
+          "locatedId": "localizados-ana-castillo-er22ir",
+          "missingName": "Johan Castillo",
+          "locatedName": "Ana Castillo",
+          "locatedHospital": "Hospital de Pariata",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/ana-castillo-er22ir",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.727,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Johan Castillo",
+          "url": "https://x.com/MaryomBriceno/status/2070151472386380014?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Ana Castillo · Hospital de Pariata",
+          "url": "https://localizadosvenezuela.com/buscar/ana-castillo-er22ir"
         }
       ]
     },
@@ -1924,6 +2229,56 @@
             "Moderate name similarity"
           ],
           "nameScore": 0.778,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-792550696",
+          "locatedId": "localizados-francisco-diaz-hj7weh",
+          "missingName": "Francisco Pi",
+          "locatedName": "Francisco Díaz",
+          "locatedHospital": "Centro de Acopio Caraballeda",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/francisco-diaz-hj7weh",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.727,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-792550696",
+          "locatedId": "localizados-francisco-perez-0157ra",
+          "missingName": "Francisco Pi",
+          "locatedName": "Francisco Pérez",
+          "locatedHospital": "Estadio Béisbol Playa Grande",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/francisco-perez-0157ra",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.783,
           "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": null
@@ -2223,6 +2578,31 @@
         },
         {
           "missingId": "kobo-792596753",
+          "locatedId": "localizados-anni-gonzalez-uqij03",
+          "missingName": "Thania González",
+          "locatedName": "Anni González",
+          "locatedHospital": "Estadio Béisbol Playa Grande",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/anni-gonzalez-uqij03",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.75,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-792596753",
           "locatedId": "localizados-brian-gonzalez-27598748-m9pmtj",
           "missingName": "Thania González",
           "locatedName": "Brian González",
@@ -2235,31 +2615,6 @@
           "locatedCedula": "27598748",
           "missingAge": null,
           "locatedAge": 26,
-          "score": 0.68,
-          "scorePercent": 68,
-          "confidence": "low",
-          "reasons": [
-            "Moderate name similarity"
-          ],
-          "nameScore": 0.72,
-          "locationScore": 0,
-          "identitySignal": "none",
-          "ageDiff": null
-        },
-        {
-          "missingId": "kobo-792596753",
-          "locatedId": "localizados-gonzalez-yoani-akfzzz",
-          "missingName": "Thania González",
-          "locatedName": "Gonzalez Yoani",
-          "locatedHospital": "Clínica El Ávila",
-          "locatedAddress": null,
-          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/gonzalez-yoani-akfzzz",
-          "locatedCondition": "desconocido",
-          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
-          "missingCedula": null,
-          "locatedCedula": null,
-          "missingAge": null,
-          "locatedAge": null,
           "score": 0.68,
           "scorePercent": 68,
           "confidence": "low",
@@ -2654,6 +3009,31 @@
           "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": null
+        },
+        {
+          "missingId": "kobo-792662548",
+          "locatedId": "localizados-alexandra-gil-xko2cm",
+          "missingName": "Alexandra Guedez",
+          "locatedName": "Alexandra Gil",
+          "locatedHospital": "Estadio Béisbol Playa Grande",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/alexandra-gil-xko2cm",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.72,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
         }
       ],
       "hospitalesVenezuelaMatches": [],
@@ -2922,6 +3302,116 @@
     },
     {
       "missing": {
+        "id": "kobo-792715012",
+        "name": "Gabriel López",
+        "rawDescription": "Personas desaparecidas: Gabriel López y Raquel López. Última ubicación: Residencias Arenal en Caraballeda.",
+        "cedula": null,
+        "age": null,
+        "contacts": [],
+        "sourceUrl": "https://x.com/Arianna66280534/status/2070209668694347855?s=20",
+        "submittedAt": "2026-06-26T00:10:21"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-792715012",
+          "locatedId": "localizados-gabriel-bello-bpuzcx",
+          "missingName": "Gabriel López",
+          "locatedName": "Gabriel Bello",
+          "locatedHospital": "Estadio Béisbol Playa Grande",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/gabriel-bello-bpuzcx",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.727,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Personas desaparecidas: Gabriel López y Raquel López. Última ubicación: Residencias Arenal en Caraballeda.",
+          "url": "https://x.com/Arianna66280534/status/2070209668694347855?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Gabriel Bello · Estadio Béisbol Playa Grande",
+          "url": "https://localizadosvenezuela.com/buscar/gabriel-bello-bpuzcx"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-792728414",
+        "name": "Elisa Sciamanna",
+        "rawDescription": "Desaparecida: Elisa Sciamanna, estaba en edf Oasis, La Guaira",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "+584127917527"
+        ],
+        "sourceUrl": "https://x.com/Katie1710729/status/2070196258476609711",
+        "submittedAt": "2026-06-26T01:08:13"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-792728414",
+          "locatedId": "localizados-eliana-macias-gkeanw",
+          "missingName": "Elisa Sciamanna",
+          "locatedName": "Eliana Macías",
+          "locatedHospital": "Centro de Acopio Caraballeda",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/eliana-macias-gkeanw",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.75,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Desaparecida: Elisa Sciamanna, estaba en edf Oasis, La Guaira",
+          "url": "https://x.com/Katie1710729/status/2070196258476609711"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Eliana Macías · Centro de Acopio Caraballeda",
+          "url": "https://localizadosvenezuela.com/buscar/eliana-macias-gkeanw"
+        }
+      ]
+    },
+    {
+      "missing": {
         "id": "kobo-792742381",
         "name": "Maria Alejandra Watay",
         "rawDescription": "Maria Alejandra Watay",
@@ -2968,6 +3458,118 @@
           "label": "Localizados Venezuela",
           "note": "María Alejandra Janes · Clínica El Ávila",
           "url": "https://localizadosvenezuela.com/buscar/maria-alejandra-janes-11234099-bbybpm"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-793066177",
+        "name": "Abel Bello",
+        "rawDescription": "Abel Bello y Anabel de Andrade, se presumen bajo los escombros de la Residencia Belleuve",
+        "cedula": null,
+        "age": null,
+        "contacts": [],
+        "sourceUrl": "https://x.com/EstefaniaVenBg/status/2070312152238272708?s=20",
+        "submittedAt": "2026-06-26T10:00:27"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-793066177",
+          "locatedId": "localizados-gabriel-bello-bpuzcx",
+          "missingName": "Abel Bello",
+          "locatedName": "Gabriel Bello",
+          "locatedHospital": "Estadio Béisbol Playa Grande",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/gabriel-bello-bpuzcx",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.737,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Abel Bello y Anabel de Andrade, se presumen bajo los escombros de la Residencia Belleuve",
+          "url": "https://x.com/EstefaniaVenBg/status/2070312152238272708?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Gabriel Bello · Estadio Béisbol Playa Grande",
+          "url": "https://localizadosvenezuela.com/buscar/gabriel-bello-bpuzcx"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-793076576",
+        "name": "Amir González",
+        "rawDescription": "Amir González (12), visto por última vez por los vecinos en OP 26 Torre J Caribe, frente a la Bomba Tanaguarenas",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "04263200635",
+          "04129331611",
+          "+573223741489"
+        ],
+        "sourceUrl": "https://x.com/Perezmaryuli/status/2070270573293261141?s=20",
+        "submittedAt": "2026-06-26T10:09:08"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-793076576",
+          "locatedId": "localizados-mia-gonzalez-0wamtd",
+          "missingName": "Amir González",
+          "locatedName": "Mía González",
+          "locatedHospital": "Estadio Béisbol Playa Grande",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/mia-gonzalez-0wamtd",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.762,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Amir González (12), visto por última vez por los vecinos en OP 26 Torre J Caribe, frente a la Bomba Tanaguarenas",
+          "url": "https://x.com/Perezmaryuli/status/2070270573293261141?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Mía González · Estadio Béisbol Playa Grande",
+          "url": "https://localizadosvenezuela.com/buscar/mia-gonzalez-0wamtd"
         }
       ]
     },
@@ -3168,21 +3770,44 @@
           "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": null
-        },
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
         {
-          "missingId": "kobo-793426333",
-          "locatedId": "localizados-yelinar-perez-3kfxt8",
-          "missingName": "Elismar Pérez",
-          "locatedName": "Yelinar Perez",
-          "locatedHospital": "Campo de Golf Caribe — sobrevivientes (Playa Los Cocos)",
-          "locatedAddress": "La Guaira",
-          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/yelinar-perez-3kfxt8",
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Eliomar Perez · Hospital Domingo Luciani",
+          "url": "https://localizadosvenezuela.com/buscar/eliomar-perez-dvy0g8"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-793581969",
+        "name": "Gabriel García Rodríguez",
+        "rawDescription": "Gabriel García Rodríguez",
+        "cedula": null,
+        "age": null,
+        "contacts": [],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-26T17:01:35"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-793581969",
+          "locatedId": "localizados-gabriel-garcia-et0ht3",
+          "missingName": "Gabriel García Rodríguez",
+          "locatedName": "Gabriel Garçía",
+          "locatedHospital": "Hospital Miguel Pérez Carreño",
+          "locatedAddress": "La Guaira - Tanaguarano",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/gabriel-garcia-et0ht3",
           "locatedCondition": "desconocido",
-          "locatedSourceFile": "consolidado.csv",
+          "locatedSourceFile": "Lista oficial Hospital Pérez Carreño",
           "missingCedula": null,
           "locatedCedula": null,
           "missingAge": null,
-          "locatedAge": null,
+          "locatedAge": 9,
           "score": 0.68,
           "scorePercent": 68,
           "confidence": "low",
@@ -3200,8 +3825,8 @@
         {
           "key": "localizados",
           "label": "Localizados Venezuela",
-          "note": "Eliomar Perez · Hospital Domingo Luciani",
-          "url": "https://localizadosvenezuela.com/buscar/eliomar-perez-dvy0g8"
+          "note": "Gabriel Garçía · Hospital Miguel Pérez Carreño",
+          "url": "https://localizadosvenezuela.com/buscar/gabriel-garcia-et0ht3"
         }
       ]
     },
@@ -3345,6 +3970,31 @@
       "candidates": [
         {
           "missingId": "kobo-793639688",
+          "locatedId": "localizados-daila-romero-ned53h",
+          "missingName": "Daniela Romero",
+          "locatedName": "Daila Romero",
+          "locatedHospital": "Hospital Vargas de Caracas",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/daila-romero-ned53h",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "Cuenta X: @eldiario",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.727,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-793639688",
           "locatedId": "localizados-mero-mariela-b7resn",
           "missingName": "Daniela Romero",
           "locatedName": "Mero Mariela",
@@ -3380,8 +4030,58 @@
         {
           "key": "localizados",
           "label": "Localizados Venezuela",
-          "note": "Mero Mariela · Periférico de Catia",
-          "url": "https://localizadosvenezuela.com/buscar/mero-mariela-b7resn"
+          "note": "Daila Romero · Hospital Vargas de Caracas",
+          "url": "https://localizadosvenezuela.com/buscar/daila-romero-ned53h"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-793644475",
+        "name": "Gilbert Gutiérrez",
+        "rawDescription": "Desaparecido: Gilbert Gutiérrez. Última vez visto en La Guaira",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "04122534945"
+        ],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-26T18:18:26"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-793644475",
+          "locatedId": "localizados-windert-gutierrez-nk383o",
+          "missingName": "Gilbert Gutiérrez",
+          "locatedName": "Windert Gutierrez",
+          "locatedHospital": "Hospital de Pariata",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/windert-gutierrez-nk383o",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.733,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Windert Gutierrez · Hospital de Pariata",
+          "url": "https://localizadosvenezuela.com/buscar/windert-gutierrez-nk383o"
         }
       ]
     },
@@ -3586,6 +4286,31 @@
         },
         {
           "missingId": "kobo-793715070",
+          "locatedId": "localizados-jose-hernandez-84p9hg",
+          "missingName": "Rosa Hernandez",
+          "locatedName": "José Hernández",
+          "locatedHospital": "Estadio Béisbol Playa Grande",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/jose-hernandez-84p9hg",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.75,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-793715070",
           "locatedId": "localizados-maria-hernandez-ef1pdj",
           "missingName": "Rosa Hernandez",
           "locatedName": "Maria Hernandez",
@@ -3605,6 +4330,56 @@
             "Moderate name similarity"
           ],
           "nameScore": 0.72,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-793715070",
+          "locatedId": "localizados-roselia-hernandez-2qx35v",
+          "missingName": "Rosa Hernandez",
+          "locatedName": "Roselia Hernández",
+          "locatedHospital": "Estadio Béisbol Playa Grande",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/roselia-hernandez-2qx35v",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.815,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-793715070",
+          "locatedId": "localizados-santana-hernandez-ewq4hh",
+          "missingName": "Rosa Hernandez",
+          "locatedName": "Santana Hernandez",
+          "locatedHospital": "Hospital de Pariata",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/santana-hernandez-ewq4hh",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.741,
           "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": null
@@ -3860,6 +4635,62 @@
           "label": "Localizados Venezuela",
           "note": "Jorge Delgado · Centro desplazados / refugio",
           "url": "https://localizadosvenezuela.com/buscar/jorge-delgado-1popx7"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-794362157",
+        "name": "Xander Hernández",
+        "rawDescription": "Xander Hernández",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "04241503223"
+        ],
+        "sourceUrl": "https://x.com/marcysf4ngs/status/2070153392857452864?s=20",
+        "submittedAt": "2026-06-27T16:49:48"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-794362157",
+          "locatedId": "localizados-eiver-hernandez-gy6g8v",
+          "missingName": "Xander Hernández",
+          "locatedName": "Eiver Hernández",
+          "locatedHospital": "Estadio Béisbol Playa Grande",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/eiver-hernandez-gy6g8v",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.741,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Xander Hernández",
+          "url": "https://x.com/marcysf4ngs/status/2070153392857452864?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Eiver Hernández · Estadio Béisbol Playa Grande",
+          "url": "https://localizadosvenezuela.com/buscar/eiver-hernandez-gy6g8v"
         }
       ]
     },
@@ -4284,6 +5115,54 @@
     },
     {
       "missing": {
+        "id": "kobo-794520665",
+        "name": "Yureima Rojas",
+        "rawDescription": "Yureima Rojas, Edif de entrada de Los Cocos. Caribe OPP26",
+        "cedula": null,
+        "age": null,
+        "contacts": [],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-28T00:16:08"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-794520665",
+          "locatedId": "localizados-yuleima-rojas-27660128-s267a9",
+          "missingName": "Yureima Rojas",
+          "locatedName": "Yuleima Rojas",
+          "locatedHospital": "Parque del Oeste, Alí Primera, Catia",
+          "locatedAddress": "macuto maternidad la guaira",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/yuleima-rojas-27660128-s267a9",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "lista sobrevivientes parque ali primera",
+          "missingCedula": null,
+          "locatedCedula": "27660128",
+          "missingAge": null,
+          "locatedAge": 32,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.818,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Yuleima Rojas · Parque del Oeste, Alí Primera, Catia",
+          "url": "https://localizadosvenezuela.com/buscar/yuleima-rojas-27660128-s267a9"
+        }
+      ]
+    },
+    {
+      "missing": {
         "id": "kobo-794524698",
         "name": "Alberto Rosales",
         "rawDescription": "Alberto Rosales",
@@ -4375,6 +5254,31 @@
         },
         {
           "missingId": "kobo-794525078",
+          "locatedId": "localizados-jose-hernandez-84p9hg",
+          "missingName": "Rosa Hernandez",
+          "locatedName": "José Hernández",
+          "locatedHospital": "Estadio Béisbol Playa Grande",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/jose-hernandez-84p9hg",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": 51,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.75,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-794525078",
           "locatedId": "localizados-maria-hernandez-ef1pdj",
           "missingName": "Rosa Hernandez",
           "locatedName": "Maria Hernandez",
@@ -4394,6 +5298,56 @@
             "Moderate name similarity"
           ],
           "nameScore": 0.72,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-794525078",
+          "locatedId": "localizados-roselia-hernandez-2qx35v",
+          "missingName": "Rosa Hernandez",
+          "locatedName": "Roselia Hernández",
+          "locatedHospital": "Estadio Béisbol Playa Grande",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/roselia-hernandez-2qx35v",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": 51,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.815,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-794525078",
+          "locatedId": "localizados-santana-hernandez-ewq4hh",
+          "missingName": "Rosa Hernandez",
+          "locatedName": "Santana Hernandez",
+          "locatedHospital": "Hospital de Pariata",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/santana-hernandez-ewq4hh",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": 51,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.741,
           "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": null
@@ -4842,6 +5796,57 @@
     },
     {
       "missing": {
+        "id": "kobo-794959760",
+        "name": "Genesis Marcano",
+        "rawDescription": "Genesis Marcano, CI 13.499.953",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "04123707623",
+          "04145324072"
+        ],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-28T17:03:36"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-794959760",
+          "locatedId": "localizados-denis-marcano-xztv1k",
+          "missingName": "Genesis Marcano",
+          "locatedName": "Denis Marcano",
+          "locatedHospital": "Centro de Acopio Caraballeda",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/denis-marcano-xztv1k",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.75,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Denis Marcano · Centro de Acopio Caraballeda",
+          "url": "https://localizadosvenezuela.com/buscar/denis-marcano-xztv1k"
+        }
+      ]
+    },
+    {
+      "missing": {
         "id": "kobo-794969415",
         "name": "Kinger Correa",
         "rawDescription": "Kinger Correa",
@@ -4988,56 +5993,6 @@
           "label": "Localizados Venezuela",
           "note": "Rodriguez Rosy · Campo de Golf Caribe — sobrevivientes (Playa Los Cocos)",
           "url": "https://localizadosvenezuela.com/buscar/rodriguez-rosy-du32wu"
-        }
-      ]
-    },
-    {
-      "missing": {
-        "id": "kobo-795027382",
-        "name": "Antoni Gonzalez",
-        "rawDescription": "Antoni Gonzalez - OPPPE 26, La Guaira",
-        "cedula": null,
-        "age": null,
-        "contacts": [
-          "04246799950"
-        ],
-        "sourceUrl": null,
-        "submittedAt": "2026-06-28T19:36:53"
-      },
-      "candidates": [
-        {
-          "missingId": "kobo-795027382",
-          "locatedId": "localizados-gonzalez-yoani-akfzzz",
-          "missingName": "Antoni Gonzalez",
-          "locatedName": "Gonzalez Yoani",
-          "locatedHospital": "Clínica El Ávila",
-          "locatedAddress": null,
-          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/gonzalez-yoani-akfzzz",
-          "locatedCondition": "desconocido",
-          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
-          "missingCedula": null,
-          "locatedCedula": null,
-          "missingAge": null,
-          "locatedAge": null,
-          "score": 0.68,
-          "scorePercent": 68,
-          "confidence": "low",
-          "reasons": [
-            "Moderate name similarity"
-          ],
-          "nameScore": 0.72,
-          "locationScore": 0,
-          "identitySignal": "none",
-          "ageDiff": null
-        }
-      ],
-      "hospitalesVenezuelaMatches": [],
-      "supportingSources": [
-        {
-          "key": "localizados",
-          "label": "Localizados Venezuela",
-          "note": "Gonzalez Yoani · Clínica El Ávila",
-          "url": "https://localizadosvenezuela.com/buscar/gonzalez-yoani-akfzzz"
         }
       ]
     },
@@ -5383,6 +6338,31 @@
         },
         {
           "missingId": "kobo-795103743",
+          "locatedId": "localizados-jolelli-rodriguez-s2slwk",
+          "missingName": "Anyoeli Rodríguez",
+          "locatedName": "Jolelli Rodríguez",
+          "locatedHospital": "Centro de Acopio Caraballeda",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/jolelli-rodriguez-s2slwk",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.733,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-795103743",
           "locatedId": "localizados-rodriguez-yoelbinyer-1y1uew",
           "missingName": "Anyoeli Rodríguez",
           "locatedName": "Rodriguez Yoelbinyer",
@@ -5414,57 +6394,6 @@
           "label": "Localizados Venezuela",
           "note": "Jelani Rodriguez · Hospital Domingo Luciani",
           "url": "https://localizadosvenezuela.com/buscar/jelani-rodriguez-5a5vj5"
-        }
-      ]
-    },
-    {
-      "missing": {
-        "id": "kobo-796343802",
-        "name": "Jose Fernandez",
-        "rawDescription": "Jose Fernandez, C.I.: V-23597234 (32 años)",
-        "cedula": null,
-        "age": 32,
-        "contacts": [
-          "04241281267",
-          "04242608221"
-        ],
-        "sourceUrl": null,
-        "submittedAt": "2026-06-30T01:40:52"
-      },
-      "candidates": [
-        {
-          "missingId": "kobo-796343802",
-          "locatedId": "localizados-joaho-fernandez-6h18kg",
-          "missingName": "Jose Fernandez",
-          "locatedName": "Joaho Fernandez",
-          "locatedHospital": "Campo de Golf Caribe — sobrevivientes (Playa Los Cocos)",
-          "locatedAddress": "La Guaira",
-          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/joaho-fernandez-6h18kg",
-          "locatedCondition": "desconocido",
-          "locatedSourceFile": "consolidado.csv",
-          "missingCedula": null,
-          "locatedCedula": null,
-          "missingAge": 32,
-          "locatedAge": null,
-          "score": 0.68,
-          "scorePercent": 68,
-          "confidence": "low",
-          "reasons": [
-            "Moderate name similarity"
-          ],
-          "nameScore": 0.72,
-          "locationScore": 0,
-          "identitySignal": "none",
-          "ageDiff": null
-        }
-      ],
-      "hospitalesVenezuelaMatches": [],
-      "supportingSources": [
-        {
-          "key": "localizados",
-          "label": "Localizados Venezuela",
-          "note": "Joaho Fernandez · Campo de Golf Caribe — sobrevivientes (Playa Los Cocos)",
-          "url": "https://localizadosvenezuela.com/buscar/joaho-fernandez-6h18kg"
         }
       ]
     },
@@ -5503,6 +6432,31 @@
             "Moderate name similarity"
           ],
           "nameScore": 0.733,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-796349240",
+          "locatedId": "localizados-luis-manuel-rodriguez-24802937-0307ou",
+          "missingName": "Jose Manuel Rodriguez",
+          "locatedName": "Luis Manuel Rodriguez",
+          "locatedHospital": "Hospital Militar Universitario Dr. Carlos Arvelo",
+          "locatedAddress": "Caraballeda",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/luis-manuel-rodriguez-24802937-0307ou",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "Lista oficial del hospital",
+          "missingCedula": null,
+          "locatedCedula": "24802937",
+          "missingAge": null,
+          "locatedAge": 31,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.778,
           "locationScore": 0,
           "identitySignal": "none",
           "ageDiff": null
@@ -5743,6 +6697,57 @@
           "label": "Localizados Venezuela",
           "note": "Hernandez Maria · Hospital José María Vargas - La Guaira",
           "url": "https://localizadosvenezuela.com/buscar/hernandez-maria-i2z8bn"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-796370782",
+        "name": "Heidy Alejandra Marquez",
+        "rawDescription": "Heidy Alejandra Marquez, hijo: Marcos Moises Sousa Marquez",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "04129001309",
+          "04129339033"
+        ],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-30T02:47:52"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-796370782",
+          "locatedId": "localizados-alejandro-marquez-uba8tb",
+          "missingName": "Heidy Alejandra Marquez",
+          "locatedName": "Alejandro Márquez",
+          "locatedHospital": "Estadio Béisbol Playa Grande",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/alejandro-marquez-uba8tb",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.743,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Alejandro Márquez · Estadio Béisbol Playa Grande",
+          "url": "https://localizadosvenezuela.com/buscar/alejandro-marquez-uba8tb"
         }
       ]
     }

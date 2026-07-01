@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T09:25:40.000Z",
+  "generatedAt": "2026-07-01T15:15:03.348Z",
   "sources": {
     "kobo": {
       "assetUid": "a8XWDsdUcpBzXGtgQmiiro",
@@ -42,11 +42,11 @@
       }
     },
     "localizados": {
-      "rawRows": 9085,
-      "dedupedRows": 8313
+      "rawRows": 10269,
+      "dedupedRows": 9250
     },
     "hospitalesVenezuela": {
-      "queriedGroups": 74,
+      "queriedGroups": 85,
       "matchedGroups": 10,
       "matchedRecords": 16
     }
@@ -58,8 +58,8 @@
     "withCedula": 47
   },
   "matching": {
-    "candidatePairs": 130,
-    "highConfidence": 1,
+    "candidatePairs": 158,
+    "highConfidence": 3,
     "mediumConfidence": 5
   }
 }
