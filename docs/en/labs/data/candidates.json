@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T19:26:59.217Z",
+  "generatedAt": "2026-07-01T20:17:52.357Z",
   "totalGroups": 85,
   "totalPairs": 158,
   "results": [
@@ -737,9 +737,9 @@
       "missing": {
         "id": "kobo-793179695",
         "name": "José Gregorio Carmona",
-        "rawDescription": "José Gregorio Carmona (20), CI: 31369114",
+        "rawDescription": "José Gregorio Carmona",
         "cedula": "31369114",
-        "age": null,
+        "age": 20,
         "contacts": [
           "04147460636",
           "04146839245"
@@ -760,7 +760,7 @@
           "locatedSourceFile": "consolidado.csv",
           "missingCedula": "31369114",
           "locatedCedula": null,
-          "missingAge": null,
+          "missingAge": 20,
           "locatedAge": null,
           "score": 0.78,
           "scorePercent": 78,
@@ -785,7 +785,7 @@
           "locatedSourceFile": "consolidado.csv",
           "missingCedula": "31369114",
           "locatedCedula": null,
-          "missingAge": null,
+          "missingAge": 20,
           "locatedAge": null,
           "score": 0.68,
           "scorePercent": 68,
@@ -810,7 +810,7 @@
           "locatedSourceFile": "consolidado.csv",
           "missingCedula": "31369114",
           "locatedCedula": null,
-          "missingAge": null,
+          "missingAge": 20,
           "locatedAge": null,
           "score": 0.68,
           "scorePercent": 68,
@@ -835,7 +835,7 @@
           "locatedSourceFile": "consolidado.csv",
           "missingCedula": "31369114",
           "locatedCedula": null,
-          "missingAge": null,
+          "missingAge": 20,
           "locatedAge": null,
           "score": 0.68,
           "scorePercent": 68,
@@ -854,7 +854,7 @@
         {
           "key": "kobo",
           "label": "KoboToolbox · TerremotoVE",
-          "note": "José Gregorio Carmona (20), CI: 31369114",
+          "note": "José Gregorio Carmona",
           "url": "https://x.com/Esnobgourmet/status/2070333791973814637?s=20"
         },
         {
@@ -3519,9 +3519,9 @@
       "missing": {
         "id": "kobo-793076576",
         "name": "Amir González",
-        "rawDescription": "Amir González (12), visto por última vez por los vecinos en OP 26 Torre J Caribe, frente a la Bomba Tanaguarenas",
+        "rawDescription": "Amir González, visto por última vez por los vecinos en OP 26 Torre J Caribe, frente a la Bomba Tanaguarenas",
         "cedula": null,
-        "age": null,
+        "age": 12,
         "contacts": [
           "04263200635",
           "04129331611",
@@ -3543,7 +3543,7 @@
           "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
           "missingCedula": null,
           "locatedCedula": null,
-          "missingAge": null,
+          "missingAge": 12,
           "locatedAge": null,
           "score": 0.68,
           "scorePercent": 68,
@@ -3562,7 +3562,7 @@
         {
           "key": "kobo",
           "label": "KoboToolbox · TerremotoVE",
-          "note": "Amir González (12), visto por última vez por los vecinos en OP 26 Torre J Caribe, frente a la Bomba Tanaguarenas",
+          "note": "Amir González, visto por última vez por los vecinos en OP 26 Torre J Caribe, frente a la Bomba Tanaguarenas",
           "url": "https://x.com/Perezmaryuli/status/2070270573293261141?s=20"
         },
         {
