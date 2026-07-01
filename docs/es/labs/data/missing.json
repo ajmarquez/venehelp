@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-30T20:23:07.727Z",
+  "generatedAt": "2026-07-01T02:08:35.402Z",
   "source": "kobotoolbox-terremotove",
-  "total": 643,
+  "total": 644,
   "results": [
     {
       "id": "kobo-791548945",
@@ -18424,6 +18424,35 @@
       "locationText": "Luis Alfonso Bustamante (70 años), hijo: Luis Alfonso Bustamante (31 años) | Contactar: 0426-7719211",
       "isMatchable": true,
       "notMatchableReason": null
+    },
+    {
+      "id": "kobo-797744104",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "797744104",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-06-30T23:13:51",
+      "event": "edificio_colapsado___da_o_estructural persona_desaparecida solicitud___oferta_de_recursos",
+      "category": "missing-person",
+      "rawDescription": "Edificio Costa Brava colpasado. Persona desaparecida: Yasmile Rafaela Utrera. Ultima vez vista el 24/06/26 en la piscina del edificio. El apto era en el piso 12. Se requiere maquinaria pesada para retirar los escombros",
+      "rawAdditional": "Diego Gonzalez: cell 04241993934",
+      "rawLinkField": null,
+      "freeText": "Edificio Costa Brava colpasado. Persona desaparecida: Yasmile Rafaela Utrera. Ultima vez vista el 24/06/26 en la piscina del edificio. El apto era en el piso 12. Se requiere maquinaria pesada para retirar los escombros | Diego Gonzalez: cell 04241993934",
+      "name": null,
+      "normalizedName": null,
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04241993934"
+      ],
+      "geo": {
+        "lat": 10.617189,
+        "lon": 66.857066
+      },
+      "locationText": "Edificio Costa Brava colpasado. Persona desaparecida: Yasmile Rafaela Utrera. Ultima vez vista el 24/06/26 en la piscina del edificio. El apto era en el piso 12. Se requiere maquinaria pesada para retirar los escombros | Diego Gonzalez: cell 04241993934",
+      "isMatchable": false,
+      "notMatchableReason": "place-report"
     }
   ]
 }

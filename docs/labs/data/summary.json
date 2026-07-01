@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-06-30T20:23:07.727Z",
+  "generatedAt": "2026-07-01T02:08:35.402Z",
   "sources": {
     "kobo": {
       "assetUid": "a8XWDsdUcpBzXGtgQmiiro",
-      "rows": 2341,
+      "rows": 2354,
       "eventCounts": {
-        "edificio_colapsado___da_o_estructural": 158,
+        "edificio_colapsado___da_o_estructural": 159,
         "punto_de_acopio___primeros_auxilios": 51,
-        "persona_rescatada___atrapada": 423,
+        "persona_rescatada___atrapada": 425,
         "persona_desaparecida": 566,
         "edificio_colapsado___da_o_estructural incendio___fuga_de_gas": 1,
         "edificio_colapsado___da_o_estructural persona_desaparecida": 7,
@@ -36,7 +36,8 @@
         "incendio___fuga_de_gas": 1,
         "persona_presuntamente_fallecida": 1,
         "persona_desaparecida persona_presuntamente_fallecida": 1,
-        "persona_en_hospital": 44
+        "persona_en_hospital": 53,
+        "edificio_colapsado___da_o_estructural persona_desaparecida solicitud___oferta_de_recursos": 1
       }
     },
     "localizados": {
@@ -46,11 +47,11 @@
     "hospitalesVenezuela": {
       "queriedGroups": 74,
       "matchedGroups": 10,
-      "matchedRecords": 18
+      "matchedRecords": 16
     }
   },
   "missing": {
-    "totalRecords": 643,
+    "totalRecords": 644,
     "matchableRecords": 583,
     "hospitalSourceRecords": 6,
     "withCedula": 47

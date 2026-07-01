@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30T20:23:07.727Z",
+  "generatedAt": "2026-07-01T02:08:35.402Z",
   "totalGroups": 74,
   "totalPairs": 130,
   "results": [
@@ -192,44 +192,6 @@
             "Exact name match in Hospitales en Venezuela",
             "Related hospital wording"
           ]
-        },
-        {
-          "id": "hospitales-en-venezuela:CASTANO CARLOS:HOSPITAL DR DOMINGO LUCIANI EL LLANITO:1632",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Carlos Castaño",
-          "name": "Castaño Carlos",
-          "detail": null,
-          "age": null,
-          "maskedCedula": "••••1632",
-          "locationName": "Hospital Dr. Domingo Luciani (El Llanito)",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.92,
-          "supportScorePercent": 92,
-          "supportReasons": [
-            "Very strong name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        },
-        {
-          "id": "hospitales-en-venezuela:CASTANO CARLOS:HOSPITAL DR DOMINGO LUCIANI EL LLANITO:1612",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Carlos Castaño",
-          "name": "Castaño Carlos",
-          "detail": "47 años · La Guaira",
-          "age": 47,
-          "maskedCedula": "••••1612",
-          "locationName": "Hospital Dr. Domingo Luciani (El Llanito)",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.92,
-          "supportScorePercent": 92,
-          "supportReasons": [
-            "Very strong name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
         }
       ],
       "supportingSources": [
@@ -249,18 +211,6 @@
           "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DR JOSE GREGORIO HERNANDEZ LOS MAGALLANES DE CATIA:1612",
           "label": "Hospitales en Venezuela",
           "note": "Carlos Castaño · 47 · Hospital Dr. José Gregorio Hernández (Los Magallanes de Catia)",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CASTANO CARLOS:HOSPITAL DR DOMINGO LUCIANI EL LLANITO:1632",
-          "label": "Hospitales en Venezuela",
-          "note": "Castaño Carlos · Hospital Dr. Domingo Luciani (El Llanito)",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CASTANO CARLOS:HOSPITAL DR DOMINGO LUCIANI EL LLANITO:1612",
-          "label": "Hospitales en Venezuela",
-          "note": "Castaño Carlos · 47 años · La Guaira · Hospital Dr. Domingo Luciani (El Llanito)",
           "url": "https://hospitalesenvenezuela.com/"
         }
       ]
