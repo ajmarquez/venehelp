@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-02T04:33:39.624Z",
+  "generatedAt": "2026-07-02T08:38:29.478Z",
   "sources": {
     "kobo": {
       "assetUid": "a8XWDsdUcpBzXGtgQmiiro",
-      "rows": 2628,
+      "rows": 2631,
       "eventCounts": {
-        "edificio_colapsado___da_o_estructural": 159,
+        "edificio_colapsado___da_o_estructural": 162,
         "punto_de_acopio___primeros_auxilios": 51,
         "persona_rescatada___atrapada": 647,
         "persona_desaparecida": 565,
