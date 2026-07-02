@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-02T09:37:22.538Z",
+  "generatedAt": "2026-07-02T13:25:11.770Z",
   "source": "kobotoolbox-terremotove",
-  "total": 643,
+  "total": 642,
   "results": [
     {
       "id": "kobo-791548945",
@@ -4663,36 +4663,6 @@
       "locationText": "Desaparecidos - Familia Chocrón - 4 personas - En los corales | Llamar al 0412 2743774",
       "isMatchable": false,
       "notMatchableReason": "family-report"
-    },
-    {
-      "id": "kobo-792662548",
-      "source": "kobotoolbox-terremotove",
-      "sourceRecordId": "792662548",
-      "sourceUrl": "https://x.com/TreesLetras/status/2070198360846336170?s=20",
-      "canonicalSourceUrl": "https://x.com/TreesLetras/status/2070198360846336170",
-      "sourceType": "missing-report",
-      "submittedAt": "2026-06-25T21:50:40",
-      "event": "persona_desaparecida",
-      "category": "missing-person",
-      "rawDescription": "Alexandra Guedez",
-      "rawAdditional": "Llamar al 0426-1508201 / 0412-0518093",
-      "rawLinkField": "https://x.com/TreesLetras/status/2070198360846336170?s=20",
-      "freeText": "Alexandra Guedez | Llamar al 0426-1508201 / 0412-0518093",
-      "name": "Alexandra Guedez",
-      "normalizedName": "ALEXANDRA GUEDEZ",
-      "cedula": null,
-      "age": null,
-      "contacts": [
-        "04261508201",
-        "04120518093"
-      ],
-      "geo": {
-        "lat": 10.617273718549201,
-        "lon": -66.85684117013824
-      },
-      "locationText": "Alexandra Guedez | Llamar al 0426-1508201 / 0412-0518093",
-      "isMatchable": true,
-      "notMatchableReason": null
     },
     {
       "id": "kobo-792664201",
@@ -14203,12 +14173,12 @@
       "submittedAt": "2026-06-28T06:24:34",
       "event": "persona_desaparecida refugio___albergue",
       "category": "missing-person",
-      "rawDescription": "Ultima vez vista en el Edificio Costa Brava frente a la playa los corales.",
-      "rawAdditional": "04261508201/ 04120518093",
+      "rawDescription": "Alexandra Guedez",
+      "rawAdditional": "Ultima vez vista en el Edificio Costa Brava frente a la playa los corales - 04261508201/ 04120518093",
       "rawLinkField": "https://x.com/TreesLetras/status/2070198360846336170?s=20",
-      "freeText": "Ultima vez vista en el Edificio Costa Brava frente a la playa los corales. | 04261508201/ 04120518093",
-      "name": null,
-      "normalizedName": null,
+      "freeText": "Alexandra Guedez | Ultima vez vista en el Edificio Costa Brava frente a la playa los corales - 04261508201/ 04120518093",
+      "name": "Alexandra Guedez",
+      "normalizedName": "ALEXANDRA GUEDEZ",
       "cedula": null,
       "age": null,
       "contacts": [
@@ -14219,9 +14189,9 @@
         "lat": 10.6170101,
         "lon": -66.8570772
       },
-      "locationText": "Ultima vez vista en el Edificio Costa Brava frente a la playa los corales. | 04261508201/ 04120518093",
-      "isMatchable": false,
-      "notMatchableReason": "no-clear-name"
+      "locationText": "Alexandra Guedez | Ultima vez vista en el Edificio Costa Brava frente a la playa los corales - 04261508201/ 04120518093",
+      "isMatchable": true,
+      "notMatchableReason": null
     },
     {
       "id": "kobo-794602394",

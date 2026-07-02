@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-02T09:37:22.538Z",
+  "generatedAt": "2026-07-02T13:25:11.770Z",
   "totalGroups": 85,
   "totalPairs": 158,
   "results": [
@@ -1725,6 +1725,89 @@
     },
     {
       "missing": {
+        "id": "kobo-794595803",
+        "name": "Alexandra Guedez",
+        "rawDescription": "Alexandra Guedez",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "04261508201",
+          "04120518093"
+        ],
+        "sourceUrl": "https://x.com/TreesLetras/status/2070198360846336170?s=20",
+        "submittedAt": "2026-06-28T06:24:34"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-794595803",
+          "locatedId": "localizados-alexandra-gil-xko2cm",
+          "missingName": "Alexandra Guedez",
+          "locatedName": "Alexandra Gil",
+          "locatedHospital": "Estadio Béisbol Playa Grande",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/alexandra-gil-xko2cm",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.7,
+          "scorePercent": 70,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity",
+            "Weak location overlap"
+          ],
+          "nameScore": 0.72,
+          "locationScore": 0.25,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-794595803",
+          "locatedId": "localizados-alexandra-wwzkub",
+          "missingName": "Alexandra Guedez",
+          "locatedName": "Alexandra",
+          "locatedHospital": "Hospital Domingo Luciani",
+          "locatedAddress": "La Guaira",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/alexandra-wwzkub",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "consolidado.csv",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.727,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Alexandra Guedez",
+          "url": "https://x.com/TreesLetras/status/2070198360846336170?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Alexandra Gil · Estadio Béisbol Playa Grande",
+          "url": "https://localizadosvenezuela.com/buscar/alexandra-gil-xko2cm"
+        }
+      ]
+    },
+    {
+      "missing": {
         "id": "kobo-794844793",
         "name": "Karla Castillo",
         "rawDescription": "Karla Castillo - Frente a la playa Los Cocos, La Guaira",
@@ -2967,88 +3050,6 @@
           "label": "Localizados Venezuela",
           "note": "Yelibeth Peña · Centro desplazados / refugio",
           "url": "https://localizadosvenezuela.com/buscar/yelibeth-pena-1hu7cj"
-        }
-      ]
-    },
-    {
-      "missing": {
-        "id": "kobo-792662548",
-        "name": "Alexandra Guedez",
-        "rawDescription": "Alexandra Guedez",
-        "cedula": null,
-        "age": null,
-        "contacts": [
-          "04261508201",
-          "04120518093"
-        ],
-        "sourceUrl": "https://x.com/TreesLetras/status/2070198360846336170?s=20",
-        "submittedAt": "2026-06-25T21:50:40"
-      },
-      "candidates": [
-        {
-          "missingId": "kobo-792662548",
-          "locatedId": "localizados-alexandra-wwzkub",
-          "missingName": "Alexandra Guedez",
-          "locatedName": "Alexandra",
-          "locatedHospital": "Hospital Domingo Luciani",
-          "locatedAddress": "La Guaira",
-          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/alexandra-wwzkub",
-          "locatedCondition": "desconocido",
-          "locatedSourceFile": "consolidado.csv",
-          "missingCedula": null,
-          "locatedCedula": null,
-          "missingAge": null,
-          "locatedAge": null,
-          "score": 0.68,
-          "scorePercent": 68,
-          "confidence": "low",
-          "reasons": [
-            "Moderate name similarity"
-          ],
-          "nameScore": 0.727,
-          "locationScore": 0,
-          "identitySignal": "none",
-          "ageDiff": null
-        },
-        {
-          "missingId": "kobo-792662548",
-          "locatedId": "localizados-alexandra-gil-xko2cm",
-          "missingName": "Alexandra Guedez",
-          "locatedName": "Alexandra Gil",
-          "locatedHospital": "Estadio Béisbol Playa Grande",
-          "locatedAddress": null,
-          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/alexandra-gil-xko2cm",
-          "locatedCondition": "vivo",
-          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
-          "missingCedula": null,
-          "locatedCedula": null,
-          "missingAge": null,
-          "locatedAge": null,
-          "score": 0.68,
-          "scorePercent": 68,
-          "confidence": "low",
-          "reasons": [
-            "Moderate name similarity"
-          ],
-          "nameScore": 0.72,
-          "locationScore": 0,
-          "identitySignal": "none",
-          "ageDiff": null
-        }
-      ],
-      "hospitalesVenezuelaMatches": [],
-      "supportingSources": [
-        {
-          "key": "kobo",
-          "label": "KoboToolbox · TerremotoVE",
-          "note": "Alexandra Guedez",
-          "url": "https://x.com/TreesLetras/status/2070198360846336170?s=20"
-        },
-        {
-          "key": "localizados",
-          "label": "Localizados Venezuela",
-          "note": "Alexandra · Hospital Domingo Luciani",
-          "url": "https://localizadosvenezuela.com/buscar/alexandra-wwzkub"
         }
       ]
     },
