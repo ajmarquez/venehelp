@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-02T19:56:16.695Z",
-  "totalGroups": 85,
-  "totalPairs": 158,
+  "generatedAt": "2026-07-03T01:44:04.290Z",
+  "totalGroups": 84,
+  "totalPairs": 157,
   "results": [
     {
       "missing": {
@@ -4780,8 +4780,8 @@
       "missing": {
         "id": "kobo-794373360",
         "name": "Manuel Ivo Fernandes",
-        "rawDescription": "Manuel Ivo Fernandes de Andrade E-81599234",
-        "cedula": "81599234",
+        "rawDescription": "Manuel Ivo Fernandes de Andrade - Última ubicación Residencias Elite Beach, Caribe. La Guaira",
+        "cedula": null,
         "age": null,
         "contacts": [
           "04241859022"
@@ -4800,7 +4800,7 @@
           "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/fernandez-manuel-wo93lv",
           "locatedCondition": "desconocido",
           "locatedSourceFile": "consolidado.csv",
-          "missingCedula": "81599234",
+          "missingCedula": null,
           "locatedCedula": null,
           "missingAge": null,
           "locatedAge": null,
@@ -4811,7 +4811,7 @@
             "Moderate name similarity"
           ],
           "nameScore": 0.774,
-          "locationScore": 0,
+          "locationScore": 0.167,
           "identitySignal": "none",
           "ageDiff": null
         }
@@ -4821,7 +4821,7 @@
         {
           "key": "kobo",
           "label": "KoboToolbox · TerremotoVE",
-          "note": "Manuel Ivo Fernandes de Andrade E-81599234",
+          "note": "Manuel Ivo Fernandes de Andrade - Última ubicación Residencias Elite Beach, Caribe. La Guaira",
           "url": "https://x.com/avacuti3/status/2070717752998769064/photo/1"
         },
         {
@@ -4911,57 +4911,6 @@
           "label": "Hospitales en Venezuela",
           "note": "Lucian Ramirez · Fecha captura: :00 vzla · Hospital General Regional Dr. José María Vargas (IVSS La Guaira)",
           "url": "https://hospitalesenvenezuela.com/"
-        }
-      ]
-    },
-    {
-      "missing": {
-        "id": "kobo-794504037",
-        "name": "Manuel Ivo Fernandes",
-        "rawDescription": "Manuel Ivo Fernandes de Andrade E-81.599.234",
-        "cedula": null,
-        "age": null,
-        "contacts": [
-          "81599234",
-          "04241859022"
-        ],
-        "sourceUrl": null,
-        "submittedAt": "2026-06-27T22:19:49"
-      },
-      "candidates": [
-        {
-          "missingId": "kobo-794504037",
-          "locatedId": "localizados-fernandez-manuel-wo93lv",
-          "missingName": "Manuel Ivo Fernandes",
-          "locatedName": "Fernández Manuel",
-          "locatedHospital": "Centro desplazados / refugio",
-          "locatedAddress": "La Guaira-Playa Grande",
-          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/fernandez-manuel-wo93lv",
-          "locatedCondition": "desconocido",
-          "locatedSourceFile": "consolidado.csv",
-          "missingCedula": null,
-          "locatedCedula": null,
-          "missingAge": null,
-          "locatedAge": null,
-          "score": 0.68,
-          "scorePercent": 68,
-          "confidence": "low",
-          "reasons": [
-            "Moderate name similarity"
-          ],
-          "nameScore": 0.774,
-          "locationScore": 0,
-          "identitySignal": "none",
-          "ageDiff": null
-        }
-      ],
-      "hospitalesVenezuelaMatches": [],
-      "supportingSources": [
-        {
-          "key": "localizados",
-          "label": "Localizados Venezuela",
-          "note": "Fernández Manuel · Centro desplazados / refugio",
-          "url": "https://localizadosvenezuela.com/buscar/fernandez-manuel-wo93lv"
         }
       ]
     },

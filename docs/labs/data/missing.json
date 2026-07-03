@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-02T19:56:16.695Z",
+  "generatedAt": "2026-07-03T01:44:04.290Z",
   "source": "kobotoolbox-terremotove",
   "total": 642,
   "results": [
@@ -7572,12 +7572,12 @@
       "canonicalSourceUrl": null,
       "sourceType": "missing-report",
       "submittedAt": "2026-06-26T11:15:16",
-      "event": "edificio_colapsado___da_o_estructural persona_desaparecida punto_de_acopio___primeros_auxilios refugio___albergue animales_perdidos solicitud___oferta_de_recursos familia_desaparecida",
-      "category": "missing-family",
-      "rawDescription": "Mi mejor amigo Alvin Mireles",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Alvin Mireles - Edificio OPP26, torre C, piso 9. Tanaguarenas, La Guaira.",
       "rawAdditional": "04167144181",
       "rawLinkField": null,
-      "freeText": "Mi mejor amigo Alvin Mireles | 04167144181",
+      "freeText": "Alvin Mireles - Edificio OPP26, torre C, piso 9. Tanaguarenas, La Guaira. | 04167144181",
       "name": "Alvin Mireles",
       "normalizedName": "ALVIN MIRELES",
       "cedula": null,
@@ -7586,10 +7586,10 @@
         "04167144181"
       ],
       "geo": {
-        "lat": 10.513019,
-        "lon": -66.888731
+        "lat": 10.615806342300258,
+        "lon": -66.83990290238286
       },
-      "locationText": "Mi mejor amigo Alvin Mireles | 04167144181",
+      "locationText": "Alvin Mireles - Edificio OPP26, torre C, piso 9. Tanaguarenas, La Guaira. | 04167144181",
       "isMatchable": true,
       "notMatchableReason": null
     },
@@ -11814,13 +11814,13 @@
       "submittedAt": "2026-06-27T17:07:54",
       "event": "persona_desaparecida",
       "category": "missing-person",
-      "rawDescription": "Manuel Ivo Fernandes de Andrade E-81599234",
-      "rawAdditional": "04241859022",
+      "rawDescription": "Manuel Ivo Fernandes de Andrade - Última ubicación Residencias Elite Beach, Caribe. La Guaira",
+      "rawAdditional": "C.I. E-81599234 - Contacto: 04241859022",
       "rawLinkField": "https://x.com/avacuti3/status/2070717752998769064/photo/1",
-      "freeText": "Manuel Ivo Fernandes de Andrade E-81599234 | 04241859022",
+      "freeText": "Manuel Ivo Fernandes de Andrade - Última ubicación Residencias Elite Beach, Caribe. La Guaira | C.I. E-81599234 - Contacto: 04241859022",
       "name": "Manuel Ivo Fernandes",
       "normalizedName": "MANUEL IVO FERNANDES",
-      "cedula": "81599234",
+      "cedula": null,
       "age": null,
       "contacts": [
         "04241859022"
@@ -11829,7 +11829,7 @@
         "lat": 10.600236,
         "lon": -66.929466
       },
-      "locationText": "Manuel Ivo Fernandes de Andrade E-81599234 | 04241859022",
+      "locationText": "Manuel Ivo Fernandes de Andrade - Última ubicación Residencias Elite Beach, Caribe. La Guaira | C.I. E-81599234 - Contacto: 04241859022",
       "isMatchable": true,
       "notMatchableReason": null
     },
@@ -12346,36 +12346,6 @@
         "lon": -66.854511
       },
       "locationText": "Sildre Josery González CI 20672053 | Cédula 20672053 Ubicación: La Guaira – Cerca de Camurjichico Observaciones: Persona desaparecida tras el terremoto del 29 de junio de 2026. Sin comunicación desde la fecha del evento. Contacto de información: 422-0073606",
-      "isMatchable": true,
-      "notMatchableReason": null
-    },
-    {
-      "id": "kobo-794504037",
-      "source": "kobotoolbox-terremotove",
-      "sourceRecordId": "794504037",
-      "sourceUrl": null,
-      "canonicalSourceUrl": null,
-      "sourceType": "missing-report",
-      "submittedAt": "2026-06-27T22:19:49",
-      "event": "persona_desaparecida",
-      "category": "missing-person",
-      "rawDescription": "Manuel Ivo Fernandes de Andrade E-81.599.234",
-      "rawAdditional": "CI E-81.599.234 Telefono contacto: 04241859022 Ubicacion: (sin dato) Observaciones: Nacionalidad Portugal, Comerciante",
-      "rawLinkField": null,
-      "freeText": "Manuel Ivo Fernandes de Andrade E-81.599.234 | CI E-81.599.234 Telefono contacto: 04241859022 Ubicacion: (sin dato) Observaciones: Nacionalidad Portugal, Comerciante",
-      "name": "Manuel Ivo Fernandes",
-      "normalizedName": "MANUEL IVO FERNANDES",
-      "cedula": null,
-      "age": null,
-      "contacts": [
-        "81599234",
-        "04241859022"
-      ],
-      "geo": {
-        "lat": 1,
-        "lon": 1
-      },
-      "locationText": "Manuel Ivo Fernandes de Andrade E-81.599.234 | CI E-81.599.234 Telefono contacto: 04241859022 Ubicacion: (sin dato) Observaciones: Nacionalidad Portugal, Comerciante",
       "isMatchable": true,
       "notMatchableReason": null
     },
@@ -18404,6 +18374,33 @@
         "lon": 66.857066
       },
       "locationText": "Edificio Costa Brava colpasado. Persona desaparecida: Yasmile Rafaela Utrera. Ultima vez vista el 24/06/26 en la piscina del edificio. El apto era en el piso 12. Se requiere maquinaria pesada para retirar los escombros | Diego Gonzalez: cell 04241993934",
+      "isMatchable": false,
+      "notMatchableReason": "place-report"
+    },
+    {
+      "id": "kobo-800593263",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "800593263",
+      "sourceUrl": null,
+      "canonicalSourceUrl": null,
+      "sourceType": "missing-report",
+      "submittedAt": "2026-07-02T23:56:49",
+      "event": "edificio_colapsado___da_o_estructural persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Residencias Ilona |",
+      "rawAdditional": "- Su esposa y su hija lo están buscando - Bajó al sótano justo antes de que ocurriera el terremoto.",
+      "rawLinkField": "Carlos Castillo - Persona Desaparecida",
+      "freeText": "Residencias Ilona | | - Su esposa y su hija lo están buscando - Bajó al sótano justo antes de que ocurriera el terremoto. | Carlos Castillo - Persona Desaparecida",
+      "name": null,
+      "normalizedName": null,
+      "cedula": null,
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 10.61648,
+        "lon": -66.859018
+      },
+      "locationText": "Residencias Ilona | | - Su esposa y su hija lo están buscando - Bajó al sótano justo antes de que ocurriera el terremoto. | Carlos Castillo - Persona Desaparecida",
       "isMatchable": false,
       "notMatchableReason": "place-report"
     }
