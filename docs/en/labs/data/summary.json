@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-07-03T01:44:04.290Z",
+  "generatedAt": "2026-07-03T04:12:34.048Z",
   "sources": {
     "kobo": {
       "assetUid": "a8XWDsdUcpBzXGtgQmiiro",
-      "rows": 2648,
+      "rows": 2650,
       "eventCounts": {
         "edificio_colapsado___da_o_estructural": 163,
         "punto_de_acopio___primeros_auxilios": 51,
         "persona_rescatada___atrapada": 647,
         "persona_desaparecida": 564,
         "edificio_colapsado___da_o_estructural incendio___fuga_de_gas": 1,
-        "edificio_colapsado___da_o_estructural persona_desaparecida": 8,
+        "edificio_colapsado___da_o_estructural persona_desaparecida": 9,
         "persona_herida": 449,
         "edificio_colapsado___da_o_estructural persona_rescatada___atrapada persona_desaparecida": 2,
         "edificio_colapsado___da_o_estructural persona_rescatada___atrapada": 6,
@@ -37,7 +37,7 @@
         "persona_presuntamente_fallecida": 11,
         "persona_desaparecida persona_presuntamente_fallecida": 1,
         "persona_en_hospital": 59,
-        "edificio_colapsado___da_o_estructural persona_desaparecida solicitud___oferta_de_recursos": 1,
+        "edificio_colapsado___da_o_estructural persona_desaparecida solicitud___oferta_de_recursos": 2,
         "edificio_colapsado___da_o_estructural solicitud___oferta_de_recursos": 1
       }
     },
@@ -52,7 +52,7 @@
     }
   },
   "missing": {
-    "totalRecords": 642,
+    "totalRecords": 644,
     "matchableRecords": 581,
     "hospitalSourceRecords": 6,
     "withCedula": 45

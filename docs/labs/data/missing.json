@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-03T01:44:04.290Z",
+  "generatedAt": "2026-07-03T04:12:34.048Z",
   "source": "kobotoolbox-terremotove",
-  "total": 642,
+  "total": 644,
   "results": [
     {
       "id": "kobo-791548945",
@@ -18401,6 +18401,60 @@
         "lon": -66.859018
       },
       "locationText": "Residencias Ilona | | - Su esposa y su hija lo están buscando - Bajó al sótano justo antes de que ocurriera el terremoto. | Carlos Castillo - Persona Desaparecida",
+      "isMatchable": false,
+      "notMatchableReason": "place-report"
+    },
+    {
+      "id": "kobo-800628885",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "800628885",
+      "sourceUrl": "https://x.com/AlbertoAltuve/status/2072838598785937635",
+      "canonicalSourceUrl": "https://x.com/AlbertoAltuve/status/2072838598785937635",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-07-03T02:01:20",
+      "event": "edificio_colapsado___da_o_estructural persona_desaparecida solicitud___oferta_de_recursos",
+      "category": "missing-person",
+      "rawDescription": "Edificio Costa Brava | Requerimientos Operativos",
+      "rawAdditional": "- Se han localizado personas con vida. - Se requiere mano de obra. - Se necesitan torres de iluminación, plantas eléctricas, reflectores y otros equipos para iluminar toda la zona.",
+      "rawLinkField": "https://x.com/AlbertoAltuve/status/2072838598785937635",
+      "freeText": "Edificio Costa Brava | Requerimientos Operativos | - Se han localizado personas con vida. - Se requiere mano de obra. - Se necesitan torres de iluminación, plantas eléctricas, reflectores y otros equipos para iluminar toda la zona.",
+      "name": null,
+      "normalizedName": null,
+      "cedula": null,
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 10.617139,
+        "lon": -66.856947
+      },
+      "locationText": "Edificio Costa Brava | Requerimientos Operativos | - Se han localizado personas con vida. - Se requiere mano de obra. - Se necesitan torres de iluminación, plantas eléctricas, reflectores y otros equipos para iluminar toda la zona.",
+      "isMatchable": false,
+      "notMatchableReason": "place-report"
+    },
+    {
+      "id": "kobo-800641506",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "800641506",
+      "sourceUrl": "https://www.tiktok.com/@danidegou/video/7657952221069331730?_r=1&_t=ZT-97iIVbHPWoA",
+      "canonicalSourceUrl": "https://www.tiktok.com/@danidegou/video/7657952221069331730",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-07-03T02:47:03",
+      "event": "edificio_colapsado___da_o_estructural persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Residencias Caribbean Golf | Ricardo David - Situación actual desconocida",
+      "rawAdditional": "- Se necesita maquinaria pesada - La madre se llama Elena Rocha.",
+      "rawLinkField": "https://www.tiktok.com/@danidegou/video/7657952221069331730?_r=1&_t=ZT-97iIVbHPWoA",
+      "freeText": "Residencias Caribbean Golf | Ricardo David - Situación actual desconocida | - Se necesita maquinaria pesada - La madre se llama Elena Rocha.",
+      "name": null,
+      "normalizedName": null,
+      "cedula": null,
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 10.613198,
+        "lon": -66.838191
+      },
+      "locationText": "Residencias Caribbean Golf | Ricardo David - Situación actual desconocida | - Se necesita maquinaria pesada - La madre se llama Elena Rocha.",
       "isMatchable": false,
       "notMatchableReason": "place-report"
     }
