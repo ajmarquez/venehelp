@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-03T19:53:40.897Z",
+  "generatedAt": "2026-07-04T01:44:14.791Z",
   "source": "kobotoolbox-terremotove",
-  "total": 644,
+  "total": 645,
   "results": [
     {
       "id": "kobo-791548945",
@@ -18457,6 +18457,33 @@
       "locationText": "Residencias Caribbean Golf | Ricardo David - Situación actual desconocida | - Se necesita maquinaria pesada - La madre se llama Elena Rocha.",
       "isMatchable": false,
       "notMatchableReason": "place-report"
+    },
+    {
+      "id": "kobo-801694552",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "801694552",
+      "sourceUrl": "https://www.tiktok.com/t/ZTSfyjEoR",
+      "canonicalSourceUrl": "https://www.tiktok.com/t/ZTSfyjEoR",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-07-03T20:00:11",
+      "event": "edificio_colapsado___da_o_estructural persona_desaparecida solicitud___oferta_de_recursos",
+      "category": "missing-person",
+      "rawDescription": "Edf Marianamar | Posibilidad de 10 niños con vida.",
+      "rawAdditional": "Se necesita excavadora sobre orugas con operador doble. Se necesita excavadora equipada con martillo hidráulico. Se necesita equipo de oxicorte y soldador.",
+      "rawLinkField": "https://www.tiktok.com/t/ZTSfyjEoR",
+      "freeText": "Edf Marianamar | Posibilidad de 10 niños con vida. | Se necesita excavadora sobre orugas con operador doble. Se necesita excavadora equipada con martillo hidráulico. Se necesita equipo de oxicorte y soldador.",
+      "name": "Edf Marianamar",
+      "normalizedName": "EDF MARIANAMAR",
+      "cedula": null,
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 10.616055,
+        "lon": -66.838862
+      },
+      "locationText": "Edf Marianamar | Posibilidad de 10 niños con vida. | Se necesita excavadora sobre orugas con operador doble. Se necesita excavadora equipada con martillo hidráulico. Se necesita equipo de oxicorte y soldador.",
+      "isMatchable": true,
+      "notMatchableReason": null
     }
   ]
 }

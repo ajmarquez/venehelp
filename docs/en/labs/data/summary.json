@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-03T19:53:40.897Z",
+  "generatedAt": "2026-07-04T01:44:14.791Z",
   "sources": {
     "kobo": {
       "assetUid": "a8XWDsdUcpBzXGtgQmiiro",
-      "rows": 2650,
+      "rows": 2651,
       "eventCounts": {
         "edificio_colapsado___da_o_estructural": 163,
         "punto_de_acopio___primeros_auxilios": 51,
@@ -37,7 +37,7 @@
         "persona_presuntamente_fallecida": 11,
         "persona_desaparecida persona_presuntamente_fallecida": 1,
         "persona_en_hospital": 59,
-        "edificio_colapsado___da_o_estructural persona_desaparecida solicitud___oferta_de_recursos": 2,
+        "edificio_colapsado___da_o_estructural persona_desaparecida solicitud___oferta_de_recursos": 3,
         "edificio_colapsado___da_o_estructural solicitud___oferta_de_recursos": 1
       }
     },
@@ -52,8 +52,8 @@
     }
   },
   "missing": {
-    "totalRecords": 644,
-    "matchableRecords": 581,
+    "totalRecords": 645,
+    "matchableRecords": 582,
     "hospitalSourceRecords": 6,
     "withCedula": 45
   },
