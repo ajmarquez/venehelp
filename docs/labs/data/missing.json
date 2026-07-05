@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T14:12:39.877Z",
+  "generatedAt": "2026-07-05T18:56:41.041Z",
   "source": "kobotoolbox-terremotove",
   "total": 645,
   "results": [
@@ -12216,10 +12216,10 @@
       "submittedAt": "2026-06-27T18:43:40",
       "event": "persona_desaparecida",
       "category": "missing-person",
-      "rawDescription": "Ángel Alí Velásquez Gavidia, 15 años, C.I. 34007805",
-      "rawAdditional": "Residencias Gradisca, Macuto.",
+      "rawDescription": "Ángel Alí Velásquez Gavidia",
+      "rawAdditional": "Residencias Gradisca, Macuto. 15 años, C.I. 34007805",
       "rawLinkField": null,
-      "freeText": "Ángel Alí Velásquez Gavidia, 15 años, C.I. 34007805 | Residencias Gradisca, Macuto.",
+      "freeText": "Ángel Alí Velásquez Gavidia | Residencias Gradisca, Macuto. 15 años, C.I. 34007805",
       "name": "Alí Velásquez Gavidia",
       "normalizedName": "ALI VELASQUEZ GAVIDIA",
       "cedula": "34007805",
@@ -12229,7 +12229,7 @@
         "lat": 10.610457,
         "lon": -66.889187
       },
-      "locationText": "Ángel Alí Velásquez Gavidia, 15 años, C.I. 34007805 | Residencias Gradisca, Macuto.",
+      "locationText": "Ángel Alí Velásquez Gavidia | Residencias Gradisca, Macuto. 15 años, C.I. 34007805",
       "isMatchable": true,
       "notMatchableReason": null
     },
@@ -12330,10 +12330,10 @@
       "submittedAt": "2026-06-27T20:50:34",
       "event": "persona_desaparecida",
       "category": "missing-person",
-      "rawDescription": "Sildre Josery González CI 20672053",
+      "rawDescription": "Sildre Josery González",
       "rawAdditional": "Cédula 20672053 Ubicación: La Guaira – Cerca de Camurjichico Observaciones: Persona desaparecida tras el terremoto del 29 de junio de 2026. Sin comunicación desde la fecha del evento. Contacto de información: 422-0073606",
       "rawLinkField": "https://x.com/elbusTV/status/2070930117493174691/photo/2",
-      "freeText": "Sildre Josery González CI 20672053 | Cédula 20672053 Ubicación: La Guaira – Cerca de Camurjichico Observaciones: Persona desaparecida tras el terremoto del 29 de junio de 2026. Sin comunicación desde la fecha del evento. Contacto de información: 422-0073606",
+      "freeText": "Sildre Josery González | Cédula 20672053 Ubicación: La Guaira – Cerca de Camurjichico Observaciones: Persona desaparecida tras el terremoto del 29 de junio de 2026. Sin comunicación desde la fecha del evento. Contacto de información: 422-0073606",
       "name": "Sildre Josery González",
       "normalizedName": "SILDRE JOSERY GONZALEZ",
       "cedula": "20672053",
@@ -12345,7 +12345,7 @@
         "lat": 10.620919,
         "lon": -66.854511
       },
-      "locationText": "Sildre Josery González CI 20672053 | Cédula 20672053 Ubicación: La Guaira – Cerca de Camurjichico Observaciones: Persona desaparecida tras el terremoto del 29 de junio de 2026. Sin comunicación desde la fecha del evento. Contacto de información: 422-0073606",
+      "locationText": "Sildre Josery González | Cédula 20672053 Ubicación: La Guaira – Cerca de Camurjichico Observaciones: Persona desaparecida tras el terremoto del 29 de junio de 2026. Sin comunicación desde la fecha del evento. Contacto de información: 422-0073606",
       "isMatchable": true,
       "notMatchableReason": null
     },
