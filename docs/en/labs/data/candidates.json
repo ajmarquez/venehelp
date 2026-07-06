@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-05T18:56:41.041Z",
-  "totalGroups": 84,
-  "totalPairs": 157,
+  "generatedAt": "2026-07-06T01:54:54.771Z",
+  "totalGroups": 85,
+  "totalPairs": 160,
   "results": [
     {
       "missing": {
@@ -324,7 +324,27 @@
           "ageDiff": null
         }
       ],
-      "hospitalesVenezuelaMatches": [],
+      "hospitalesVenezuelaMatches": [
+        {
+          "id": "hospitales-en-venezuela:JOSE RAMOS:ESTADIO DE BEISBOL DE PLAYA GRANDE MAIQUETIA LA GUAIRA:",
+          "source": "hospitales-en-venezuela",
+          "sourceUrl": "https://hospitalesenvenezuela.com/",
+          "sourceSearchTerm": "José Ramos",
+          "name": "José Ramos",
+          "detail": null,
+          "age": null,
+          "maskedCedula": null,
+          "locationName": "Estadio de Béisbol de Playa Grande (Maiquetía, La Guaira)",
+          "city": null,
+          "phone": null,
+          "supportScore": 0.98,
+          "supportScorePercent": 98,
+          "supportReasons": [
+            "Exact name match in Hospitales en Venezuela",
+            "Same hospital or facility"
+          ]
+        }
+      ],
       "supportingSources": [
         {
           "key": "kobo",
@@ -337,6 +357,12 @@
           "label": "Localizados Venezuela",
           "note": "José Ramos · Estadio Béisbol Playa Grande",
           "url": "https://localizadosvenezuela.com/buscar/jose-ramos-60spr4"
+        },
+        {
+          "key": "hospitales-en-venezuela:hospitales-en-venezuela:JOSE RAMOS:ESTADIO DE BEISBOL DE PLAYA GRANDE MAIQUETIA LA GUAIRA:",
+          "label": "Hospitales en Venezuela",
+          "note": "José Ramos · Estadio de Béisbol de Playa Grande (Maiquetía, La Guaira)",
+          "url": "https://hospitalesenvenezuela.com/"
         }
       ]
     },
@@ -1337,10 +1363,11 @@
       "missing": {
         "id": "kobo-796343802",
         "name": "Jose Fernandez",
-        "rawDescription": "Jose Fernandez, C.I.: V-23597234 (32 años)",
+        "rawDescription": "Jose Fernandez",
         "cedula": null,
         "age": 32,
         "contacts": [
+          "2359723432",
           "04241281267",
           "04242608221"
         ],
@@ -1983,6 +2010,107 @@
           "label": "Localizados Venezuela",
           "note": "Andrea Jose · Hospital Vargas de Caracas",
           "url": "https://localizadosvenezuela.com/buscar/andrea-jose-646450-9niul3"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-795079285",
+        "name": "Jose Miguel Gutierrez",
+        "rawDescription": "JOSE MIGUEL GUTIERREZ",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "04129212138"
+        ],
+        "sourceUrl": null,
+        "submittedAt": "2026-06-28T22:06:37"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-795079285",
+          "locatedId": "localizados-gutierrez-jose-28447519-wicwtq",
+          "missingName": "Jose Miguel Gutierrez",
+          "locatedName": "Gutierrez Jose",
+          "locatedHospital": "Hospital Miguel Pérez Carreño",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/gutierrez-jose-28447519-wicwtq",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
+          "missingCedula": null,
+          "locatedCedula": "28447519",
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.7,
+          "scorePercent": 70,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity",
+            "Weak location overlap"
+          ],
+          "nameScore": 0.733,
+          "locationScore": 0.25,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-795079285",
+          "locatedId": "localizados-gutierrez-jose-28743519-zbhuex",
+          "missingName": "Jose Miguel Gutierrez",
+          "locatedName": "Gutierrez Jose",
+          "locatedHospital": "Hospital Militar Universitario Dr. Carlos Arvelo",
+          "locatedAddress": "Procedencia: Sta Barbara - Barinas \\",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/gutierrez-jose-28743519-zbhuex",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "consolidado.csv",
+          "missingCedula": null,
+          "locatedCedula": "28743519",
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.733,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-795079285",
+          "locatedId": "localizados-jose-gutierrez-289425190-9jtrmk",
+          "missingName": "Jose Miguel Gutierrez",
+          "locatedName": "Jose Gutierrez",
+          "locatedHospital": "Hospital Miguel Pérez Carreño",
+          "locatedAddress": "Sin información",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/jose-gutierrez-289425190-9jtrmk",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "25JUN26 11PM Pacientes Consolidados Hospitales Venezuela.xlsx",
+          "missingCedula": null,
+          "locatedCedula": "289425190",
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.733,
+          "locationScore": 0.167,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Gutierrez Jose · Hospital Miguel Pérez Carreño",
+          "url": "https://localizadosvenezuela.com/buscar/gutierrez-jose-28447519-wicwtq"
         }
       ]
     },
@@ -5596,7 +5724,7 @@
       "missing": {
         "id": "kobo-794866123",
         "name": "Valentina Veracierta",
-        "rawDescription": "Valentina Veracierta CI-27027712",
+        "rawDescription": "Valentina Veracierta",
         "cedula": "27027712",
         "age": null,
         "contacts": [],
@@ -5748,12 +5876,13 @@
       "missing": {
         "id": "kobo-794959760",
         "name": "Genesis Marcano",
-        "rawDescription": "Genesis Marcano, CI 13.499.953",
+        "rawDescription": "Genesis Marcano",
         "cedula": null,
         "age": null,
         "contacts": [
           "04123707623",
-          "04145324072"
+          "04145324072",
+          "13499953"
         ],
         "sourceUrl": null,
         "submittedAt": "2026-06-28T17:03:36"
@@ -6351,11 +6480,15 @@
       "missing": {
         "id": "kobo-796349240",
         "name": "Jose Manuel Rodriguez",
-        "rawDescription": "Jose Manuel Rodriguez, C.I. 12.072.859, Marzia Margarita Chavez Hernandez, C.I. 12.112.072, Manuel Alejandro Rodriguez Chavez, C.I. 31.794.294 y Raquel Alessandra Rodriguez, C.I. 30.112.395",
+        "rawDescription": "Jose Manuel Rodriguez, Marzia Margarita Chavez Hernandez, Manuel Alejandro Rodriguez Chavez y Raquel Alessandra Rodriguez",
         "cedula": null,
         "age": null,
         "contacts": [
-          "+34665451208"
+          "+34665451208",
+          "12072859",
+          "12112072",
+          "31794294",
+          "30112395"
         ],
         "sourceUrl": null,
         "submittedAt": "2026-06-30T01:53:39"
