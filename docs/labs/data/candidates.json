@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-07T20:18:06.456Z",
-  "totalGroups": 85,
-  "totalPairs": 160,
+  "generatedAt": "2026-07-08T03:49:37.687Z",
+  "totalGroups": 86,
+  "totalPairs": 163,
   "results": [
     {
       "missing": {
@@ -2194,6 +2194,114 @@
           "label": "Localizados Venezuela",
           "note": "Gonzales Jesus · Hospital Miguel Pérez Carreño",
           "url": "https://localizadosvenezuela.com/buscar/gonzales-jesus-693tng"
+        }
+      ]
+    },
+    {
+      "missing": {
+        "id": "kobo-804727518",
+        "name": "Osmary Montilla",
+        "rawDescription": "Osmary Montilla. Ultima vez en Caraballeda - Residencias Coral Park",
+        "cedula": null,
+        "age": null,
+        "contacts": [
+          "04141132334",
+          "04129082419"
+        ],
+        "sourceUrl": "https://x.com/pichma_/status/2071037124799799445?s=20",
+        "submittedAt": "2026-07-07T21:11:32"
+      },
+      "candidates": [
+        {
+          "missingId": "kobo-804727518",
+          "locatedId": "localizados-montilla-maria-o0jqt2",
+          "missingName": "Osmary Montilla",
+          "locatedName": "Montilla Maria",
+          "locatedHospital": "Centro de Acopio Caraballeda",
+          "locatedAddress": null,
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/montilla-maria-o0jqt2",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "consolidado.csv",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.7,
+          "scorePercent": 70,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity",
+            "Weak location overlap"
+          ],
+          "nameScore": 0.72,
+          "locationScore": 0.333,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-804727518",
+          "locatedId": "localizados-carlos-montilla-48jo08",
+          "missingName": "Osmary Montilla",
+          "locatedName": "Carlos Montilla",
+          "locatedHospital": "Campo de Golf Caribe — sobrevivientes (Playa Los Cocos)",
+          "locatedAddress": "La Guaira (Campo de Golf)",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/carlos-montilla-48jo08",
+          "locatedCondition": "desconocido",
+          "locatedSourceFile": "consolidado.csv",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.769,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        },
+        {
+          "missingId": "kobo-804727518",
+          "locatedId": "localizados-maria-montilla-nrsyl2",
+          "missingName": "Osmary Montilla",
+          "locatedName": "Maria Montilla",
+          "locatedHospital": "Hospital de Pariata",
+          "locatedAddress": "Playa Los Cocos",
+          "locatedSourceUrl": "https://localizadosvenezuela.com/buscar/maria-montilla-nrsyl2",
+          "locatedCondition": "vivo",
+          "locatedSourceFile": "Lista unificada sobrevivientes La Guaira — Luis Rangel",
+          "missingCedula": null,
+          "locatedCedula": null,
+          "missingAge": null,
+          "locatedAge": null,
+          "score": 0.68,
+          "scorePercent": 68,
+          "confidence": "low",
+          "reasons": [
+            "Moderate name similarity"
+          ],
+          "nameScore": 0.72,
+          "locationScore": 0,
+          "identitySignal": "none",
+          "ageDiff": null
+        }
+      ],
+      "hospitalesVenezuelaMatches": [],
+      "supportingSources": [
+        {
+          "key": "kobo",
+          "label": "KoboToolbox · TerremotoVE",
+          "note": "Osmary Montilla. Ultima vez en Caraballeda - Residencias Coral Park",
+          "url": "https://x.com/pichma_/status/2071037124799799445?s=20"
+        },
+        {
+          "key": "localizados",
+          "label": "Localizados Venezuela",
+          "note": "Montilla Maria · Centro de Acopio Caraballeda",
+          "url": "https://localizadosvenezuela.com/buscar/montilla-maria-o0jqt2"
         }
       ]
     },

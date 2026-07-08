@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-07T20:18:06.456Z",
+  "generatedAt": "2026-07-08T03:49:37.687Z",
   "source": "kobotoolbox-terremotove",
-  "total": 645,
+  "total": 650,
   "results": [
     {
       "id": "kobo-791548945",
@@ -18502,6 +18502,155 @@
         "lon": -66.838862
       },
       "locationText": "Edf Marianamar | Posibilidad de 10 niños con vida. | Se necesita excavadora sobre orugas con operador doble. Se necesita excavadora equipada con martillo hidráulico. Se necesita equipo de oxicorte y soldador.",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-804727518",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "804727518",
+      "sourceUrl": "https://x.com/pichma_/status/2071037124799799445?s=20",
+      "canonicalSourceUrl": "https://x.com/pichma_/status/2071037124799799445",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-07-07T21:11:32",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Osmary Montilla. Ultima vez en Caraballeda - Residencias Coral Park",
+      "rawAdditional": "0414-113-2334 / 0412-9082419",
+      "rawLinkField": "https://x.com/pichma_/status/2071037124799799445?s=20",
+      "freeText": "Osmary Montilla. Ultima vez en Caraballeda - Residencias Coral Park | 0414-113-2334 / 0412-9082419",
+      "name": "Osmary Montilla",
+      "normalizedName": "OSMARY MONTILLA",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04141132334",
+        "04129082419"
+      ],
+      "geo": {
+        "lat": 10.617850051971516,
+        "lon": -66.85465287425578
+      },
+      "locationText": "Osmary Montilla. Ultima vez en Caraballeda - Residencias Coral Park | 0414-113-2334 / 0412-9082419",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-804732186",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "804732186",
+      "sourceUrl": "https://x.com/pichma_/status/2071037124799799445?s=20",
+      "canonicalSourceUrl": "https://x.com/pichma_/status/2071037124799799445",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-07-07T21:23:44",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Victor Medina. Ultima vez en Caraballeda - Residencias Coral Park",
+      "rawAdditional": "0414-113-2334 / 0412-9082418",
+      "rawLinkField": "https://x.com/pichma_/status/2071037124799799445?s=20",
+      "freeText": "Victor Medina. Ultima vez en Caraballeda - Residencias Coral Park | 0414-113-2334 / 0412-9082418",
+      "name": "Victor Medina",
+      "normalizedName": "VICTOR MEDINA",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04141132334",
+        "04129082418"
+      ],
+      "geo": {
+        "lat": 10.617850051971516,
+        "lon": -66.85465287425578
+      },
+      "locationText": "Victor Medina. Ultima vez en Caraballeda - Residencias Coral Park | 0414-113-2334 / 0412-9082418",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-804732465",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "804732465",
+      "sourceUrl": "https://x.com/pichma_/status/2071037124799799445?s=20",
+      "canonicalSourceUrl": "https://x.com/pichma_/status/2071037124799799445",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-07-07T21:24:38",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Maritza Quintero. Ultima vez en Caraballeda - Residencias Coral Park",
+      "rawAdditional": "0414-113-2334 / 0412-9082418",
+      "rawLinkField": "https://x.com/pichma_/status/2071037124799799445?s=20",
+      "freeText": "Maritza Quintero. Ultima vez en Caraballeda - Residencias Coral Park | 0414-113-2334 / 0412-9082418",
+      "name": "Maritza Quintero",
+      "normalizedName": "MARITZA QUINTERO",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04141132334",
+        "04129082418"
+      ],
+      "geo": {
+        "lat": 10.617850051971516,
+        "lon": -66.85465287425578
+      },
+      "locationText": "Maritza Quintero. Ultima vez en Caraballeda - Residencias Coral Park | 0414-113-2334 / 0412-9082418",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-804732811",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "804732811",
+      "sourceUrl": "https://x.com/pichma_/status/2071037124799799445?s=20",
+      "canonicalSourceUrl": "https://x.com/pichma_/status/2071037124799799445",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-07-07T21:25:46",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Logan Medina. Ultima vez en Caraballeda - Residencias Coral Park",
+      "rawAdditional": "0414-113-2334 / 0412-9082418",
+      "rawLinkField": "https://x.com/pichma_/status/2071037124799799445?s=20",
+      "freeText": "Logan Medina. Ultima vez en Caraballeda - Residencias Coral Park | 0414-113-2334 / 0412-9082418",
+      "name": "Logan Medina",
+      "normalizedName": "LOGAN MEDINA",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04141132334",
+        "04129082418"
+      ],
+      "geo": {
+        "lat": 10.617850051971516,
+        "lon": -66.85465287425578
+      },
+      "locationText": "Logan Medina. Ultima vez en Caraballeda - Residencias Coral Park | 0414-113-2334 / 0412-9082418",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-804733805",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "804733805",
+      "sourceUrl": "https://x.com/Davi_rLee143/status/2071056936397574423?s=20",
+      "canonicalSourceUrl": "https://x.com/Davi_rLee143/status/2071056936397574423",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-07-07T21:28:41",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "Miguel Alejandro Garcia Carreno La Guaira - Edificio Caribe Piso 9",
+      "rawAdditional": "0412-740-5916",
+      "rawLinkField": "https://x.com/Davi_rLee143/status/2071056936397574423?s=20",
+      "freeText": "Miguel Alejandro Garcia Carreno La Guaira - Edificio Caribe Piso 9 | 0412-740-5916",
+      "name": "Miguel Alejandro Garcia Carreno La",
+      "normalizedName": "MIGUEL ALEJANDRO GARCIA CARRENO LA",
+      "cedula": null,
+      "age": null,
+      "contacts": [
+        "04127405916"
+      ],
+      "geo": {
+        "lat": 10.617040448691089,
+        "lon": -66.85644510180231
+      },
+      "locationText": "Miguel Alejandro Garcia Carreno La Guaira - Edificio Caribe Piso 9 | 0412-740-5916",
       "isMatchable": true,
       "notMatchableReason": null
     }
