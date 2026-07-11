@@ -107,9 +107,9 @@
       "registro"
     ],
     "report_stats": {
-      "reported": 44307,
-      "found": 26243,
-      "as_of": "2026-07-11T01:21:44.789Z",
+      "reported": 44308,
+      "found": 26262,
+      "as_of": "2026-07-11T07:29:15.722Z",
       "source": "self-reported"
     },
     "use_when_label": "Úsalo si buscas o quieres reportar a una persona desaparecida.",
@@ -161,8 +161,8 @@
     ],
     "report_stats": {
       "reported": 41297,
-      "found": 6367,
-      "as_of": "2026-07-11T01:21:44.789Z",
+      "found": 6379,
+      "as_of": "2026-07-11T07:29:15.722Z",
       "source": "self-reported"
     },
     "summary": "Plataforma ciudadana para reportar, buscar y marcar personas desaparecidas como encontradas tras el terremoto.",
