@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-14T14:17:14.132Z",
+  "generatedAt": "2026-07-14T18:58:05.487Z",
   "source": "kobotoolbox-terremotove",
-  "total": 650,
+  "total": 651,
   "results": [
     {
       "id": "kobo-791548945",
@@ -18651,6 +18651,33 @@
         "lon": -66.85644510180231
       },
       "locationText": "Miguel Alejandro Garcia Carreno La Guaira - Edificio Caribe Piso 9 | 0412-740-5916",
+      "isMatchable": true,
+      "notMatchableReason": null
+    },
+    {
+      "id": "kobo-811023358",
+      "source": "kobotoolbox-terremotove",
+      "sourceRecordId": "811023358",
+      "sourceUrl": "https://x.com/mamejnt/status/2071055449990775272?s=20",
+      "canonicalSourceUrl": "https://x.com/mamejnt/status/2071055449990775272",
+      "sourceType": "missing-report",
+      "submittedAt": "2026-07-14T17:07:52",
+      "event": "persona_desaparecida",
+      "category": "missing-person",
+      "rawDescription": "William Cortesia, desaparecido La Guaira",
+      "rawAdditional": null,
+      "rawLinkField": "https://x.com/mamejnt/status/2071055449990775272?s=20",
+      "freeText": "William Cortesia, desaparecido La Guaira",
+      "name": "William Cortesia",
+      "normalizedName": "WILLIAM CORTESIA",
+      "cedula": null,
+      "age": null,
+      "contacts": [],
+      "geo": {
+        "lat": 10.599775,
+        "lon": -66.929616
+      },
+      "locationText": "William Cortesia, desaparecido La Guaira",
       "isMatchable": true,
       "notMatchableReason": null
     }
