@@ -108,8 +108,8 @@
     ],
     "report_stats": {
       "reported": 44287,
-      "found": 26492,
-      "as_of": "2026-08-07T18:36:10.225Z",
+      "found": 26494,
+      "as_of": "2026-08-08T06:30:34.785Z",
       "source": "self-reported"
     },
     "use_when_label": "Use this to search for or report a missing person.",
