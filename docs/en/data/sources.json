@@ -107,9 +107,9 @@
       "registry"
     ],
     "report_stats": {
-      "reported": 44287,
-      "found": 26495,
-      "as_of": "2026-08-08T18:19:17.836Z",
+      "reported": 44288,
+      "found": 26496,
+      "as_of": "2026-08-09T12:23:05.843Z",
       "source": "self-reported"
     },
     "use_when_label": "Use this to search for or report a missing person.",
