@@ -160,9 +160,9 @@
       "found-report"
     ],
     "report_stats": {
-      "reported": 41348,
+      "reported": 41349,
       "found": 33397,
-      "as_of": "2026-09-10T15:20:41.868Z",
+      "as_of": "2026-09-12T09:41:46.241Z",
       "source": "self-reported"
     },
     "summary": "Plataforma ciudadana para reportar, buscar y marcar personas desaparecidas como encontradas tras el terremoto.",
