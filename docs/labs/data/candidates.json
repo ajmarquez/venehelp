@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T02:10:26.943Z",
+  "generatedAt": "2026-09-25T05:05:07.816Z",
   "totalGroups": 86,
   "totalPairs": 163,
   "results": [
@@ -91,89 +91,13 @@
           "ageDiff": null
         }
       ],
-      "hospitalesVenezuelaMatches": [
-        {
-          "id": "hospitales-en-venezuela:CARMEN RODRIGUEZ:HOSPITAL DR RAFAEL MEDINA JIMENEZ PERIFERICO DE PARIATA MAIQUETIA:6783",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Carmen Rodríguez",
-          "name": "Carmen Rodriguez",
-          "detail": "72 años / Barrio Aeropuerto",
-          "age": 72,
-          "maskedCedula": "••••6783",
-          "locationName": "Hospital Dr. Rafael Medina Jiménez (Periférico de Pariata / Maiquetía)",
-          "city": "La Guaira",
-          "phone": null,
-          "supportScore": 0.98,
-          "supportScorePercent": 98,
-          "supportReasons": [
-            "Exact name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        },
-        {
-          "id": "hospitales-en-venezuela:CARMEN RODRIGUEZ:HOSPITAL VICTORIO SANTAELLA LOS TEQUES:5501",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Carmen Rodríguez",
-          "name": "Carmen Rodríguez",
-          "detail": "73",
-          "age": 73,
-          "maskedCedula": "••••5501",
-          "locationName": "Hospital Victorio Santaella (Los Teques)",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.98,
-          "supportScorePercent": 98,
-          "supportReasons": [
-            "Exact name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        },
-        {
-          "id": "hospitales-en-venezuela:CARMEN RODRIGUEZ:HOSPITAL DR RAFAEL MEDINA JIMENEZ PERIFERICO DE PARIATA MAIQUETIA:0123",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Carmen Rodríguez",
-          "name": "Carmen Rodríguez",
-          "detail": "33 años · Antímano",
-          "age": 33,
-          "maskedCedula": "••••0123",
-          "locationName": "Hospital Dr. Rafael Medina Jiménez (Periférico de Pariata / Maiquetía)",
-          "city": "La Guaira",
-          "phone": null,
-          "supportScore": 0.98,
-          "supportScorePercent": 98,
-          "supportReasons": [
-            "Exact name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        }
-      ],
+      "hospitalesVenezuelaMatches": [],
       "supportingSources": [
         {
           "key": "localizados",
           "label": "Localizados Venezuela",
           "note": "Carmen Rodriguez · Hospital de Pariata",
           "url": "https://localizadosvenezuela.com/buscar/carmen-rodriguez-2z368m"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARMEN RODRIGUEZ:HOSPITAL DR RAFAEL MEDINA JIMENEZ PERIFERICO DE PARIATA MAIQUETIA:6783",
-          "label": "Hospitales en Venezuela",
-          "note": "Carmen Rodriguez · 72 años / Barrio Aeropuerto · Hospital Dr. Rafael Medina Jiménez (Periférico de Pariata / Maiquetía)",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARMEN RODRIGUEZ:HOSPITAL VICTORIO SANTAELLA LOS TEQUES:5501",
-          "label": "Hospitales en Venezuela",
-          "note": "Carmen Rodríguez · 73 · Hospital Victorio Santaella (Los Teques)",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARMEN RODRIGUEZ:HOSPITAL DR RAFAEL MEDINA JIMENEZ PERIFERICO DE PARIATA MAIQUETIA:0123",
-          "label": "Hospitales en Venezuela",
-          "note": "Carmen Rodríguez · 33 años · Antímano · Hospital Dr. Rafael Medina Jiménez (Periférico de Pariata / Maiquetía)",
-          "url": "https://hospitalesenvenezuela.com/"
         }
       ]
     },
@@ -242,27 +166,7 @@
           "ageDiff": null
         }
       ],
-      "hospitalesVenezuelaMatches": [
-        {
-          "id": "hospitales-en-venezuela:MARCO REINA:HOSPITAL MIGUEL PEREZ CARRENO:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Marco Reina",
-          "name": "Marco Reina",
-          "detail": "49 años · Fallecido · Signos vitales · Guaira",
-          "age": 49,
-          "maskedCedula": null,
-          "locationName": "Hospital Miguel Pérez Carreño",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.96,
-          "supportScorePercent": 96,
-          "supportReasons": [
-            "Exact name match in Hospitales en Venezuela",
-            "Exact age match"
-          ]
-        }
-      ],
+      "hospitalesVenezuelaMatches": [],
       "supportingSources": [
         {
           "key": "kobo",
@@ -275,12 +179,6 @@
           "label": "Localizados Venezuela",
           "note": "Marco Reina · Sin identificar (Hospital pared azul)",
           "url": "https://localizadosvenezuela.com/buscar/marco-reina-3z0tg9"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:MARCO REINA:HOSPITAL MIGUEL PEREZ CARRENO:",
-          "label": "Hospitales en Venezuela",
-          "note": "Marco Reina · 49 años · Fallecido · Signos vitales · Guaira · Hospital Miguel Pérez Carreño",
-          "url": "https://hospitalesenvenezuela.com/"
         }
       ]
     },
@@ -324,27 +222,7 @@
           "ageDiff": null
         }
       ],
-      "hospitalesVenezuelaMatches": [
-        {
-          "id": "hospitales-en-venezuela:JOSE RAMOS:ESTADIO DE BEISBOL DE PLAYA GRANDE MAIQUETIA LA GUAIRA:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "José Ramos",
-          "name": "José Ramos",
-          "detail": null,
-          "age": null,
-          "maskedCedula": null,
-          "locationName": "Estadio de Béisbol de Playa Grande (Maiquetía, La Guaira)",
-          "city": null,
-          "phone": null,
-          "supportScore": 0.98,
-          "supportScorePercent": 98,
-          "supportReasons": [
-            "Exact name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        }
-      ],
+      "hospitalesVenezuelaMatches": [],
       "supportingSources": [
         {
           "key": "kobo",
@@ -357,12 +235,6 @@
           "label": "Localizados Venezuela",
           "note": "José Ramos · Estadio Béisbol Playa Grande",
           "url": "https://localizadosvenezuela.com/buscar/jose-ramos-60spr4"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:JOSE RAMOS:ESTADIO DE BEISBOL DE PLAYA GRANDE MAIQUETIA LA GUAIRA:",
-          "label": "Hospitales en Venezuela",
-          "note": "José Ramos · Estadio de Béisbol de Playa Grande (Maiquetía, La Guaira)",
-          "url": "https://hospitalesenvenezuela.com/"
         }
       ]
     },
@@ -454,27 +326,7 @@
           "ageDiff": null
         }
       ],
-      "hospitalesVenezuelaMatches": [
-        {
-          "id": "hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DR JOSE GREGORIO HERNANDEZ LOS MAGALLANES DE CATIA:1612",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Carlos Castaño",
-          "name": "Carlos Castaño",
-          "detail": "47",
-          "age": 47,
-          "maskedCedula": "••••1612",
-          "locationName": "Hospital Dr. José Gregorio Hernández (Los Magallanes de Catia)",
-          "city": null,
-          "phone": null,
-          "supportScore": 0.94,
-          "supportScorePercent": 94,
-          "supportReasons": [
-            "Exact name match in Hospitales en Venezuela",
-            "Related hospital wording"
-          ]
-        }
-      ],
+      "hospitalesVenezuelaMatches": [],
       "supportingSources": [
         {
           "key": "kobo",
@@ -487,12 +339,6 @@
           "label": "Localizados Venezuela",
           "note": "Castaño Carlos · Hospital Domingo Luciani",
           "url": "https://localizadosvenezuela.com/buscar/castano-carlos-05yqth"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:CARLOS CASTANO:HOSPITAL DR JOSE GREGORIO HERNANDEZ LOS MAGALLANES DE CATIA:1612",
-          "label": "Hospitales en Venezuela",
-          "note": "Carlos Castaño · 47 · Hospital Dr. José Gregorio Hernández (Los Magallanes de Catia)",
-          "url": "https://hospitalesenvenezuela.com/"
         }
       ]
     },
@@ -1476,46 +1322,7 @@
           "ageDiff": 0
         }
       ],
-      "hospitalesVenezuelaMatches": [
-        {
-          "id": "hospitales-en-venezuela:DELIA DE GUERRERO PENA:HOSPITAL MILITAR DR CARLOS ARVELO:2518",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Guerrero Peña",
-          "name": "Delia De Guerrero Peña",
-          "detail": "50 Catia",
-          "age": null,
-          "maskedCedula": "••••2518",
-          "locationName": "Hospital Militar Dr. Carlos Arvelo",
-          "city": "Caracas",
-          "phone": null,
-          "supportScore": 0.92,
-          "supportScorePercent": 92,
-          "supportReasons": [
-            "Very strong name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        },
-        {
-          "id": "hospitales-en-venezuela:DELIA DE GUERRERO PENA DE GUERRERO PENA DELIA NA:HOSPITAL MILITAR DR CARLOS ARVELO:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Guerrero Peña",
-          "name": "Delia De Guerrero Pena / De Guerrero Peña Delia Na",
-          "detail": "PNA",
-          "age": null,
-          "maskedCedula": null,
-          "locationName": "Hospital Militar Dr. Carlos Arvelo",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.92,
-          "supportScorePercent": 92,
-          "supportReasons": [
-            "Very strong name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        }
-      ],
+      "hospitalesVenezuelaMatches": [],
       "supportingSources": [
         {
           "key": "kobo",
@@ -1528,18 +1335,6 @@
           "label": "Localizados Venezuela",
           "note": "Delia De Guerrero Peña · Hospital Militar Universitario Dr. Carlos Arvelo",
           "url": "https://localizadosvenezuela.com/buscar/delia-de-guerrero-pena-11642518-0x6hv3"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:DELIA DE GUERRERO PENA:HOSPITAL MILITAR DR CARLOS ARVELO:2518",
-          "label": "Hospitales en Venezuela",
-          "note": "Delia De Guerrero Peña · 50 Catia · Hospital Militar Dr. Carlos Arvelo",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:DELIA DE GUERRERO PENA DE GUERRERO PENA DELIA NA:HOSPITAL MILITAR DR CARLOS ARVELO:",
-          "label": "Hospitales en Venezuela",
-          "note": "Delia De Guerrero Pena / De Guerrero Peña Delia Na · PNA · Hospital Militar Dr. Carlos Arvelo",
-          "url": "https://hospitalesenvenezuela.com/"
         }
       ]
     },
@@ -4622,46 +4417,7 @@
           "ageDiff": null
         }
       ],
-      "hospitalesVenezuelaMatches": [
-        {
-          "id": "hospitales-en-venezuela:ROSA HERNANDEZ:HOSPITAL MIGUEL PEREZ CARRENO:4556",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Rosa Hernandez",
-          "name": "Rosa Hernandez",
-          "detail": "N/A",
-          "age": null,
-          "maskedCedula": "••••4556",
-          "locationName": "Hospital Miguel Pérez Carreño",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.94,
-          "supportScorePercent": 94,
-          "supportReasons": [
-            "Exact name match in Hospitales en Venezuela",
-            "Related hospital wording"
-          ]
-        },
-        {
-          "id": "hospitales-en-venezuela:PARRA HERNANDEZ ROSA:HOSPITAL DR DOMINGO LUCIANI EL LLANITO:9012",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Rosa Hernandez",
-          "name": "Parra Hernandez Rosa",
-          "detail": null,
-          "age": null,
-          "maskedCedula": "••••9012",
-          "locationName": "Hospital Dr. Domingo Luciani (El Llanito)",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.84,
-          "supportScorePercent": 84,
-          "supportReasons": [
-            "Strong name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        }
-      ],
+      "hospitalesVenezuelaMatches": [],
       "supportingSources": [
         {
           "key": "kobo",
@@ -4674,18 +4430,6 @@
           "label": "Localizados Venezuela",
           "note": "Hernandez Cesar · Hospital Domingo Luciani",
           "url": "https://localizadosvenezuela.com/buscar/hernandez-cesar-x79q0x"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:ROSA HERNANDEZ:HOSPITAL MIGUEL PEREZ CARRENO:4556",
-          "label": "Hospitales en Venezuela",
-          "note": "Rosa Hernandez · N/A · Hospital Miguel Pérez Carreño",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:PARRA HERNANDEZ ROSA:HOSPITAL DR DOMINGO LUCIANI EL LLANITO:9012",
-          "label": "Hospitales en Venezuela",
-          "note": "Parra Hernandez Rosa · Hospital Dr. Domingo Luciani (El Llanito)",
-          "url": "https://hospitalesenvenezuela.com/"
         }
       ]
     },
@@ -5108,27 +4852,7 @@
           "ageDiff": null
         }
       ],
-      "hospitalesVenezuelaMatches": [
-        {
-          "id": "hospitales-en-venezuela:LUCIAN RAMIREZ:HOSPITAL GENERAL REGIONAL DR JOSE MARIA VARGAS IVSS LA GUAIRA:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Luci Ramírez",
-          "name": "Lucian Ramirez",
-          "detail": "Fecha captura: :00 vzla",
-          "age": null,
-          "maskedCedula": null,
-          "locationName": "Hospital General Regional Dr. José María Vargas (IVSS La Guaira)",
-          "city": null,
-          "phone": null,
-          "supportScore": 0.92,
-          "supportScorePercent": 92,
-          "supportReasons": [
-            "Very strong name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        }
-      ],
+      "hospitalesVenezuelaMatches": [],
       "supportingSources": [
         {
           "key": "kobo",
@@ -5141,12 +4865,6 @@
           "label": "Localizados Venezuela",
           "note": "Ramirez Lucian · Hospital José María Vargas - La Guaira",
           "url": "https://localizadosvenezuela.com/buscar/ramirez-lucian-r4bw39"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:LUCIAN RAMIREZ:HOSPITAL GENERAL REGIONAL DR JOSE MARIA VARGAS IVSS LA GUAIRA:",
-          "label": "Hospitales en Venezuela",
-          "note": "Lucian Ramirez · Fecha captura: :00 vzla · Hospital General Regional Dr. José María Vargas (IVSS La Guaira)",
-          "url": "https://hospitalesenvenezuela.com/"
         }
       ]
     },
@@ -5539,64 +5257,13 @@
           "ageDiff": null
         }
       ],
-      "hospitalesVenezuelaMatches": [
-        {
-          "id": "hospitales-en-venezuela:ROSA HERNANDEZ:HOSPITAL MIGUEL PEREZ CARRENO:4556",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Rosa Hernandez",
-          "name": "Rosa Hernandez",
-          "detail": "N/A",
-          "age": null,
-          "maskedCedula": "••••4556",
-          "locationName": "Hospital Miguel Pérez Carreño",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.94,
-          "supportScorePercent": 94,
-          "supportReasons": [
-            "Exact name match in Hospitales en Venezuela",
-            "Related hospital wording"
-          ]
-        },
-        {
-          "id": "hospitales-en-venezuela:PARRA HERNANDEZ ROSA:HOSPITAL DR DOMINGO LUCIANI EL LLANITO:9012",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Rosa Hernandez",
-          "name": "Parra Hernandez Rosa",
-          "detail": null,
-          "age": null,
-          "maskedCedula": "••••9012",
-          "locationName": "Hospital Dr. Domingo Luciani (El Llanito)",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.84,
-          "supportScorePercent": 84,
-          "supportReasons": [
-            "Strong name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        }
-      ],
+      "hospitalesVenezuelaMatches": [],
       "supportingSources": [
         {
           "key": "localizados",
           "label": "Localizados Venezuela",
           "note": "Hernandez Cesar · Hospital Domingo Luciani",
           "url": "https://localizadosvenezuela.com/buscar/hernandez-cesar-x79q0x"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:ROSA HERNANDEZ:HOSPITAL MIGUEL PEREZ CARRENO:4556",
-          "label": "Hospitales en Venezuela",
-          "note": "Rosa Hernandez · N/A · Hospital Miguel Pérez Carreño",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:PARRA HERNANDEZ ROSA:HOSPITAL DR DOMINGO LUCIANI EL LLANITO:9012",
-          "label": "Hospitales en Venezuela",
-          "note": "Parra Hernandez Rosa · Hospital Dr. Domingo Luciani (El Llanito)",
-          "url": "https://hospitalesenvenezuela.com/"
         }
       ]
     },
@@ -5766,65 +5433,13 @@
           "ageDiff": null
         }
       ],
-      "hospitalesVenezuelaMatches": [
-        {
-          "id": "hospitales-en-venezuela:ANABELLA DAVILA:HOSPITAL CIUDAD CARIBIA:9901",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Ana Avila",
-          "name": "Anabella Dávila",
-          "detail": "13 años · Los Corales",
-          "age": 13,
-          "maskedCedula": "••••9901",
-          "locationName": "Hospital Ciudad Caribia",
-          "city": "Caribia",
-          "phone": null,
-          "supportScore": 0.9,
-          "supportScorePercent": 90,
-          "supportReasons": [
-            "Strong name match in Hospitales en Venezuela",
-            "Exact age match",
-            "Same hospital or facility"
-          ]
-        },
-        {
-          "id": "hospitales-en-venezuela:BRIANA AVILA:HOSPITAL MIGUEL PEREZ CARRENO:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Ana Avila",
-          "name": "Briana Avila",
-          "detail": "9 años",
-          "age": 9,
-          "maskedCedula": null,
-          "locationName": "Hospital Miguel Pérez Carreño",
-          "city": "Caracas",
-          "phone": null,
-          "supportScore": 0.8,
-          "supportScorePercent": 80,
-          "supportReasons": [
-            "Strong name match in Hospitales en Venezuela",
-            "Related hospital wording"
-          ]
-        }
-      ],
+      "hospitalesVenezuelaMatches": [],
       "supportingSources": [
         {
           "key": "localizados",
           "label": "Localizados Venezuela",
           "note": "Davila Anabela · Hospital Ciudad Caribia",
           "url": "https://localizadosvenezuela.com/buscar/davila-anabela-31439931-90qpe6"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:ANABELLA DAVILA:HOSPITAL CIUDAD CARIBIA:9901",
-          "label": "Hospitales en Venezuela",
-          "note": "Anabella Dávila · 13 años · Los Corales · Hospital Ciudad Caribia",
-          "url": "https://hospitalesenvenezuela.com/"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:BRIANA AVILA:HOSPITAL MIGUEL PEREZ CARRENO:",
-          "label": "Hospitales en Venezuela",
-          "note": "Briana Avila · 9 años · Hospital Miguel Pérez Carreño",
-          "url": "https://hospitalesenvenezuela.com/"
         }
       ]
     },
@@ -6394,27 +6009,7 @@
           "ageDiff": null
         }
       ],
-      "hospitalesVenezuelaMatches": [
-        {
-          "id": "hospitales-en-venezuela:GIMENELLY MORENO:HOSPITAL DR DOMINGO LUCIANI EL LLANITO:",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Nelly Moreno",
-          "name": "Gimenelly Moreno",
-          "detail": "31 - La Guaira - Tanaguarena",
-          "age": null,
-          "maskedCedula": null,
-          "locationName": "Hospital Dr. Domingo Luciani (El Llanito)",
-          "city": "Por confirmar",
-          "phone": null,
-          "supportScore": 0.84,
-          "supportScorePercent": 84,
-          "supportReasons": [
-            "Strong name match in Hospitales en Venezuela",
-            "Same hospital or facility"
-          ]
-        }
-      ],
+      "hospitalesVenezuelaMatches": [],
       "supportingSources": [
         {
           "key": "kobo",
@@ -6427,12 +6022,6 @@
           "label": "Localizados Venezuela",
           "note": "Gisbely Moreno · Hospital Domingo Luciani",
           "url": "https://localizadosvenezuela.com/buscar/gisbely-moreno-gcz5rp"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:GIMENELLY MORENO:HOSPITAL DR DOMINGO LUCIANI EL LLANITO:",
-          "label": "Hospitales en Venezuela",
-          "note": "Gimenelly Moreno · 31 - La Guaira - Tanaguarena · Hospital Dr. Domingo Luciani (El Llanito)",
-          "url": "https://hospitalesenvenezuela.com/"
         }
       ]
     },
@@ -6703,39 +6292,13 @@
           "ageDiff": null
         }
       ],
-      "hospitalesVenezuelaMatches": [
-        {
-          "id": "hospitales-en-venezuela:JOSE RODRIGUEZ MANUEL:HOSPITAL DR JOSE GREGORIO HERNANDEZ LOS MAGALLANES DE CATIA:4542",
-          "source": "hospitales-en-venezuela",
-          "sourceUrl": "https://hospitalesenvenezuela.com/",
-          "sourceSearchTerm": "Jose Manuel Rodriguez",
-          "name": "Jose Rodriguez Manuel",
-          "detail": "21 - Caracas",
-          "age": null,
-          "maskedCedula": "••••4542",
-          "locationName": "Hospital Dr. José Gregorio Hernández (Los Magallanes de Catia)",
-          "city": null,
-          "phone": null,
-          "supportScore": 0.88,
-          "supportScorePercent": 88,
-          "supportReasons": [
-            "Very strong name match in Hospitales en Venezuela",
-            "Related hospital wording"
-          ]
-        }
-      ],
+      "hospitalesVenezuelaMatches": [],
       "supportingSources": [
         {
           "key": "localizados",
           "label": "Localizados Venezuela",
           "note": "José Rodríguez · Hospital Domingo Luciani",
           "url": "https://localizadosvenezuela.com/buscar/jose-rodriguez-pot70j"
-        },
-        {
-          "key": "hospitales-en-venezuela:hospitales-en-venezuela:JOSE RODRIGUEZ MANUEL:HOSPITAL DR JOSE GREGORIO HERNANDEZ LOS MAGALLANES DE CATIA:4542",
-          "label": "Hospitales en Venezuela",
-          "note": "Jose Rodriguez Manuel · 21 - Caracas · Hospital Dr. José Gregorio Hernández (Los Magallanes de Catia)",
-          "url": "https://hospitalesenvenezuela.com/"
         }
       ]
     },
