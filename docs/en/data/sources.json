@@ -160,9 +160,9 @@
       "found-report"
     ],
     "report_stats": {
-      "reported": 41363,
+      "reported": 41364,
       "found": 33403,
-      "as_of": "2026-10-17T01:50:19.682Z",
+      "as_of": "2026-10-17T19:45:59.270Z",
       "source": "self-reported"
     },
     "summary": "Citizen platform for reporting, searching, and marking missing people as found after the earthquake.",
