@@ -85,9 +85,9 @@
       "registry"
     ],
     "report_stats": {
-      "reported": 44338,
-      "found": 84908,
-      "as_of": "2026-09-05T19:38:16.137Z",
+      "reported": 44347,
+      "found": 26548,
+      "as_of": "2026-10-23T10:36:32.936Z",
       "source": "self-reported"
     }
   },
